@@ -1,7 +1,6 @@
 ---
 layout: single
 title: "My Dictionary for Medical Imaging"
-categories : Terminology
 ---
 
 # DICOM 
