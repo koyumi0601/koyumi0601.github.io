@@ -5,6 +5,9 @@ categories: Blog
 tags: [Github, Blog, Installation]
 toc: true
 author_profile: false
+sidebar:
+    nav: "docs"
+search: true
 ---
 
 # Generation

@@ -1,10 +1,13 @@
 ---
 layout: single
-title: "Edit Template - Minimal Mistake"
+title: "Edit Template - Minimal Mistake2"
 categories: Blog
 tags: [Github, Blog, Template]
 toc: true
 author_profile: false
+sidebar:
+    nav: "docs"
+search: true
 ---
 # Template - Minimal Mistake
 ## Add category
@@ -63,7 +66,7 @@ sidebar_main: true
 ```markdown
 toc: true
 ```
-## 404 Page Error
+## Add 404 Page Error
 - generate file _pages/404.md refer to test/_pages/404.md
 
 ## Disable/Enable Author Profile
@@ -71,3 +74,93 @@ toc: true
 ```markdown
 author_profile: false
 ```
+
+## Add Sidebar
+- add below lines in _data/navigation.yml
+```yaml
+docs:
+  - title: "대목차1"
+  - children:
+    - title: "Category"
+      url: /categories/
+    - title: "Tag"
+      url: /tags/
+  - title: "대목차2"
+  - children:
+    - title: "Category"
+      url: /categories/
+    - title: "Tag"
+      url: /tags/
+```
+- in post, write below line
+```markdown
+sidebar:
+    nav: "docs"
+```
+
+## Add Search
+- add file _pages/search.md
+```markdown
+---
+title: Search
+layout: search
+permalink: /search/
+---
+```
+- edit navigation.yml
+```markdown
+main:
+  - title: "Category"
+    url: /categories/
+  - title: "Tag"
+    url: /tags/
+  - title: "Search"
+    url: /search/
+```
+- in post, write below line
+```markdown
+search: true # default true
+```
+
+## Change Font
+- Go to https://fonts.google.com/
+- Select Korean
+- Select Noto Sans Korean (example)
+- View Selected family
+- See 'Use on the web'
+- Select @import
+- Copy @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap');
+- Go to _sass/minimal-mistakes.scss
+- Add below lines
+```scss
+/* Google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap');
+```
+- Go to google font and check font family name in 'CSS rules to specify families'
+- Go to _sass/minimal-mistakes/_variables.scss
+- Edit like below
+```scss
+/* system typefaces */
+$serif: Georgia, Times, serif !default;
+$sans-serif: -apple-system, BlinkMacSystemFont, "Noto Sans KR", "Roboto", "Segoe UI",
+  "Helvetica Neue", "Lucida Grande", Arial, sans-serif !default;
+$monospace: Monaco, Consolas, "Lucida Console", monospace !default;
+
+```
+
+## Add Notice
+- Refer to: https://www.youtube.com/watch?v=q0P3TSoVNDM&t=184s
+- In short:
+<div class="notice">
+    <ul>
+        <li> Some notice </li>
+    </ul>
+</div>
+{: .notice--danger}
+
+## Add Button
+[This is a button](https://google.com){: .btn .btn--danger}
+
+## Add Youtube
+- Actually, remove &t=xxs in id q0P3TSoVNDM&t=184s
+{% include video id="q0P3TSoVNDM" provider="youtube" %}

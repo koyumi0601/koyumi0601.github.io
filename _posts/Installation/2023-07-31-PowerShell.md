@@ -5,6 +5,9 @@ categories: Setup
 tags: [Power Shell, Ubuntu, Installation]
 toc: true
 author_profile: false
+sidebar:
+    nav: "docs"
+search: true
 ---
 # add PowerShell repository
 ```bash

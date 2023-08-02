@@ -5,6 +5,9 @@ categories: Setup
 tags: [Beyond Compare, Ubuntu, Installation]
 toc: true
 author_profile: false
+sidebar:
+    nav: "docs"
+search: true
 ---
 # Linux license
 ## Terminal Installation

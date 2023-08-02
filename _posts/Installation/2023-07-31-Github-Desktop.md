@@ -5,6 +5,9 @@ categories: Blog
 tags: [Github Desktop, Blog, Ubuntu, Installation]
 toc: true
 author_profile: false
+sidebar:
+    nav: "docs"
+search: true
 ---
 
 # Install Github desktop in Ubuntu
@@ -27,4 +30,9 @@ sudo snap install GitHubDesktop-linux-2.0.4-linux1.snap --classic --dangerous
 - Refer to: 
     - https://wotres.tistory.com/entry/Github-%EC%97%90%EB%9F%AC-%ED%95%B4%EA%B2%B0%EB%B2%95-Authentication-failed-for-use-a-personal-access-token-instead
 - In short: 
-    - Password = token
+    <div class="notice">
+        <ul>
+            <li> Password = token </li>
+        </ul>
+    </div>
+    {: .notice--danger}
