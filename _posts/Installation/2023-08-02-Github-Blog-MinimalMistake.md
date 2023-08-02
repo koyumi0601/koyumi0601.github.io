@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Edit Template - Minimal Mistake2"
+title: "Edit Template - Minimal Mistake"
 categories: Blog
 tags: [Github, Blog, Template]
 toc: true
