@@ -1,6 +1,10 @@
 ---
 layout: single
 title: "How to install Beyond Compare (Linux)"
+categories: Setup
+tags: [Beyond Compare, Ubuntu, Installation]
+toc: true
+author_profile: false
 ---
 # Linux license
 ## Terminal Installation

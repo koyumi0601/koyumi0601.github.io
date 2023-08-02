@@ -1,6 +1,10 @@
 ---
 layout: single
 title: "How to install powershell"
+categories: Setup
+tags: [Power Shell, Ubuntu, Installation]
+toc: true
+author_profile: false
 ---
 # add PowerShell repository
 ```bash
