@@ -10,11 +10,4 @@ main:
   #   url: /collection-archive/
   # - title: "Sitemap"
   #   url: /sitemap/
-  - title: "Language"
- children: 
-   - title: "Markdown"
-     url: categories/markdown
-     category: "markdown"
-   - title: "Python"
-     url: categories/python
-     category: "python"
+
