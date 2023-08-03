@@ -12,8 +12,10 @@ search: true
 # Template - Minimal Mistake
 ## Add category
 - Refer to:
-    - {% include video id="3UOh0rKlxjg" provider="youtube" %}
-    - https://www.youtube.com/watch?v=3UOh0rKlxjg
+
+    {% include video id="3UOh0rKlxjg" provider="youtube" %}
+
+    
 
 - In short:
 
