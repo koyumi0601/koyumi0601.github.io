@@ -10,7 +10,7 @@ sidebar:
 search: true
 ---
 
-## 
+
 
 # Install Flameshot
 
@@ -21,7 +21,7 @@ sudo apt install flameshot
 
 
 
-## Execute
+# Execute
 
 - double click icon
 - See system tray
