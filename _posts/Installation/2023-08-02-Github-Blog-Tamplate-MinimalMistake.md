@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Edit Template - Minimal Mistake"
+title: "How to use template - Minimal Mistake"
 categories: Blog
 tags: [Github, Blog, Template]
 toc: true
@@ -12,7 +12,9 @@ search: true
 # Template - Minimal Mistake
 ## Add category
 - Refer to:
+    - {% include video id="3UOh0rKlxjg" provider="youtube" %}
     - https://www.youtube.com/watch?v=3UOh0rKlxjg
+
 - In short:
 
 1. _config.yml
