@@ -107,7 +107,7 @@ author:
   name             : "Ko YuMi"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "I am an **amazing** person."
-  location         : "Somewhere"
+  location         : "South Korea"
   email            :
   links:
     - label: "Email"
@@ -278,6 +278,19 @@ compress_html:
 
 
 # Defaults
+# defaults:
+#   # _posts
+#   - scope:
+#       path: ""
+#       type: posts
+#     values:
+#       layout: single
+#       author_profile: true
+#       read_time: true
+#       comments: # true
+#       share: true
+#       related: true
+
 defaults:
   # _posts
   - scope:
@@ -286,7 +299,7 @@ defaults:
     values:
       layout: single
       author_profile: true
-      read_time: true
-      comments: # true
       share: true
       related: true
+      sidebar:
+        nav: "docs"

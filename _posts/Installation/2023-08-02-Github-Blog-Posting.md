@@ -146,6 +146,10 @@ author_profile: true
 
 ## Add Sidebar
 
+### Sidebar using Category and Tag
+
+*Not preferred*
+
 - Add below lines in _data/navigation.yml
 
 ![2023-08-03_14-13-sidebar]({{site.url}}/images/2023-08-02-Github-Blog-Posting/2023-08-03_14-13-sidebar.png)
@@ -177,6 +181,10 @@ sidebar:
 - Result
 
 ![2023-08-03_14-13-sidebar-result]({{site.url}}/images/2023-08-02-Github-Blog-Posting/2023-08-03_14-13-sidebar-result.png)
+
+### Sidebar using categories
+
+https://sunghwan7330.github.io/blog/blog_sidebar/
 
 
 
@@ -285,14 +293,11 @@ $monospace: Monaco, Consolas, "Lucida Console", monospace !default;
 
 ## Add Image
 
-- Download typora https://typora.io/#linux
+- Download typora [https://typora.io/#linux](https://typora.io/#linux)
 - File > Preferences > Image > 'copy image to custom folder' > ../../images/$(filename)
   - Or ../images (it depends on your _post file structure)
 - Drag and drop image to post
-- Edit absolute path to relative path like {{site.url}}
-  - {{site.url}}/images/{filename}
-
-
+- Edit absolute path to relative path like ![2023-08-03_15-13-image]({{site.url}}/images/2023-08-02-Github-Blog-Posting/2023-08-03_15-13-image.png)
 
 # Reference
 
@@ -302,5 +307,7 @@ Author profile, Sidebar, Search
 
 {% include video id="AONVKTeeaWY" provider="youtube" %}
 
+Sidebar (by categories)
 
+Sunghwan's blog [https://sunghwan7330.github.io/blog/blog_sidebar/](https://sunghwan7330.github.io/blog/blog_sidebar/)
 

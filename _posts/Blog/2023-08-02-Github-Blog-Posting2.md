@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "How to post on Github blog using template"
-categories: Blog
+categories: blog
 tags: [Github, Blog, Template]
 toc: true
 author_profile: false

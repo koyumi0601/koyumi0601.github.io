@@ -7,37 +7,62 @@ main:
   - title: "Search"
     url: /search/
 docs:
-  - title: "대목차1"
-  - children:
-    - title: "Category"
-      url: /categories/
-    - title: "Tag"
-      url: /tags/
-  - title: "대목차2"
-  - children:
-    - title: "Category"
-      url: /categories/
-    - title: "Tag"
-      url: /tags/
-  - title: "Programming"
-  - children:
-    - title: "Blog"
-    - url: /Blog/
-    - title: "Python"
-    - url: /Python/
-  - title: "Image Processing"
-  - children:
-    - title: "OpenCV-Python"
-  - title: "Radar System"
-  - children:
-    - title: "Radar Systems Analysis and Design Using MATLAB"
-  - title: "Big Data"
-  - children:
-    - title: "Big Data - Python"
-  - title: "Machine Learning"
-  - children:
-    - title: "Machine Learning"
-
+  - title: Electrical Engineering
+    children:
+      - title: "Image Signal Processing"
+        url: /categories/imagesignalprocessing
+      - title: "Digital Signal Processing"
+        url: /categories/digitalsignalprocessing
+      - title: "Electrical Circuit"
+        url: /categories/electricalcircuit
+      - title: "Numerical Method"
+        url: /categories/numericalmethod
+  - title: Natural Sciences
+    children:
+      - title: "Physics"
+        url: /categories/physics
+      - title: "Medical Science"
+        url: /categories/medicalscience
+      - title: "Mathmatics"
+        url: /categories/mathmatics
+      - title: "Probability"
+        url: /categories/probability
+      - title: "Linear Algebra"
+        url: /categories/linearalgebra
+      - title: "Tensor"
+        url: /categories/tensor
+      - title: "Mathematical Physics"
+        url: /categories/mathematicalphysics
+  - title: Computer Science
+    children:
+      - title: "Python"
+        url: /categories/python
+      - title: "CUDA"
+        url: /categories/cuda
+      - title: "SQL"
+        url: /categories/sql
+      - title: "Labview"
+        url: /categories/labview
+      - title: "Visual Basic .NET"
+        url: /categories/visualbasicdotnet
+      - title: "Design Pattern"
+        url: /categories/designpattern
+      - title: "Data Structure"
+        url: /categories/datastructure        
+  - title: Others
+    children:
+      - title: "Blog"
+        url: /categories/blog
+      - title: "MS Office"
+        url: /categories/msoffice
+      - title: "Economics"
+        url: /categories/economics
+      - title: "Language"
+        url: /categories/language
+      - title: "Book"
+        url: /categories/book
+      - title: "House Chores"
+        url: /categories/housechores
   # - title: "Quick-Start Guide"
   #   url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
   # - title: "About"
