@@ -9,7 +9,7 @@ sidebar:
     nav: "docs"
 search: true
 ---
-
+*Screen shot tool*
 
 
 # Install Flameshot
@@ -23,11 +23,9 @@ sudo apt install flameshot
 
 # Execute
 
-- double click icon
+- Double click icon
 - See system tray
-- ![2023-08-03_10-04_flameshot](/home/koyumi/Documents/GitHub/koyumi0601.github.io/_posts/images/2023-08-03-Flameshot/2023-08-03_10-04_flameshot.png)
-- ![2023-08-03_10-04_flameshot]({{site.url}}/images/2023-08-03-Flameshot/2023-08-03_10-04_flameshot-1691025883210-2.png)
-
-- Take screen shot
+- ![2023-08-03_10-04_flameshot]({{site.url}}/images/2023-08-03-Flameshot/2023-08-03_10-04_flameshot.png)
+- Click Take screen shot
 - Save file (control + S)
 - Go to Pictures
