@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "How to use template - Minimal Mistake"
+title: "How to post on Github blog using template"
 categories: Blog
 tags: [Github, Blog, Template]
 toc: true
@@ -9,8 +9,18 @@ sidebar:
     nav: "docs"
 search: true
 ---
+*Tips to post on Github blog using template*
+
+
+
 # Template - Minimal Mistake
+
+
+
 ## Add category
+
+
+
 - Refer to:
 
     {% include video id="3UOh0rKlxjg" provider="youtube" %}
@@ -65,21 +75,35 @@ author_profile: true
 sidebar_main: true
 ---
 ```
+
+
+
 ## Add TOC (Table of Contents)
+
 - in post, write below line
 ```markdown
 toc: true
 ```
+
+
+
 ## Add 404 Page Error
+
 - generate file _pages/404.md refer to test/_pages/404.md
 
+
+
 ## Disable/Enable Author Profile
+
 - in post, write below line
 ```markdown
 author_profile: false
 ```
 
+
+
 ## Add Sidebar
+
 - add below lines in _data/navigation.yml
 ```yaml
 docs:
@@ -102,7 +126,10 @@ sidebar:
     nav: "docs"
 ```
 
+
+
 ## Add Search
+
 - add file _pages/search.md
 ```markdown
 ---
@@ -126,7 +153,10 @@ main:
 search: true # default true
 ```
 
+
+
 ## Change Font
+
 - Go to https://fonts.google.com/
 - Select Korean
 - Select Noto Sans Korean (example)
@@ -152,7 +182,10 @@ $monospace: Monaco, Consolas, "Lucida Console", monospace !default;
 
 ```
 
+
+
 ## Add Notice
+
 - Refer to: https://www.youtube.com/watch?v=q0P3TSoVNDM&t=184s
 - In short:
 <div class="notice">
@@ -162,17 +195,27 @@ $monospace: Monaco, Consolas, "Lucida Console", monospace !default;
 </div>
 {: .notice--danger}
 
+
+
 ## Add Button
+
 [This is a button](https://google.com){: .btn .btn--danger}
 
-## Add Youtube
+
+
+## Add Youtube Clip
+
 - Actually, remove &t=xxs in id q0P3TSoVNDM&t=184s
 {% include video id="q0P3TSoVNDM" provider="youtube" %}
 
 
 
-## Insert Image
+## Add Image
 
 - Download typora https://typora.io/#linux
-- File > Preferences > Image > 'copy image to custom folder' > ../images/$(filename)
+- File > Preferences > Image > 'copy image to custom folder' > ../../images/$(filename)
+  - Or ../images (it depends on your _post file structure)
 - Drag and drop image to post
+- Edit absolute path to relative path like {{site.url}}
+  - {{site.url}}/images/{filename}
+
