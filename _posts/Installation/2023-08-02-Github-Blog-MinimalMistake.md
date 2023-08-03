@@ -164,3 +164,11 @@ $monospace: Monaco, Consolas, "Lucida Console", monospace !default;
 ## Add Youtube
 - Actually, remove &t=xxs in id q0P3TSoVNDM&t=184s
 {% include video id="q0P3TSoVNDM" provider="youtube" %}
+
+
+
+## Insert Image
+
+- Download typora https://typora.io/#linux
+- File > Preferences > Image > 'copy image to custom folder' > ../images/$(filename)
+- Drag and drop image to post
