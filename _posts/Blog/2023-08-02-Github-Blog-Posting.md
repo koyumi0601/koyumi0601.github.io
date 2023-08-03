@@ -27,23 +27,73 @@ search: true
 
 # Body
 
-## Add Category and Tag
+## Add Category
 
-*This is how to edit navigation bar like below*
-
-
+*Navigation bar above site*
 
 ![2023-08-03_13-34-5]({{site.url}}/images/2023-08-02-Github-Blog-Posting/2023-08-03_13-34-5.png)
 
 - Go to (local project path)/_config.yml
+
 - Undo comment
 
-![2023-08-03_13-12-Add-Category]({{site.url}}/images/2023-08-02-Github-Blog-Posting/2023-08-03_13-12-Add-Category.png)
+  ![2023-08-03_13-12-Add-Category]({{site.url}}/images/2023-08-02-Github-Blog-Posting/2023-08-03_13-12-Add-Category.png)
 
 - Make file (local project path)/_pages/category-archive.md
 
-![2023-08-03_13-23-Add-category-2]({{site.url}}/images/2023-08-02-Github-Blog-Posting/2023-08-03_13-23-Add-category-2.png)
+  ![2023-08-03_13-23-Add-category-2]({{site.url}}/images/2023-08-02-Github-Blog-Posting/2023-08-03_13-23-Add-category-2.png)
 
+  ```markdown
+  ---
+  title: "Category"
+  layout: categories
+  permalink: /categories/
+  author_profile: true
+  sidebar_main: true
+  ---
+  ```
+
+- Make file (local project path)/_pages/tag-archive.md
+
+  ![2023-08-03_13-23-Add-category-3]({{site.url}}/images/2023-08-02-Github-Blog-Posting/2023-08-03_13-23-Add-category-3.png)
+
+  ```markdown
+  ---
+  title: "Tag"
+  layout: tags
+  permalink: /tags/
+  author_profile: true
+  sidebar_main: true
+  ---
+  ```
+
+- Go to (local project path)/_data/navigation.yml
+
+- Add below lines
+
+  ```markdown
+  main:
+    - title: "Category"
+      url: /categories/
+    - title: "Tag"
+      url: /tags/
+    - title: "Search"
+      url: /search/
+  ```
+
+  ![2023-08-03_13-23-Add-category-4]({{site.url}}/images/2023-08-02-Github-Blog-Posting/2023-08-03_13-23-Add-category-4.png)
+
+- add navigation
+```yml
+main:
+  - title: "Category"
+    url: /categories/
+  - title: "Tag"
+    url: /tags/
+```
+3. _pages/category-archive.md
+- add folder _pages
+- add category-archive.md
 ```markdown
 ---
 title: "Category"
@@ -53,12 +103,8 @@ author_profile: true
 sidebar_main: true
 ---
 ```
-
-- Make file (local project path)/_pages/tag-archive.md
-
-![2023-08-03_13-23-Add-category-3]({{site.url}}/images/2023-08-02-Github-Blog-Posting/2023-08-03_13-23-Add-category-3.png)
-
-```markdown
+4. _pages/tag-archive.md
+```markdwon
 ---
 title: "Tag"
 layout: tags
@@ -68,88 +114,35 @@ sidebar_main: true
 ---
 ```
 
-- Go to (local project path)/_data/navigation.yml
-- Add below lines
-
-```markdown
-main:
-  - title: "Category"
-    url: /categories/
-  - title: "Tag"
-    url: /tags/
-  - title: "Search"
-    url: /search/
-```
-
-![2023-08-03_13-23-Add-category-4]({{site.url}}/images/2023-08-02-Github-Blog-Posting/2023-08-03_13-23-Add-category-4.png)
-
-- Go to (local project path)/_posts/(sample category name)/(sample post).md
-
-![2023-08-03_13-34-6]({{site.url}}/images/2023-08-02-Github-Blog-Posting/2023-08-03_13-34-6.png)
-
-- Add below lines
-
-```markdown
-categories: Blog
-tags: [Github, Blog, Template]
-```
-
-- Result
-
-![2023-08-03_13-46-7-result]({{site.url}}/images/2023-08-02-Github-Blog-Posting/2023-08-03_13-46-7-result.png)
-
 
 
 ## Add TOC (Table of Contents)
 
-*This is how to add table of contents like below*
-
-![2023-08-03_13-52-toc-result]({{site.url}}/images/2023-08-02-Github-Blog-Posting/2023-08-03_13-52-toc-result.png)
-
-- In post, write below line
-
-![2023-08-03_13-49-toc]({{site.url}}/images/2023-08-02-Github-Blog-Posting/2023-08-03_13-49-toc.png)
-
+- in post, write below line
 ```markdown
 toc: true
 ```
 
 
 
+## Add 404 Page Error
+
+- generate file _pages/404.md refer to test/_pages/404.md
+
+
+
 ## Disable/Enable Author Profile
 
-*This is how to disable author profile on the post*
-
-
-
 - in post, write below line
-
-![2023-08-03_13-55-authorprofile]({{site.url}}/images/2023-08-02-Github-Blog-Posting/2023-08-03_13-55-authorprofile.png)
-
-
-
 ```markdown
 author_profile: false
 ```
-
-![2023-08-03_13-55-authorprofile-disable]({{site.url}}/images/2023-08-02-Github-Blog-Posting/2023-08-03_13-55-authorprofile-disable.png)
-
-
-
-```markdown
-author_profile: true
-```
-
-![2023-08-03_13-55-authorprofile-enable]({{site.url}}/images/2023-08-02-Github-Blog-Posting/2023-08-03_13-55-authorprofile-enable.png)
 
 
 
 ## Add Sidebar
 
-- Add below lines in _data/navigation.yml
-
-![2023-08-03_14-13-sidebar]({{site.url}}/images/2023-08-02-Github-Blog-Posting/2023-08-03_14-13-sidebar.png)
-
+- add below lines in _data/navigation.yml
 ```yaml
 docs:
   - title: "대목차1"
@@ -166,26 +159,16 @@ docs:
       url: /tags/
 ```
 - in post, write below line
-
-![2023-08-03_14-13-sidebar-post]({{site.url}}/images/2023-08-02-Github-Blog-Posting/2023-08-03_14-13-sidebar-post.png)
-
 ```markdown
 sidebar:
     nav: "docs"
 ```
-
-- Result
-
-![2023-08-03_14-13-sidebar-result]({{site.url}}/images/2023-08-02-Github-Blog-Posting/2023-08-03_14-13-sidebar-result.png)
 
 
 
 ## Add Search
 
 - add file _pages/search.md
-
-![2023-08-03_14-29-search]({{site.url}}/images/2023-08-02-Github-Blog-Posting/2023-08-03_14-29-search.png)
-
 ```markdown
 ---
 title: Search
@@ -194,9 +177,6 @@ permalink: /search/
 ---
 ```
 - edit navigation.yml
-
-![2023-08-03_14-29-search-nav]({{site.url}}/images/2023-08-02-Github-Blog-Posting/2023-08-03_14-29-search-nav.png)
-
 ```markdown
 main:
   - title: "Category"
@@ -207,20 +187,9 @@ main:
     url: /search/
 ```
 - in post, write below line
-
-![2023-08-03_14-29-search-post]({{site.url}}/images/2023-08-02-Github-Blog-Posting/2023-08-03_14-29-search-post.png)
-
 ```markdown
-search: true
+search: true # default true
 ```
-
-- Result
-
-![2023-08-03_14-29-search-nav-ui]({{site.url}}/images/2023-08-02-Github-Blog-Posting/2023-08-03_14-29-search-nav-ui.png)
-
-![2023-08-03_14-29-search-result-in-searchpage]({{site.url}}/images/2023-08-02-Github-Blog-Posting/2023-08-03_14-29-search-result-in-searchpage.png)
-
-
 
 
 
@@ -263,6 +232,8 @@ $monospace: Monaco, Consolas, "Lucida Console", monospace !default;
 
 
 
+
+
 ## Add Notice
 
 - Refer to: https://www.youtube.com/watch?v=q0P3TSoVNDM&t=184s
@@ -273,6 +244,12 @@ $monospace: Monaco, Consolas, "Lucida Console", monospace !default;
     </ul>
 </div>
 {: .notice--danger}
+
+
+
+## Add Button
+
+[This is a button](https://google.com){: .btn .btn--danger}
 
 
 
@@ -297,10 +274,3 @@ $monospace: Monaco, Consolas, "Lucida Console", monospace !default;
 # Reference
 
 {% include video id="3UOh0rKlxjg" provider="youtube" %}
-
-Author profile, Sidebar, Search
-
-{% include video id="AONVKTeeaWY" provider="youtube" %}
-
-
-

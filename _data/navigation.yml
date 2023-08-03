@@ -19,6 +19,25 @@ docs:
       url: /categories/
     - title: "Tag"
       url: /tags/
+  - title: "Programming"
+  - children:
+    - title: "Blog"
+    - url: /Blog/
+    - title: "Python"
+    - url: /Python/
+  - title: "Image Processing"
+  - children:
+    - title: "OpenCV-Python"
+  - title: "Radar System"
+  - children:
+    - title: "Radar Systems Analysis and Design Using MATLAB"
+  - title: "Big Data"
+  - children:
+    - title: "Big Data - Python"
+  - title: "Machine Learning"
+  - children:
+    - title: "Machine Learning"
+
   # - title: "Quick-Start Guide"
   #   url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
   # - title: "About"
