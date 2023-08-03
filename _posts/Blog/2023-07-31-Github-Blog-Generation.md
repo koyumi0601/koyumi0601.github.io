@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "Generate github blog"
-categories: Blog
+categories: blog
 tags: [Github, Blog, Installation]
 toc: true
 author_profile: false

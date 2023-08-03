@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "Install Github Desktop"
-categories: Blog
+categories: setup
 tags: [Github Desktop, Blog, Ubuntu, Installation]
 toc: true
 author_profile: false

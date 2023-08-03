@@ -9,6 +9,8 @@ main:
 docs:
   - title: Electrical Engineering
     children:
+      - title: "Machine Learning"
+        url: /categories/machinelearning
       - title: "Image Signal Processing"
         url: /categories/imagesignalprocessing
       - title: "Digital Signal Processing"
@@ -51,6 +53,8 @@ docs:
         url: /categories/datastructure        
   - title: Others
     children:
+      - title: "Setup"
+        url: /categories/setup
       - title: "Blog"
         url: /categories/blog
       - title: "MS Office"

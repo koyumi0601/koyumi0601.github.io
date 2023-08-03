@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "How to install powershell"
-categories: Setup
+categories: setup
 tags: [Power Shell, Ubuntu, Installation]
 toc: true
 author_profile: false

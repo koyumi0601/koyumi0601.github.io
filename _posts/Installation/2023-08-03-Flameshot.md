@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "Install Flameshot"
-categories: Blog
+categories: setup
 tags: [Flameshot, Ubuntu, Installation]
 toc: true
 author_profile: false
