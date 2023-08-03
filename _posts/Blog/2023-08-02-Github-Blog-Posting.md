@@ -188,6 +188,14 @@ https://sunghwan7330.github.io/blog/blog_sidebar/
 
 
 
+### Add sidebar on main page
+
+- Go to index.html
+
+![2023-08-03_17-49-home-sidebar]({{site.url}}/images/2023-08-02-Github-Blog-Posting/2023-08-03_17-49-home-sidebar.png)
+
+
+
 ## Add Search
 
 - add file _pages/search.md
