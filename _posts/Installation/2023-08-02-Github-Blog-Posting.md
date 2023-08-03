@@ -9,25 +9,27 @@ sidebar:
     nav: "docs"
 search: true
 ---
-*Tips to post on Github blog using template*
+
+
+# Purpose
+
+*This post is to record tips to post on Github blog using template; minimal mistake*
 
 
 
-# Template - Minimal Mistake
+# Terminology
+
+***Minimal Mistake** - a popular template among Jekyll themes, widely used for creating blogs and portfolios*
+
+***Jekyll** - a static site generator developed in Ruby, used to create static websites using simple Markdown syntax and HTML/CSS*
 
 
 
-## Add category
+# Body
 
+## Add Category
 
-
-- Refer to:
-
-    {% include video id="3UOh0rKlxjg" provider="youtube" %}
-
-    
-
-- In short:
+- Summary:
 
 1. _config.yml
 - 주석 취소
@@ -219,3 +221,8 @@ $monospace: Monaco, Consolas, "Lucida Console", monospace !default;
 - Edit absolute path to relative path like {{site.url}}
   - {{site.url}}/images/{filename}
 
+
+
+# Reference
+
+{% include video id="3UOh0rKlxjg" provider="youtube" %}
