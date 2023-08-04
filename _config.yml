@@ -16,7 +16,7 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Records"
+title                    : "Study Records"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Your Name"
@@ -106,9 +106,9 @@ analytics:
 author:
   name             : "Ko YuMi"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am an **amazing** person."
+  bio              : "Ultrasound Engineer"
   location         : "South Korea"
-  email            :
+  email            : koyumi0601@gmail.com
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"

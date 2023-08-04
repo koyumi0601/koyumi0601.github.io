@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "How to post on Github blog using template"
+title: "Posting on Github blog using template"
 categories: blog
 tags: [Github, Blog, Template]
 toc: true
@@ -182,17 +182,25 @@ sidebar:
 
 ![2023-08-03_14-13-sidebar-result]({{site.url}}/images/2023-08-02-Github-Blog-Posting/2023-08-03_14-13-sidebar-result.png)
 
+
+
+
+
 ### Sidebar using categories
 
 https://sunghwan7330.github.io/blog/blog_sidebar/
 
 
 
-### Add sidebar on main page
+### Add sidebar on other page
 
-- Go to index.html
+- Home: index.html
 
 ![2023-08-03_17-49-home-sidebar]({{site.url}}/images/2023-08-02-Github-Blog-Posting/2023-08-03_17-49-home-sidebar.png)
+
+- each page: _pages/*.md
+
+![2023-08-04_10-59-sidebar-search]({{site.url}}/images/2023-08-02-Github-Blog-Posting/2023-08-04_10-59-sidebar-search.png)
 
 
 
