@@ -20,10 +20,10 @@ search: true
 ```yml
 # Analytics
 analytics:
-  provider               : "google" # false (default), "google", "google-universal", "google-gtag", "custom"
+  provider               : "google-gtag" # false (default), "google", "google-universal", "google-gtag", "custom"
   google:
-    tracking_id          :
-    anonymize_ip         : # true, false (default)
+    tracking_id          : "your id generated from google analytics"
+    anonymize_ip         : false # true, false (default)
 ```
 
 
