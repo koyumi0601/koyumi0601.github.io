@@ -31,11 +31,11 @@ author_profile: true
 | Redwood Transducer Integration and Optimization | Siemens Heathineers Korea | Image/Signal Processing, Acoustics | 2012.Feb - Current |
 
 
-### Personal Projects(Including Student)
+### Personal Projects
 
 |                      Title                      |          Company          |               Skills               | Time               |
 |:-----------------------------------------------:|:-------------------------:|:----------------------------------:|--------------------|
-| Redwood Transducer Integration and Optimization | Siemens Heathineers Korea | Image/Signal Processing, Acoustics | 2012.Feb - Current |
+|                 Machine Learning                |     Personal Project      |       Image/Signal Processing      | 2023.Jul - Current |
 
 
 # Awards / Grants
