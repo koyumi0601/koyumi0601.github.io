@@ -2,7 +2,7 @@
 layout: single
 title: "How to add table on a post"
 categories: blog
-tags: [Github, Blog, Template]
+tags: [Blog, Markdown]
 toc: true
 author_profile: false
 sidebar:
@@ -23,3 +23,7 @@ search: true
 |  001   | Kim  |  3   |     70     |     6      |
 |  002   | Lee  |  8   |    140     |     20     |
 |  003   | Park |  15  |    170     |     65     |
+
+# Reference
+
+- Blog [https://jonsyou.tistory.com/18](https://jonsyou.tistory.com/18)

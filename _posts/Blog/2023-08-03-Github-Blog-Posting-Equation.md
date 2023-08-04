@@ -2,7 +2,7 @@
 layout: single
 title: "How to add equation on a post"
 categories: blog
-tags: [Github, Blog, Template]
+tags: [Blog, Markdown]
 toc: true
 author_profile: false
 sidebar:
