@@ -300,21 +300,6 @@ $monospace: Monaco, Consolas, "Lucida Console", monospace !default;
 
 
 
-## Add Youtube Clip
-
-- Actually, remove &t=xxs in id q0P3TSoVNDM&t=184s
-{% include video id="q0P3TSoVNDM" provider="youtube" %}
-
-
-
-## Add Image
-
-- Download typora [https://typora.io/#linux](https://typora.io/#linux)
-- File > Preferences > Image > 'copy image to custom folder' > ../../images/$(filename)
-  - Or ../images (it depends on your _post file structure)
-- Drag and drop image to post
-- Edit absolute path to relative path like ![2023-08-03_15-13-image]({{site.url}}/images/2023-08-02-Github-Blog-Posting/2023-08-03_15-13-image.png)
-- Edit absolute path to relative path like ![2023-08-03_15-13-image]({{site.url}}/images/2023-08-02-Github-Blog-Posting/2023-08-03_15-13-image.png)
 
 
 

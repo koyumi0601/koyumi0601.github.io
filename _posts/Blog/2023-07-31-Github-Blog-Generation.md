@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Generate github blog"
+title: "How to generate github blog"
 categories: blog
 tags: [Github, Blog, Installation]
 toc: true
@@ -18,7 +18,7 @@ search: true
     - Go to template link https://github.com/topics/jekyll-theme
     - Folk
     - Change repository name to (my ID).github.io
-  
+
 ## Enter github blog
 - https://koyumi0601.github.io/
 
