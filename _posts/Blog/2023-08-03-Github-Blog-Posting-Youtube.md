@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "How to add youtube on a post"
+title: "How to add youtube clip on a post"
 categories: blog
 tags: [Blog, Markdown]
 toc: true
@@ -12,7 +12,7 @@ search: true
 
 # Work Instruction
 
-- Copy youtube id from clip except time(&t=xxs)
+- Copy youtube id 'q0P3TSoVNDM' from clip except time(&t=186s)
 
 ![2023-08-04_16-11-youtubeid]({{site.url}}/images/2023-08-03-Github-Blog-Posting-Youtube/2023-08-04_16-11-youtubeid.png)
 
