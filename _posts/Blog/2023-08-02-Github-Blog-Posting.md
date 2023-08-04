@@ -248,45 +248,6 @@ search: true
 
 
 
-## Change Font
-
-- Go to https://fonts.google.com/
-- Select Korean
-- Select Noto Sans Korean (example)
-- View Selected family
-- See 'Use on the web'
-- Select @import
-- Copy @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap');
-- Go to _sass/minimal-mistakes.scss
-- Add below lines
-```scss
-/* Google fonts */
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap');
-```
-- Go to google font and check font family name in 'CSS rules to specify families'
-- Go to _sass/minimal-mistakes/_variables.scss
-- Edit like below
-```scss
-/* system typefaces */
-$serif: Georgia, Times, serif !default;
-$sans-serif: -apple-system, BlinkMacSystemFont, "Noto Sans KR", "Roboto", "Segoe UI",
-  "Helvetica Neue", "Lucida Grande", Arial, sans-serif !default;
-$monospace: Monaco, Consolas, "Lucida Console", monospace !default;
-
-```
-
-
-
-## Change Font Size
-
-- Go to (local project folder)/_sass_minimal-mistakes/_reset.scss
-
-- Change font-size: 16px; to 10px; and others
-
-  ![2023-08-03_13-00-font-size-change]({{site.url}}/images/2023-08-02-Github-Blog-Posting/2023-08-03_13-00-font-size-change.png)
-
-
-
 
 
 
