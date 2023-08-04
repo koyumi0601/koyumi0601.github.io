@@ -18,18 +18,34 @@ author_profile: true
 
 ##
 
-Time Description Company
-2012-
+|       Period       |          Company          |         Role        |
+|:------------------:|:-------------------------:|:-------------------:|
+| 2012.Feb - Current | Siemens Heathineers Korea | Ultrasound Engineer |
 
-## Project / Role
-Title	Company	Skills	Time
+## Project
 
-Personal Projects(Including Student)
-Title	Skills	Time
+### Company
+
+|                      Title                      |          Company          |               Skills               | Time               |
+|:-----------------------------------------------:|:-------------------------:|:----------------------------------:|--------------------|
+| Redwood Transducer Integration and Optimization | Siemens Heathineers Korea | Image/Signal Processing, Acoustics | 2012.Feb - Current |
+
+
+### Personal Projects(Including Student)
+
+|                      Title                      |          Company          |               Skills               | Time               |
+|:-----------------------------------------------:|:-------------------------:|:----------------------------------:|--------------------|
+| Redwood Transducer Integration and Optimization | Siemens Heathineers Korea | Image/Signal Processing, Acoustics | 2012.Feb - Current |
+
 
 # Awards / Grants
-Title	Time
+
+-
 
 # Publication
 
+-
+
 # Education
+
+- 
