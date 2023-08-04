@@ -307,7 +307,7 @@ $monospace: Monaco, Consolas, "Lucida Console", monospace !default;
 
 
 
-## Add Image2
+## Add Image
 
 - Download typora [https://typora.io/#linux](https://typora.io/#linux)
 - File > Preferences > Image > 'copy image to custom folder' > ../../images/$(filename)
@@ -320,13 +320,46 @@ $monospace: Monaco, Consolas, "Lucida Console", monospace !default;
 
 ## Add Equation
 
-- Go to _config.yml
-- Add
-```yml
-
-```
+- Add file _includes/mathjax_support.html
 
 
+- Edit file _scripts.html
+
+
+- Edit file _layouts/default.html
+
+- Conversion site: [https://latex.codecogs.com/eqneditor/editor.php](https://latex.codecogs.com/eqneditor/editor.php)
+
+![2023-08-04_15-18-eq]({{site.url}}/images/2023-08-02-Github-Blog-Posting/2023-08-04_15-18-eq.png)
+
+- Wrap equation with &&  && like below
+
+![2023-08-04_15-29-equation3]({{site.url}}/images/2023-08-02-Github-Blog-Posting/2023-08-04_15-29-equation3.png)
+
+- Result
+
+$$
+\begin{matrix}
+a & b & c \\
+d & e & f
+\end{matrix}
+$$
+
+
+
+## Add Table
+
+- Conversion site: [https://www.tablesgenerator.com/markdown_tables](https://www.tablesgenerator.com/markdown_tables)
+
+![2023-08-04_15-15-table]({{site.url}}/images/2023-08-02-Github-Blog-Posting/2023-08-04_15-15-table.png)
+
+- Result
+
+| **ID** | Name | Age  | Height(cm) | Weight(kg) |
+| :----: | :--: | :--: | :--------: | :--------: |
+|  001   | Kim  |  3   |     70     |     6      |
+|  002   | Lee  |  8   |    140     |     20     |
+|  003   | Park |  15  |    170     |     65     |
 
 # Reference
 
@@ -342,6 +375,7 @@ Sunghwan's blog [https://sunghwan7330.github.io/blog/blog_sidebar/](https://sung
 
 공부하는 식빵맘 blog [https://ansohxxn.github.io/blog/category/](https://ansohxxn.github.io/blog/category/)
 
-Math
+Equation
+[https://an-seunghwan.github.io/github.io/mathjax-error/](https://an-seunghwan.github.io/github.io/mathjax-error/)
 
-[https://ingu627.github.io/git_blog/mathjax_in_md/](https://ingu627.github.io/git_blog/mathjax_in_md/)
+[https://ashki23.github.io/markdown-latex.html](https://ashki23.github.io/markdown-latex.html)
