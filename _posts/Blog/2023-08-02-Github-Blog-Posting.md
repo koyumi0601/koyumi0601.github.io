@@ -287,19 +287,6 @@ $monospace: Monaco, Consolas, "Lucida Console", monospace !default;
 
 
 
-## Add Notice
-
-- Refer to: https://www.youtube.com/watch?v=q0P3TSoVNDM&t=184s
-- In short:
-<div class="notice">
-    <ul>
-        <li> Some notice </li>
-    </ul>
-</div>
-{: .notice--danger}
-
-
-
 
 
 
