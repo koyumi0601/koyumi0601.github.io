@@ -318,49 +318,6 @@ $monospace: Monaco, Consolas, "Lucida Console", monospace !default;
 
 
 
-## Add Equation
-
-- Add file _includes/mathjax_support.html
-
-
-- Edit file _scripts.html
-
-
-- Edit file _layouts/default.html
-
-- Conversion site: [https://latex.codecogs.com/eqneditor/editor.php](https://latex.codecogs.com/eqneditor/editor.php)
-
-![2023-08-04_15-18-eq]({{site.url}}/images/2023-08-02-Github-Blog-Posting/2023-08-04_15-18-eq.png)
-
-- Wrap equation with &&  && like below
-
-![2023-08-04_15-29-equation3]({{site.url}}/images/2023-08-02-Github-Blog-Posting/2023-08-04_15-29-equation3.png)
-
-- Result
-
-$$
-\begin{matrix}
-a & b & c \\
-d & e & f
-\end{matrix}
-$$
-
-
-
-## Add Table
-
-- Conversion site: [https://www.tablesgenerator.com/markdown_tables](https://www.tablesgenerator.com/markdown_tables)
-
-![2023-08-04_15-15-table]({{site.url}}/images/2023-08-02-Github-Blog-Posting/2023-08-04_15-15-table.png)
-
-- Result
-
-| **ID** | Name | Age  | Height(cm) | Weight(kg) |
-| :----: | :--: | :--: | :--------: | :--------: |
-|  001   | Kim  |  3   |     70     |     6      |
-|  002   | Lee  |  8   |    140     |     20     |
-|  003   | Park |  15  |    170     |     65     |
-
 # Reference
 
 {% include video id="3UOh0rKlxjg" provider="youtube" %}
