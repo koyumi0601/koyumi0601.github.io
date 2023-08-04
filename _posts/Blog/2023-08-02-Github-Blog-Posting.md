@@ -204,48 +204,6 @@ https://sunghwan7330.github.io/blog/blog_sidebar/
 
 
 
-## Add Search
-
-- add file _pages/search.md
-
-![2023-08-03_14-29-search]({{site.url}}/images/2023-08-02-Github-Blog-Posting/2023-08-03_14-29-search.png)
-
-```markdown
----
-title: Search
-layout: search
-permalink: /search/
----
-```
-- edit navigation.yml
-
-![2023-08-03_14-29-search-nav]({{site.url}}/images/2023-08-02-Github-Blog-Posting/2023-08-03_14-29-search-nav.png)
-
-```markdown
-main:
-  - title: "Category"
-    url: /categories/
-  - title: "Tag"
-    url: /tags/
-  - title: "Search"
-    url: /search/
-```
-- in post, write below line
-
-![2023-08-03_14-29-search-post]({{site.url}}/images/2023-08-02-Github-Blog-Posting/2023-08-03_14-29-search-post.png)
-
-```markdown
-search: true
-```
-
-- Result
-
-![2023-08-03_14-29-search-nav-ui]({{site.url}}/images/2023-08-02-Github-Blog-Posting/2023-08-03_14-29-search-nav-ui.png)
-
-![2023-08-03_14-29-search-result-in-searchpage]({{site.url}}/images/2023-08-02-Github-Blog-Posting/2023-08-03_14-29-search-result-in-searchpage.png)
-
-
-
 
 
 
