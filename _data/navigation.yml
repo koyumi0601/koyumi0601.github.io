@@ -8,7 +8,6 @@ main:
     url: /tags/
   - title: "Search"
     url: /search/
-
 docs:
   - title: Electrical Engineering
     children:
