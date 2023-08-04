@@ -10,6 +10,10 @@ sidebar:
 search: true
 ---
 
+*Simplified Git management tool*
+
+# Work Instruction
+
 # Install Github desktop in Ubuntu
 - Refer to: 
     - https://davelogs.tistory.com/55 

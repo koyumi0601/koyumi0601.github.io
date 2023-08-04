@@ -9,7 +9,10 @@ sidebar:
     nav: "docs"
 search: true
 ---
-*Screen shot tool*
+
+*Screenshot tool*
+
+# Work Instruction
 
 
 # Install Flameshot

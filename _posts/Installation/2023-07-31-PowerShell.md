@@ -9,6 +9,11 @@ sidebar:
     nav: "docs"
 search: true
 ---
+
+*Command-line tool available on various platforms*
+
+# Work Instruction
+
 # add PowerShell repository
 ```bash
 wget -q https://packages.microsoft.com/config/ubuntu/$(lsb_release -rs)/packages-microsoft-prod.deb -O packages-microsoft-prod.deb

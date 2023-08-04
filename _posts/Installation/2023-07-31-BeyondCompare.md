@@ -9,6 +9,11 @@ sidebar:
     nav: "docs"
 search: true
 ---
+
+*File and folder comparison tool*
+
+# Work Instruction
+
 # Linux license
 ## Terminal Installation
 - Refer to:
