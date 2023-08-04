@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "How to install Beyond Compare (Linux)"
+title: "How to install Beyond Compare in Ubuntu"
 categories: setup
 tags: [Beyond Compare, Ubuntu, Installation]
 toc: true

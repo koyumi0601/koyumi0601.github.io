@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Install Flameshot"
+title: "How to install Flameshot in Ubuntu"
 categories: setup
 tags: [Flameshot, Ubuntu, Installation]
 toc: true

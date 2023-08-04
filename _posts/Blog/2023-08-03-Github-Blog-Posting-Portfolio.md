@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "How to add portfoloi(single page in main)"
+title: "How to add portfolio(single page in main navigation)"
 categories: blog
 tags: [Github, Blog, Template]
 toc: true
@@ -35,11 +35,7 @@ author_profile: true
 ---
 ```
 
-- Fill like post below area in portfolio.md
-
-- Result
-
-
+- Fill in anything like post below area in portfolio.md
 
 
 # Reference

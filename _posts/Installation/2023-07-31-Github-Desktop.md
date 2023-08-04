@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Install Github Desktop"
+title: "How to install Github Desktop in Ubuntu"
 categories: setup
 tags: [Github Desktop, Blog, Ubuntu, Installation]
 toc: true

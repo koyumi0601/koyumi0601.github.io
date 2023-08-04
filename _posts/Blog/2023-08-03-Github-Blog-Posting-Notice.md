@@ -12,8 +12,7 @@ search: true
 
 # Work Instruction
 
-- Wrap paragraph with class notice
-- add at the end of the paragraph
+- Wrap paragraph with class(notice) like below
 
 ```html
 <div class="notice">
@@ -21,10 +20,6 @@ search: true
     <li> Some notice 2 </li>
 </div>{: .notice--danger}
 ```
-
-
-
-
 
 
 - Result
