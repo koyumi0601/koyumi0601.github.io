@@ -100,22 +100,6 @@ tags: [Github, Blog, Template]
 
 
 
-## Add TOC (Table of Contents)
-
-*This is how to add table of contents like below*
-
-![2023-08-03_13-52-toc-result]({{site.url}}/images/2023-08-02-Github-Blog-Posting/2023-08-03_13-52-toc-result.png)
-
-- In post, write below line
-
-![2023-08-03_13-49-toc]({{site.url}}/images/2023-08-02-Github-Blog-Posting/2023-08-03_13-49-toc.png)
-
-```markdown
-toc: true
-```
-
-
-
 ## Disable/Enable Author Profile
 
 *This is how to disable author profile on the post*
