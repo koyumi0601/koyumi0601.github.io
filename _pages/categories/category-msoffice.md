@@ -2,8 +2,10 @@
 title: "MS Office"
 layout: archive
 permalink: categories/msoffice
-author_profile: true
+author_profile: false
 types: posts
+sidebar:
+  nav: "docs"
 ---
 
 {% assign posts = site.categories['msoffice']%}

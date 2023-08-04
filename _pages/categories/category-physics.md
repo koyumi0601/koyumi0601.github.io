@@ -2,8 +2,10 @@
 title: "Physics"
 layout: archive
 permalink: categories/physics
-author_profile: true
+author_profile: false
 types: posts
+sidebar:
+  nav: "docs"
 ---
 
 {% assign posts = site.categories['physics']%}

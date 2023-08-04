@@ -2,8 +2,10 @@
 title: "Economics"
 layout: archive
 permalink: categories/economics
-author_profile: true
+author_profile: false
 types: posts
+sidebar:
+  nav: "docs"
 ---
 
 {% assign posts = site.categories['economics']%}

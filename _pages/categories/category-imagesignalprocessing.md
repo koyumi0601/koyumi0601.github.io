@@ -2,8 +2,10 @@
 title: "Image Signal Processing"
 layout: archive
 permalink: categories/imagesignalprocessing
-author_profile: true
+author_profile: false
 types: posts
+sidebar:
+  nav: "docs"
 ---
 
 {% assign posts = site.categories['imagesignalprocessing']%}

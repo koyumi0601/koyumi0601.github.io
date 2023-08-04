@@ -2,8 +2,10 @@
 title: "Linear Algebra"
 layout: archive
 permalink: categories/linearalgebra
-author_profile: true
+author_profile: false
 types: posts
+sidebar:
+  nav: "docs"
 ---
 
 {% assign posts = site.categories['linearalgebra']%}

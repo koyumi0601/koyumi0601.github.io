@@ -2,8 +2,10 @@
 title: "Mathmatics"
 layout: archive
 permalink: categories/mathmatics
-author_profile: true
+author_profile: false
 types: posts
+sidebar:
+  nav: "docs"
 ---
 
 {% assign posts = site.categories['mathmatics']%}

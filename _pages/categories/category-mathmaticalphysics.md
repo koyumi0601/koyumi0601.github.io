@@ -2,8 +2,10 @@
 title: "Mathmatical Physics"
 layout: archive
 permalink: categories/mathmaticalphysics
-author_profile: true
+author_profile: false
 types: posts
+sidebar:
+  nav: "docs"
 ---
 
 {% assign posts = site.categories['mathmaticalphysics']%}

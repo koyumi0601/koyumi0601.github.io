@@ -2,8 +2,10 @@
 title: "Python"
 layout: archive
 permalink: categories/python
-author_profile: true
+author_profile: false
 types: posts
+sidebar:
+  nav: "docs"
 ---
 
 {% assign posts = site.categories['python']%}

@@ -2,8 +2,10 @@
 title: "House Chores"
 layout: archive
 permalink: categories/housechores
-author_profile: true
+author_profile: false
 types: posts
+sidebar:
+  nav: "docs"
 ---
 
 {% assign posts = site.categories['housechores']%}

@@ -2,8 +2,10 @@
 title: "Book Review"
 layout: archive
 permalink: categories/book
-author_profile: true
+author_profile: false
 types: posts
+sidebar:
+  nav: "docs"
 ---
 
 {% assign posts = site.categories['book']%}

@@ -2,8 +2,10 @@
 title: "Electrical Circuit"
 layout: archive
 permalink: categories/electricalcircuit
-author_profile: true
+author_profile: false
 types: posts
+sidebar:
+  nav: "docs"
 ---
 
 {% assign posts = site.categories['electricalcircuit']%}

@@ -2,8 +2,10 @@
 title: "Probability"
 layout: archive
 permalink: categories/probability
-author_profile: true
+author_profile: false
 types: posts
+sidebar:
+  nav: "docs"
 ---
 
 {% assign posts = site.categories['probability']%}

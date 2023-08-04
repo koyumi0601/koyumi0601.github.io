@@ -2,8 +2,10 @@
 title: "Tensor"
 layout: archive
 permalink: categories/tensor
-author_profile: true
+author_profile: false
 types: posts
+sidebar:
+  nav: "docs"
 ---
 
 {% assign posts = site.categories['tensor']%}

@@ -2,8 +2,10 @@
 title: "SQL"
 layout: archive
 permalink: categories/sql
-author_profile: true
+author_profile: false
 types: posts
+sidebar:
+  nav: "docs"
 ---
 
 {% assign posts = site.categories['sql']%}

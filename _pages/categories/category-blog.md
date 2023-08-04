@@ -2,8 +2,10 @@
 title: "Blog"
 layout: archive
 permalink: categories/blog
-author_profile: true
+author_profile: false
 types: posts
+sidebar:
+  nav: "docs"
 ---
 
 {% assign posts = site.categories['blog']%}

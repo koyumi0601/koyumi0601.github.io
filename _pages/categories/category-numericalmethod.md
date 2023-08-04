@@ -2,8 +2,10 @@
 title: "Numerical Method"
 layout: archive
 permalink: categories/numericalmethod
-author_profile: true
+author_profile: false
 types: posts
+sidebar:
+  nav: "docs"
 ---
 
 {% assign posts = site.categories['numericalmethod']%}
