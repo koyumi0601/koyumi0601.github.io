@@ -100,31 +100,7 @@ tags: [Github, Blog, Template]
 
 
 
-## Disable/Enable Author Profile
 
-*This is how to disable author profile on the post*
-
-
-
-- in post, write below line
-
-![2023-08-03_13-55-authorprofile]({{site.url}}/images/2023-08-02-Github-Blog-Posting/2023-08-03_13-55-authorprofile.png)
-
-
-
-```markdown
-author_profile: false
-```
-
-![2023-08-03_13-55-authorprofile-disable]({{site.url}}/images/2023-08-02-Github-Blog-Posting/2023-08-03_13-55-authorprofile-disable.png)
-
-
-
-```markdown
-author_profile: true
-```
-
-![2023-08-03_13-55-authorprofile-enable]({{site.url}}/images/2023-08-02-Github-Blog-Posting/2023-08-03_13-55-authorprofile-enable.png)
 
 
 

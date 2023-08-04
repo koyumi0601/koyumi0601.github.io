@@ -27,7 +27,7 @@ permalink: /search/
 ---
 ```
 
-- Edit navigation.yml
+- Edit _data/navigation.yml
 
 ![2023-08-03_14-29-search-nav]({{site.url}}/images/2023-08-02-Github-Blog-Posting/2023-08-03_14-29-search-nav.png)
 
