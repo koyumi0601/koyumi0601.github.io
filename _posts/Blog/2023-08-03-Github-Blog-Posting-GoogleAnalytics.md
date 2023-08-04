@@ -15,7 +15,10 @@ search: true
 
 # Work Instruction
 
+- Go to google analytics [https://analytics.google.com/analytics/web](https://analytics.google.com/analytics/web)
+- Get google analytic Id
 - Go to _config.yml
+- Edit provider, tracking_id, anonymize_ip like below
 
 ```yml
 # Analytics
@@ -26,7 +29,7 @@ analytics:
     anonymize_ip         : false # true, false (default)
 ```
 
-
+- Go to google analytics web and check report
 
 
 
