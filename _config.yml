@@ -303,3 +303,4 @@ defaults:
       related: true
       sidebar:
         nav: "docs"
+      # use_math: true

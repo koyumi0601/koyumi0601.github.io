@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Posting on Github blog using template"
+title: "How to post on Github blog using template"
 categories: blog
 tags: [Github, Blog, Template]
 toc: true
@@ -307,13 +307,26 @@ $monospace: Monaco, Consolas, "Lucida Console", monospace !default;
 
 
 
-## Add Image
+## Add Image2
 
 - Download typora [https://typora.io/#linux](https://typora.io/#linux)
 - File > Preferences > Image > 'copy image to custom folder' > ../../images/$(filename)
   - Or ../images (it depends on your _post file structure)
 - Drag and drop image to post
 - Edit absolute path to relative path like ![2023-08-03_15-13-image]({{site.url}}/images/2023-08-02-Github-Blog-Posting/2023-08-03_15-13-image.png)
+- Edit absolute path to relative path like ![2023-08-03_15-13-image]({{site.url}}/images/2023-08-02-Github-Blog-Posting/2023-08-03_15-13-image.png)
+
+
+
+## Add Equation
+
+- Go to _config.yml
+- Add
+```yml
+
+```
+
+
 
 # Reference
 
@@ -327,3 +340,8 @@ Sidebar (by categories)
 
 Sunghwan's blog [https://sunghwan7330.github.io/blog/blog_sidebar/](https://sunghwan7330.github.io/blog/blog_sidebar/)
 
+공부하는 식빵맘 blog [https://ansohxxn.github.io/blog/category/](https://ansohxxn.github.io/blog/category/)
+
+Math
+
+[https://ingu627.github.io/git_blog/mathjax_in_md/](https://ingu627.github.io/git_blog/mathjax_in_md/)
