@@ -1,5 +1,5 @@
 ---
-title: "Book Review"
+title: "Book"
 layout: archive
 permalink: categories/book
 author_profile: false
