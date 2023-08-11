@@ -1,11 +1,16 @@
+---
 layout: single
 title: "readITzine #5, #6"
-
 categories: book
 tags: [book, essay]
 toc: true
-
+author_profile: false
+sidebar:
+    nav: "docs"
+search: true
 ---
+
+
 
 # readITzine #5, #6
 *도서 추천 및 기억에 남는 문구*
