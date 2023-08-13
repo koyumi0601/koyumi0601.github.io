@@ -36,12 +36,15 @@ find . -type file -name "*.json" # find *.json files in current directory
 find . -type directory -name "*2" # find * directory named *2 in current directory
 which # find location of installed application
 touch new_file1.txt # generate file
+chmod 777 new_file1.txt # change permission read, write and execution for all user
 cat new_file1.txt # print 1st line
 echo "hello world" > new_file3.txt # print "hello world to new_file3.txt" (overwrite)
 echo "goodbye world" >> new_file3.txt # append
 mkdir dir3 # make directory
 mkdir -p dir4/subdir1
 ```
+
+
 
 - File
 
