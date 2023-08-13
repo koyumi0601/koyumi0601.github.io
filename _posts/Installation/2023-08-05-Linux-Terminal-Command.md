@@ -74,6 +74,11 @@ sudo su
 # password
 ```
 
+- super user permission 2
+```bash
+sudo usermod -aG docker $USER
+sudo reboot
+```
 
 
 
