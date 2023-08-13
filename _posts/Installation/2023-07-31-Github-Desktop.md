@@ -15,6 +15,7 @@ search: true
 # Work Instruction
 
 - Install git
+
 ```bash
 sudo apt install git
 ```
