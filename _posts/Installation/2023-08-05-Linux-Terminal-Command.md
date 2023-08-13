@@ -68,7 +68,11 @@ cd $MY_DIR # how to use; $MY_DIR
 unset $MY_DIR # unset
 ```
 
-
+- super user permission
+```bash
+sudo su
+# password
+```
 
 
 
