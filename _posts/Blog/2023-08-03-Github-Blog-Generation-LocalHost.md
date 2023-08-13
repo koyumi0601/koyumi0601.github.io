@@ -22,6 +22,7 @@ search: true
 
 ```bash
 sudo apt-get install ruby-dev
+sudo gem install bundler
 sudo bundle install
 ```
 - Clone target repository
