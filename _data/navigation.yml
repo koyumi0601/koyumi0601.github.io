@@ -13,6 +13,8 @@ docs:
     children:
       - title: "Machine Learning"
         url: /categories/machinelearning
+      - title: "Data Analysis"
+        url: /categories/dataanalysis
       - title: "Image Signal Processing"
         url: /categories/imagesignalprocessing
       - title: "Digital Signal Processing"
