@@ -47,6 +47,7 @@ e = 0x12A # hexadecimal
 ```
 
 - 숫자형 연산
+*숫자형 연산이 속도가 빠르다*
 
 ```py
 a + b # 합
@@ -134,3 +135,30 @@ t1[0] = 2 # error. 리스트와는 다르게, 튜플은 값을 변경할 수 없
 - dictionary
 *key: value*
 
+```py
+dic = {'name': 'Hong', 'phone': '01012345678', 'birth': '0814'} # generate dictionary
+dic['pet'] = 'dog' # add element
+del dic['pet'] # delete element
+dic['name'] # get element
+dic.keys() # 
+list(dic.keys()) # list of keys
+dic.items() # keys and values
+dic.clear() # remove all element
+```
+
+- set
+
+```py
+s1 = {1, 2, 'a', 5}
+s2 = set([1, 2, 3, 4, 5, 6])
+s3 = set([4, 5, 6, 7, 8, 9])
+s2 & s3 # 교집합
+s2.intersection(s3) # 교집합
+s2 | s3 # 합집합
+s2.union(s3) # 합집합
+s2 - s3 # 차집합
+s2.difference(s3) # 차집합
+s2.add(7) # 원소 하나 추가
+s2.update([6, 7, 8, 9, 10]) # 원소 여러개 추가
+s2.remove(7) # 특정원소 제거
+```
