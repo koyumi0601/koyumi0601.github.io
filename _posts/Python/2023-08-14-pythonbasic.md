@@ -353,4 +353,47 @@ pip install pandas
 
 ```py
 import pandas as pd
+# Series
+data1 = [10, 20, 30, 40, 50]
+data2 = ['1반', '2반', '3반', '4반', '5반']
+sr1 = pd.Series(data1)
+sr2 = pd.Series(data2)
+sr3 = pd.Series([101, 102, 103, 104, 105])
+sr4 = pd.Series(['월', '화', '수', '목', '금'])
+sr5 = pd.Series(data1, index = [1000, 1001, 1002, 1003, 1004]) # index change
+sr6 = pd.Series(data1, index = data2)
+sr7 = pd.Series(data2, index = data1)
+sr8 = pd.Series(data2, index = sr4)
+sr8[0:4] # slicing
+sr8.index
+sr8.values
+sr1 + sr3 # 둘 다 숫자이므로 덧셈 연산 수행
+sr4 + sr2 # 둘 다 string이므로 문자연결 수행
+
+# DataFrame
+# Dictionary to dataframe
+data_dic = {'year': [2018, 2019, 2020], 'sales': [350, 480, 1099]}
+df1 = pd.DataFrame(data_dic)
+# List to dataframe
+df2 = pd.DataFrame([[89.2, 92.5, 90.8],[92.8, 89.9, 95.2]], index = ['중간고사', '기말고사'], columns = data2[0:3])
+df2
+
+data_df = [['20201101', 'Hong', '90', '95'],['20201102', 'Kim', '93', '94'],['20201103', 'Lee', '87', '97']]
+df3 = pd.DataFrame(data_df)
+df3.columns = ['학번', '이름', '중간고사', '기말고사']
+df3
+df3.head(2)
+df3.tail(2)
+df3('이름') # column '이름'
+df3.to_csv('path and filename', header='False')
+df4 = pd.read_csv('path and filename', encoding='utf-8', index_col = 0, engine='python')
+```
+
+```bash
+pip install matplotlib 
+```
+
+```py
+import matplotlib.pyplot as plt
+
 ```
