@@ -14,7 +14,7 @@ search: true
 
 ## Chapter 04 파이썬 프로그래밍 기초
 
-2. 변수와 객체
+### 변수와 객체
 
 - 변수
   - 값을 저장하는 메모리 공간
@@ -30,7 +30,7 @@ a.real # attribute, 1
 a.conjugate() # method, a - 2j
 ```
 
-3. 자료형과 연산자
+### 자료형과 연산자
 
 - 숫자형
 
@@ -47,6 +47,7 @@ e = 0x12A # hexadecimal
 ```
 
 - 숫자형 연산
+
 *숫자형 연산이 속도가 빠르다*
 
 ```py
@@ -72,7 +73,7 @@ a = 'Hello World' # string
 b = """Hello World""" # string, several lines
 ```
 
-- 문자열에 가능한 연산
+- 문자열 연산
 
 ```py
 a = 'Hello World' # string
@@ -133,6 +134,7 @@ t1[0] = 2 # error. 리스트와는 다르게, 튜플은 값을 변경할 수 없
 ```
 
 - dictionary
+
 *key: value*
 
 ```py
@@ -163,7 +165,7 @@ s2.update([6, 7, 8, 9, 10]) # 원소 여러개 추가
 s2.remove(7) # 특정원소 제거
 ```
 
-4. 조건문과 반복문
+### 조건문과 반복문
 
 - 조건문
 
@@ -209,7 +211,7 @@ while i < 5:
     print('*' * i)
 ```
 
-5. 함수
+### 함수
 
 - 사용자 정의 함수
 
@@ -279,7 +281,7 @@ from datetime import datatime # from 패키지명 import 모듈명
 datetime.now() # 모듈명.모듈함수
 ```
 
-6. 파일 처리
+### 파일 처리
 
 ```py
 # 파일 생성하기
@@ -325,7 +327,7 @@ with open("D:/새파일.txt", 'w') as f:
     f.write("Now is better than never.")
 ```
 
-7. 데이터 분석을 위한 주요 라이브러리
+### 데이터 분석을 위한 주요 라이브러리
 
 ```bash
 pip install numpy
@@ -396,4 +398,26 @@ pip install matplotlib
 ```py
 import matplotlib.pyplot as plt
 
+# line plot
+x = [2016, 2017, 2018, 2019, 2020]
+y = [350, 410, 520, 695, 543]
+plt.plot(x, y)
+plt.title('Annual sales')
+plt.xlabel('years')
+plt.ylabel('sales')
+plt.show()
+
+# bar plot
+y1 = [350, 410, 520, 695]
+y2 = [200, 250, 285, 350]
+x = range(len(y1))
+plt.bar(x, y1, width = 0.7, color = "blue")
+plt.bar(x, y2, width = 0.7, color = "red")
+plt.title('Quarterly sales')
+plt.xlabel('Quarters')
+plt.ylabel('sales')
+xLabel = ['first', 'second', 'third', 'fourth']
+plt.xticks(x, xLabel, fontsize = 10)
+plt.legend(['chairs', 'desks'])
+plt.show()
 ```
