@@ -211,3 +211,36 @@ while i < 5:
 
 5. 함수
 
+- 사용자 정의 함수
+
+```py
+# 인수 개수가 정해진 경우
+def sum1(a, b):
+    x = a + b
+    return x
+
+# 인수 개수가 정해지지 않은 경우
+def sum2(*args):
+    x = 0
+    for i in args:
+        x += i
+    return x
+
+a = 5
+b = 3
+sum1(a, b)
+sum2(1, 2, 3, 4, 5)
+```
+
+- 내장 함수
+
+```py
+abs(-3.5)
+all([1, 2, 3, 4]) # True, 모든 원소가 True이면 True 반환
+all([4, -2, 0.0, 4]) # False
+any([4, -2, 0.0, 4]) # True, 하나라도 참이면 True 반환
+chr(97) # 아스키코드 값 97에 대한 문자 출력, 'a'
+ord('a') # 문자'a'에 대한 아스키코드 값 출력, 97
+dir([1, 2, 3]) # 객체가 가진 attribute와 method 보여주기
+divmod(7, 3) # 몫과 나머지를 튜플로 반환
+```
