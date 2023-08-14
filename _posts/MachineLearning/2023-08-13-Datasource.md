@@ -37,5 +37,5 @@ search: true
 - 트위터 개발자 센터 [https://developers.twitter.com](https://developers.twitter.com)
 - 공공데이터포털 [https://www.data.go.kr](https://www.data.go.kr)
 - 세계 날씨 [http://openweathermap.org](http://openweathermap.org)
-- 유료/무료 API 스토어 [http://mashup.or.kr](http://mashup.or.kr)
-- 유료/무료 API 스토어2 [http:www.apistore.co.kr/api/apiList.do](http:www.apistore.co.kr/api/apiList.do)
+- ~~유료/무료 API 스토어 [http://mashup.or.kr](http://mashup.or.kr)~~
+- ~~유료/무료 API 스토어2 [http://www.apistore.co.kr/api/apiList.do](http://www.apistore.co.kr/api/apiList.do)~~
