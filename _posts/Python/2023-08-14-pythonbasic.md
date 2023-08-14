@@ -243,4 +243,40 @@ chr(97) # 아스키코드 값 97에 대한 문자 출력, 'a'
 ord('a') # 문자'a'에 대한 아스키코드 값 출력, 97
 dir([1, 2, 3]) # 객체가 가진 attribute와 method 보여주기
 divmod(7, 3) # 몫과 나머지를 튜플로 반환
+oct(8) # 8진수로 변환
+hex(16) # 16진수로 변환
+# 객체의 주소 값 반환
+a = 3
+id(a) 
+int('3') # change to int
+str(3) # change to string
+list('Python') # ['P', 'y', 't', 'h', 'o', 'n'], change to list
+tuple('Python') # ('P', 'y', 't', 'h', 'o', 'n'), change to tuple
+type('abc') # return type
+# lambda
+sum = lambda a, b: a + b
+sum(3, 5)
+max([1, 4, 2, 8, 6])
+min([1, 4, 2, 8, 6])
+pow(2, 4) # 제곱
+c = input('insert value c') # user input
+list(range(5)) # [0, 1, 2, 3, 4]
+list(range(5, 10)) # [5, 6, 7, 8, 9]
+list(range(5, 10, 2)) # [5, 7, 9]
+len('Python') # length, 6
+sorted([3, 0, 2, 1]) # ordered, [0, 1, 2, 3]
+sorted('Python') # ordered and return list, ['P', 'h', 'n', 'o', 't', 'y']
 ```
+
+- module and package
+
+```py
+import urllib.request # import 패키지명.모듈명
+urllib.request.Request('http://www.hanb.co.kr') # 패키지명.모듈명.모듈함수
+import pandas # 모듈명
+pandas.DataFrame() # 모듈명.모듈함수
+from datetime import datatime # from 패키지명 import 모듈명
+datetime.now() # 모듈명.모듈함수
+```
+
+6. 파일 처리
