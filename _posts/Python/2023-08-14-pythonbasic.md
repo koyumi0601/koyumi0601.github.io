@@ -162,3 +162,52 @@ s2.add(7) # 원소 하나 추가
 s2.update([6, 7, 8, 9, 10]) # 원소 여러개 추가
 s2.remove(7) # 특정원소 제거
 ```
+
+4. 조건문과 반복문
+
+- 조건문
+
+```py
+if condition1:
+    execution1
+elif condition2:
+    excution2
+else:
+    pass # do nothing
+```
+
+- 조건문 연산
+
+```py
+==
+!=
+>
+<
+>=
+<=
+and
+or
+not
+1 in [1, 2, 3] # tuple, list, string
+0 not in [1, 2, 3]
+'a' in ('a', 'b', 'c', 'd')
+'i' not in 'Python'
+```
+
+- 반복문
+
+```py
+test_list = ['one', 'two', 'three']
+for i in test_list:
+    print(i + '!')
+```
+
+```py
+i = 0
+while i < 5:
+    i += 1
+    print('*' * i)
+```
+
+5. 함수
+
