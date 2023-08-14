@@ -150,6 +150,12 @@ if __name__ == '__main__':
 
 ```
 
+- Result
+
+![2023-08-14_14-21-naver-api-terminal]({{site.url}}/images/$(filename)/2023-08-14_14-21-naver-api-terminal.png)
+
+![2023-08-14_14-23-naver-api-result]({{site.url}}/images/$(filename)/2023-08-14_14-23-naver-api-result.png)
+
 
 
 
