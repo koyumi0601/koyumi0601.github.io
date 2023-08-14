@@ -280,3 +280,77 @@ datetime.now() # 모듈명.모듈함수
 ```
 
 6. 파일 처리
+
+```py
+# 파일 생성하기
+f = open("D:/새파일.txt", 'w') # 파일 객체 생성
+for i in range(1, 6):
+    data = "%d번째 줄입니다. \n" % i
+    f.write(data) # 파일 쓰기
+f.close # 파일 닫기
+
+# 파일 추가하기
+f = open("D:/새파일.txt", 'a') # 파일 추가하기 모드로 열기
+for i in range(6, 10):
+    data = "%d번째 줄 추가입니다. \n" % i
+    f.write(data) # 파일 쓰기
+f.close # 파일 닫기
+
+# 파일 읽기 1
+f = open("D:/새파일.txt", 'r') # 파일 읽기 모드로 열기
+line = f.readline()
+print(line)
+while True:
+    line = f.readline()
+    if not line: break
+    print(line)
+f.close()
+
+# 파일 읽기 2
+f = open("D:/새파일.txt", 'r') # 파일 읽기 모드로 열기
+lines = f.readlines()
+print(lines)
+for line in lines:
+    print(line)
+f.close()
+
+# 파일 읽기 3
+f = open("D:/새파일.txt", 'r') # 파일 읽기 모드로 열기
+data = f.read()
+data
+f.close()
+
+# 파일 처리 후 파일 닫기(자동)
+with open("D:/새파일.txt", 'w') as f:
+    f.write("Now is better than never.")
+```
+
+7. 데이터 분석을 위한 주요 라이브러리
+
+```bash
+pip install numpy
+```
+
+```py
+import numpy as np
+ar1 = np.array([1, 2, 3, 4, 5])
+ar2 = np.array([1, 2, 3], [10, 20, 30])
+ar3 = np.arange(1, 11, 2) # array([1, 3, 5, 7, 9])
+ar4 = np.array([1, 2, 3, 4, 5, 6]).reshape(3, 2) # [1,2], [3, 4], [5, 6]
+np.zeros((2,3))
+ar2[0:2, 0:2] # slicing
+ar1 + 10
+ar1 - 5
+ar1 * 3
+ar1 / 2
+np.dot(ar2, ar4) # inner product
+```
+
+```bash
+pip install pandas
+# series, dataframe
+```
+
+```py
+import pandas as pd
+```
