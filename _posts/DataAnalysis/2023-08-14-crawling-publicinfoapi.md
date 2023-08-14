@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Crawling using Public Information API"
+title: "Crawling with API using Public Information API"
 categories: dataanalysis
 tags: [Big Data, Data Analysis, Crawling]
 toc: true
@@ -54,6 +54,7 @@ ServiceKey = "공공데이터포털 한국문화관광연구원 출입국관광�
 
 # [CODE 1]
 def getRequestUrl(url):
+    # Request Url
     req = urllib.request.Request(url)
     try:
         response = urllib.request.urlopen(req)
@@ -67,6 +68,7 @@ def getRequestUrl(url):
     
 # [CODE 2]
 def getTourismStatsItem(yyyymm, national_code, ed_cd):
+    # Refer to API Docs and get data
     service_url ='http://openapi.tour.go.kr/openapi/service/EdrcntTourismStatsService/getEdrcntTourismStatsList'
     parameters = '?YM=' + yyyymm
     parameters += '&NAT_CD=' + national_code

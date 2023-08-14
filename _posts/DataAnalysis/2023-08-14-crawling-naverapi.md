@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Crawling using Naver API"
+title: "Crawling with API using Naver API"
 categories: dataanalysis
 tags: [Big Data, Data Analysis, Crawling]
 toc: true
