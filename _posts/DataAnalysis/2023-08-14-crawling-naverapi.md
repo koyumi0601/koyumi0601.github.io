@@ -15,8 +15,7 @@ search: true
 
 
 
-- Go to 네이버 개발자 센터 [https://developers.naver.com/main/](https://developers.naver.com/main/)
-- 가입
+- 네이버 개발자 센터 가입 [https://developers.naver.com/main/](https://developers.naver.com/main/)
 - 서비스 API > 검색 > 오픈 API 이용 신청
 
 ![2023-08-14_13-08-naver-api]({{site.url}}/images/$(filename)/2023-08-14_13-08-naver-api.png)
