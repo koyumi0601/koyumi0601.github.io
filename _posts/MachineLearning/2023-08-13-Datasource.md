@@ -29,6 +29,11 @@ search: true
 - naver [http://naver.com](http://naver.com)
 - twitter [https://twitter.com](https://twitter.com)
 - meta [https://www.facebook.com](https://www.facebook.com)
+- 와인 데이터셋, 어바인 대학 머신러닝 저장소 [https://archive.ics.uci.edu/dataset/186/wine+quality](https://archive.ics.uci.edu/dataset/186/wine+quality)
+
+
+
+# R
 
 # Web API 제공자
 - 네이버 개발자 센터 [https://developers.naver.com](https://developers.naver.com)

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <title>Random Menu</title>
+</head>
+<body>
+    <h1>Today's Random Menu</h1>
+    <p><strong>Menu: </strong>{{ menu }}</p>
+    <h2>Recipe</h2>
+    <p><strong>Ingredients: </strong>{{ recipe['ingredients'] }}</p>
+    <h3>Instructions:</h3>
+    <ol>
+        {% for step in recipe['recipe'] %}
+            <ul>{{ step }}</ul>
+        {% endfor %}
+    </ol>
+</body>
+</html>
