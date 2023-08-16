@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <title>Random Menu</title>
+</head>
+<body>
+
+    <div class="weeklymenu"> 
+        <ul><li>찌개: {{ stew_recipe['name'] }}</li></ul>
+        <ul><li>메인반찬 소고기: {{ beef_recipe['name'] }}</li></ul>
+        <ul><li>메인반찬 돼지고기: {{ pork_recipe['name'] }}</li></ul>
+        <ul><li>메인반찬 닭고기: {{ chiken_recipe['name'] }}</li></ul>
+        <ul><li>메인반찬 해산물: {{ seafood_routine_recipe['name'] }}</li></ul>
+        <ul><li>메인반찬 달걀: {{ egg_recipe['name'] }}</li></ul>
+        <ul><li>메인반찬 두부: {{ tofu_recipe['name'] }}</li></ul>
+        <ul><li>밑반찬: {{ side_recipe['name'] }}</li></ul>
+        <ul><li>제철음식 해산물: {{ seafood_recipe['name'] }}</li></ul>
+        <ul><li>제철음식 채소: {{ vegetable_recipe['name'] }}</li></ul>
+        <ul><li>제철음식 과일: {{ fruit_recipe['name'] }}</li></ul>
+        <ul><li>다이어트 샐러드: {{ diet_recipe['name'] }}</li></ul>
+    </div>
+
+    <div class="singlemenu">
+        <p><strong>Stew Menu: </strong>{{ stew_recipe['name'] }}</p>
+        <p><strong>Ingredients: </strong>{{ stew_recipe['ingredients'] }}</p>
+        <p><strong>Instructions: </strong>
+        <ol>
+            {% for step in stew_recipe['recipe'] %}
+                <ul>{{ step }}</ul>
+            {% endfor %}
+        </ol>
+    </div>
+
+    <div class="singlemenu">    
+        <p><strong>Beef Menu: </strong>{{ beef_recipe['name'] }}</p>
+        <p><strong>Ingredients: </strong>{{ beef_recipe['ingredients'] }}</p>
+        <p><strong>Instructions: </strong>
+        <ol>
+            {% for step in beef_recipe['recipe'] %}
+                <ul>{{ step }}</ul>
+            {% endfor %}
+        </ol>
+    </div>
+
+    <div class="singlemenu">    
+        <p><strong>Pork Menu: </strong>{{ pork_recipe['name'] }}</p>
+        <p><strong>Ingredients: </strong>{{ pork_recipe['ingredients'] }}</p>
+        <p><strong>Instructions: </strong>
+        <ol>
+            {% for step in pork_recipe['recipe'] %}
+                <ul>{{ step }}</ul>
+            {% endfor %}
+        </ol>
+    </div>
+
+    <div class="singlemenu">
+        <p><strong>Chiken Menu: </strong>{{ chiken_recipe['name'] }}</p>
+        <p><strong>Ingredients: </strong>{{ chiken_recipe['ingredients'] }}</p>
+        <p><strong>Instructions: </strong>
+        <ol>
+            {% for step in chiken_recipe['recipe'] %}
+                <ul>{{ step }}</ul>
+            {% endfor %}
+        </ol>
+    </div>    
+
+    <div class="singlemenu">
+        <p><strong>Seafood Menu: </strong>{{ seafood_routine_recipe['name'] }}</p>
+        <p><strong>Ingredients: </strong>{{ seafood_routine_recipe['ingredients'] }}</p>
+        <p><strong>Instructions: </strong>
+        <ol>
+            {% for step in seafood_routine_recipe['recipe'] %}
+                <ul>{{ step }}</ul>
+            {% endfor %}
+        </ol>
+    </div>
+
+    <div class="singlemenu">   
+        <p><strong>Egg Menu: </strong>{{ egg_recipe['name'] }}</p>
+        <p><strong>Ingredients: </strong>{{ egg_recipe['ingredients'] }}</p>
+        <p><strong>Instructions: </strong>
+        <ol>
+            {% for step in egg_recipe['recipe'] %}
+                <ul>{{ step }}</ul>
+            {% endfor %}
+        </ol>
+    </div>
+
+    <div class="singlemenu">   
+        <p><strong>Tofu Menu: </strong>{{ tofu_recipe['name'] }}</p>
+        <p><strong>Ingredients: </strong>{{ tofu_recipe['ingredients'] }}</p>
+        <p><strong>Instructions: </strong>
+        <ol>
+            {% for step in tofu_recipe['recipe'] %}
+                <ul>{{ step }}</ul>
+            {% endfor %}
+        </ol>
+    </div>
+
+    <div class="singlemenu">   
+        <p><strong>Side Menu: </strong>{{ side_recipe['name'] }}</p>
+        <p><strong>Ingredients: </strong>{{ side_recipe['ingredients'] }}</p>
+        <p><strong>Instructions: </strong>
+        <ol>
+            {% for step in side_recipe['recipe'] %}
+                <ul>{{ step }}</ul>
+            {% endfor %}
+        </ol>
+    </div>
+
+    <div class="singlemenu">   
+        <p><strong>Seasonal Seafood Menu: </strong>{{ seafood_recipe['name'] }}</p>
+        <p><strong>Ingredients: </strong>{{ seafood_recipe['ingredients'] }}</p>
+        <p><strong>Instructions: </strong>
+        <ol>
+            {% for step in seafood_recipe['recipe'] %}
+                <ul>{{ step }}</ul>
+            {% endfor %}
+        </ol>
+    </div>
+
+    <div class="singlemenu">   
+        <p><strong>Seasoanl Vegetable Menu: </strong>{{ vegetable_recipe['name'] }}</p>
+        <p><strong>Ingredients: </strong>{{ vegetable_recipe['ingredients'] }}</p>
+        <p><strong>Instructions: </strong>
+        <ol>
+            {% for step in vegetable_recipe['recipe'] %}
+                <ul>{{ step }}</ul>
+            {% endfor %}
+        </ol>
+    </div>
+
+    <div class="singlemenu">   
+        <p><strong>Seasoanl Dessert Menu: </strong>{{ fruit_recipe['name'] }}</p>
+        <p><strong>Ingredients: </strong>{{ fruit_recipe['ingredients'] }}</p>
+        <p><strong>Instructions: </strong>
+        <ol>
+            {% for step in fruit_recipe['recipe'] %}
+                <ul>{{ step }}</ul>
+            {% endfor %}
+        </ol>
+    </div>
+
+    <div class="singlemenu">   
+        <p><strong>Diet Salad Menu: </strong>{{ diet_recipe['name'] }}</p>
+        <p><strong>Ingredients: </strong>{{ diet_recipe['ingredients'] }}</p>
+        <p><strong>Instructions: </strong>
+        <ol>
+            {% for step in diet_recipe['recipe'] %}
+                <ul>{{ step }}</ul>
+            {% endfor %}
+        </ol>
+    </div>
+    
+</body>
+</html>
