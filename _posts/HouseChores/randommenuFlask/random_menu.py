@@ -12,15 +12,30 @@ import get_10000recipe_ranking
 
 # Food
 
+def get_KFDA_menu():
+    KFDA_menu = pd.read_excel('./KFDA_Nutrition_20230816.xlsx', engine="openpyxl")
+    KFDA_menu_name_category = KFDA_menu[['식품명', '식품대분류']]
+    filtered_row=[]
+    filtered_row.append(KFDA_menu_name_category[(KFDA_menu_name_category['식품대분류']=='구이류') 
+                                                | (KFDA_menu_name_category['식품대분류']=='볶음류')
+                                                | (KFDA_menu_name_category['식품대분류']=='찌개 및 전골류')
+                                                | (KFDA_menu_name_category['식품대분류']=='조림류')
+                                                | (KFDA_menu_name_category['식품대분류']=='찌개류')
+                                                ])
+    filtered_df = pd.DataFrame(filtered_row[0])
+    random_menu = filtered_df.sample(n=1)
+    random_menu_name = random_menu['식품명'].iloc[0]
+    print(random_menu_name)
+    return random_menu_name
+
 def get_random_seasonal_ingredient():
     sfood, random_fruit, random_seafood, random_vegetable = get_seasonalfood_naver.get_seasonalfood()
-    # print(sfood, random_fruit, random_seafood, random_vegetable)
+    print(random_fruit)
+    print(random_seafood)
+    print(random_vegetable)
     return sfood, random_fruit, random_seafood, random_vegetable
 
-
-
 app = Flask(__name__)
-
 
 # Diet
 
@@ -36,9 +51,6 @@ def calculate_BasalMetabolicRate(sex, weight, height, age):
     elif sex.lower() == 'female':
         BMR = (665.1 + (9.56 * weight ) + ( 1.85 * height ) - (4.68 * age))
     return BMR
-
-
-
 
 def physical_info():
     # inputs
@@ -82,25 +94,7 @@ def get_food_nutrition():
     food_df = pd.read_excel("./KFDA_Nutrition_20230816.xlsx", sheet_name="Sheet0")
     return food_df
 
-
-
-
-
-
-
-
 def food_info(sfood):
-    '''
-    This function gives you food information for the given input.
-
-    PARAMETERS
-        - name(str): name of Korean food in Korean ex) food_info("김치찌개")
-    RETURN
-        - res(list): list of dict that containing info for some Korean food related to 'name'
-            - res['name'](str): name of food
-            - res['ingredients'](str): ingredients to make the food
-            - res['recipe'](list[str]): contain recipe in order
-    '''
     url = f"https://www.10000recipe.com/recipe/list.html?q={sfood}"
     response = requests.get(url)
     if response.status_code == 200:
@@ -109,7 +103,6 @@ def food_info(sfood):
     else : 
         print("HTTP response error :", response.status_code)
         return
-    
     random_recipe_index = random.randrange(40) 
     food_list = soup.find_all(attrs={'class':'common_sp_link'})
     food_id = food_list[random_recipe_index]['href'].split('/')[-1]
@@ -121,33 +114,30 @@ def food_info(sfood):
     else : 
         print("HTTP response error :", response.status_code)
         return
-    
     food_info = soup.find(attrs={'type':'application/ld+json'})
-    # print(food_info)
     result = json.loads(food_info.text)
     menu = ''.join(result['name'])
     ingredient = ','.join(result['recipeIngredient'])
     recipe = [result['recipeInstructions'][i]['text'] for i in range(len(result['recipeInstructions']))]
     for i in range(len(recipe)):
         recipe[i] = f'{i+1}. ' + recipe[i]
-    
     res = {
         'seasonal food': sfood, 
         'name': menu,
         'ingredients': ingredient,
         'recipe': recipe
     }
-
     return res
 
 @app.route('/')
 def index():
-    # today_menu = random_menu()
-    today_menu = random_seafood # 
+    
+    # today_menu = random_seafood 
     seafood_recipe = food_info(random_seafood)
     vegetable_recipe = food_info(random_vegetable)
     fruit_recipe = food_info(random_fruit)
     diet_recipe = food_info(diet)
+    kfda_menu_recipe = food_info(KFDA_menu)
     stew_recipe = food_info(stew)
     beef_recipe = food_info(beef)
     pork_recipe = food_info(pork)
@@ -157,7 +147,6 @@ def index():
     tofu_recipe = food_info(tofu)
     side_recipe = food_info(side)
 
-    # return render_template('index.html', sfood=random_fruit, menu=today_menu, recipe=today_recipe)
     return render_template('index.html', 
                            stew_recipe=stew_recipe, 
                            beef_recipe=beef_recipe, 
@@ -170,14 +159,14 @@ def index():
                            seafood_recipe=seafood_recipe, 
                            vegetable_recipe=vegetable_recipe, 
                            fruit_recipe=fruit_recipe,
-                           diet_recipe=diet_recipe
+                           diet_recipe=diet_recipe,
+                           kfda_menu_recipe=kfda_menu_recipe
                            )
    
 
 if __name__ == "__main__":
-    # main()
-    # physical_info()
-    # get_food_nutrition()
+    
+    KFDA_menu = get_KFDA_menu()
     sfood, random_fruit, random_seafood, random_vegetable = get_random_seasonal_ingredient()
     stew = get_10000recipe_ranking.get_food_ranking("찌개")
     beef = get_10000recipe_ranking.get_food_ranking("메인:소")
@@ -188,9 +177,4 @@ if __name__ == "__main__":
     tofu = get_10000recipe_ranking.get_food_ranking("메인:콩")
     side = get_10000recipe_ranking.get_food_ranking("밑반찬")
     diet = get_10000recipe_ranking.get_food_ranking("다이어트")
-    
-    # print(stew)
-    # type = "찌개" # "찌개", "메인:소", "메인:돼지", "메인:닭", "메인:해물", "메인:달걀", "메인:콩", "밑반찬"
-    # random_food = get_food_ranking(type) # [CODE 1]
-    # food_name = "고구마"
     app.run(host='0.0.0.0')

@@ -7,6 +7,7 @@
 <body>
 
     <div class="weeklymenu"> 
+        <p><strong>인기메뉴 - 만개의 레시피</strong></p>
         <ul><li>찌개: {{ stew_recipe['name'] }}</li></ul>
         <ul><li>메인반찬 소고기: {{ beef_recipe['name'] }}</li></ul>
         <ul><li>메인반찬 돼지고기: {{ pork_recipe['name'] }}</li></ul>
@@ -19,6 +20,7 @@
         <ul><li>제철음식 채소: {{ vegetable_recipe['name'] }}</li></ul>
         <ul><li>제철음식 과일: {{ fruit_recipe['name'] }}</li></ul>
         <ul><li>다이어트 샐러드: {{ diet_recipe['name'] }}</li></ul>
+        <ul><li>편식방지 랜덤메뉴(구이, 전, 조림, 찌개, 찜): {{ kfda_menu_recipe['name'] }}</li></ul>        
     </div>
 
     <div class="singlemenu">
@@ -152,6 +154,18 @@
             {% endfor %}
         </ol>
     </div>
+
+    <div class="singlemenu">   
+        <p><strong>Diet Salad Menu: </strong>{{ kfda_menu_recipe['name'] }}</p>
+        <p><strong>Ingredients: </strong>{{ kfda_menu_recipe['ingredients'] }}</p>
+        <p><strong>Instructions: </strong>
+        <ol>
+            {% for step in kfda_menu_recipe['recipe'] %}
+                <ul>{{ step }}</ul>
+            {% endfor %}
+        </ol>
+    </div>
+
     
 </body>
 </html>
