@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Food Shopping and Storage Method"
+title: "Food Shopping and Storage Consideration"
 categories: housechores
 tags: [menu, housechores, cooking]
 toc: true
