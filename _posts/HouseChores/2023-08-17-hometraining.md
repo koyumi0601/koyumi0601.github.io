@@ -9,7 +9,9 @@ sidebar:
     nav: "docs"
 search: true
 ---
+
 *home training vedio - youtube clips*
+
 - 국민체조
 {% include video id="Ur-E2QnXON4" provider="youtube" %}
 
