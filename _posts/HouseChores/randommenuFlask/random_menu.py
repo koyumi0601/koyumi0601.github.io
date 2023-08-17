@@ -63,8 +63,9 @@ def physical_info():
     BMR = calculate_BasalMetabolicRate(sex, weight_current, height, age)
     weight_target_loss = weight_current - weight_target # 12.1 kg
     calorie_per_weight = 7700 # kcal/kg
+    weight_loss_limit = 0.05 # 5%
     calorie_total_to_target_weight = calorie_per_weight * weight_target_loss # 93170
-    weight_loss_limit = 0.05
+    
     months_required = int(np.ceil(np.log10(weight_target/weight_current)/np.log10((1-weight_loss_limit))))
     weight_months = np.zeros(months_required+1)
     weight_months[0] = weight_current
@@ -165,16 +166,16 @@ def index():
    
 
 if __name__ == "__main__":
-    
-    KFDA_menu = get_KFDA_menu()
-    sfood, random_fruit, random_seafood, random_vegetable = get_random_seasonal_ingredient()
-    stew = get_10000recipe_ranking.get_food_ranking("찌개")
-    beef = get_10000recipe_ranking.get_food_ranking("메인:소")
-    pork = get_10000recipe_ranking.get_food_ranking("메인:돼지")
-    chiken = get_10000recipe_ranking.get_food_ranking("메인:닭")
-    seafood_routine = get_10000recipe_ranking.get_food_ranking("메인:해물")
-    egg = get_10000recipe_ranking.get_food_ranking("메인:달걀")
-    tofu = get_10000recipe_ranking.get_food_ranking("메인:콩")
-    side = get_10000recipe_ranking.get_food_ranking("밑반찬")
-    diet = get_10000recipe_ranking.get_food_ranking("다이어트")
-    app.run(host='0.0.0.0')
+    physical_info()
+    # KFDA_menu = get_KFDA_menu()
+    # sfood, random_fruit, random_seafood, random_vegetable = get_random_seasonal_ingredient()
+    # stew = get_10000recipe_ranking.get_food_ranking("찌개")
+    # beef = get_10000recipe_ranking.get_food_ranking("메인:소")
+    # pork = get_10000recipe_ranking.get_food_ranking("메인:돼지")
+    # chiken = get_10000recipe_ranking.get_food_ranking("메인:닭")
+    # seafood_routine = get_10000recipe_ranking.get_food_ranking("메인:해물")
+    # egg = get_10000recipe_ranking.get_food_ranking("메인:달걀")
+    # tofu = get_10000recipe_ranking.get_food_ranking("메인:콩")
+    # side = get_10000recipe_ranking.get_food_ranking("밑반찬")
+    # diet = get_10000recipe_ranking.get_food_ranking("다이어트")
+    # app.run(host='0.0.0.0')
