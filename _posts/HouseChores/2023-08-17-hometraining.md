@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Home trainig youtube clips"
+title: "Home trainig"
 categories: housechores
 tags: [menu, housechores, workout]
 toc: true
@@ -10,7 +10,7 @@ sidebar:
 search: true
 ---
 
-*home training vedio - youtube clips*
+*home training youtube clips*
 
 - 국민체조
 {% include video id="Ur-E2QnXON4" provider="youtube" %}
