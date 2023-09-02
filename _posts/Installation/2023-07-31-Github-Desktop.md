@@ -14,10 +14,14 @@ search: true
 
 # Work Instruction
 
-# Install Github desktop in Ubuntu
-- Refer to: 
-    - https://davelogs.tistory.com/55 
-- In short:
+- Install git
+
+```bash
+sudo apt install git
+```
+
+- Install Github desktop in Ubuntu
+
 ```bash
 sudo apt-get update
 sudo apt-get install snapd
@@ -26,17 +30,28 @@ sudo snap install GitHubDesktop-linux-2.0.4-linux1.snap --classic --dangerous
 ```
 - Go to Activities and Search github desktop
 
-# Download to local using github desktop
-- Download github desktop and vs code
-- Open github desktop and login
-  
+- Download to local using github desktop
+  - Download github desktop and vs code
+  - Open github desktop and login
+
+# Trial and Error  
 ## Authentication Failure
-- Refer to: 
-    - https://wotres.tistory.com/entry/Github-%EC%97%90%EB%9F%AC-%ED%95%B4%EA%B2%B0%EB%B2%95-Authentication-failed-for-use-a-personal-access-token-instead
-- In short: 
-    <div class="notice">
-        <ul>
-            <li> Password = token </li>
-        </ul>
-    </div>
-    {: .notice--danger}
+
+- Go to github [https://github.com/](https://github.com/)
+- Go to right upper corner and click settings
+- Go to left lower corner  and click developer settings
+- Go to personal access toekns
+- Go to Tokens (classic)
+- Click Generate new token or regenerate if you already have it
+- Copy and paste token to Password
+- register user name and password to local pc git
+```bash
+git config --global user.name 'your_id@your_email.com'
+git config --global user.password ‘copied_token’
+```
+*In short, password = token*
+
+
+# Reference 
+- [https://davelogs.tistory.com/55](https://davelogs.tistory.com/55)
+- [https://wotres.tistory.com/entry/Github-%EC%97%90%EB%9F%AC-%ED%95%B4%EA%B2%B0%EB%B2%95-Authentication-failed-for-use-a-personal-access-token-instead](https://wotres.tistory.com/entry/Github-%EC%97%90%EB%9F%AC-%ED%95%B4%EA%B2%B0%EB%B2%95-Authentication-failed-for-use-a-personal-access-token-instead)
