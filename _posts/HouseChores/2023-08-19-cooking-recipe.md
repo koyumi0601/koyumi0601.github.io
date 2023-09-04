@@ -75,6 +75,7 @@ search: true
 
 ## [파프리카월남쌈](https://www.10000recipe.com/recipe/6919807)
 
+
 ## [참치김치찌개](https://www.10000recipe.com/recipe/6864674)
 
 ## [낙엽브레드]
@@ -87,3 +88,11 @@ search: true
 - 발효 (2-3시간) [참고](https://www.youtube.com/watch?v=XmdkoztxVYo)
 - 오븐 예열
 - 계란물 혹은 녹인버터
+
+
+## [모닝빵]()
+
+- 모닝빵 생지
+  - [구입처, 신세계푸드](https://brand.naver.com/ssgfood/products/5533808584?NaPm=ct%3Dlm3dmlhj%7Cci%3Dcheckout%7Ctr%3Dppc%7Ctrx%3Dnull%7Chk%3Dfc673944bc6f5c54f41b6956c7e77fbd085fb02c)
+  - 해동 1시간 > 발효 2시간
+  - 에어프라이어 예열 후 180도 10-15분 혹은 오븐 예열 후 170도 7분 
