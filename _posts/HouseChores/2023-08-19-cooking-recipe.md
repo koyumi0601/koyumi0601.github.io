@@ -37,7 +37,8 @@ search: true
 
 ## [돼지갈비찜](https://www.10000recipe.com/recipe/6872886)
 
-- 맛있었음
+- 양념은 맛있었음
+- 퍽퍽했음
 
 ## [제육볶음](https://www.10000recipe.com/recipe/6845428)
 
@@ -61,11 +62,28 @@ search: true
 
 ## [반건조오징어튀김]()
 
+## [오징어부추전](https://www.10000recipe.com/recipe/6874608)
+
+- 계란을 넣으니 금방 노릇노릇하게 구워 짐
+
+
 ## [닭가슴살장조림](https://www.10000recipe.com/recipe/6952439)
 
 - 설탕, 마늘, 꽈리고추은 넣지 않음
 - 청양고추, 양파 넣음
-- 잘 먹음
+- 닭가슴살은 잘 먹지 않음. 달걀은 잘 먹음. 다음엔 계란장을 하는 게 낫겠음.
 
 ## [파프리카월남쌈](https://www.10000recipe.com/recipe/6919807)
 
+## [참치김치찌개](https://www.10000recipe.com/recipe/6864674)
+
+## [낙엽브레드]
+
+- 냉동생지, 소시지, + 야채
+
+## [냉동생지 크로아상](https://www.youtube.com/watch?v=nbKuM4-b_18)
+
+- 해동 (30분)
+- 발효 (2-3시간) [참고](https://www.youtube.com/watch?v=XmdkoztxVYo)
+- 오븐 예열
+- 계란물 혹은 녹인버터
