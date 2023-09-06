@@ -21,4 +21,5 @@ search: true
 - [아이나비 업데이트 경로 https://www.inavi.com/Upgrades/INFO/AUTOSMARTUPGRADE](https://www.inavi.com/Upgrades/INFO/AUTOSMARTUPGRADE)
 
 - 제품등록 E4VA6E5C5SVW4CKC5N
+- gmail 로그인
 
