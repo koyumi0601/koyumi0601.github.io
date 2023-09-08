@@ -258,13 +258,12 @@ int main(){
 
 ## 4.2 Dynamic Arrays
 
-
-
 ## 4.3 Reference Variables
 
 ## 4.4 Recursive Structures
 
-
+- Linked list
+- 자료구조 참조
 
 
 
