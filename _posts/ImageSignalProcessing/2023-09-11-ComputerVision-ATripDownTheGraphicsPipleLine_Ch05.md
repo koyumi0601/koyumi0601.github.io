@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "A Trip Down The Graphics PipleLine, Chapter 05. How to Write a Paper for AIGGRAPH"
+title: "A Trip Down The Graphics PipleLine, Chapter 05. How to Write a Paper for SIGGRAPH"
 categories: imagesignalprocessing
 tags: [Image Signal Processing, A Trip Down The Graphics PipleLine]
 toc: true
