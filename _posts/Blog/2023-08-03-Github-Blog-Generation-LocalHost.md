@@ -22,6 +22,8 @@ search: true
 
 ```bash
 sudo apt-get install ruby-dev
+# sudo apt install build-essential # if required
+# sudo gem install eventmachine # if required
 sudo gem install bundler
 sudo bundle install
 ```
