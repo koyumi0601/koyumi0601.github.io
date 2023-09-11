@@ -12,6 +12,9 @@ search: true
 
 *A Trip Down The Graphics PipleLine, Jim Blinn's Corner*
 
+해당 책은 아래와 같은 내용을 포함하고 있다.
+각 챕터는 article의 형식을 따른다.
+
 - Category
     - Geometry, Graphics Pipeline, Image Processing, Pixel Arithmetic
 
