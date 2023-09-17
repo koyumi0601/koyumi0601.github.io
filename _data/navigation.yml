@@ -45,6 +45,8 @@ docs:
         url: /categories/python
       - title: "CUDA"
         url: /categories/cuda
+      - title: "Language"
+        url: /categories/language
       # - title: "SQL"
       #   url: /categories/sql
       # - title: "Labview"
@@ -65,8 +67,7 @@ docs:
       #   url: /categories/msoffice
       # - title: "Economics"
       #   url: /categories/economics
-      # - title: "Language"
-      #   url: /categories/language
+
       - title: "Book"
         url: /categories/book
       - title: "House Chores"
