@@ -69,7 +69,7 @@ bundle install
 - run jekyll
 
 ```bash
-bundle exec jekyll serve
+sudo bundle exec jekyll serve
 ```
 
 - Go to http://127.0.0.1:4000/ with any explorer
