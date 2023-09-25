@@ -52,6 +52,12 @@ git config --global user.password ‘copied_token’
 *In short, password = token*
 
 
+
+- 참고로, 첫 화면에서는 로그인하지 않은 상태로 브랜치를 땡겨오고, 이후에 푸쉬할 때 user email과 token(password)를 입력하면 정상 사용 가능하다.
+
+
+
+
 # Reference 
 - [https://davelogs.tistory.com/55](https://davelogs.tistory.com/55)
 - [https://wotres.tistory.com/entry/Github-%EC%97%90%EB%9F%AC-%ED%95%B4%EA%B2%B0%EB%B2%95-Authentication-failed-for-use-a-personal-access-token-instead](https://wotres.tistory.com/entry/Github-%EC%97%90%EB%9F%AC-%ED%95%B4%EA%B2%B0%EB%B2%95-Authentication-failed-for-use-a-personal-access-token-instead)
