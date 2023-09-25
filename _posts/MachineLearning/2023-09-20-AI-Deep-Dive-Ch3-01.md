@@ -20,13 +20,11 @@ search: true
 
 
 
-신경
 
 ![neuron]({{site.url}}/images/$(filename)/neuron.png)
 
 
 
-단순화한 모델
 
 
 
