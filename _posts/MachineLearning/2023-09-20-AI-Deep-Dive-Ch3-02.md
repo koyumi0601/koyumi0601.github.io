@@ -1,10 +1,6 @@
 ---
 layout: single
-<<<<<<< HEAD
-title: "AI Deep Dive, Chapter 3. 왜 우리는 인공신경망을 공부해야 하는가? 02. 선형 회귀, 개념부터 알고리즘까지 step by step, 2"
-=======
 title: "AI Deep Dive, Chapter 3. 왜 우리는 인공신경망을 공부해야 하는가? 02. 선형 회귀, 개념부터 알고리즘까지 step by step"
->>>>>>> c0bb21443a4c8516413cf6781d6c3912b33f2df8
 categories: machinelearning
 tags: [ML, Machine Learning, AI, AI Deep Dive]
 toc: true
@@ -20,10 +16,7 @@ search: true
 
 
 
-<<<<<<< HEAD
-# Chapter 3 - 02. 선형 회귀, 개념부터 알고리즘까지 step by step, 2
 
-=======
 # Chapter 3 - 02. 선형 회귀, 개념부터 알고리즘까지 step by step
 
 
@@ -45,4 +38,3 @@ search: true
 ​				-> 선형회귀는 지도학습에 해당 함
 
 ​			-> 최적의 a,b? 내가 고른 a, b가 좋다 나쁘다를 판단할 수 있어야 함
->>>>>>> c0bb21443a4c8516413cf6781d6c3912b33f2df8
