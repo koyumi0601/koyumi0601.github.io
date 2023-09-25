@@ -20,11 +20,13 @@ search: true
 
 
 
+### 신경
 
 ![neuron]({{site.url}}/images/$(filename)/neuron.png)
 
 
 
+### 단순화한 모델
 
 
 
@@ -113,3 +115,76 @@ weight를 0을 주면 마비일 것
 
 
 주어진 입력(강아지)에 대해서 원하는 출력(1)이 나오도록 웨이트, 바이어스를 정해줘야 한다.
+
+
+
+근데, AI가 스스로 적절한 웨이트, 바이어스를 알아낸다. 어떻게?
+
+
+
+
+
+자극을 전달 받는 부위로부터, 신경 다발을 거쳐서, 뇌까지 전달 된다.
+
+멀리 있는 신경에 대해서는 (발바닥) -> 허리 -> 머리
+
+
+
+중간 전달하는 척수들의 층이 있다. 거기도  활성화 함수가 들어간다.
+
+
+
+연습삼아, weight와 bias 개수를 세어보자
+
+
+
+3 - 2 - 1
+
+3x2+2   +   2x1 + 1
+
+노드 개수 * 웨이트 개수, activation 에 bias하나씩 붙음
+
+![wb]({{site.url}}\images\2023-09-20-AI-Deep-Dive-Ch3-01\wb.png)
+
+
+
+input layer & output layer & hidden layer
+
+- input layer: 입력 들어가는 층,  숫자만 있는 거
+- output layer: weight랑 합쳐서, bias랑 마지막 아웃풋 노드까지
+- hidden layer: 중간 층. 층의 마지막은 노드까지임.
+
+
+
+깊은 인공 신경망은? DNN Deep Neural Network
+
+노드끼리 싹다 연결되어 있으면 fully connected layer라고 한다
+
+
+
+모든 layer가 fully connected layer로 구성되어 있으면 MLP(multi-layer perceptron) 이라고 부름
+
+
+
+원래 perceptron은 unit step function을 활성화 함수로 사용하는 신경망 하나를 의미한다.
+
+
+
+그렇지만 MLP는 임의의 활성화 함수를 사용하는 인공신경망을 말하는 것으로 의미가 확장되었다.
+
+
+
+
+
+인공 신경망은 함수다. 
+
+다시말해, 인공 신경망은 입력과 출력을 연결시켜주는 연결 고리인 것이고
+
+결국, 주어진 입력에 대해서 원하는 출력이 나오도록하는 함수를 찾고 싶은 것
+
+
+
+그럼, ax+b 일차함수를  인공신경망으로 표현해보자 linear activation
+
+
+
