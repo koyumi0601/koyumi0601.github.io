@@ -84,3 +84,30 @@ sudo bundle exec jekyll serve
 - 테디노트 영상 [https://www.youtube.com/watch?v=ACzFIAOsfpM](https://www.youtube.com/watch?v=ACzFIAOsfpM])
 
 - Windows에서 Github와 Jekyll 개발 환경 설치하기 [https://wormwlrm.github.io/2018/07/13/How-to-set-Github-and-Jekyll-environment-on-Windows.html](https://wormwlrm.github.io/2018/07/13/How-to-set-Github-and-Jekyll-environment-on-Windows.html)
+
+
+
+# Ruby upgrade
+```bash
+wget https://cache.ruby-lang.org/pub/ruby/3.0/ruby-3.0.0.tar.gz # download 3.0
+tar -xzvf ruby-3.0.0.tar.gz # unpack
+# move to unpacked directory
+# compile and install
+cd ruby-3.0.0 
+./configure
+make
+sudo make install
+# version check
+ruby --version
+sudo apt-get install libssl-dev
+# rebuild ruby
+cd ~/Documents/GitHub/koyumi0601.github.io/ruby-3.0.0
+./configure --with-openssl-dir=/usr/include/openssl
+make
+sudo make install
+# version check
+ruby --version
+# gem update
+sudo gem install jekyll
+sudo bundle exec jekyll serve
+```
