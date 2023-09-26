@@ -39,7 +39,7 @@ cat cudnn.h | grep CUDNN_MAJOR -A 2 # cuDNN
 ```
 cuDNN은 설치 경로에 복사되어 있는 지 확인한다
 컴퓨터 > usr > local > cuda-x.x > include > cudnn*.h
- 
+
 아카이브에서 .deb 파일을 다운받고 dpkg했을 때 /var/cudnn-local-repo-ubuntu2004-8.9.5.29 폴더가 생성되고 그 하위에 또 .deb들이 생성된 것이 보인다. > 원하는 동작이 아니다
 다시 아카이브에서, .tar를 받고 압축을 푼 후(우클릭 > 압축풀기), 필요한 경로(cuda toolkit 설치 경로)에 복사/붙여넣기 한다.
 
@@ -83,13 +83,15 @@ echo $LD_LIBRARY_PATH # check registered paths
 
 - nano ~/.bashrc
 - .bashrc의 맨 아래 추가한다.
+
 export PATH=/usr/local/cuda-11.8/bin:/usr/local/cuda-11.8/NsightCompute-2023.1:$PATH
 export LD_LIBRARY_PATH=/usr/local/cuda-11.8/lib64:/usr/local/cuda-11.8/include:$LD_LIBRARY_PATH
+
 - 적용한다 
-source ~/.bashrc
+  source ~/.bashrc
 - 확인한다
-echo $LD_LIBRARY_PATH
-echo $PATH
+  echo $LD_LIBRARY_PATH
+  echo $PATH
 
 
 참고 중인 블로그 https://normal-engineer.tistory.com/356
@@ -213,7 +215,7 @@ X.Y = 11.8
   - TensorRT 8.6 GA for Ubuntu 20.04 and CUDA 11.0, 11.1, 11.2, 11.3, 11.4, 11.5, 11.6, 11.7 and 11.8 DEB local repo Package
 - dpkg
 - 저장소 키 업데이트 sudo cp /var/nv-tensorrt-local-repo-ubuntu2004-8.6.1-cuda-11.8/nv-tensorrt-local-D7BB1B18-keyring.gpg /usr/share/keyrings/
- 
+
 
 
 - Tar version
