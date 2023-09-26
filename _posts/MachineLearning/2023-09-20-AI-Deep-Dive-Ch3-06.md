@@ -42,6 +42,17 @@ search: true
 
 
 
+# 강의 내용 중, 용어 설명
+
+- Epoch
+- Batch size
+
+![ch0306_4]({{site.url}}/images/$(filename)/ch0306_4.png)
+
+
+
+
+
 # 논문요약
 
 ### 요약:
