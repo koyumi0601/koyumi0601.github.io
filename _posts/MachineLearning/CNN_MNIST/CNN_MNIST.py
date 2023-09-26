@@ -3,7 +3,7 @@ from tensorflow.keras import layers, models  # Keras에서 필요한 layers와 m
 from tensorflow.keras.datasets import mnist  # MNIST 데이터셋을 불러옵니다.
 from tensorflow.keras.utils import to_categorical  # 범주형 데이터를 다루기 위한 유틸리티를 불러옵니다.
 
-# 데이터 로딩 및 전처리
+# # 데이터 로딩 및 전처리
 (train_images, train_labels), (test_images, test_labels) = mnist.load_data()  # MNIST 데이터를 로드합니다.
 train_images = train_images.reshape((60000, 28, 28, 1)).astype('float32') / 255  # 이미지 데이터를 전처리합니다.
 test_images = test_images.reshape((10000, 28, 28, 1)).astype('float32') / 255  # 테스트 이미지 데이터를 전처리합니다.
@@ -28,7 +28,7 @@ model.compile(optimizer='adam',  # 옵티마이저로 Adam을 사용합니다.
               metrics=['accuracy'])  # 평가 지표로 정확도를 사용합니다.
 
 # 모델 학습
-model.fit(train_images, train_labels, epochs=10, batch_size=64)  # 모델을 학습시킵니다.
+model.fit(train_images, train_labels, epochs=10, batch_size=64)  # 모델을 학습시킵니다. Need cuDNN libraries
 
 # 모델 평가
 test_loss, test_acc = model.evaluate(test_images, test_labels)  # 테스트 데이터로 모델을 평가합니다.
