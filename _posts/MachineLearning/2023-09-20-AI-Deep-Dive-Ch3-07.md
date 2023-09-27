@@ -49,14 +49,21 @@ search: true
 
 ![ch0307_4]({{site.url}}/images/$(filename)/ch0307_4.png)
 
-- moving average라고 이해하면 될 것 같다
-- learning rate의 dynamic한 조정이라고 볼 수 있다.
+- 속도
+  - 이전 한 시간 스텝에서의 weight(거리) 변화량
+- 모멘텀 계수
+  - 이전 속도의 영향정도
+  - 보통 0.9로 설정한다고 되어 있으나, 아래의 실험에서는 overshooting 발생하여 0.1로 낮추었다. 튜닝해야하는 하이퍼파라미터이다.
 
 
 
-<br><br>
 
-<br>
+
+<br><br><br>
+
+
+
+
 
 # RMS prop. (Root Mean Square Propagation)
 
@@ -64,20 +71,40 @@ search: true
 
 ![ch0307_2]({{site.url}}/images/$(filename)/ch0307_2.png)
 
+뭔 소린지 모르겠음
+
+
+
+
+
 ### 추가조사
 
 - 제안: 
 
   - Geoffrey Hinton의 강의([강의록](http://www.cs.toronto.edu/~tijmen/csc321/slides/lecture_slides_lec6.pdf))에서 처음 제안됨. 
 
+- 수식
+
+  ![ch0307_13]({{site.url}}/images/$(filename)/ch0307_13.png)
+
+- Root Mean Square Propagation 이름의 유래
+
+  - Root Mean Square가 학습률 조정 계산에 사용됨. 여기서 유래된 이름. ($$ s_t $$가 그라디언트 제곱의 '이동평균')
+
+  - 특정 파라미터의 그래디언트가 크게 발생하면, 해당 파라미터의 학습률은 감소 ($$ w_{t+1} $$ 수식에서, 그라디언트의 분모항으로 들어감. 제곱 후 루트 취해주므로 항상 양수)
+
+  - 각 파라미터에 대해, 그래디언트의 제곱의 이동 평균을 유지한다.
+
+    
+
 - 핵심 아이디어
 
   - 각 파라미터에 대해 학습률을 개별적으로 조정
   - 그래디언트가 작은 파라미터는 더 큰 학습률을 가지며, 그래디언트가 큰 파라미터는 더 작은 학습률을 가짐
 
-- 수식
+  
 
-  ![ch0307_3]({{site.url}}/images/$(filename)/ch0307_3.png)
+  
 
 - 효과성
 
@@ -88,6 +115,10 @@ search: true
   - 사람이 경사가 가파를 때는 작은 걸음을, 경사가 완만할 때는 큰 걸음을 걷는 것과 유사함.
 
 - 논문x. 수학적 증명x 
+
+
+
+>  w1, w2, ... 들에 대한 이동량을 normalize해주는 것 같다?
 
 
 
@@ -144,9 +175,82 @@ optimizer = tf.keras.optimizers.Adam(learning_rate=0.001) # tensorflow
 
 ### 코드
 
-![ch0307_5]({{site.url}}/images/$(filename)/ch0307_5.png)
+#### 등방한 경우
+
+$$ Loss = w_1^2 + w_2^2 $$
+
+##### 등방한 경우, SGD 지그재그로 움직이지 않음, 모멘텀 alpha 0.9, RMSProp beta 0.1
+
+![ch0307_12]({{site.url}}/images/$(filename)/ch0307_12.png)
 
 *연한 색: 초기 위치, 진한 색: 나중 위치, 빨간 색: 최종 위치*
+
+
+
+##### 등방한 경우, SGD 지그재그로 움직이지 않음, 모멘텀 alpha 0.1, RMSProp beta 0.9
+
+![ch0307_11]({{site.url}}/images/$(filename)/ch0307_11.png)
+
+
+
+
+
+<br>
+
+<br>
+
+#### 비등방한 경우
+
+#### 비등방 + SGD가 지그재그로 움직이는 경우 + 모멘텀 alpha 0.1
+
+![ch0307_7]({{site.url}}/images/$(filename)/ch0307_7.png)
+
+
+
+
+
+##### 비등방 + SGD가 지그재그로 움직이는 경우 + 모멘텀 alpha 0.9
+
+$$ Loss = w_1^2 + 8*w_2^2 $$
+
+![ch0307_6]({{site.url}}/images/$(filename)/ch0307_6.png)
+
+
+
+
+
+##### 비등방 + SGD가 지그재그로 움직이는 경우 + 모멘텀 alpha 0.99 
+
+수렴을 못하기도 하네. overshooting 발생
+
+![ch0307_8]({{site.url}}/images/$(filename)/ch0307_8.png)
+
+
+
+##### 비등방 + SGD가 지그재그로 움직이는 경우 + RMSProp beta 0.1 
+
+![ch0307_9]({{site.url}}/images/$(filename)/ch0307_9.png)
+
+
+
+##### 비등방 + SGD가 지그재그로 움직이는 경우 + RMSProp beta 0.99
+
+![ch0307_10]({{site.url}}/images/$(filename)/ch0307_10.png)
+
+
+
+모델과 설정 값에 따라, 수렴하는 양태가 다르다.
+
+항상 지그재그가 효과적으로 없어지는 것도 아니다... 모델의 특성을 잘 보고 판단하여 optimizer도 튜닝해야 한다.
+
+
+
+- 모멘텀을 사용할 때의 장점
+  - 비등방 오류 표면에서, 지그재그 움직임이 줄어들고, 빠르게 수렴 가능 (튜닝은 잘 해야 함)
+  - Local Minima 및 안장점 Saddle Point 탈출
+  - 고차원 및 복잡한 모델에서도 잘 동작 함
+
+
 
 ```python
 import numpy as np
@@ -169,6 +273,7 @@ class SGDOptimizer:
     def update(self, w1, w2, grad_w1, grad_w2):
         w1 -= self.learning_rate * grad_w1
         w2 -= self.learning_rate * grad_w2
+        print(f'w1, w2 = ', w1, w2)
         return w1, w2
 
 class MomentumOptimizer:
@@ -201,13 +306,13 @@ class RMSPropOptimizer:
 
 # 손실 함수와 그래디언트 정의
 def f(w1, w2):
-    return w1**2 + w2**2
+    return w1**2 + 8*w2**2
 
 def gradient_w1(w1):
-    return 2 *  w1
+    return 2 * w1
 
 def gradient_w2(w2):
-    return 2 * w2
+    return 2 * 8 * w2
 
 # Optimizer 인스턴스 생성
 sgd_optimizer = SGDOptimizer(learning_rate)
@@ -257,7 +362,8 @@ def plot_path(ax, path, title, color):
     ax.plot_surface(X, Y, Z, cmap='viridis', alpha=0.5)
     x, y = zip(*path)
     num_points = len(path)
-    colors = [mcolors.to_rgba(color, alpha=i/num_points) for i in range(num_points)]  # 그라데이션 적용
+    min_alpha = 0.2  # 최소 alpha 값 설정
+    colors = [mcolors.to_rgba(color, alpha=min(1, i/num_points + min_alpha)) for i in range(num_points)]
     ax.scatter(x, y, [f(w1, w2) for w1, w2 in path], c=colors, marker='o', s=30)
     ax.scatter(x[-1], y[-1], [f(w1, w2) for w1, w2 in [path[-1]]], c='red', marker='o', s=50)  # 최종 도착 지점을 다른 색으로 표시
     ax.set_xlabel('w1')
@@ -265,13 +371,13 @@ def plot_path(ax, path, title, color):
     ax.set_zlabel('Loss Function')
 
 ax1 = fig.add_subplot(131, projection='3d')
-plot_path(ax1, sgd_path, 'SGD for $f(w1, w2) = w1^2 + w2^2$', 'blue')
+plot_path(ax1, sgd_path, 'SGD for $f(w1, w2) = w1^2 + 8*w2^2$', 'blue')
 
 ax2 = fig.add_subplot(132, projection='3d')
-plot_path(ax2, momentum_path, 'Momentum for $f(w1, w2) = w1^2 + w2^2$', 'blue')
+plot_path(ax2, momentum_path, 'Momentum for $f(w1, w2) = w1^2 + 8*w2^2$', 'blue')
 
 ax3 = fig.add_subplot(133, projection='3d')
-plot_path(ax3, rmsprop_path, 'RMSProp for $f(w1, w2) = w1^2 + w2^2$', 'blue')
+plot_path(ax3, rmsprop_path, 'RMSProp for $f(w1, w2) = w1^2 + 8*w2^2$', 'blue')
 
 plt.show()
 ```

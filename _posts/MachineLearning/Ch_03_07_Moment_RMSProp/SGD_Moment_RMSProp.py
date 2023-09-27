@@ -18,10 +18,11 @@ class SGDOptimizer:
     def update(self, w1, w2, grad_w1, grad_w2):
         w1 -= self.learning_rate * grad_w1
         w2 -= self.learning_rate * grad_w2
+        print(f'w1, w2 = ', w1, w2)
         return w1, w2
 
 class MomentumOptimizer:
-    def __init__(self, learning_rate, alpha=0.9):
+    def __init__(self, learning_rate, alpha=0.99):
         self.learning_rate = learning_rate
         self.alpha = alpha
         self.v_w1 = 0
@@ -35,7 +36,7 @@ class MomentumOptimizer:
         return w1, w2
 
 class RMSPropOptimizer:
-    def __init__(self, learning_rate, beta=0.9):
+    def __init__(self, learning_rate, beta=0.1):
         self.learning_rate = learning_rate
         self.beta = beta
         self.s_w1 = 0
@@ -50,13 +51,13 @@ class RMSPropOptimizer:
 
 # 손실 함수와 그래디언트 정의
 def f(w1, w2):
-    return w1**2 + w2**2
+    return w1**2 + 1*w2**2
 
 def gradient_w1(w1):
-    return 2 *  w1
+    return 2 * w1
 
 def gradient_w2(w2):
-    return 2 * w2
+    return 2 * 1 * w2
 
 # Optimizer 인스턴스 생성
 sgd_optimizer = SGDOptimizer(learning_rate)
@@ -106,7 +107,8 @@ def plot_path(ax, path, title, color):
     ax.plot_surface(X, Y, Z, cmap='viridis', alpha=0.5)
     x, y = zip(*path)
     num_points = len(path)
-    colors = [mcolors.to_rgba(color, alpha=i/num_points) for i in range(num_points)]  # 그라데이션 적용
+    min_alpha = 0.2  # 최소 alpha 값 설정
+    colors = [mcolors.to_rgba(color, alpha=min(1, i/num_points + min_alpha)) for i in range(num_points)]
     ax.scatter(x, y, [f(w1, w2) for w1, w2 in path], c=colors, marker='o', s=30)
     ax.scatter(x[-1], y[-1], [f(w1, w2) for w1, w2 in [path[-1]]], c='red', marker='o', s=50)  # 최종 도착 지점을 다른 색으로 표시
     ax.set_xlabel('w1')
@@ -114,12 +116,12 @@ def plot_path(ax, path, title, color):
     ax.set_zlabel('Loss Function')
 
 ax1 = fig.add_subplot(131, projection='3d')
-plot_path(ax1, sgd_path, 'SGD for $f(w1, w2) = w1^2 + w2^2$', 'blue')
+plot_path(ax1, sgd_path, 'SGD', 'blue')
 
 ax2 = fig.add_subplot(132, projection='3d')
-plot_path(ax2, momentum_path, 'Momentum for $f(w1, w2) = w1^2 + w2^2$', 'blue')
+plot_path(ax2, momentum_path, 'Momentum', 'blue')
 
 ax3 = fig.add_subplot(133, projection='3d')
-plot_path(ax3, rmsprop_path, 'RMSProp for $f(w1, w2) = w1^2 + w2^2$', 'blue')
+plot_path(ax3, rmsprop_path, 'RMSProp', 'blue')
 
 plt.show()
