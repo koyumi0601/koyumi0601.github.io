@@ -49,9 +49,19 @@ search: true
 
 ![ch0306_4]({{site.url}}/images/$(filename)/ch0306_4.png)
 
+- hyper-parameters:
+  - 모델의 학습 방식을 제어하는 변수
+  - 데이터로부터 학습되지 않으며, 훈련 전에 사전에 설정
+  - 튜닝 - 머신러닝 모델 개발의 중요 단계
+  - ex. learning rate, batch size, epoch number, ...
+- parameters: 
+  - 모델이 데이터로부터 학습하는 변수
+  - ex. 선형 회귀 모델: 기울기, 절편
+  - ex2. 신경망: 가중치, 편향
 
 
 
+<br><br><br><br><br><br>
 
 # 논문요약
 
