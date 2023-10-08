@@ -30,3 +30,4 @@ _site
 
 # datafile
 _posts/MachineLearning/Ch_05_02_sigmoid_classification/data
+_posts/MachineLearning/Ch_05_02_sigmoid_classification/trainset.pkl
