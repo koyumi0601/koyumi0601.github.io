@@ -27,3 +27,6 @@ codekit-config.json
 .sass-cache
 _asset_bundler_cache
 _site
+
+# datafile
+_posts/MachineLearning/Ch_05_02_sigmoid_classification/data
