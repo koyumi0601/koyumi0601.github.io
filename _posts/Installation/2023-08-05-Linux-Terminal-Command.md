@@ -57,6 +57,7 @@ grep "world" *.txt # Global Regular Expression Print
 grep -n "world" *.txt # print nth line including "world"
 grep -ni "world" *.txt # grep insensitivite
 grep -nir "world" .txt # grep insensitive and recursive
+for dir in */; do mv "$dir" "Pop_$dir"; done # 폴더 이름 앞에 prefix 일괄 붙이기
 ```
 
 - Environment variables
