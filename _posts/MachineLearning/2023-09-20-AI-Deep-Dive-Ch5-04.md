@@ -67,7 +67,8 @@ search: true
 - 가우시안 분포는 연속확률분포이다.
 - 내가 입력한 키, 몸무게가 가우시안 분포를 따른다고 가정하면 likelihood는
 - $$ \frac{1}{\sqrt{2*pi*\sigma^2}^{-\exp{\frac{(y-\hat{y})^2}{2\sigma^2}}}}$$ .
-- -log 씌우고 상수 무시하고 유도하면 $$ \sum{(y_i-\hat{y_i})^2} $$ 나온다
+- -log 씌우고 상수 무시하고 유도하면 $$ \sum{(y_i-\hat{y_i})^2} $$ 나온다 MSE와 동일하다.
+- 이걸 loss함수로 쓰면 된다.
 
 
 
