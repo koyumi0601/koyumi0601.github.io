@@ -26,3 +26,36 @@ search: true
   - 내 드라이브 > CoLab Notebooks
   - 배포자료 붙여넣기
 
+
+
+
+
+##### 참고
+
+- .pt 파일 
+
+  - PyTorch에서 모델의 가중치나 전체 모델을 저장할 때 사용하는 파일 확장자
+
+  - torch.save / torch.load
+
+  - 모델의 가중치만 저장하고 불러오는 경우:
+
+    ```python
+    # 저장
+    torch.save(model.state_dict(), 'model_weights.pt')
+    
+    # 불러오기
+    model.load_state_dict(torch.load('model_weights.pt'))
+    ```
+
+  - 전체 모델을 저장하고 불러오는 경우:
+
+    ```python
+    # 저장
+    torch.save(model, 'model.pt')
+    
+    # 불러오기
+    model = torch.load('model.pt')
+    ```
+
+    
