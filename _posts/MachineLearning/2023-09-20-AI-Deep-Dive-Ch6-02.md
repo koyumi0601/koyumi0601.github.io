@@ -26,7 +26,8 @@ search: true
   - 내 드라이브 > CoLab Notebooks
   - 배포자료 붙여넣기
 
-
+- shift enter: 셀 실행 후 다음 셀로 이동
+- control enter: 셀 실행
 
 
 
