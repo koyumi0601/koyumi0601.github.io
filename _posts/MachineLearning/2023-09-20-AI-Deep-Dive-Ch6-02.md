@@ -31,6 +31,24 @@ search: true
 
 
 
+##### 구성
+
+- import
+- hyperparameter 설정
+- model 설정
+- 학습 (반복)
+- 검증 loss
+
+
+
+##### 첨부 코드 확인 요망
+
+
+
+
+
+
+
 ##### 참고
 
 - .pt 파일 
