@@ -14,6 +14,70 @@ search: true
 
 *기본 지식*
 
+
+
+### 1. 딥러닝 기본 개념
+
+1. 인공신경망의 기본
+2. 딥러닝과 머신러닝의 차이
+3. 딥러닝의 역사와 발전
+
+### 2. 수학적 기초
+
+1. 선형대수학
+2. 미적분학 및 최적화
+3. 확률과 통계
+
+### 3. 딥러닝 프레임워크 및 도구
+
+1. TensorFlow와 Keras 소개
+2. PyTorch 소개
+3. 기타 도구 (CUDA, cuDNN 등)
+
+### 4. 기본 신경망 구조
+
+1. 완전 연결 신경망 (Fully Connected Neural Networks)
+2. 합성곱 신경망 (Convolutional Neural Networks, CNN)
+3. 순환 신경망 (Recurrent Neural Networks, RNN)
+
+### 5. 학습 기법
+
+1. 경사하강법 및 변형 (SGD, Momentum, Adam 등)
+2. 오버피팅과 정규화 (Dropout, L1/L2 정규화 등)
+3. 배치 정규화
+
+### 6. 고급 신경망 구조
+
+1. ResNet, Inception, MobileNet 등
+2. Transformer 구조
+3. GAN (Generative Adversarial Networks)
+
+### 7. 특수 주제
+
+1. 자연어 처리 (NLP)
+2. 이미지 생성 및 스타일 전송
+3. 강화 학습
+
+### 8. 응용 분야
+
+1. 이미지 분류 및 객체 탐지
+2. 음성 인식
+3. 추천 시스템
+
+### 9. 최신 연구 동향
+
+1. 딥러닝 연구의 최신 트렌드
+2. 딥러닝의 한계와 미래 전망
+
+### 10. 실제 프로젝트 및 캐글 경진대회
+
+1. 실제 문제 해결을 위한 딥러닝 모델 구축
+2. 캐글 경진대회 참여 및 경험 공유
+
+
+
+
+
 ##### 기본 지식:
 
 - 생물학, 의학 기초
@@ -196,40 +260,40 @@ search: true
 
     - 아모레퍼시픽
         - AI/ML [사람인](https://www.saramin.co.kr/zf_user/jobs/relay/view?isMypage=no&rec_idx=46694761&recommend_ids=eJxNjrsNAzEMQ6dJL1OiKNUZ5PbfIsYBsVU%2B8BvpbrXW02YffSPBRPfByOXoZzte3EzZQTbChwo584%2FRtvM8VaR6Dx1zAbxZqFy6qhExzGxZjmynxq6h5knCcE%2BmfFkMcxNjSOZ11YCJPlSuem%2F8AFTJQCs%3D&view_type=list&gz=1&t_ref_content=ing_recruit&t_ref=company_info_view&immediately_apply_layer_open=n#seq=0)
-
+    
     - 오스템 임플란트
         - 각 부문 채용, 많음 [사람인](https://www.saramin.co.kr/zf_user/jobs/relay/view?isMypage=no&rec_idx=46708069&recommend_ids=eJxNj7sRQ0EIA6txDgIhiF3I678Le15wR7ijFZ%2BswmTPM2YffbOyPDBPu7%2F4Z8oOcpCxUihYBxMmxk0pl85kVlvERWrcr9wA72So4989qRG5ZI6sVndK6yrRe8mG3h8RBltyuOWSh1h7ZdFv%2BgNoG0BA&view_type=list&gz=1&t_ref_content=ing_recruit&t_ref=company_info_view&immediately_apply_layer_open=n#seq=0)
-
+    
     - **SK Telecom**
         - [사람인](https://www.saramin.co.kr/zf_user/company-info/view-inner-salary?csn=ckxLKzZwTlBnZTFleFRSUTJQR3ZRZz09)
         - ML 기반 서비스 Backend 개발자 [사람인](https://www.saramin.co.kr/zf_user/jobs/relay/view?isMypage=no&rec_idx=46612988&recommend_ids=eJxNz7kNw1AMA9Bp0pO6KNUZxPtvkcCA%2FVU%2BUGdU0MtxDfDRNyqKbnM1ebOc0%2FmmORZ%2BUlO7dIpzhDrsKa1R%2F3bh0OR5isOg9JeZGvJhEOjie0a1Wa7JSAseKtmbql57Yb0fTIOtVE7EIrxv%2FgBbNEAk&view_type=list&gz=1&t_ref_content=ing_recruit&t_ref=company_info_view&immediately_apply_layer_open=n#seq=0)
         - 센서융합 기반 측위 기술 전문가 [사람인](https://www.saramin.co.kr/zf_user/jobs/relay/view?isMypage=no&rec_idx=46565322&recommend_ids=eJxNj8sNxFAIA6vZOxjM55xC0n8X%2BxQpgaPl8Qg8oG3md4v88vKIzCi5S%2FWJHmroNxINVQ7swRyYDbcPPipT8YlIY4wZkrTZMlt14AK4Vd25jhTCF8xOibXtw68ttRYsKKyWEMwLpw4sVYrV88IfUZFAMA%3D%3D&view_type=list&gz=1&t_ref_content=SRI_050_FVCOVIEW_SM_CPN&t_ref=company_info_view&immediately_apply_layer_open=n#seq=0)
-
+    
     - **신한은행**
         - AI Unit 부서 - RPA 개발 및 운영 [사람인](https://www.saramin.co.kr/zf_user/company-info/view-inner-recruit?csn=ZmExenNMS3JoVXFtSHlzNUVidUJwUT09)
-
+    
     - **삼성생명보험**
         - RPA [사람인](https://www.saramin.co.kr/zf_user/company-info/view-inner-recruit?csn=ZmExenNMS3JoVXFtSHlzNUVidUJwUT09)
-
+    
     - 현대캐피탈
         - 
-
+    
     - **포스코DX**
         - AI BD Analytics, AI Vision [사람인](https://www.saramin.co.kr/zf_user/jobs/relay/view?isMypage=no&rec_idx=46652082&recommend_ids=eJxNj8sRw0AIQ6vJXeIjlnMKcf9dJPZ4lj2%2BETxBCAE2rwY%2B9Y1sdcRGqUoL1yIfzAKZG13qskGy1toYoltP6mBoVG3hk8qClrs3s5qc9Kk%2BhstzVH9X4cCW57GbaN34fpQGO1QwliZdZnlcVfAVN%2F4AQ55AFA%3D%3D&view_type=list&gz=1&t_ref_content=ing_recruit&t_ref=company_info_view&immediately_apply_layer_open=n#seq=0)
-
+    
     - **라인플러스**
         - 데이터 플랫폼 쿠버네티스 엔지니어 [사람인](https://www.saramin.co.kr/zf_user/company-info/view-inner-salary?csn=aTArMW5EbXVaUFRYcTNNdVQ1VFdJQT09)
-
+    
     - **하이퍼커넥트**
         - AI 집중 채용[사람인](https://www.saramin.co.kr/zf_user/company-info/view-inner-salary?csn=UHh6NXc3Y09jTmxoS3ZkZkxCNmdVZz09)
 
 
     - **케이티**
         - 24년도 봄학기 KT AI석사과정 신입생 모집 - 취업연계형으로 석사과정 졸업 후 4년 근무 [사람인](https://www.saramin.co.kr/zf_user/company-info/view?csn=c1J5cnFra1h4OFJWMmgrN1Ywc2dpUT09)
-
+    
     - 삼성메디슨
         - [사람인](https://www.saramin.co.kr/zf_user/company-info/view?csn=SnRIK1NwR3Z5YXozUmVuLzltMEt6UT09)
-
+    
     - Radar
         - 에이치엘클레무브
             - 자율주행, Radar, 
@@ -237,11 +301,11 @@ search: true
 
     - 케이엠더블유
         - RF[사람인](https://www.saramin.co.kr/zf_user/company-info/view-inner-salary?csn=Zm9Ub0xkUDBhY092bEgrZnlYUlYzUT09)
-    
+
 
     - 엠씨넥스
         - CCM
-
+    
     - 한국 타이어앤테크놀로지
         - 선행연구 등등[사람인](https://www.saramin.co.kr/zf_user/jobs/relay/view?isMypage=no&rec_idx=46485357&recommend_ids=eJxNj7kRQ0EIQ6txDuIQxC7k99%2BF1%2FbMQoZ4gJAHGqrxtMiLb89kn8aVnmrop1T%2F1DMoV0bDbVHQIq90CMOGFhAzbKYqHKnKqkXllPOVBFznFJm13qB8I1waTcnl2yfU2g2tOWWZTQwV1M4bEPyMPkXEQBo%3D&view_type=list&gz=1&t_ref_content=ing_recruit&t_ref=company_info_view&immediately_apply_layer_open=n#seq=0)
 
@@ -251,7 +315,7 @@ search: true
 
 
     ##### 부트캠프
-
+    
     - 구글 머신러닝 부트캠프(500명) 지원: 야놀자, 올리브영, KT, 넥슨, ~~노타~~, 넷마블, 롯데e커머스, 몰로코, 보이저엑스, 쏘카
     - 네이버 AI 부스트캠프(240명)
     - 코드스테이츠
@@ -266,7 +330,7 @@ search: true
     - KT AIVLE 만 34세 이하 [링크](https://aivle.kt.co.kr/home/main/applyMain?mcd=MC00000051)
     - 프로그래머스 데브코스 [링크](https://school.programmers.co.kr/learn/courses/19235/19235-%EB%8D%B0%EB%B8%8C%EC%BD%94%EC%8A%A4-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EB%B6%84%EC%84%9D-1%EA%B8%B0)
     - SW사관학교정글 [링크](https://swjungle.net/)
-
+    
     - 직무 올라온 것은 없지만 연봉이
         - 카카오 [사람인](https://www.saramin.co.kr/zf_user/company-info/view?csn=SWxZTDB4NDZWTDRFSnQ3N3krT080dz09)
         - 삼성에스디에스 [사람인](https://www.saramin.co.kr/zf_user/company-info/view-inner-salary?csn=aTArMW5EbXVaUFRYcTNNdVQ1VFdJQT09)
