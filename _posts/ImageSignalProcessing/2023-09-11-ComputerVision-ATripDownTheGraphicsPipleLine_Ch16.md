@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "A Trip Down The Graphics PipleLine, Chapter 17. Grandpa, What Does "Viewport" Mean?"
+title: "A Trip Down The Graphics PipleLine, Chapter 17. Grandpa, What Does Viewport Mean?"
 categories: imagesignalprocessing
 tags: [Image Signal Processing, A Trip Down The Graphics PipleLine]
 toc: true

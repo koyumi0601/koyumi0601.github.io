@@ -60,6 +60,12 @@ gem install bundler
 gem install jekyll
 ```
 
+- install paraday v2.0+
+
+```bash
+gem install faraday-retry
+```
+
 - Go to project foler and install bundle
 
 ```bash
@@ -69,7 +75,7 @@ bundle install
 - run jekyll
 
 ```bash
-sudo bundle exec jekyll serve
+bundle exec jekyll serve
 ```
 
 - Go to http://127.0.0.1:4000/ with any explorer
