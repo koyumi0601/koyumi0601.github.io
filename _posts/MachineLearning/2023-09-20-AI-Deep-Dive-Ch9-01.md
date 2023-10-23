@@ -33,6 +33,14 @@ search: true
 
 ![ch9_01]({{site.url}}\images\2023-09-20-AI-Deep-Dive-Ch9-01\ch9_01.png)
 
+- 이렇게 함으로써 얻는 효과는?
+  - h2의 출력을 만들 때, h1도 고려한다.
+  - h3의 출력을 만들 때, h1, h2도 고려한다. 
+
+- 수식
+
+![ch9_02]({{site.url}}\images\2023-09-20-AI-Deep-Dive-Ch9-01\ch9_02.png)
+
 
 
 > 추가 조사
