@@ -160,10 +160,84 @@ search: true
 
 
 
+> 추가 조사 2 
+>
+> Teacher forcing
+>
+> `Teacher forcing`은 시퀀스 예측 작업에서 RNN(Recurrent Neural Network) 또는 그 변형 구조들(LSTM, GRU 등)을 학습시킬 때 사용하는 기법입니다.
+>
+> 시퀀스 예측 작업에서 모델은 이전 시간 스텝의 출력을 현재 시간 스텝의 입력으로 사용합니다. 예를 들어, 번역 작업에서 "I am a student"를 "나는 학생이다"로 번역하는 경우, "나는"이라는 단어를 생성한 후, 이 단어를 다음 입력으로 사용하여 "학생이다"를 생성하게 됩니다.
+>
+> 그러나 학습 초기에는 모델의 예측이 부정확할 수 있기 때문에, 이러한 부정확한 예측을 다음 입력으로 사용하면 학습이 불안정해질 수 있습니다. 이를 해결하기 위해 `Teacher forcing` 기법을 사용합니다.
+>
+> **Teacher forcing의 원리**:
+>
+> - 학습 도중에는 실제 정답(ground truth)을 다음 시간 스텝의 입력으로 사용합니다.
+> - 예를 들어, 위의 번역 예제에서 "나는"을 생성한 후, 실제 정답인 "학생이다"를 다음 입력으로 사용하여 모델을 학습시킵니다.
+> - 이렇게 하면 모델이 부정확한 예측으로 인한 누적된 오류로부터 보호받게 되어 학습이 더 안정적으로 진행됩니다.
+>
+> 그러나 `Teacher forcing`만 사용하면, 실제 테스트 시에는 이전 시간 스텝의 모델 출력을 입력으로 사용해야 하므로, 학습과 테스트 시의 동작이 다르게 됩니다. 이로 인해 일부 경우에는 학습된 모델의 성능이 저하될 수 있습니다. 따라서, 학습 도중에 `Teacher forcing`를 일정 확률로 적용하거나, 학습 초기에만 적용하는 등의 전략을 사용하기도 합니다.
+
 
 
 ## 05 RNN attention의 문제점과 트랜스포머의 self-attention
 
+- Beautiful insights for RNN
 
+  - 왜 plain RNN은 번역기로는 잘 안쓰일까?
+
+    - 무조건, 문장의 마지막 단어가 제일 중요하게 여겨짐.
+
+    - LSTM, GRU가 있다지만, 근본적인 해결은 아님. why?
+
+      - 얼만큼 주울지도 학습하는데, 이것도 멀면 흐려짐
+
+    - 트랜스포머는 왜 성공했나 Attention is all you need [pdf link](https://arxiv.org/pdf/1706.03762.pdf)
+
+      - '뭘' 주목해야 하는 지를 학습함
+
+        - LSTM, GRU는 얼마나 주울 지를 학습함
+
+      - 내적 연산이 활용 됨
+
+        - 내적 - 얼마나 닮았는 지
+
+        - ```python
+          import numpy as np
+          
+          def softmax(x):
+              e_x = np.exp(x - np.max(x))
+              return e_x / e_x.sum(axis=0)
+          
+          def attention(query, key, value):
+              # Query와 Key의 내적을 구합니다.
+              scores = np.dot(query, key.T)
+              
+              # Softmax를 적용하여 Attention weights를 구합니다.
+              attention_weights = softmax(scores)
+              
+              # Attention weights와 Value의 내적을 구하여 출력을 계산합니다.
+              output = np.dot(attention_weights, value)
+              
+              return output, attention_weights
+          ```
+
+      - Attention은 트랜스포머 이전에 이미 있던 개념
+
+        - RNN -> RNN + attention -> 트랜스포머로 발전
+
+        - > 추가조사
+          >
+          > 1. **BERT (Bidirectional Encoder Representations from Transformers)**: Transformer의 인코더만을 사용하여 양방향으로 문맥을 파악하는 모델입니다. 주로 사전 학습(pre-training)과 세부 튜닝(fine-tuning)의 두 단계로 학습됩니다.
+          > 2. **GPT (Generative Pre-trained Transformer)**: Transformer의 디코더만을 사용하여 텍스트를 생성하는 모델입니다. BERT와 마찬가지로 사전 학습과 세부 튜닝의 두 단계로 학습됩니다.
+          > 3. **T5 (Text-to-Text Transfer Transformer)**: 모든 NLP 작업을 텍스트 대 텍스트 변환 문제로 간주하는 모델입니다.
+          > 4. **XLNet**: Transformer와 순환 메커니즘을 결합하여 긴 시퀀스를 처리하는 데 효과적인 모델입니다.
+          > 5. **RoBERTa**: BERT의 변형으로, 학습 데이터와 학습 방법을 최적화하여 BERT보다 더 좋은 성능을 달성합니다.
+          > 6. **ViT (Vision Transformer)**: Transformer 구조를 이미지 분류 작업에 적용한 모델입니다.
+          > 7. **DistilBERT, TinyBERT, MobileBERT**: BERT의 경량화 버전으로, 계산 효율성을 높이면서도 비교적 높은 성능을 유지합니다.
+
+        - RNN + attention의 문제: RNN 구조적 한계 두 가지 + 흐려지는 정보에 attention한다
+
+          - 쓰다라는 단어의 뜻을 이해하려면, 돈을, 모자를, 맛이, 글을 과 같이 멀리 있는 앞 단어를 봐야 알 수 있는데, h7에는 x1이 흐려진 채로 들어가 있으니 x7의 참의미를 못 담고 있다. 심지어 영어라면 뒤를 봐야 할텐데 뒤 단어들은 아예 담지도 않음 (bidirectional RNN 써야 함)
 
 ## 06 강의 마무리 (딥러닝 연구는 뭘 잘해야 할까)
