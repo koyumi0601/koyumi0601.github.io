@@ -41,6 +41,18 @@ search: true
 
 ![ch9_02]({{site.url}}\images\2023-09-20-AI-Deep-Dive-Ch9-01\ch9_02.png)
 
+- $$ h_0 = 0 $$
+- $$ h_1 = tanh(x_1W_x+b) $$
+- $$ h_2 = tanh(x_2W_x+h_1W_h + b) $$
+- $$ h_3 = tanh(x_3W_x+h_2W_h + b) $$
+- $$ y_3 = h3W_y+b_y $$ 얘는 activation따로 안하고, softmax를 통과시킬거라
+
+- tanh: -1~1까지, 최대 기울기 1정도는 됨. vanishing gradient에 취약
+
+- h가 이전 정보를 담는 역할
+
+
+
 
 
 > 추가 조사
