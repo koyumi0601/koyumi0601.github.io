@@ -20,6 +20,8 @@ search: true
 ##### Transcript
 - 크롬 확장프로그램 ChatGPT for Chrome & YouTube Summary with AI
 
+
+
 ###### 0:00 - 머신 러닝, training, test 개념 (지도 학습: supervised learning)
 > 오늘부터 머신 러닝에 대해 공부를 시작합니다.
 > 저는 신호처리 연구실에서 연구를 하고 있는 박사 과정 학생입니다. 신호처리와 머신 러닝은 비슷한 점이 많아 이에 대해 영상을 찍게 되었습니다.
