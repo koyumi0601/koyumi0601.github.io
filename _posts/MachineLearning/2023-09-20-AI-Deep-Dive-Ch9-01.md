@@ -239,5 +239,58 @@ search: true
         - RNN + attention의 문제: RNN 구조적 한계 두 가지 + 흐려지는 정보에 attention한다
 
           - 쓰다라는 단어의 뜻을 이해하려면, 돈을, 모자를, 맛이, 글을 과 같이 멀리 있는 앞 단어를 봐야 알 수 있는데, h7에는 x1이 흐려진 채로 들어가 있으니 x7의 참의미를 못 담고 있다. 심지어 영어라면 뒤를 봐야 할텐데 뒤 단어들은 아예 담지도 않음 (bidirectional RNN 써야 함)
+        
+        - 트랜스포머는 attention을 적극 활용, self-attention을 통해 RNN을 완전히 버렸다
+        
+          - Decoder가 마지막 단어만 열심히 보는 문제 (갈수록 흐려진다) <- attention으로 해결
+        
+          - RNN의 vanishing gradient (멀수록 잊혀진다) <- self-attention으로 해결
+        
+          - 흐려지는 정보에 attention <- self-attention으로 해결
+        
+          - ![ch9_05]({{site.url}}\images\2023-09-20-AI-Deep-Dive-Ch9-01\ch9_05.png)
+        
+          - > 추가 조사
+            >
+            > Self-Attention
+            >
+            > Self-Attention은 Transformer 모델의 핵심 구성 요소 중 하나로, 시퀀스 내의 각 단어나 토큰이 다른 모든 단어나 토큰과의 관계를 계산하는 메커니즘입니다. 이를 통해 모델은 문장 내의 장거리 의존성(long-range dependencies)을 효과적으로 파악할 수 있게 됩니다.
+            >
+            > Self-Attention의 기본 아이디어는 다음과 같습니다:
+            >
+            > 1. **Query, Key, Value**: 각 단어나 토큰은 세 가지 다른 벡터로 변환됩니다. 이 벡터들은 Query(Q), Key(K), Value(V)로 불립니다. 이 변환은 각각 다른 학습 가능한 가중치 행렬을 사용하여 수행됩니다.
+            > 2. **Attention Score 계산**: Query 벡터와 모든 Key 벡터의 내적(dot product)을 계산하여 Attention Score를 얻습니다. 이 점수는 해당 단어가 다른 단어와 얼마나 관련이 있는지를 나타냅니다.
+            > 3. **Softmax 적용**: Attention Score에 Softmax 함수를 적용하여 확률 분포를 얻습니다. 이 확률 분포는 각 단어가 다른 단어에 주는 "주의"의 정도를 나타냅니다.
+            > 4. **Value 가중합**: Softmax로 얻은 확률 분포를 사용하여 Value 벡터들의 가중합을 계산합니다. 이 결과는 각 단어에 대한 출력 벡터로 사용됩니다.
+            > 5. **출력**: 위의 과정을 통해 얻은 출력 벡터들은 최종적으로 다음 층으로 전달됩니다.
+            >
+            > Self-Attention의 장점은 각 단어가 문장 내의 모든 단어와의 관계를 동시에 고려할 수 있다는 것입니다. 이로 인해 Transformer는 장거리 의존성을 효과적으로 학습할 수 있으며, 이는 RNN이나 LSTM과 같은 순차적인 모델보다 더 높은 성능을 달성하는 데 기여합니다.
+            >
+            > ![img](https://miro.medium.com/v2/resize:fit:428/1*ZCFSvkKtppgew3cc7BIaug.png)
 
 ## 06 강의 마무리 (딥러닝 연구는 뭘 잘해야 할까)
+
+- 결국 직관을 바탕으로하는 아이디어 싸움
+- 사전 정보를 잘 심어주자
+  - ex 1. 정보를 어떻게 엮는 게 좋을까?
+    - CNN: 위치가 가까운 픽셀들끼리 먼저 보고 (선택과 집중), 멀리 있는 건 나중에 정제해서 조합
+    - 트랜스포머: 단어들 간 관계 정보를 파악해서 번역하자
+  - ex 2. 이전 layer와 다음 layer는 값의 차이가 별로 없을 것이다.
+    - ResNet의 skip connection
+      - Residual (잔차)를 학습한다
+      - 기존에는 x->F(x)를 만드는 것을 학습했다면, 여기선 그 차이값 H(x)-x를 학습한다. 
+        - 신경망이 깊을 수록, 그 전 레이어와 다음 레이어의 차이가 크지 않다는 사전정보를 준 것이다.
+      - 도식
+        - 기존
+        - ![img](https://blog.kakaocdn.net/dn/bCq53Y/btqS3aiUBz4/KwFH2Eqf3FTWgrYwsmHAy1/img.png)
+        - ResNet
+      - ![img](https://blog.kakaocdn.net/dn/QP9is/btqTcQ4s52b/ARS9MrzwdbhJKRKDhtkWx1/img.png)
+      - [블로그 링크](https://phil-baek.tistory.com/entry/ResNet-Deep-Residual-Learning-for-Image-Recognition-%EB%85%BC%EB%AC%B8-%EB%A6%AC%EB%B7%B0) 매우 설명이 잘 되어 있다
+  - ex 3. loss는?
+    - 회귀 문제니까 MSE로
+    - 출력이 확률 분포니까 cross-entropy로
+    - overfitting 방지를 위해 weight의 크기도 같이 고려해 봐야겠다 -> regularization
+- 수식은 양념(설득력을 뒷받침)
+
+- 인간은 어떻게 알까? 생각 또 생각
+
