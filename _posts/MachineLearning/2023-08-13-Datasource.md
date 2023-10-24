@@ -22,6 +22,42 @@ search: true
 | **STL-10** | - 스탠포드 대학교 제공<br>- Stanford Tiled | - 96x96 컬러 이미지<br>- 클래스 10개: 비행기, 새, 자동차, 고양이, 사슴, 개, 말, 원숭이, 배, 트럭<br>- 학습데이터 5000개, 클래스당 500개 / 테스트데이터 8000개<br>- 비지도학습을 위한 10만개의 레이블 없는 이미지 포함 | [STL-10 Code](#stl-10-code) |
 | **ImageNet** | - 1000개 카테고리, 1200000개의 훈련 이미지, 50000 검증 이미지, 150000개 테스트 이미지<br>- **ILSVRC (ImageNet Large Scale Visual Recognition Challenge)**: ImageNet 데이터셋을 기반으로 한 연간 경쟁 대회. 객체 탐지, 이미지 분류, 객체 위치 지정 | - 딥러닝과 컴퓨터 비전<br>- 2012년 AlexNet 우승<br>- 라벨링: WordNet 계층 구조를 기반으로 라벨링. 각각의 WordNet 명사는 하나 이상의 이미지로 표현되며, 이를 통해 다양한 시각적 개념을 포착 | [ImageNet Link](https://www.image-net.org/download.php) |
 | **AI Hub** | - 한국의 AI 데이터 허브 | - 다양한 데이터셋 제공 | [AI Hub Link](https://aihub.or.kr/) |
+| **COCO (Common Objects in Context)** | 객체 탐지, 세그멘테이션(segmentation), 캡션 생성 등을 위한 데이터셋 | 330K 이미지, 200K 레이블, 80 객체 카테고리 |
+| **Pascal VOC** | 객체 탐지, 세그멘테이션(segmentation)을 위한 데이터셋 | 20 객체 카테고리 |
+| **ADE20K** | 시각적 의미론적 세그멘테이션(semantic segmentation)을 위한 데이터셋 | 150개 이상의 객체와 부분 카테고리 |
+| **Cityscapes** | 도시 풍경 이미지의 세그멘테이션(segmentation)을 위한 데이터셋 | 50개 도시의 다양한 시나리오 |
+| **CelebA** | 유명인 얼굴 이미지 데이터셋 | 200K+ 이미지, 40개 속성 레이블 |
+| **LSUN (Large-scale Scene Understanding)** | 시각적 장면 이해를 위한 데이터셋 | 10개의 장면 카테고리와 20개의 객체 카테고리 |
+| **Kinetics** | 동영상 분류를 위한 데이터셋 | 400개의 동작 카테고리, 300K+ 동영상 클립 |
+| **UCF101** | 동영상 분류를 위한 데이터셋 | 101개의 동작 카테고리 |
+| **Fashion MNIST** | 의류 이미지 데이터셋, MNIST의 대안으로 사용 | 10개의 의류 카테고리, 28x28 Grayscale |
+| **SVHN (Street View House Numbers)** | 거리 뷰 이미지에서 집 번호 인식을 위한 데이터셋 | 600K+ 숫자 이미지 |
+| **LIDC-IDRI (Lung Image Database Consortium and Image Database Resource Initiative)** | 폐 CT 영상 데이터셋 | 1000개의 비침습성 폐 CT 영상, 약 4만개의 레이블 |
+| **BRATS (Brain Tumor Segmentation Challenge)** | 뇌 종양 세그멘테이션(segmentation) 데이터셋 | MRI 영상을 기반으로 한 뇌 종양 데이터 |
+| **ISIC (International Skin Imaging Collaboration)** | 피부 암 진단을 위한 데이터셋 | 다양한 피부 병변 이미지 |
+| **Mammographic Masses** | 유방암 진단을 위한 맘모그래피 데이터셋 | 유방암 여부와 관련된 속성 정보 포함 |
+| **DRIVE (Digital Retinal Images for Vessel Extraction)** | 망막 이미지 데이터셋 | 혈관 추출을 위한 40개의 컬러 망막 이미지 |
+| **DDSM (Digital Database for Screening Mammography)** | 디지털 유방 X-선 영상 데이터셋 | 유방암 진단을 위한 X-선 영상 |
+| **AID (Arrhythmia Identification Dataset)** | 부정맥 식별을 위한 심전도(ECG) 데이터셋 | 다양한 부정맥 유형의 심전도 데이터 |
+| **OASIS (Open Access Series of Imaging Studies)** | 뇌 MRI 데이터셋 | 노인의 뇌 MRI 영상 및 관련 임상 데이터 |
+| **ANHIR (Automatic Non-rigid Histological Image Registration Challenge)** | 조직학적 이미지 등록 챌린지 데이터셋 | 다양한 조직학적 슬라이드 이미지 |
+| **KiTS19 (2019 Kidney and Kidney Tumor Segmentation Challenge)** | 신장 및 신장 종양 세그멘테이션 챌린지 데이터셋 | CT 영상 기반의 신장 및 신장 종양 데이터 |
+| Dataset Name | Description | Download Link |
+|--------------|-------------|--------------|
+| **Breast Ultrasound Images Dataset** | 유방 초음파 영상 데이터셋. 양성 및 악성 종양의 이미지 포함 || [Kaggle](https://www.kaggle.com/aryashah2k/breast-ultrasound-images-dataset) |
+| **Thyroid Ultrasound Dataset** | 갑상선 초음파 영상 데이터셋. 갑상선의 정상 및 비정상 영상 포함 || [Kaggle](https://www.kaggle.com/kmader/siim-medical-images) |
+| **POCUS: Point-of-Care Ultrasound Dataset** | 다양한 부위의 초음파 영상 데이터셋. 포인트 오브 케어 초음파 이미지 포함 || [POCUS101](https://www.pocus101.com/pocus-atlas-database/) |
+| **Cardiac Ultrasound Dataset** | 심장 초음파 영상 데이터셋. 심장의 구조 및 기능을 평가하기 위한 영상 || [Grand Challenge](https://grand-challenge.org/challenges/) |
+| **Ultrasound Nerve Segmentation** | 신경 초음파 영상 데이터셋. 신경의 위치를 자동으로 세분화하기 위한 영상 || [Kaggle](https://www.kaggle.com/c/ultrasound-nerve-segmentation) |
+
+
+
+
+
+- Refer to 
+  - https://github.com/sfikas/medical-imaging-datasets
+  - file:///D:/Downloads/3._%EC%97%B0%EC%82%B0%EC%84%B8%EC%85%98_%EC%83%9D%EC%84%B1_%EB%B0%8F_%EC%98%88%EC%A0%9C_%EC%8B%A4%EC%8A%B5.pdf
+  - 
 
 
 
