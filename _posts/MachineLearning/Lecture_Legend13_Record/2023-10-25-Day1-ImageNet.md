@@ -16,9 +16,9 @@ search: true
 
 # 강의록
 
-![ImageNet]({{site.url}}\images\2023-10-25-Day1-ImageNet\ImageNet.png)
 
 
+![Legend 13-034]({{site.url}}\images\2023-10-25-Day1-ImageNet\Legend 13-034.jpg)
 
 
 
@@ -46,7 +46,7 @@ search: true
 
 ##### 받아쓰기
 
-참석자 1 00:09
+##### Page 34 50:10
 이미지넷 챌린지는 이렇게 수많은 이미지 128만 장의 이미지를 가지고 1000종 분류하는 분들 1000종 그럼 맨 마지막 노드의 개수로 적절한 것은 몇 개일까요? 천개죠. MLP 통과하고 나서 맨 마지막은 무조건 1000개로 끝납니다. 
 
 제가 보여드릴 모든 모델들이 맨 마지막에는 Fully Connected를 쓰고요. 1000개로 노드가 끝이 나요. 
