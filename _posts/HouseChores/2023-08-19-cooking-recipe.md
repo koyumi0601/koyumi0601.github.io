@@ -27,8 +27,6 @@ search: true
 ## [오리엔탈 드레싱](https://www.10000recipe.com/recipe/6853407)
 
 
-
-
 # 냉장고요리
 
 ## [크래미 양배추 샐러드](https://www.10000recipe.com/recipe/6983956)
@@ -49,10 +47,11 @@ search: true
 
 - 양념은 맛있었음
 - 퍽퍽했음
+- 백종원 레시피, 양념이 컵 단위인데 졸이니 엄청 짰음. 리플에 짜다고 난리 [링크](https://www.10000recipe.com/recipe/6934624)
 
 ## [제육볶음](https://www.10000recipe.com/recipe/6845428)
 
-- 시도 중
+- 기사식당 레시피 < 백종원 레시피에서 설탕 뺀 것[링크](https://www.10000recipe.com/recipe/6892456)
 
 ## [오징어짬뽕](https://www.10000recipe.com/recipe/6865551)
 
