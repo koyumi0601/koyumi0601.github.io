@@ -14,20 +14,247 @@ search: true
 
 
 
+# Loss Landscape
+
+#### 중요성
+
+- **최적화**: 최적화 알고리즘의 작동 원리와 목표 지점을 이해하는 데 중요.
+- **모델 이해**: 모델의 학습 가능성과 복잡성 파악.
+- **과적합**: 과적합 지점을 식별하여 모델의 성능 개선.
+- **일반화**: 부드러운 손실 풍경을 가진 모델이 더 좋은 일반화 경향.
+
+#### 특징
+
+- **전역 최소값**: 모델의 최적 성능을 나타내는 지점.
+- **지역 최소값**: 전역 최소값이 아닌, 주변보다 낮은 지점.
+- **안장점**: 일부 방향에서 최소, 다른 방향에서 최대가 되는 지점.
+- **평탄한 지역**: 손실이 거의 변하지 않는 지역, 최적화 속도 저하 가능성.
+
+### 시각화 방법
+
+- **차원 축소**: 고차원 파라미터 공간을 2D 또는 3D로 변환하는 기법. PCA, t-SNE 등의 방법 사용.
+- **손실 곡선 그리기**: 특정 방향에 대한 손실 값 계산을 통한 1D 손실 곡선 생성. 모델 최적화 경로와 손실 평탄성 비교 분석.
+- **정규화된 방향 선택**: 모델 파라미터에 대한 무작위 방향 선택 및 필터 레벨에서의 정규화. 가중치 차원과 동일한 방향 사용.
+- **2D 등고선 플롯**: 두 개의 무작위 방향 선택 및 정규화를 통한 2D 손실 등고선 그리기. 손실 표면의 지형 시각화.
+- **3D 손실 표면 시각화**: 2D 등고선 플롯을 기반으로 한 3D 손실 표면 생성. ParaView와 같은 고급 렌더링 도구 활용.
+- **학습 과정 동적 시각화**: 학습 과정 중 손실 풍경 변화 추적. 모델의 손실 공간 탐색 관찰.
+- **도구 및 라이브러리 활용**: PyTorch, TensorFlow와 같은 머신러닝 프레임워크와 Matplotlib, Plotly, TensorBoard 등의 시각화 도구 활용.
+- **연구 및 분석**: 시각화를 통한 최적화 전략, 배치 크기, 학습률의 모델 손실 공간 영향 분석. 모델의 일반화 능력 및 최적화 난이도 평가.
+
+
+
+
+
 # Paper 
 
 - Visualizing the Loss Landscape of Neural Nets [https://arxiv.org/pdf/1712.09913.pdf](https://arxiv.org/pdf/1712.09913.pdf)
 
+- code [https://github.com/tomgoldstein/loss-landscape](https://github.com/tomgoldstein/loss-landscape)
+
 - Paper summary
+  - "Visualizing the Loss Landscape of Neural Nets"라는 논문은 신경망의 손실 표면을 시각화하는 방법론에 대해 설명합니다. 이 논문에서는 손실 표면을 시각화하기 위한 여러 기술을 제시하며, 이를 통해 신경망의 최적화 과정을 이해하고, 모델의 일반화 능력과 관련된 통찰을 얻을 수 있습니다. 특히, 이 논문은 손실 표면의 복잡성과 최적화 경로를 시각적으로 분석하는 데 중점을 둡니다.
+  - **필터별 정규화**
+    - 소개: 손실 함수를 플로팅하기 위해 무작위 가우시안 방향 벡터 사용.
+    - 목적: 신경망 매개변수의 스케일에 맞게 벡터들을 정규화하여 손실 함수의 곡률을 시각화.
+    - 중요성: 다른 손실 함수 간 의미 있는 비교 가능.
+  - **1차원 선형 보간**
+    - 방법: 두 세트의 매개변수를 선으로 연결하고, 해당 선을 따라 손실 값을 플로팅.
+    - 활용: 최소값의 날카로움과 평탄함 연구에 사용.
+  - **등고선 플롯 & 무작위 방향**
+    - 구현: 중심점과 두 방향 벡터를 선택하여 손실 함수를 1차원 또는 2차원에서 플로팅.
+    - 응용: 다양한 최소화 방법의 궤적 탐색 및 최적화기 비교.
+  - **날카로움 대 평탄함**
+    - 논의: 날카로운 최소화기가 평탄한 것보다 일반화가 더 잘되는지에 대한 논쟁.
+    - 관찰: 필터 정규화를 통한 시각화가 일반화 오류와 상관관계가 있음을 제안.
+  - **스케일 불변성**
+    - 문제: ReLU 비선형성과 배치 정규화 사용 시 신경망의 스케일 불변성 문제 발생.
+    - 강조: 적절한 정규화 없이는 손실 함수 플롯 간 비교가 오해를 불러일으킬 수 있음.
+  - **일반화와 네트워크 구조**
+    - 탐구: 스킵 연결과 같은 네트워크 구조가 손실 풍경과 일반화에 미치는 영향.
+    - 중요성: 손실 풍경의 시각화가 신경망의 행동과 모델의 학습 가능성 및 일반화에 미치는 영향 이해에 중요.
+  - 요약
+    - 이 문서는 손실 풍경의 시각화가 신경망의 성능과 구조적 특성을 이해하는 데 중요한 역할을 한다고 강조합니다. 특히, 필터별 정규화와 같은 방법론은 손실 함수의 곡률을 시각화하고, 다양한 최적화기의 특성을 비교하는 데 유용합니다. 또한, 스케일 불변성과 네트워크 구조가 일반화에 미치는 영향을 분석함으로써, 모델의 학습과 일반화 능력을 향상시키는 방향으로 연구를 진행할 수 있습니다.
 
-1. **필터별 정규화(Filter-Wise Normalization)**: 이 논문은 필터별 정규화라는 시각화 방법을 소개합니다. 이 방법은 무작위 가우시안 방향 벡터를 사용하여 손실 함수를 플로팅하며, 이 벡터들은 신경망 매개변수의 스케일에 맞게 정규화됩니다. 이 접근법은 손실 함수의 곡률을 시각화하는 데 도움이 되며, 다른 손실 함수 간에 의미 있는 비교를 가능하게 합니다.
-2. **1차원 선형 보간(1-Dimensional Linear Interpolation)**: 이 방법은 두 세트의 매개변수를 선으로 연결하고 이 선을 따라 손실 값을 플로팅하는 간단한 방법입니다. 이 방법은 다양한 최소값의 날카로움과 평탄함을 연구하는 데 사용되었습니다.
-3. **등고선 플롯 & 무작위 방향(Contour Plots & Random Directions)**: 이 방법은 중심점과 두 방향 벡터를 선택하여 1차원 또는 2차원에서 손실 함수를 플로팅합니다. 이 접근법은 다양한 최소화 방법의 궤적을 탐색하고 다른 최적화기가 다른 국소 최소값을 찾는다는 것을 보여주는 데 사용되었습니다.
-4. **날카로움 대 평탄함(Sharp vs Flat Dilemma)**: 논문은 날카로운 최소화기가 평탄한 것보다 일반화가 더 잘되는지에 대한 논쟁을 다룹니다. 필터 정규화로 시각화할 때 최소화기의 날카로움이 일반화 오류와 잘 상관한다는 것을 제안합니다.
-5. **스케일 불변성(Scale Invariance)**: 논문은 또한 ReLU 비선형성과 배치 정규화를 사용할 때 신경망의 스케일 불변성 문제를 다룹니다. 적절한 정규화 없이는 손실 함수 플롯 간의 비교가 오해의 소지가 있다고 강조합니다.
-6. **일반화와 네트워크 구조(Generalization and Network Architecture)**: 논문은 스킵 연결과 같은 네트워크 구조가 손실 풍경과 일반화에 어떤 영향을 미치는지 탐구합니다.
 
-문서는 손실 풍경의 시각화가 신경망의 행동을 이해하고 다양한 구조와 학습 매개변수가 모델의 학습 가능성과 일반화에 미치는 영향을 이해하는 데 강력한 도구라고 강조합니다.
+
+# Loss Landscape의 시각화 방법
+
+## 라이브러리와 예제
+
+- Matplotlib
+
+```python
+import matplotlib.pyplot as plt
+import numpy as np
+
+param_vals, loss_vals = np.meshgrid(np.linspace(-1, 1, 100), np.linspace(0, 1, 100))
+
+fig = plt.figure()
+ax = fig.add_subplot(111, projection='3d')
+ax.plot_surface(param_vals, loss_vals, np.sin(param_vals) + np.cos(loss_vals))
+ax.set_xlabel('Parameter')
+ax.set_ylabel('Loss')
+ax.set_zlabel('Loss Value')
+plt.show()
+```
+
+
+
+- Plotly
+
+```python
+import plotly.graph_objs as go
+import numpy as np
+
+# 가정: loss_vals와 param_vals는 위와 같습니다.
+param_vals, loss_vals = np.meshgrid(np.linspace(-1, 1, 100), np.linspace(0, 1, 100))
+loss_surface = np.sin(param_vals) + np.cos(loss_vals)
+
+fig = go.Figure(data=[go.Surface(z=loss_surface, x=param_vals, y=loss_vals)])
+fig.update_layout(title='Loss Landscape', autosize=False,
+                  width=500, height=500,
+                  margin=dict(l=65, r=50, b=65, t=90))
+fig.show()
+```
+
+
+
+- TensorBoard
+
+```python
+import tensorflow as tf
+
+# 모델과 로거 설정
+model = ... # 모델 정의
+log_dir = ... # 로그 디렉토리 경로
+tensorboard_callback = tf.keras.callbacks.TensorBoard(log_dir=log_dir, histogram_freq=1)
+
+# 모델 훈련
+model.fit(x_train, y_train, epochs=5, callbacks=[tensorboard_callback])
+```
+
+
+
+- PyTorch
+
+```python
+# PyHessian
+# 이 코드는 모델의 Hessian 행렬의 고유값을 계산합니다
+import torch
+import torchvision.models as models
+from pyhessian import hessian # pyhessian 라이브러리를 불러옵니다.
+
+# 모델 정의 (예: ResNet18)
+model = models.resnet18(pretrained=True)
+
+# 데이터셋 정의 (예: CIFAR10)
+# CIFAR10 데이터셋을 불러오고 DataLoader를 설정합니다.
+transform = transforms.Compose([
+    transforms.ToTensor(),
+    transforms.Normalize((0.5,), (0.5,))
+])
+trainset = datasets.CIFAR10(root='./data', train=True, download=True, transform=transform)
+trainloader = torch.utils.data.DataLoader(trainset, batch_size=256, shuffle=True)
+
+# 손실 함수 정의
+criterion = torch.nn.CrossEntropyLoss()
+
+# Hessian 계산을 위한 데이터셋과 모델, 손실 함수를 hessian 클래스에 전달합니다.
+hessian_comp = hessian(model, criterion, dataloader=trainloader, cuda=True)
+
+# 고유값 계산
+eigenvalues, _ = hessian_comp.eigenvalues()
+print(f'The eigenvalues of the Hessian are: {eigenvalues}')
+# 고유값이 크면 손실 표면이 더 가파르고, 작으면 더 평평함을 의미
+```
+
+
+
+# Paper's code
+
+https://github.com/tomgoldstein/loss-landscape
+
+### 환경 설정
+
+다음 소프트웨어와 라이브러리가 설치된 멀티 GPU 노드를 준비하세요:
+
+- PyTorch 0.4
+- OpenMPI 3.1.2
+- mpi4py 2.0.0
+- numpy 1.15.1
+- h5py 2.7.0
+- matplotlib 2.0.2
+- scipy 0.19
+
+### 사전 훈련된 모델 다운로드
+
+CIFAR-10 데이터셋에 대한 사전 훈련된 모델을 제공된 링크에서 다운로드하고 `cifar10/trained_nets` 디렉토리에 위치시킵니다.
+
+### 데이터 전처리
+
+다운로드한 모델을 훈련시킬 때 사용된 데이터 전처리 방법과 일치하는지 확인하세요.
+
+### 1D 손실 곡선 시각화
+
+#### 1D 선형 보간 생성
+
+1D 선형 보간 방법은 동일한 네트워크 손실 함수의 두 최소화자 사이의 방향으로 손실 값을 평가합니다. 이 방법은 다른 배치 크기로 훈련된 최소화자의 평탄함을 비교하는 데 사용되었습니다. `plot_surface.py` 메소드를 사용하여 1D 선형 보간 그래프를 생성합니다.
+
+```bash
+mpirun -n 4 python plot_surface.py --mpi --cuda --model vgg9 --x=-0.5:1.5:401 --dir_type states \
+--model_file cifar10/trained_nets/vgg9_sgd_lr=0.1_bs=128_wd=0.0_save_epoch=1/model_300.t7 \
+--model_file2 cifar10/trained_nets/vgg9_sgd_lr=0.1_bs=8192_wd=0.0_save_epoch=1/model_300.t7 --plot
+
+```
+
+#### 무작위 정규화된 방향을 따라 플롯 생성
+
+모델 매개변수와 동일한 차원을 가진 무작위 방향을 생성하고 "필터 정규화"를 수행합니다. 그런 다음 이 방향을 따라 손실 값을 샘플링할 수 있습니다.
+
+
+
+```bash
+mpirun -n 4 python plot_surface.py --mpi --cuda --model vgg9 --x=-1:1:51 \
+--model_file cifar10/trained_nets/vgg9_sgd_lr=0.1_bs=128_wd=0.0_save_epoch=1/model_300.t7 \
+--dir_type weights --xnorm filter --xignore biasbn --plot
+
+```
+
+
+
+### 2D 손실 등고선 시각화
+
+손실 등고선을 그리기 위해 두 개의 무작위 방향을 선택하고 1D 플로팅과 같은 방식으로 정규화합니다.
+
+
+
+```bash
+
+mpirun -n 4 python plot_surface.py --mpi --cuda --model resnet56 --x=-1:1:51 --y=-1:1:51 \
+--model_file cifar10/trained_nets/resnet56_sgd_lr=0.1_bs=128_wd=0.0005/model_300.t7 \
+--dir_type weights --xnorm filter --xignore biasbn --ynorm filter --yignore biasbn  --plot
+
+```
+
+
+
+### 3D 손실 표면 시각화
+
+`plot_2D.py`를 사용하여 기본적인 3D 손실 표면 플롯을 생성할 수 있습니다. 더 상세한 렌더링을 원한다면 [ParaView](http://paraview.org/)를 사용하여 손실 표면을 렌더링할 수 있습니다.
+
+
+
+
+
+# PyHessian
+
+https://cocoa-t.tistory.com/entry/PyHessian-Loss-Landscape-%EC%8B%9C%EA%B0%81%ED%99%94-PyHessian-Neural-Networks-Through-the-Lens-of-the-Hessian
+
+
+
+
+
+
 
 
 
@@ -159,39 +386,24 @@ clovanote.naver.com
 
 
 
-# Summary
+# Transcription Summary
 
-이 설명은 고차원의 손실(로스) 풍경(랜드스케이프)을 시각화하는 방법에 대한 것입니다. 손실 풍경은 모델의 매개변수(웨이트)에 대한 손실 함수의 값을 나타내는 그래프로, 모델의 학습 과정에서 최적의 매개변수를 찾는 데 도움을 줍니다. 이 풍경은 일반적으로 매우 고차원이기 때문에 직접적으로 시각화하기 어렵습니다.
+방법론
 
-설명에 따르면, 랜덤 벡터를 사용하여 고차원 손실 풍경을 시각화하는 방법에 대해 이야기하고 있습니다. 이 방법은 다음과 같은 단계를 포함합니다:
-
-1. **랜덤 벡터 선택**: 웨이트 벡터와 동일한 크기를 가진 두 개의 랜덤 벡터를 선택합니다.
-2. **스케일링**: 선택된 랜덤 벡터를 사용하여 웨이트 공간에서의 방향을 정의하고, 이 방향들을 따라 웨이트를 스케일링하여 손실 값을 계산합니다.
-3. **알파와 베타 조정**: 알파와 베타라는 두 매개변수를 사용하여 랜덤 벡터의 스케일을 조정하면서 손실 값을 계산합니다. 이렇게 하여 손실 풍경의 2차원 '슬라이스'를 생성할 수 있습니다.
-4. **시각화**: 알파와 베타를 변화시키면서 계산된 손실 값들을 3차원 공간에 플롯하여 손실 풍경을 시각화합니다.
-
-이 방법은 고차원의 손실 풍경을 이해하고, 특히 깊은 신경망에서 발생할 수 있는 최적화 문제들(예: 언더피팅, 오버피팅, 로컬 미니멈 문제 등)을 시각적으로 분석하는 데 유용합니다. 또한, 이 방법은 레즈넷(ResNet)과 같은 깊은 신경망의 스킵 커넥션(skip connection)이 손실 풍경에 어떤 영향을 미치는지를 보여주는 데 사용되었습니다. 스킵 커넥션은 손실 풍경을 더 '평평하게' 만들어 최적화를 용이하게 하는 것으로 알려져 있습니다.
-
-## 
-
-### Loss Landscape의 중요성
-
-- **최적화**: Loss landscape는 최적화 과정에서 중요한 역할을 합니다. 경사 하강법(Gradient Descent)과 같은 최적화 알고리즘은 이 표면을 따라 가장 낮은 지점(전역 최소값)을 찾으려고 시도합니다.
-- **모델의 이해**: Loss landscape를 통해 모델의 학습 가능성과 복잡성을 이해할 수 있습니다. 예를 들어, 매우 복잡하고 깊은 모델은 매우 울퉁불퉁하고 복잡한 loss landscape를 가질 수 있습니다.
-- **과적합(Overfitting)**: Loss landscape는 과적합을 이해하는 데에도 도움을 줄 수 있습니다. 훈련 데이터에 대해 너무 낮은 손실을 가지는 지점은 과적합을 나타낼 수 있습니다.
-- **일반화(Generalization)**: 좋은 일반화를 가진 모델은 보통 더 부드러운 loss landscape를 가집니다. 이는 모델이 새로운 데이터에 대해 더 잘 작동할 가능성이 높음을 의미합니다.
-
-### Loss Landscape의 특징
-
-- **전역 최소값(Global Minimum)**: 손실 함수가 가장 낮은 지점입니다. 이론적으로 이 지점에서 모델은 최적의 성능을 발휘합니다.
-- **지역 최소값(Local Minimum)**: 손실 함수가 주변보다 낮지만 전역 최소값은 아닌 지점입니다. 모델이 이러한 지점에 갇히면 더 이상 개선되지 않을 수 있습니다.
-- **안장점(Saddle Point)**: 주변의 일부 방향에서는 최소값이지만 다른 방향에서는 최대값인 지점입니다. 고차원에서는 안장점이 흔하게 발생합니다.
-- **평탄한 지역(Flat Regions)**: 손실이 거의 변하지 않는 지역입니다. 이러한 지역에서는 경사 하강법이 느려질 수 있습니다.
-
-### 시각화
-
-Loss landscape는 고차원이기 때문에 직접적으로 시각화하기 어렵습니다. 그러나 연구자들은 다양한 기법을 사용하여 2D 또는 3D로 표현합니다. 예를 들어, 두 개의 가중치를 선택하여 그에 대한 손실 값을 표면으로 그리거나, 주성분 분석(PCA) 또는 t-SNE와 같은 차원 축소 기법을 사용하여 시각화할 수 있습니다.
-
-### 결론
-
-Loss landscape는 모델의 학습 과정과 최적화를 이해하는 데 중요한 도구입니다. 그러나 실제로는 매우 고차원이고 복잡하기 때문에, 연구자들은 이를 분석하고 이해하기 위해 다양한 방법론을 개발하고 있습니다.
+1. **랜덤 벡터 생성**
+   - 모델 가중치와 동일한 크기의 두 개의 랜덤 벡터 생성
+   - 각 가중치 필터에 맞춰 랜덤 벡터 스케일링 및 정규화
+2. **벡터 정규화**
+   - 생성된 랜덤 벡터의 크기를 1로 조정하여 방향 유지
+3. **스케일링**
+   - 정규화된 벡터에 모델의 각 가중치 필터 크기를 곱하여 원래 스케일로 조정
+4. **정규화**
+   - 벡터의 크기를 표준화하여 방향만을 고려하도록 조정
+5. **손실 풍경 시각화의 스케일링과 정규화**
+   - 랜덤 벡터를 기저로 사용하여 가중치 공간의 두 방향 표현
+   - 가중치 조정을 통한 손실 함수 값 계산 및 2차원 슬라이스 생성
+6. **손실 풍경 플롯**
+   - 알파와 베타 매개변수를 변화시키며 손실 값을 계산
+   - 계산된 손실 값을 3차원 공간에 플롯하여 시각화
+7. **로컬 미니멈 탐색**
+   - 알파와 베타가 0일 때 현재 모델 위치에서의 손실 값을 확인
