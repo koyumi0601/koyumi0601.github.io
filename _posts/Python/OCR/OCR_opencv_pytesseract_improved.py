@@ -6,7 +6,7 @@ import pytesseract
 pytesseract.pytesseract.tesseract_cmd = r'D:\Program Files\Tesseract-OCR\tesseract.exe'
 
 # 이미지 파일 로드
-image_path = r'D:\GitHub_Project\koyumi0601.github.io\_posts\Python\OCR\image_00249.png'
+image_path = r'D:\GitHub_Project\koyumi0601.github.io\_posts\Python\OCR\[0_1]-[9_1]-[5_3]_invert_1080_1920.png'
 # image_00028.png
 # image_00039.png
 # image_00172.png
@@ -41,6 +41,7 @@ processed_roi = cv2.morphologyEx(binary, cv2.MORPH_CLOSE, kernel)
 
 # Tesseract로 전처리된 이미지 영역에서 텍스트를 인식
 extracted_text = pytesseract.image_to_string(processed_roi, lang='eng')
+# extracted_text = pytesseract.image_to_string(roi_gray, lang='eng')
 
 # 추출한 텍스트 출력
 print("인식된 텍스트:", extracted_text)

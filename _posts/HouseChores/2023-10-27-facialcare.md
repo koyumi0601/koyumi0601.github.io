@@ -10,10 +10,31 @@ sidebar:
 search: true
 ---
 
-
 *Facial Care, Medical Items*
 
+
+
+# 순위
+
+- 수면 > 피부 자극 안하는 세안 > 가습기 > 운동 > 오일 > 비타민제 > 히알루론산
+
+
+
+# 실내 습도 관리
+
+- 가습기
+- 온도 20 습도 40-50
+
+
+
+# 오일
+
+- RMK treatment oil
+
+
+
 # 영양제[링크](https://www.youtube.com/watch?v=jftqdGGlwHI&t=234s)
+
 - 비타민 C, E > 비타민 B > 오메가3 > 저분자 콜라겐 > 히알루론산 > 비오틴(탈모에도 좋음) > 프롤린
 - 브로콜리, 시금치
 - 여드름: 비타민 C, E, A, 아연, 셀레늄
@@ -671,18 +692,22 @@ search: true
 # 어플: 필라이즈
 ## 멀티비타민
 - **라이프익스텐션 - 투퍼데이 멀티비타민** / 냄새 있음 / 괜찮은데 하루에 두 알 챙기기 쉽지 않음, 개당 100원 꼴
-- 고려은단 - 멀티비타민 올인원 / 용량이 약간 적음, 냄새 구리단 얘기가 없음, 23종, 알약의 크기가 큼
-- 종근당건강 벤포벨S / 냄새 구리단 얘기가 없음. 용량 약간 적음, 전체 16종
-- 오쏘몰 이뮨 / 즉각 효과
-- 베이직 뉴트리언트 투퍼데이 / 24개 , 냄새남, 활기 생김, 냄새가 엄청 심한듯..
-- 얼라이브 원스데일리 멀티비타민 / 가성비
+- ~~고려은단 - 멀티비타민 올인원 / 용량이 약간 적음, 냄새 구리단 얘기가 없음, 23종, 알약의 크기가 큼~~
+- ~~종근당건강 벤포벨S / 냄새 구리단 얘기가 없음. 용량 약간 적음, 전체 16종~~
+- ~~오쏘몰 이뮨 / 즉각 효과~~
+- ~~베이직 뉴트리언트 투퍼데이 / 24개 , 냄새남, 활기 생김, 냄새가 엄청 심한듯..~~
+- ~~얼라이브 원스데일리 멀티비타민 / 가성비~~
+
+## 비타민C
+
+- 메가 비타민C 3000MG [구매링크](https://brand.naver.com/soonsoofood/products/5105700600?NaPm=ct%3Dlpgpbsos%7Cci%3Dcheckout%7Ctr%3Dppc%7Ctrx%3Dnull%7Chk%3Da383faf765a2cb26585615b7e58fcfa046601a61)
 
 ## 콜라겐
-- 슈퍼콜라겐 플래티넘 / 가격이 사악 / 최적 23개, 조합 84점
-- **콜라겐 샷 데이 & 나잇 / 호평** / 최적 25개, 근데 조합하면 81점.. 왜? 엽산이 많아져서
-- 참존 톤업핏 콜라겐 6000 /
+- ~~슈퍼콜라겐 플래티넘 / 가격이 사악 / 최적 23개, 조합 84점~~
+- ~~**콜라겐 샷 데이 & 나잇 / 호평** / 최적 25개, 근데 조합하면 81점.. 왜? 엽산이 많아져서~~
+- ~~참존 톤업핏 콜라겐 6000 /~~
 - **이너콜라겐 포 화이트** 레몬맛(더 맛있다고 함)/사과맛 / 평점이 제일 높음 / 최적 30개 - 맛있음. 비쌈. 개당 2500원 꼴
-- 올인원 저분자 피쉬 콜라겐 펩타이드 / 고용량,평점 좋은 편, 가격 좋음 / 최적 24개 / 4주 분 32500 원
+- ~~올인원 저분자 피쉬 콜라겐 펩타이드 / 고용량,평점 좋은 편, 가격 좋음 / 최적 24개 / 4주 분 32500 원~~
 
 ## 조합 99점
 - 투퍼데이 멀티비타민 타블렛(120개 22900원) - 비타민A, C, D3, E, B1, B2, B3, B6, 엽산, B12, 비오틴, B5, 요오드, 마그네슘, 아연, 셀레늄, 망간, 크롬, 몰리브덴, 이노시톨, 알파리포산, 퀘르세틴, 마리골드꽃추출물, 아피제닌, 보론, 라이코펜
@@ -691,23 +716,31 @@ search: true
 - 루테인: 시금치 30g이면 20mg 다 채울 수 있음
 - 오메가3: 일주일에 2~3번 고등어 한토막 40g 정도 먹으면 됨
 - 홍삼: 있던 것
+- 비타민C: 과다 섭취 경고
+
+
+
+
+
+
 
 # 효과-제품
+- 보습: 에스트라 아토베리어365 크림 80ml [구매링크](https://smartstore.naver.com/dkfldpatmxhdj2/products/9526380001?NaPm=ct%3Dlpgp7qgx%7Cci%3Dcheckout%7Ctr%3Dppc%7Ctrx%3Dnull%7Chk%3D74821a5ce4e79fe835f69d0ef23ad820e0784e0a)
 - 피부 밝힘: 비타민C / 퓨라도르 비타민C 세럼 118ml, 20% [구매링크](https://smartstore.naver.com/mario0711/products/8126120629?n_media=27758&n_query=%EB%B9%84%ED%83%80%EB%AF%BCC%EC%84%B8%EB%9F%BC&n_rank=1&n_ad_group=grp-a001-02-000000032792941&n_ad=nad-a001-02-000000231416881&n_campaign_type=2&n_mall_id=ncp_1og0u4_01&n_mall_pid=8126120629&n_ad_group_type=2&n_match=3&NaPm=ct%3Dlo869x40%7Cci%3D0zC0001GgxHzFDLITfka%7Ctr%3Dpla%7Chk%3D180d04f4df6568c432f5b9b5db3fbc4c2e09462f)
 - 안티에이징: 
   - 비타민C, 
   - 비타민B3 / 디 오디너리 나이아신아마이드 [구매링크](https://smartstore.naver.com/chaaan/products/8206458638?NaPm=ct%3Dlo86pi2g%7Cci%3D1fb3da2f67a27185f2af6f02102ca40fdffa65fe%7Ctr%3Dsls%7Csn%3D1670627%7Chk%3D3f7f61031e6b5cff83637fc01a0bd063e42db5b4)
-  - 비타민A, 
+  - 비타민A, / 디 오디너리 레티놀 1% 인 스쿠알란 30ml [구매링크](https://brand.naver.com/theordinary/products/7590214221?NaPm=ct%3Dlpgp5pb3%7Cci%3Dcheckout%7Ctr%3Dppc%7Ctrx%3Dnull%7Chk%3De98fedb9907a93af6aa26cba0f2dc68c9faafe91)
   - 레티노이드
   - 트리파로틴 / 아크리프, 처방전 필요
   - 트레티노인 크림
 - 색소침착 개선: 
-  - 하이드로퀴논
-  - 노스카나
-  - 멜라노사 혹은 멜라토닝
+  - 하이드로퀴논 [구매링크](https://smartstore.naver.com/jponpon/products/7020201174?NaPm=ct%3Dlpgpek64%7Cci%3Dcheckout%7Ctr%3Dppc%7Ctrx%3Dnull%7Chk%3Db59b570d4982fb99b005a31a4b4d08bd5ebbaccd)
+  - 노스카나 (약국)
+  - 멜라노사 혹은 멜라토닝 (약국)
 - 목주름, 손등주름 관리: 바세린, Eucerin Aquaphor, 트레티노인 크림, 하이드로퀴논
-- 눈가, 미간 주름: 마데카솔 겔 혹은 분말, 하이드로 클로이드 패치
-- 발각질: 유리아 10%, 살리실산 2%(클리어틴)
+- 눈가, 미간 주름: 마데카솔 겔 혹은 분말(약국), 하이드로 클로이드 패치 (약국)
+- 발각질: 유리아 10%, 살리실산 2%(클리어틴) (약국)
 - 활성산소 낮추기: NAC, 뮤테란
 - 영양제: 오메가3, 비타민 B, 비타민 D, 마그네슘, 비타민 C, 유산균
 - 다이어트: 알긴산 알룬 츄어블정, 가르시니아, 엘 카르니틴, 카테킨, 방풍통성산
@@ -817,6 +850,10 @@ search: true
 - 가려운 곳
   - 장벽이 약해지니까 긁거나 씻거나 너무 많이 하면 더 약해짐
 
+##### 실내 온습도 관리
+
+- 온도: 20, 습도: 40-60
+
 #### 다이어트약
 - 알긴산 알룬 츄어블정 - 포만감
   - 물을 흡수해서 더부룩함
@@ -892,7 +929,7 @@ search: true
 ## 퍼스널컬러
 - 여름, 쿨, 트루 ?
 - 쿨, 톤  업 필요, = 웜톤에 어두운 편
-- 다크서크 ㄹ없음 눈 미백 괜찮음, 애교살 앞머리에는 약가 ㄴ없음 뒤엔 있음, 모공없음
+- 다크서클 없음 눈 미백 괜찮음, 애교살 앞머리에는 약간 없음 뒤엔 있음, 모공없음
 - 섀딩, 컨투어 필수
 - 블러셔는 광대
 - 립은 brick 글로시, nude 글로시
@@ -905,6 +942,11 @@ search: true
 - 옐로 높음, 레드 낮음, 채도 높음, 명도 높음
   - 파스텔 보라색, 연한 회색, 아이보리,
 
+## 메이크업제품
+
+- 컨실러 **더샘 커버 퍼펙션 트리플 팟 컨실러 01 코렉트 베이지** [구매링크](https://smartstore.naver.com/healive/products/7792155393?NaPm=ct%3Dlpgph54h%7Cci%3Dcheckout%7Ctr%3Dppc%7Ctrx%3Dnull%7Chk%3Da900ea8d8e59956b7a15528e686eb33b76c2b276)
+- 마스카라 토니모리 더 쇼킹카라 [구매링크](https://smartstore.naver.com/sellerhubshop/products/8834665254?NaPm=ct%3Dlpgphozt%7Cci%3Dcheckout%7Ctr%3Dppc%7Ctrx%3Dnull%7Chk%3D60d1f9dc6acccb02ecd6455618d3bbc27a0b88c5)
+
 ## 헤어
 - 광대 가리는 길이의 사이드뱅
 ## 체형
@@ -915,4 +957,14 @@ search: true
   - 토너: 보습 기능 약산성 토너
   - 에센스/앰플/세럼: 잡티케어 세럼, 보습 진정 세럼
   - 로션: 보습, 장벽케어
-  - 
+
+## 삭피기/스크럽
+
+- **라벨르 삭피기 초음파 아쿠아 워터 필링기 스크러버 블랙헤드 각질 코 얼굴 피지 제거 L5** [구매링크](https://smartstore.naver.com/wisenine/products/7899372874?NaPm=ct%3Dlpgpirc6%7Cci%3Dcheckout%7Ctr%3Dppc%7Ctrx%3Dnull%7Chk%3D61cbe188984ec794756347b517c29363b6d3dea2)
+
+- 효소 파우더 **더말로지카 데일리 마이크로폴리언트 13g** [구매링크](https://smartstore.naver.com/organichouse/products/8795163369?NaPm=ct%3Dlpgpoyfk%7Cci%3D46e7ede08bd3cc4443d5691bc8b9d9a4f22eae1e%7Ctr%3Dslsl%7Csn%3D306502%7Chk%3D02cc6fe65e8df390574a4da2e13511fc0e3699db)
+- 크리스틴 발미 로션x
+
+## 뷰티디바이스
+
+- 메디큐브 에이지알 부스터프로 [구매링크](https://themedicube.co.kr/product/detail.html?product_no=1425&utm_source=naver&utm_medium=bs_pc&utm_campaign=main_text&n_media=27758&n_query=%EB%A9%94%EB%94%94%ED%81%90%EB%B8%8C%EB%B6%80%EC%8A%A4%ED%84%B0%ED%94%84%EB%A1%9C&n_rank=1&n_ad_group=grp-a001-04-000000027573459&n_ad=nad-a001-04-000000274969633&n_keyword_id=nkw-a001-04-000005805824252&n_keyword=%EB%A9%94%EB%94%94%ED%81%90%EB%B8%8C%EB%B6%80%EC%8A%A4%ED%84%B0%ED%94%84%EB%A1%9C&n_campaign_type=4&n_contract=tct-a001-04-000000000808326&n_ad_group_type=5&NaPm=ct%3Dlpgplecg%7Cci%3D0yi0003amkfzrhwrU133%7Ctr%3Dbrnd%7Chk%3Dfa3775c7de88872580728e603ea847019f0d1296)
