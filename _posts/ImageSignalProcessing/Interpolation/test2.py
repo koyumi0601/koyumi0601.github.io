@@ -10,9 +10,10 @@ def cubic_spline_interpolation_1D(x, y, x_new):
     y = np.array(y).astype(float)
     variableNum = 4 # because it is cubic
     diagonalMtrRowLength = int(variableNum * (len(x) - 1))
+    print(f'(diagonalMtrRowLength): {diagonalMtrRowLength}')
     solvor_input_y = []
-    for idx in range(len(y)):
-        if idx == 0 or idx == len(y)-1:
+    for idx in range(len(x)):
+        if idx == 0 or idx == len(x)-1:
             solvor_input_y.append(y[idx]) # first boundary knot and last boundary knot
             solvor_input_y.append(0.0) # first and last curve as "Not-a-knot"
         else:
@@ -21,6 +22,7 @@ def cubic_spline_interpolation_1D(x, y, x_new):
             solvor_input_y.append(0.0)    # first derivative of lefthand and righthand, then its difference equal to 0
             solvor_input_y.append(0.0)    # Second derivative of lefthand and righthand, then its difference equal to 0
     solvor_input_y = np.array(solvor_input_y)
+    print(f'solvor_input_y: {len(solvor_input_y)}')
     solvor_input_Mtx = []
     for idx in range(len(x)):
         if idx == 0:
