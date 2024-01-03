@@ -1,0 +1,4 @@
+matplotlib==3.7.1
+natsort==8.4.0
+numpy==1.24.3
+scipy==1.11.4

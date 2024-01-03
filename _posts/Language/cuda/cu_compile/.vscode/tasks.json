@@ -6,9 +6,10 @@
             "type": "shell",
             "command": "nvcc",
             "args": [
-                "main.cu",          // .cu 파일 이름
+                //"main.cu",          // .cu 파일 이름
+                "kernel.cu",          // .cu 파일 이름
                 "-o",
-                "bin/main"  // 생성된 실행 파일 이름
+                "bin/main_window"  // 생성된 실행 파일 이름
             ],
             "group": {
                 "kind": "build",

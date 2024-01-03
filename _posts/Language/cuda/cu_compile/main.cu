@@ -20,11 +20,11 @@ int main() {
                   << deviceProp.maxThreadsDim[1] << ", " << deviceProp.maxThreadsDim[2] << ")" << std::endl;
         std::cout << "  Max Grid Size: (" << deviceProp.maxGridSize[0] << ", " << deviceProp.maxGridSize[1] << ", "
                   << deviceProp.maxGridSize[2] << ")" << std::endl;
-        // Tensor Core 지원 여부 확인
+        // Tensor Core support check
         if (deviceProp.major >= 7 && deviceProp.minor >= 0) {
-            std::cout << "  Tensor Core 지원: Yes" << std::endl;
+            std::cout << "  Tensor Core support: Yes" << std::endl;
         } else {
-            std::cout << "  Tensor Core 지원: No" << std::endl;
+            std::cout << "  Tensor Core support: No" << std::endl;
         }          
 
         std::cout << std::endl;

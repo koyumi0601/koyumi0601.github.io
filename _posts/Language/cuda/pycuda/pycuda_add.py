@@ -1,10 +1,32 @@
-# pip install pycuda
+﻿# pip install pycuda
 import pycuda.driver as cuda
 import pycuda.autoinit
 from pycuda.compiler import SourceModule
+# import pycuda.compiler as compiler
 import numpy
 
-# CUDA 커널 코드 작성
+
+# import pycuda.driver as cuda
+# import pycuda.compiler as compiler
+# cuda.init()
+# driver_version = cuda.get_driver_version()
+# cuda_version = cuda.get_version()
+# print("CUDA driver version:", driver_version)
+# print("Current CUDA Toolkit Version:", cuda_version)
+# Name: pycuda
+# Version: 2023.1
+# Summary: Python wrapper for Nvidia CUDA
+# Home-page: http://mathema.tician.de/software/pycuda
+# Author: Andreas Kloeckner
+# Author-email: inform@tiker.net
+# License: MIT
+# Location: D:\Program Files\Python311\Lib\site-packages
+# Requires: appdirs, mako, pytools
+# Required-by:
+
+
+
+# CUDA kernel code
 cuda_code = """
 __global__ void add_kernel(float *a, float *b, float *c, int n) {
     int idx = threadIdx.x + blockIdx.x * blockDim.x;
@@ -14,21 +36,22 @@ __global__ void add_kernel(float *a, float *b, float *c, int n) {
 }
 """
 
-# 커널 코드 컴파일
+# kernel code compile
 mod = SourceModule(cuda_code)
+# warning C4819: multi-character. encoding utf-8 with BOM, with signature using visual studio save dropdown menu
 
-# 커널 함수 가져오기
-add_kernel = mod.get_function("add_kernel")
+# # get kernel function
+# add_kernel = mod.get_function("add_kernel")
 
-# 입력 데이터 생성
-a = numpy.array([1.0, 2.0, 3.0], dtype=numpy.float32)
-b = numpy.array([4.0, 5.0, 6.0], dtype=numpy.float32)
-c = numpy.zeros_like(a)
+# # input data
+# a = numpy.array([1.0, 2.0, 3.0], dtype=numpy.float32)
+# b = numpy.array([4.0, 5.0, 6.0], dtype=numpy.float32)
+# c = numpy.zeros_like(a)
 
-# GPU에서 커널 실행
-block_size = 256
-grid_size = (a.size + block_size - 1) // block_size
-add_kernel(cuda.In(a), cuda.In(b), cuda.Out(c), numpy.int32(a.size), block=(block_size, 1, 1), grid=(grid_size, 1))
+# # GPU - execute kernel
+# block_size = 256
+# grid_size = (a.size + block_size - 1) // block_size
+# add_kernel(cuda.In(a), cuda.In(b), cuda.Out(c), numpy.int32(a.size), block=(block_size, 1, 1), grid=(grid_size, 1))
 
-# 결과 출력
-print("Result:", c)
+# # print result
+# print("Result:", c)

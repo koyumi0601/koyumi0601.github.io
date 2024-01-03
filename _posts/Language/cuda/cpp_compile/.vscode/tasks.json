@@ -6,9 +6,10 @@
             "type": "shell",
             "command": "g++",
             "args": [
+                "-g",
                 "main.cpp",
                 "-o",
-                "bin/main" // 실행 파일 경로 변경. bin 폴더는 만들어둬야 함.
+                "bin/main"
             ],
             "group": {
                 "kind": "build",
@@ -16,9 +17,8 @@
             },
             "presentation": {
                 "reveal": "always",
-                "panel": "shared"
-            },
-            "problemMatcher": "$gcc"
+                "panel": "new"
+            }
         }
     ]
 }
