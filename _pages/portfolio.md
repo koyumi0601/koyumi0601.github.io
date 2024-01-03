@@ -11,7 +11,7 @@ author_profile: true
 ## Programming language
 - Python
 - Matlab
-- C++
+- C++, CUDA
 - SQL
 
 # Experience
