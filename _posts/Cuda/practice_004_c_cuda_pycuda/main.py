@@ -4,7 +4,17 @@ import os, copy
 import numpy as np
 import ctypes
 from ctypes import *
+import sys
 
+if sys.platform.startswith('win'): 
+    print('platform is window')
+    platform = 'window'
+elif sys.platform.startswith('linux'): 
+    print('platform is linux')
+    platform = 'linux'
+else: 
+    print('platform is others')
+    platform = 'other platform'
 
 pnsz = np.asarray([100, 50, 30], dtype = np.int32)
 
@@ -23,7 +33,11 @@ dst_numpy = dst_numpy * dst_numpy
 dst_numpy = dst_numpy + dst_numpy
 
 ## Clang in CPU
-clang_file = os.path.join(os.path.dirname(__file__), 'libmath_clang.so')
+if platform == 'window':
+    clang_file = os.path.join(os.path.dirname(__file__), 'libmath_clang.so')
+elif platform == 'linux':
+    clang_file = os.path.join(os.getcwd(), 'libmath_clang.so')
+
 _math_clang = ctypes.CDLL(clang_file)
 
 __mul_const_clang = _math_clang.mul_const
@@ -56,6 +70,7 @@ __add_mat_clang(c_float_p(dst_clang), c_float_p(dst_clang), c_float_p(dst_clang)
 
 
 ##
+print('---numpy vs c---')
 print(dst_numpy[:10, 0, 0])
 print(dst_clang[:10, 0, 0])
 print(np.sum((dst_numpy - dst_clang)))
@@ -64,8 +79,15 @@ print(np.sum((dst_numpy - dst_clang)))
 
 ## CU in GPU
 
-cu_file = os.path.join(os.path.dirname(__file__), 'libmath_cu.so')
+if platform == 'window':
+    cu_file = os.path.join(os.path.dirname(__file__), 'libmath_cu.so')
+elif platform == 'linux':
+    cu_file = os.path.join(os.getcwd(), 'libmath_cu.so')
+
 _math_cu = ctypes.CDLL(cu_file)
+
+
+
 
 __mul_const_cu = _math_cu.mul_const
 __add_const_cu = _math_cu.add_const
@@ -93,6 +115,7 @@ __add_const_cu(c_float_p(dst_cu), c_float_p(dst_cu), add, c_int_p(pnsz))
 __mul_mat_cu(c_float_p(dst_cu), c_float_p(dst_cu), c_float_p(dst_cu), c_int_p(pnsz))
 __add_mat_cu(c_float_p(dst_cu), c_float_p(dst_cu), c_float_p(dst_cu), c_int_p(pnsz))
 
+print('---numpy vs cuda---')
 print(dst_numpy[:10, 0, 0])
 print(dst_cu[:10, 0, 0])
 print(np.sum(dst_numpy - dst_cu))
