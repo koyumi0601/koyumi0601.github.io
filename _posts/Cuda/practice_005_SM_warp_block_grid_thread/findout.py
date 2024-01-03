@@ -68,14 +68,15 @@ for i in range(device_count):
 # """)
 
 # 블록 및 스레드 설정
-numWarp = 32  
+# numWarp = 32 
 numSM = 28  
 numThreadPerWarp = 32
-numThread = numSM * numSM * numThreadPerWarp
+numSchedulerPerSM = 4
+numThread = numSM * numSchedulerPerSM * numThreadPerWarp
 vendor_streamProcessor = 3584
 
 print(numThread)
-print(vendor_streamProcessor/numSM/numWarp)
+# print(vendor_streamProcessor/numSM/numWarp)
 max_num_threads_per_block = 1024
 
 
