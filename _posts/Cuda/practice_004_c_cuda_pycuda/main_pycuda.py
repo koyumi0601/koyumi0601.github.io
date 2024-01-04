@@ -1,10 +1,9 @@
-import os
-import numpy as np
 import pycuda.driver as cuda
 import pycuda.autoinit
 from pycuda.compiler import SourceModule
-from pycuda import gpuarray
-
+import numpy
+import copy
+import time
 
 # 주어진 커널 코드
 kernel_code = """
@@ -26,64 +25,117 @@ __global__ void mul_const_kernel(float *pddst, float *pdsrc, float dconst, int *
     
     return ;
 }
+
+
+__global__ void add_const_kernel(float *pddst, float *pdsrc, float dconst, int *pnsz) {
+    int nx = pnsz[0];
+    int ny = pnsz[1];
+    int nz = pnsz[2];
+    int id = 0;
+
+    int idx = blockDim.x * blockIdx.x + threadIdx.x;
+    int idy = blockDim.y * blockIdx.y + threadIdx.y;
+    int idz = blockDim.z * blockIdx.z + threadIdx.z;
+
+    if (idz >= nz || idy >= ny || idx >= nx) return;
+
+    id = ny * nx * idz + nx * idy + idx;
+    pddst[id] = pdsrc[id] + dconst;
+    
+    return ;
+
+}
+
+
+__global__ void mul_mat_kernel(float *pddst, float *pdsrc, float *pdsrc2, int *pnsz) {
+    int nx = pnsz[0];
+    int ny = pnsz[1];
+    int nz = pnsz[2];
+    int id = 0;
+
+    int idx = blockDim.x * blockIdx.x + threadIdx.x;
+    int idy = blockDim.y * blockIdx.y + threadIdx.y;
+    int idz = blockDim.z * blockIdx.z + threadIdx.z;
+
+    if (idz >= nz || idy >= ny || idx >= nx) return;
+
+    id = ny * nx * idz + nx * idy + idx;
+    pddst[id] = pdsrc[id] * pdsrc2[id];
+
+    return ;
+
+}
+
+
+__global__ void add_mat_kernel(float *pddst, float *pdsrc, float *pdsrc2, int *pnsz) {
+    int nx = pnsz[0];
+    int ny = pnsz[1];
+    int nz = pnsz[2];
+    int id = 0;
+
+    int idx = blockDim.x * blockIdx.x + threadIdx.x;
+    int idy = blockDim.y * blockIdx.y + threadIdx.y;
+    int idz = blockDim.z * blockIdx.z + threadIdx.z;
+
+    if (idz >= nz || idy >= ny || idx >= nx) return;
+
+    id = ny * nx * idz + nx * idy + idx;
+    pddst[id] = pdsrc[id] + pdsrc2[id];
+    
+    return ;
+
+}
 """
 
 # 커널 코드를 컴파일
 module = SourceModule(kernel_code)
 mul_const_kernel = module.get_function("mul_const_kernel")
+add_const_kernel = module.get_function("add_const_kernel")
+mul_mat_kernel = module.get_function("mul_mat_kernel")
+add_mat_kernel = module.get_function("add_mat_kernel")
 
-# 데이터 및 메모리 할당
-# pnsz = np.asarray([100, 50, 30], dtype=np.int32)
-# pnsz = np.int32([100, 50, 30])
-# pnsz = np.array([100, 50, 30], dtype=np.int32)
-# pnsz = np.asarray([100, 50, 30], dtype=np.int32)
-pnsz = np.array([100, 50, 30], dtype=np.int32)
-# mul = np.random.randn()
-# mul = np.random.randn().astype(np.float32)
-mul = float(np.random.randn())
-# src = np.random.randn(pnsz[0], pnsz[1], pnsz[2]).astype(dtype=np.float32)
-src = np.random.randn(pnsz[0], pnsz[1], pnsz[2]).astype(dtype=np.float32)
-# CPU 메모리 할당 및 데이터 복사
-src_cpu = src.copy()
-dst_cpu = np.zeros_like(src_cpu)
-
-# GPU 메모리 할당 및 데이터 복사
-src_gpu = cuda.mem_alloc(src_cpu.nbytes)
-dst_gpu = cuda.mem_alloc(dst_cpu.nbytes)
-cuda.memcpy_htod(src_gpu, src_cpu)
+pnsz = numpy.int32(numpy.array([300, 1024, 760]))
+mul = numpy.float32(numpy.random.randn())
+# mul = numpy.float32(3.0)
+add = numpy.float32(numpy.random.randn())
+# add = numpy.float32(5.0)
+# src1 = numpy.float32(numpy.ones((pnsz[0], pnsz[1], pnsz[2]))*4)
+src1 = numpy.float32(numpy.random.randn(pnsz[0], pnsz[1], pnsz[2]))
+# src2 = numpy.float32(numpy.ones((pnsz[0], pnsz[1], pnsz[2]))*2)
+src2 = numpy.float32(numpy.random.randn(pnsz[0], pnsz[1], pnsz[2]))
+dst = numpy.float32(numpy.zeros_like(src1))
 
 
-# 커널 설정
-cuda.init()
-device = cuda.Device(0) # first GPU
-warp_size = device.warp_size
-sm_count = device.get_attribute(cuda.device_attribute.MULTIPROCESSOR_COUNT)
-print("Warp 크기:", warp_size)
-print("SM 수:", sm_count)
-# 스레드수 = 병렬연산 수
-block_size = (8, 8, 8) 
-# 2의 제곱수. 128, 256, 512, 1024...
-# 블록당 포함되는 스레드 수
-# 1차원 데이터 (x, 1, 1) 2차원 데이터 (x, y, 1), 3차원 데이터 (x, y, z)
-grid_size = (pnsz[0] // block_size[0] + 1, pnsz[1] // block_size[1] + 1, pnsz[2] // block_size[2] + 1)
-# 그리드당 포함되는 블록 수
-print(block_size, grid_size)
+## numpy in CPU
+src_numpy = copy.deepcopy(src1)
+pre_time_numpy = time.time()
+dst_numpy = src_numpy
+dst_numpy = dst_numpy * mul
+dst_numpy = dst_numpy + add
+dst_numpy = dst_numpy * dst_numpy
+dst_numpy = dst_numpy + dst_numpy
+after_time_numpy = time.time()
+print(f'elapsed time numpy: {after_time_numpy - pre_time_numpy}')
+print("Result: ", dst_numpy[:4,0,0])
+## cuda 
 
-# CUDA 커널 실행
 
-# mul_const_kernel(dst_gpu, src_gpu, mul, pnsz, block=block_size, grid=grid_size) # block당 스레드 수, 그리드(GPU)당 스레드 수
-# mul_const_kernel(dst_gpu, src_gpu, np.float32(mul), cuda.InOut(pnsz), block=block_size, grid=grid_size)
-# mul_const_kernel(dst_gpu, src_gpu, np.float32(mul), pnsz.astype(np.int32), block=block_size, grid=grid_size)
-# mul_const_kernel(dst_gpu, src_gpu, np.float32(mul), pnsz, block=block_size, grid=grid_size)
-# mul_const_kernel(dst_gpu, src_gpu, np.float32(mul), cuda.InOut(pnsz), block=block_size, grid=grid_size)
-# mul_const_kernel(dst_gpu, src_gpu, np.float32(mul), pnsz, block=block_size, grid=grid_size)
-# mul_const_kernel(dst_gpu, src_gpu, np.float32(mul), pnsz.astype(np.int32), block=block_size, grid=grid_size)
-mul_const_kernel(dst_gpu, src_gpu, np.float32(mul), pnsz.astype(np.int32), block=block_size, grid=grid_size)
-cuda.memcpy_dtoh(dst_cpu, dst_gpu)
+block_size = (32, 8, 4) 
+# GTX 960: warp size 32 * streaming multiprocessor 8 * scheduler 4 = 1024
+# RTX 3060: warp size 32 * streaming multiprocessor 28 * scheduler 4 = 3584 (cuda core)
+grid_size = (int(pnsz[0] // block_size[0] + 1), int(pnsz[1] // block_size[1] + 1), int(pnsz[2] // block_size[2] + 1))
 
-# 결과 확인
-print("GPU Result:")
-print(dst_cpu)
+pre_time_pycuda = time.time()
+
+mul_const_kernel(cuda.Out(dst), cuda.In(src1), numpy.float32(mul), cuda.In(pnsz), block=block_size, grid=grid_size)
+add_const_kernel(cuda.Out(dst), cuda.In(dst), numpy.float32(add), cuda.In(pnsz), block=block_size, grid=grid_size)
+mul_mat_kernel(cuda.Out(dst), cuda.In(dst), cuda.In(dst), cuda.In(pnsz), block=block_size, grid=grid_size)
+add_mat_kernel(cuda.Out(dst), cuda.In(dst), cuda.In(dst), cuda.In(pnsz), block=block_size, grid=grid_size)
+
+after_time_pycuda = time.time()
+print(f'elapsed time pycuda: {after_time_pycuda - pre_time_pycuda}')
+
+print("Result: ", dst[:4,0,0])
 
 # https://cuda.readthedocs.io/ko/latest/PyCUDA_int/
 # https://www.cudahandbook.com/sample-chapters/
