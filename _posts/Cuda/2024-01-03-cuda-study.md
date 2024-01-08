@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "CUDA Study Materials"
-categories: language
+categories: cuda
 tags: [language, programming, cpp, cuda]
 toc: true
 author_profile: false
@@ -17,43 +17,25 @@ search: true
 
 # Cuda c programming guide
 
-Programming Guide https://docs.nvidia.com/cuda/cuda-c-programming-guide 공부할 때 이거 써야 함
+- **Programming Guide** [https://docs.nvidia.com/cuda/cuda-c-programming-guide](https://docs.nvidia.com/cuda/cuda-c-programming-guide)
+- Quick Start Guide [https://docs.nvidia.com/cuda/cuda-quick-start-guide/](https://docs.nvidia.com/cuda/cuda-quick-start-guide/)
+- CUDA Programming read docs. [https://cuda.readthedocs.io/ko/latest/rtx2080Ti/](https://cuda.readthedocs.io/ko/latest/rtx2080Ti/)
 
-Quick Start Guide [https://docs.nvidia.com/cuda/cuda-quick-start-guide/](https://docs.nvidia.com/cuda/cuda-quick-start-guide/)
 
-CUDA Programming read docs. [https://cuda.readthedocs.io/ko/latest/rtx2080Ti/](https://cuda.readthedocs.io/ko/latest/rtx2080Ti/)
-
+# Code 
+- Samples: NVIDIA Github 
+- 자주 쓰는 코드: https://blog.naver.com/PostView.nhn?blogId=lithium81&logNo=80143506571
 
 
 # Compute Capability
 
 - maxwell 5.x (https://docs.nvidia.com/cuda/archive/12.2.1/maxwell-compatibility-guide/index.html
 
-
-
 # Specifications
-
 - GTX 960
 - RTX 3060 [https://www.nvidia.com/en-us/data-center/ampere-architecture/](https://www.nvidia.com/en-us/data-center/ampere-architecture/)
-
-
-
-- Occupancy 100%로 만드는 방법 [https://ccode.tistory.com/184](https://ccode.tistory.com/184)
-
-  - 참고.
-
-    http://developer.download.nvidia.com/CUDA/training/NVIDIA_GPU_Computing_Webinars_Further_CUDA_Optimization.pdf
-
-    http://www.nvidia.com/content/PDF/sc_2010/CUDA_Tutorial/SC10_Fundamental_Optimizations.pdf
-
-    http://developer.download.nvidia.com/CUDA/training/cuda_webinars_WarpsAndOccupancy.pdf
-
-    http://nvidia.fullviewmedia.com/gtc2010/0922-a5-2238.html
-
-    http://www.cs.berkeley.edu/~volkov/volkov10-GTC.pdf
-
 - Geforce 550 TI
-
+```bash
   **CL_DEVICE_COMPUTE_CAPABILITY_NV: 2.1
   NUMBER OF MULTIPROCESSORS: 4** >> SM 4개
   **NUMBER OF CUDA CORES: 192** >> 전체 SP 192개. 하나의 SM당 SP는 192/4 = 48개
@@ -63,56 +45,34 @@ CUDA Programming read docs. [https://cuda.readthedocs.io/ko/latest/rtx2080Ti/](h
   CL_DEVICE_KERNEL_EXEC_TIMEOUT_NV: CL_FALSE
   CL_DEVICE_INTEGRATED_MEMORY_NV: CL_FALSE
   CL_DEVICE_PREFERRED_VECTOR_WIDTH_<t> CHAR 1, SHORT 1, INT 1, LONG 1, FLOAT 1, DOUBLE 1
-
-  
-
-  Physical Limits for GPU Compute Capability:	2.0 >> 최대 한계란 뜻
-
+  Physical Limits for GPU Compute Capability:	2.0 # 최대 한계란 뜻
   Threads per Warp	32
-
-  **Warps per Multiprocessor	48** 
-
+  Warps per Multiprocessor	48
   Threads per Multiprocessor	1536
-
-  **Thread Blocks per Multiprocessor	8**
-
-  **Total # of 32-bit registers per Multiprocessor	32768**
-
+  Thread Blocks per Multiprocessor	8
+  Total # of 32-bit registers per Multiprocessor	32768
   Register allocation unit size	64
-
   Register allocation granularity	warp
-
   Registers per Thread	63
-
-  **Shared Memory per Multiprocessor (bytes)	49152** >> Shared Memory 49152 bytes
-
+  Shared Memory per Multiprocessor (bytes)	49152 # Shared Memory 49152 bytes
   Shared Memory Allocation unit size	128
-
   Warp allocation granularity	2
-
   Maximum Thread Block Size	1024
-
-![img](https://t1.daumcdn.net/cfile/tistory/16282136509A061507)
+```
 
 ## 구조
 
 - https://www.youtube.com/watch?v=gSgZNdT9414 33:54
 
-
 | 항목            | CUDA               | HW               |
-|-----------------|--------------------|------------------|
-| 연산 단위       | Thread             | SP or CUDA Core  |
-| HW 점유 단위    | Block              | SM               |
-| Shared Memory   | 48KB `__shared__`  | L1 Cache (16KB + 4KB) |
-| Barrier         | `__syncthreads()`  | -                |
+|----------------|--------------------|------------------|
+| 연산 단위        | Thread             | SP or CUDA Core  |
+| HW 점유 단위     | Block              | SM               |
+| Shared Memory  | 48KB `__shared__`  | L1 Cache (16KB + 4KB) |
+| Barrier        | `__syncthreads()`  | -                |
 | 언어            | C/C++, ptr 사용 가능 | -                |
 
-
-
-
-# Code Samples
-
-- NVIDIA Github 
+![img](https://t1.daumcdn.net/cfile/tistory/16282136509A061507)
 
 
 
@@ -137,12 +97,16 @@ CUDA Programming read docs. [https://cuda.readthedocs.io/ko/latest/rtx2080Ti/](h
 
 
 
-# Blog and youtube
+
+# Optimization
+- Occupancy 100%로 만드는 방법 
+  - [https://ccode.tistory.com/184](https://ccode.tistory.com/184)
+- 참고.
+  - [http://developer.download.nvidia.com/CUDA/training/NVIDIA_GPU_Computing_Webinars_Further_CUDA_Optimization.pdf](http://developer.download.nvidia.com/CUDA/training/NVIDIA_GPU_Computing_Webinars_Further_CUDA_Optimization.pdf)
+  - [http://www.nvidia.com/content/PDF/sc_2010/CUDA_Tutorial/SC10_Fundamental_Optimizations.pdf](http://www.nvidia.com/content/PDF/sc_2010/CUDA_Tutorial/SC10_Fundamental_Optimizations.pdf)
+  - [http://developer.download.nvidia.com/CUDA/training/cuda_webinars_WarpsAndOccupancy.pdf](http://developer.download.nvidia.com/CUDA/training/cuda_webinars_WarpsAndOccupancy.pdf)
+  - [http://nvidia.fullviewmedia.com/gtc2010/0922-a5-2238.html](http://nvidia.fullviewmedia.com/gtc2010/0922-a5-2238.html)
+  - [http://www.cs.berkeley.edu/~volkov/volkov10-GTC.pdf](http://www.cs.berkeley.edu/~volkov/volkov10-GTC.pdf)
 
 
 
-
-
-# 자주쓰는 코드
-
-- https://blog.naver.com/PostView.nhn?blogId=lithium81&logNo=80143506571
