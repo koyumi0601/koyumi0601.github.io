@@ -36,7 +36,7 @@ print("Result: ", dst_numpy[:4,0,0])
 
 ## Clang in CPU
 if platform == 'window':
-    clang_file = os.path.join(os.path.dirname(__file__), 'libmath_clang.so')
+    clang_file = os.path.join(os.path.dirname(__file__), 'libmath_clang_win.so')
 elif platform == 'linux':
     clang_file = os.path.join(os.getcwd(), 'libmath_clang.so')
 
