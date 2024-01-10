@@ -257,5 +257,5 @@ extern "C" void add_mat(float *pddst, float *pdsrc1, float *pdsrc2, int *pnsz){ 
 
 
 // nvcc -Xcompiler -fPIC math_cu.cu -shared -o libmath_cu.so
-// nvcc -Xcompiler -fPIC math_cu.cu -shared -o libmath_cu_win.so
+// nvcc -Xcompiler -fPIC math_cu_linux.cu -shared -o libmath_cu_win.so
 // nvcc error   : 'cudafe++' died with status 0xC0000005 (ACCESS_VIOLATION)
