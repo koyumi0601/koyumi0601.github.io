@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34330.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CudaRuntime2_cuda12p3_custom_code", "CudaRuntime2_cuda12p3_custom_code.vcxproj", "{F05FDA96-36F0-4E20-BF45-9A6FA91E9987}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{967100B2-EDF8-4306-8D11-3B42B969CA8A}"
+	ProjectSection(SolutionItems) = preProject
+		main.py = main.py
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F05FDA96-36F0-4E20-BF45-9A6FA91E9987}.Debug|x64.ActiveCfg = Debug|x64
+		{F05FDA96-36F0-4E20-BF45-9A6FA91E9987}.Debug|x64.Build.0 = Debug|x64
+		{F05FDA96-36F0-4E20-BF45-9A6FA91E9987}.Release|x64.ActiveCfg = Release|x64
+		{F05FDA96-36F0-4E20-BF45-9A6FA91E9987}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3B873021-0456-430F-BE58-6EA71F35CB8A}
+	EndGlobalSection
+EndGlobal
