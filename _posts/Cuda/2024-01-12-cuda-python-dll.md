@@ -14,6 +14,14 @@ search: true
 *cpp dll, cu dll and python*
 
 - see practice_020_dll, practice_021_usedll
+- https://luckygg.tistory.com/278
+    - (tip) dll 탐색 프로그램: dependency walker
+    - (tip) extern "C" 키워드를 붙이면, 네임 맹글링 Name Mangling을 하지 않는다. C++을 함수 오버로딩이 가능하므로 호출될 때 그 구분을 위한 네임 맹글링을 수행하는데, C로 하면 맹글링 안한다. 명시적 링킹으로 특정 함수 호출이 가능해진다.
+    - __declspec(dllexport), declspec(dllimport) : dll 외부로 노출된다. 호출 가능하다는 얘기. export로 정의된 함수를 import로 호출한다. 동일한 *.h파일을 호출 프로젝트와 생성 프로젝트에서 동일하게 사용하기 위함.
+- 클래스를 dll로 만들기 [https://luckygg.tistory.com/281](https://luckygg.tistory.com/281)
+
+
+
 
 # generate dll
 - run visual studio
