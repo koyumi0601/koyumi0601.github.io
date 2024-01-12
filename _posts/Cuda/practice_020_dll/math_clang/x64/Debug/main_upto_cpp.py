@@ -73,3 +73,5 @@ after_time_clang = time.time()
 print(f'elapsed time clang: {after_time_clang - pre_time_clang}')
 print("Result: ", dst_clang[:4,0,0])
 
+print("Press Enter to continue...")
+input()
