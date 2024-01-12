@@ -1,0 +1,4 @@
+﻿  MySum.cpp
+     Creating library D:\GitHub_Project\koyumi0601.github.io\_posts\Cuda\Practice_013_dll_2\MySum\x64\Debug\MySum.lib and object D:\GitHub_Project\koyumi0601.github.io\_posts\Cuda\Practice_013_dll_2\MySum\x64\Debug\MySum.exp
+MSVCRTD.lib(exe_main.obj) : error LNK2019: unresolved external symbol main referenced in function "int __cdecl invoke_main(void)" (?invoke_main@@YAHXZ)
+D:\GitHub_Project\koyumi0601.github.io\_posts\Cuda\Practice_013_dll_2\MySum\x64\Debug\MySum.exe : fatal error LNK1120: 1 unresolved externals

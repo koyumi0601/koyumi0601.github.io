@@ -1,0 +1,8 @@
+﻿  mydll.cpp
+D:\GitHub_Project\koyumi0601.github.io\_posts\Cuda\practice_017_dll\mydll\mydll\mydll.cpp(8,6): warning C4273: 'my_list_add': inconsistent dll linkage
+  (compiling source file '/mydll.cpp')
+  D:\GitHub_Project\koyumi0601.github.io\_posts\Cuda\practice_017_dll\mydll\mydll\mydll.h(10,33):
+  see previous definition of 'my_list_add'
+  
+     Creating library D:\GitHub_Project\koyumi0601.github.io\_posts\Cuda\practice_017_dll\mydll\x64\Debug\mydll.lib and object D:\GitHub_Project\koyumi0601.github.io\_posts\Cuda\practice_017_dll\mydll\x64\Debug\mydll.exp
+  mydll.vcxproj -> D:\GitHub_Project\koyumi0601.github.io\_posts\Cuda\practice_017_dll\mydll\x64\Debug\mydll.dll
