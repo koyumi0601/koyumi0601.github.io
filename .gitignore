@@ -38,3 +38,4 @@ _posts/Cuda/actual_001_reverse_curved_scanconversion/transformed_data_mask_KU/te
 _posts/Cuda/actual_001_reverse_curved_scanconversion/transformed_data_mask_KU/test/ABUS003_RMED_transformed.nrrd
 _posts/Cuda/actual_001_reverse_curved_scanconversion/Tested_DICOM/test/ABUS-003/INVENIA0000-02724/20230508150948/US/1.2.276.0.7230010.3.1.4.301774566.4480.1683583960.534
 _posts/Cuda/practice_008_compiled_cu_dll_open_w_python/cusparse64_12.dll
+_posts/Cuda/practice_008_compiled_cu_dll_open_w_python/cusolver64_11.dll
