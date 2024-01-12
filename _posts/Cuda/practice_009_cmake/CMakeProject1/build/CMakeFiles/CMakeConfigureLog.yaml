@@ -1,0 +1,420 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "D:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineSystem.cmake:233 (message)"
+      - "CMakeLists.txt:7 (project)"
+    message: |
+      The system is: Windows - 10.0.19045 - AMD64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "D:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "D:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "D:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:7 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler:  
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      MSBuild version 17.8.3+195e7f5a3 for .NET Framework
+      Build started 1/11/2024 2:46:39 PM.
+      
+      Project "D:\\GitHub_Project\\koyumi0601.github.io\\_posts\\Cuda\\practice_009_cmake\\CMakeProject1\\build\\CMakeFiles\\3.28.1\\CompilerIdC\\CompilerIdC.vcxproj" on node 1 (default targets).
+      PrepareForBuild:
+        Creating directory "Debug\\".
+        Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+        Creating directory "Debug\\CompilerIdC.tlog\\".
+      InitializeBuildStatus:
+        Creating "Debug\\CompilerIdC.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+        Touching "Debug\\CompilerIdC.tlog\\unsuccessfulbuild".
+      ClCompile:
+        D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\CL.exe /c /nologo /W0 /WX- /diagnostics:column /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\\\" /Fd"Debug\\vc143.pdb" /external:W0 /Gd /TC /FC /errorReport:queue CMakeCCompilerId.c
+        CMakeCCompilerId.c
+      Link:
+        D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdC.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdC.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdC.lib" /MACHINE:X64 Debug\\CMakeCCompilerId.obj
+        CompilerIdC.vcxproj -> D:\\GitHub_Project\\koyumi0601.github.io\\_posts\\Cuda\\practice_009_cmake\\CMakeProject1\\build\\CMakeFiles\\3.28.1\\CompilerIdC\\CompilerIdC.exe
+      PostBuildEvent:
+        for %%i in (cl.exe) do @echo CMAKE_C_COMPILER=%%~$PATH:i
+        :VCEnd
+        CMAKE_C_COMPILER=D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.38.33130\\bin\\Hostx64\\x64\\cl.exe
+      FinalizeBuildStatus:
+        Deleting file "Debug\\CompilerIdC.tlog\\unsuccessfulbuild".
+        Touching "Debug\\CompilerIdC.tlog\\CompilerIdC.lastbuildstate".
+      Done Building Project "D:\\GitHub_Project\\koyumi0601.github.io\\_posts\\Cuda\\practice_009_cmake\\CMakeProject1\\build\\CMakeFiles\\3.28.1\\CompilerIdC\\CompilerIdC.vcxproj" (default targets).
+      
+      Build succeeded.
+          0 Warning(s)
+          0 Error(s)
+      
+      Time Elapsed 00:00:01.45
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.vcxproj"
+      
+      The C compiler identification is MSVC, found in:
+        D:/GitHub_Project/koyumi0601.github.io/_posts/Cuda/practice_009_cmake/CMakeProject1/build/CMakeFiles/3.28.1/CompilerIdC/CompilerIdC.exe
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "D:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "D:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "D:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:7 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler:  
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      MSBuild version 17.8.3+195e7f5a3 for .NET Framework
+      Build started 1/11/2024 2:46:41 PM.
+      
+      Project "D:\\GitHub_Project\\koyumi0601.github.io\\_posts\\Cuda\\practice_009_cmake\\CMakeProject1\\build\\CMakeFiles\\3.28.1\\CompilerIdCXX\\CompilerIdCXX.vcxproj" on node 1 (default targets).
+      PrepareForBuild:
+        Creating directory "Debug\\".
+        Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+        Creating directory "Debug\\CompilerIdCXX.tlog\\".
+      InitializeBuildStatus:
+        Creating "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+        Touching "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild".
+      ClCompile:
+        D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\CL.exe /c /nologo /W0 /WX- /diagnostics:column /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\\\" /Fd"Debug\\vc143.pdb" /external:W0 /Gd /TP /FC /errorReport:queue CMakeCXXCompilerId.cpp
+        CMakeCXXCompilerId.cpp
+      Link:
+        D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdCXX.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdCXX.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdCXX.lib" /MACHINE:X64 Debug\\CMakeCXXCompilerId.obj
+        CompilerIdCXX.vcxproj -> D:\\GitHub_Project\\koyumi0601.github.io\\_posts\\Cuda\\practice_009_cmake\\CMakeProject1\\build\\CMakeFiles\\3.28.1\\CompilerIdCXX\\CompilerIdCXX.exe
+      PostBuildEvent:
+        for %%i in (cl.exe) do @echo CMAKE_CXX_COMPILER=%%~$PATH:i
+        :VCEnd
+        CMAKE_CXX_COMPILER=D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.38.33130\\bin\\Hostx64\\x64\\cl.exe
+      FinalizeBuildStatus:
+        Deleting file "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild".
+        Touching "Debug\\CompilerIdCXX.tlog\\CompilerIdCXX.lastbuildstate".
+      Done Building Project "D:\\GitHub_Project\\koyumi0601.github.io\\_posts\\Cuda\\practice_009_cmake\\CMakeProject1\\build\\CMakeFiles\\3.28.1\\CompilerIdCXX\\CompilerIdCXX.vcxproj" (default targets).
+      
+      Build succeeded.
+          0 Warning(s)
+          0 Error(s)
+      
+      Time Elapsed 00:00:01.46
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.vcxproj"
+      
+      The CXX compiler identification is MSVC, found in:
+        D:/GitHub_Project/koyumi0601.github.io/_posts/Cuda/practice_009_cmake/CMakeProject1/build/CMakeFiles/3.28.1/CompilerIdCXX/CompilerIdCXX.exe
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "D:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "D:/Program Files/CMake/share/cmake-3.28/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:7 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "D:/GitHub_Project/koyumi0601.github.io/_posts/Cuda/practice_009_cmake/CMakeProject1/build/CMakeFiles/CMakeScratch/TryCompile-r0x6mb"
+      binary: "D:/GitHub_Project/koyumi0601.github.io/_posts/Cuda/practice_009_cmake/CMakeProject1/build/CMakeFiles/CMakeScratch/TryCompile-r0x6mb"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
+      CMAKE_C_FLAGS_DEBUG: "/Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/GitHub_Project/koyumi0601.github.io/_posts/Cuda/practice_009_cmake/CMakeProject1/build/CMakeFiles/CMakeScratch/TryCompile-r0x6mb'
+        
+        Run Build Command(s): "D:/Program Files/Microsoft Visual Studio/2022/Professional/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_21582.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.8.3+195e7f5a3 for .NET Framework
+        Build started 1/11/2024 2:46:43 PM.
+        
+        Project "D:\\GitHub_Project\\koyumi0601.github.io\\_posts\\Cuda\\practice_009_cmake\\CMakeProject1\\build\\CMakeFiles\\CMakeScratch\\TryCompile-r0x6mb\\cmTC_21582.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_21582.dir\\Debug\\".
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "D:\\GitHub_Project\\koyumi0601.github.io\\_posts\\Cuda\\practice_009_cmake\\CMakeProject1\\build\\CMakeFiles\\CMakeScratch\\TryCompile-r0x6mb\\Debug\\".
+          Creating directory "cmTC_21582.dir\\Debug\\cmTC_21582.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_21582.dir\\Debug\\cmTC_21582.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_21582.dir\\Debug\\cmTC_21582.tlog\\unsuccessfulbuild".
+        ClCompile:
+          D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_21582.dir\\Debug\\\\" /Fd"cmTC_21582.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "D:\\Program Files\\CMake\\share\\cmake-3.28\\Modules\\CMakeCCompilerABI.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.38.33133 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_21582.dir\\Debug\\\\" /Fd"cmTC_21582.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "D:\\Program Files\\CMake\\share\\cmake-3.28\\Modules\\CMakeCCompilerABI.c"
+          CMakeCCompilerABI.c
+        Link:
+          D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"D:\\GitHub_Project\\koyumi0601.github.io\\_posts\\Cuda\\practice_009_cmake\\CMakeProject1\\build\\CMakeFiles\\CMakeScratch\\TryCompile-r0x6mb\\Debug\\cmTC_21582.exe" /INCREMENTAL /ILK:"cmTC_21582.dir\\Debug\\cmTC_21582.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/GitHub_Project/koyumi0601.github.io/_posts/Cuda/practice_009_cmake/CMakeProject1/build/CMakeFiles/CMakeScratch/TryCompile-r0x6mb/Debug/cmTC_21582.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/GitHub_Project/koyumi0601.github.io/_posts/Cuda/practice_009_cmake/CMakeProject1/build/CMakeFiles/CMakeScratch/TryCompile-r0x6mb/Debug/cmTC_21582.lib" /MACHINE:X64  /machine:x64 cmTC_21582.dir\\Debug\\CMakeCCompilerABI.obj
+          cmTC_21582.vcxproj -> D:\\GitHub_Project\\koyumi0601.github.io\\_posts\\Cuda\\practice_009_cmake\\CMakeProject1\\build\\CMakeFiles\\CMakeScratch\\TryCompile-r0x6mb\\Debug\\cmTC_21582.exe
+        FinalizeBuildStatus:
+          Deleting file "cmTC_21582.dir\\Debug\\cmTC_21582.tlog\\unsuccessfulbuild".
+          Touching "cmTC_21582.dir\\Debug\\cmTC_21582.tlog\\cmTC_21582.lastbuildstate".
+        Done Building Project "D:\\GitHub_Project\\koyumi0601.github.io\\_posts\\Cuda\\practice_009_cmake\\CMakeProject1\\build\\CMakeFiles\\CMakeScratch\\TryCompile-r0x6mb\\cmTC_21582.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:01.61
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "D:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "D:/Program Files/CMake/share/cmake-3.28/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:7 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "D:/GitHub_Project/koyumi0601.github.io/_posts/Cuda/practice_009_cmake/CMakeProject1/build/CMakeFiles/CMakeScratch/TryCompile-ui3whf"
+      binary: "D:/GitHub_Project/koyumi0601.github.io/_posts/Cuda/practice_009_cmake/CMakeProject1/build/CMakeFiles/CMakeScratch/TryCompile-ui3whf"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/GitHub_Project/koyumi0601.github.io/_posts/Cuda/practice_009_cmake/CMakeProject1/build/CMakeFiles/CMakeScratch/TryCompile-ui3whf'
+        
+        Run Build Command(s): "D:/Program Files/Microsoft Visual Studio/2022/Professional/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_4bc0e.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.8.3+195e7f5a3 for .NET Framework
+        Build started 1/11/2024 2:46:45 PM.
+        
+        Project "D:\\GitHub_Project\\koyumi0601.github.io\\_posts\\Cuda\\practice_009_cmake\\CMakeProject1\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ui3whf\\cmTC_4bc0e.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_4bc0e.dir\\Debug\\".
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "D:\\GitHub_Project\\koyumi0601.github.io\\_posts\\Cuda\\practice_009_cmake\\CMakeProject1\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ui3whf\\Debug\\".
+          Creating directory "cmTC_4bc0e.dir\\Debug\\cmTC_4bc0e.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_4bc0e.dir\\Debug\\cmTC_4bc0e.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_4bc0e.dir\\Debug\\cmTC_4bc0e.tlog\\unsuccessfulbuild".
+        ClCompile:
+          D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_4bc0e.dir\\Debug\\\\" /Fd"cmTC_4bc0e.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "D:\\Program Files\\CMake\\share\\cmake-3.28\\Modules\\CMakeCXXCompilerABI.cpp"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.38.33133 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_4bc0e.dir\\Debug\\\\" /Fd"cmTC_4bc0e.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "D:\\Program Files\\CMake\\share\\cmake-3.28\\Modules\\CMakeCXXCompilerABI.cpp"
+          CMakeCXXCompilerABI.cpp
+        Link:
+          D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"D:\\GitHub_Project\\koyumi0601.github.io\\_posts\\Cuda\\practice_009_cmake\\CMakeProject1\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ui3whf\\Debug\\cmTC_4bc0e.exe" /INCREMENTAL /ILK:"cmTC_4bc0e.dir\\Debug\\cmTC_4bc0e.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/GitHub_Project/koyumi0601.github.io/_posts/Cuda/practice_009_cmake/CMakeProject1/build/CMakeFiles/CMakeScratch/TryCompile-ui3whf/Debug/cmTC_4bc0e.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/GitHub_Project/koyumi0601.github.io/_posts/Cuda/practice_009_cmake/CMakeProject1/build/CMakeFiles/CMakeScratch/TryCompile-ui3whf/Debug/cmTC_4bc0e.lib" /MACHINE:X64  /machine:x64 cmTC_4bc0e.dir\\Debug\\CMakeCXXCompilerABI.obj
+          cmTC_4bc0e.vcxproj -> D:\\GitHub_Project\\koyumi0601.github.io\\_posts\\Cuda\\practice_009_cmake\\CMakeProject1\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ui3whf\\Debug\\cmTC_4bc0e.exe
+        FinalizeBuildStatus:
+          Deleting file "cmTC_4bc0e.dir\\Debug\\cmTC_4bc0e.tlog\\unsuccessfulbuild".
+          Touching "cmTC_4bc0e.dir\\Debug\\cmTC_4bc0e.tlog\\cmTC_4bc0e.lastbuildstate".
+        Done Building Project "D:\\GitHub_Project\\koyumi0601.github.io\\_posts\\Cuda\\practice_009_cmake\\CMakeProject1\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ui3whf\\cmTC_4bc0e.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:01.70
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "D:/Program Files/CMake/share/cmake-3.28/Modules/FindCUDAToolkit.cmake:640 (message)"
+      - "D:/Program Files/CMake/share/cmake-3.28/Modules/FindCUDAToolkit.cmake:766 (_CUDAToolkit_find_root_dir)"
+      - "CMakeLists.txt:10 (find_package)"
+    message: |
+      Executed nvcc to extract CUDAToolkit information:
+      
+      D:\\GitHub_Project\\koyumi0601.github.io\\_posts\\Cuda\\practice_009_cmake\\CMakeProject1\\build>call "D:/Program Files/Microsoft Visual Studio/2022/Professional/VC/Tools/MSVC/14.38.33130/bin/HostX86/x86/../../../../../../../VC/Auxiliary/Build/vcvars64.bat" 
+      **********************************************************************
+      ** Visual Studio 2022 Developer Command Prompt v17.8.3
+      ** Copyright (c) 2022 Microsoft Corporation
+      **********************************************************************
+      [vcvarsall.bat] Environment initialized for: 'x64'
+      #$ D:/Program Files/Microsoft Visual Studio/2022/Professional/VC/Tools/MSVC/14.38.33130/bin/HostX86/x86/../../../../../../../VC/Auxiliary/Build/vcvars64.bat
+      #$ ALLUSERSPROFILE=C:\\ProgramData
+      #$ APPDATA=C:\\Users\\user\\AppData\\Roaming
+      #$ ChocolateyInstall=C:\\ProgramData\\chocolatey
+      #$ ChocolateyLastPathUpdate=133187434801200203
+      #$ CommandPromptType=Native
+      #$ CommonProgramFiles=C:\\Program Files\\Common Files
+      #$ CommonProgramFiles(x86)=C:\\Program Files (x86)\\Common Files
+      #$ CommonProgramW6432=C:\\Program Files\\Common Files
+      #$ COMPLUS_FusionEnableForcedFullClosureWalk=1
+      #$ COMPlus_ThreadPool_UsePortableThreadPool=0
+      #$ COMPUTERNAME=DESKTOP-P1OE51C
+      #$ ComSpec=C:\\Windows\\system32\\cmd.exe
+      #$ CUDA_PATH=C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.3
+      #$ CUDA_PATH_V12_3=C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.3
+      #$ DevEnvDir=D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\Common7\\IDE\\
+      #$ DOTNET_MULTILEVEL_LOOKUP=0
+      #$ DriverData=C:\\Windows\\System32\\Drivers\\DriverData
+      #$ ExtensionSdkDir=C:\\Program Files (x86)\\Microsoft SDKs\\Windows Kits\\10\\ExtensionSDKs
+      #$ EXTERNAL_INCLUDE=D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.38.33130\\include;D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.38.33130\\ATLMFC\\include;D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Auxiliary\\VS\\include;C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.22621.0\\ucrt;C:\\Program Files (x86)\\Windows Kits\\10\\\\include\\10.0.22621.0\\\\um;C:\\Program Files (x86)\\Windows Kits\\10\\\\include\\10.0.22621.0\\\\shared;C:\\Program Files (x86)\\Windows Kits\\10\\\\include\\10.0.22621.0\\\\winrt;C:\\Program Files (x86)\\Windows Kits\\10\\\\include\\10.0.22621.0\\\\cppwinrt;C:\\Program Files (x86)\\Windows Kits\\NETFXSDK\\4.8\\include\\um;D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.38.33130\\include;D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.38.33130\\ATLMFC\\include;D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Auxiliary\\VS\\include;C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.22621.0\\ucrt;C:\\Program Files (x86)\\Windows Kits\\10\\\\include\\10.0.22621.0\\\\um;C:\\Program Files (x86)\\Windows Kits\\10\\\\include\\10.0.22621.0\\\\shared;C:\\Program Files (x86)\\Windows Kits\\10\\\\include\\10.0.22621.0\\\\winrt;C:\\Program Files (x86)\\Windows Kits\\10\\\\include\\10.0.22621.0\\\\cppwinrt;C:\\Program Files (x86)\\Windows Kits\\NETFXSDK\\4.8\\include\\um
+      #$ FPS_BROWSER_APP_PROFILE_STRING=Internet Explorer
+      #$ FPS_BROWSER_USER_PROFILE_STRING=Default
+      #$ Framework40Version=v4.0
+      #$ FrameworkDir=C:\\Windows\\Microsoft.NET\\Framework64\\
+      #$ FrameworkDIR32=C:\\Windows\\Microsoft.NET\\Framework\\
+      #$ FrameworkDIR64=C:\\Windows\\Microsoft.NET\\Framework64
+      #$ FrameworkVersion=v4.0.30319
+      #$ FrameworkVersion32=v4.0.30319
+      #$ FrameworkVersion64=v4.0.30319
+      #$ FSHARPINSTALLDIR=D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\Common7\\IDE\\CommonExtensions\\Microsoft\\FSharp\\Tools
+      #$ GCExpConfigUsedInSession=3
+      #$ HOMEDRIVE=C:
+      #$ HOMEPATH=\\Users\\user
+      #$ INCLUDE=D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.38.33130\\include;D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.38.33130\\ATLMFC\\include;D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Auxiliary\\VS\\include;C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.22621.0\\ucrt;C:\\Program Files (x86)\\Windows Kits\\10\\\\include\\10.0.22621.0\\\\um;C:\\Program Files (x86)\\Windows Kits\\10\\\\include\\10.0.22621.0\\\\shared;C:\\Program Files (x86)\\Windows Kits\\10\\\\include\\10.0.22621.0\\\\winrt;C:\\Program Files (x86)\\Windows Kits\\10\\\\include\\10.0.22621.0\\\\cppwinrt;C:\\Program Files (x86)\\Windows Kits\\NETFXSDK\\4.8\\include\\um;D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.38.33130\\include;D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.38.33130\\ATLMFC\\include;D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Auxiliary\\VS\\include;C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.22621.0\\ucrt;C:\\Program Files (x86)\\Windows Kits\\10\\\\include\\10.0.22621.0\\\\um;C:\\Program Files (x86)\\Windows Kits\\10\\\\include\\10.0.22621.0\\\\shared;C:\\Program Files (x86)\\Windows Kits\\10\\\\include\\10.0.22621.0\\\\winrt;C:\\Program Files (x86)\\Windows Kits\\10\\\\include\\10.0.22621.0\\\\cppwinrt;C:\\Program Files (x86)\\Windows Kits\\NETFXSDK\\4.8\\include\\um
+      #$ JAVA_HOME=C:\\Program Files\\Java\\jdk-18.0.1.1
+      #$ JEKYLL_ENV=production
+      #$ LIB=D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.38.33130\\ATLMFC\\lib\\x64;D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.38.33130\\lib\\x64;C:\\Program Files (x86)\\Windows Kits\\NETFXSDK\\4.8\\lib\\um\\x64;C:\\Program Files (x86)\\Windows Kits\\10\\lib\\10.0.22621.0\\ucrt\\x64;C:\\Program Files (x86)\\Windows Kits\\10\\\\lib\\10.0.22621.0\\\\um\\x64;D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.38.33130\\ATLMFC\\lib\\x86;D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.38.33130\\lib\\x86;C:\\Program Files (x86)\\Windows Kits\\NETFXSDK\\4.8\\lib\\um\\x86;C:\\Program Files (x86)\\Windows Kits\\10\\lib\\10.0.22621.0\\ucrt\\x86;C:\\Program Files (x86)\\Windows Kits\\10\\\\lib\\10.0.22621.0\\\\um\\x86
+      #$ LIBPATH=D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.38.33130\\ATLMFC\\lib\\x64;D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.38.33130\\lib\\x64;D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.38.33130\\lib\\x86\\store\\references;C:\\Program Files (x86)\\Windows Kits\\10\\UnionMetadata\\10.0.22621.0;C:\\Program Files (x86)\\Windows Kits\\10\\References\\10.0.22621.0;C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319;D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.38.33130\\ATLMFC\\lib\\x86;D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.38.33130\\lib\\x86;D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.38.33130\\lib\\x86\\store\\references;C:\\Program Files (x86)\\Windows Kits\\10\\UnionMetadata\\10.0.22621.0;C:\\Program Files (x86)\\Windows Kits\\10\\References\\10.0.22621.0;C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319
+      #$ LOCALAPPDATA=C:\\Users\\user\\AppData\\Local
+      #$ LOGONSERVER=\\\\DESKTOP-P1OE51C
+      #$ MSBuildLoadMicrosoftTargetsReadOnly=true
+      #$ NETFXSDKDir=C:\\Program Files (x86)\\Windows Kits\\NETFXSDK\\4.8\\
+      #$ NUMBER_OF_PROCESSORS=12
+      #$ OneDrive=C:\\Users\\user\\OneDrive
+      #$ OneDriveConsumer=C:\\Users\\user\\OneDrive
+      #$ OS=Windows_NT
+      #$ Path=D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64;D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\Common7\\IDE\\VC\\VCPackages;D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\Common7\\IDE\\CommonExtensions\\Microsoft\\TestWindow;D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\Common7\\IDE\\CommonExtensions\\Microsoft\\TeamFoundation\\Team Explorer;D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\MSBuild\\Current\\bin\\Roslyn;D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\Team Tools\\Performance Tools\\x64;D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\Team Tools\\Performance Tools;C:\\Program Files (x86)\\Microsoft SDKs\\Windows\\v10.0A\\bin\\NETFX 4.8 Tools\\x64\\;D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\Common7\\IDE\\CommonExtensions\\Microsoft\\FSharp\\Tools;D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\Team Tools\\DiagnosticsHub\\Collector;C:\\Program Files (x86)\\Windows Kits\\10\\bin\\10.0.22621.0\\\\x64;C:\\Program Files (x86)\\Windows Kits\\10\\bin\\\\x64;D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\\\MSBuild\\Current\\Bin\\amd64;C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319;D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\Common7\\IDE\\;D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\Common7\\Tools\\;D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX86\\x86;D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\Common7\\IDE\\VC\\VCPackages;D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\Common7\\IDE\\CommonExtensions\\Microsoft\\TestWindow;D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\Common7\\IDE\\CommonExtensions\\Microsoft\\TeamFoundation\\Team Explorer;D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\MSBuild\\Current\\bin\\Roslyn;D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\Team Tools\\Performance Tools;C:\\Program Files (x86)\\Microsoft SDKs\\Windows\\v10.0A\\bin\\NETFX 4.8 Tools\\;D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\Common7\\IDE\\CommonExtensions\\Microsoft\\FSharp\\Tools;D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\Team Tools\\DiagnosticsHub\\Collector;C:\\Program Files (x86)\\Windows Kits\\10\\bin\\10.0.22621.0\\\\x86;C:\\Program Files (x86)\\Windows Kits\\10\\bin\\\\x86;D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\\\MSBuild\\Current\\Bin\\amd64;C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319;D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\Common7\\IDE\\;D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\Common7\\Tools\\;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.3\\bin;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.3\\libnvvp;;D:\\Ruby32-x64\\bin;C:\\Program Files\\Microsoft\\jdk-11.0.16.101-hotspot\\bin;D:\\Program Files\\Python311\\Scripts\\;D:\\Program Files\\Python311\\;C:\\Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files\\Eclipse Foundation\\jdk-8.0.302.8-hotspot\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\nodejs\\;C:\\ProgramData\\chocolatey\\bin;C:\\Program Files\\Docker\\Docker\\resources\\bin;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;D:\\Program Files\\Graphviz\\bin\\dot.exe;D:\\Program Files\\Tesseract-OCR;D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.38.33130\\bin\\Hostx64\\x86\\cl.exe;D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.38.33130\\bin\\Hostx64\\x86;D:\\msys64\\mingw64\\bin;D:\\Program Files\\CMake\\bin;C:\\Program Files\\NVIDIA Corporation\\Nsight Compute 2023.3.1\\;D:\\Program Files (x86)\\Intel\\oneAPI\\ipp\\latest\\bin;C:\\Ruby31-x64\\bin;C:\\Users\\user\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\user\\.dotnet\\tools;C:\\Users\\user\\AppData\\Roaming\\npm;C:\\Users\\user\\AppData\\Local\\GitHubDesktop\\bin;D:\\Program Files\\Graphviz\\bin\\dot.exe;D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.38.33130\\bin\\Hostx64\\x86\\cl.exe;D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.38.33130\\bin\\Hostx64\\x86;D:\\msys64\\mingw64\\bin;D:\\Users\\user\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;D:\\Program Files\\CMake\\bin;;D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin;D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\Ninja;D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\Common7\\IDE\\VC\\Linux\\bin\\ConnectionManagerExe;D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\vcpkg;D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin;D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\Ninja;D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\Common7\\IDE\\VC\\Linux\\bin\\ConnectionManagerExe;D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\vcpkg
+      #$ PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW;.RB;.RBW;.RB;.RBW;.CPL
+      #$ PkgDefApplicationConfigFile=C:\\Users\\user\\AppData\\Local\\Microsoft\\VisualStudio\\17.0_2ee3d0df\\devenv.exe.config
+      #$ Platform=x64
+      #$ PROCESSOR_ARCHITECTURE=AMD64
+      #$ PROCESSOR_IDENTIFIER=AMD64 Family 25 Model 33 Stepping 0, AuthenticAMD
+      #$ PROCESSOR_LEVEL=25
+      #$ PROCESSOR_REVISION=2100
+      #$ ProgramData=C:\\ProgramData
+      #$ ProgramFiles=C:\\Program Files
+      #$ ProgramFiles(x86)=C:\\Program Files (x86)
+      #$ ProgramW6432=C:\\Program Files
+      #$ PROMPT=$P$G
+      #$ PSModulePath=C:\\Users\\user\\Documents\\WindowsPowerShell\\Modules;C:\\Program Files\\WindowsPowerShell\\Modules;C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules
+      #$ PUBLIC=C:\\Users\\Public
+      #$ ServiceHubClientProcessVersion=17.8.34330.188 built by: d17.8
+      #$ ServiceHubCurrentOsLocale=en-US
+      #$ ServiceHubLocationServicePipeName=e623b29b2c1addf18efe1051565eb69baac5a977e7cdf227344566a052c48d8c
+      #$ ServiceHubLogSessionKey=3A451BDC
+      #$ SESSIONNAME=Console
+      #$ SignInWithHomeTenantOnly=False
+      #$ SystemDrive=C:
+      #$ SystemRoot=C:\\Windows
+      #$ ThreadedWaitDialogDpiContext=-4
+      #$ UCRTVersion=10.0.22621.0
+      #$ UniversalCRTSdkDir=C:\\Program Files (x86)\\Windows Kits\\10\\
+      #$ USERDOMAIN=DESKTOP-P1OE51C
+      #$ USERDOMAIN_ROAMINGPROFILE=DESKTOP-P1OE51C
+      #$ USERNAME=user
+      #$ USERPROFILE=C:\\Users\\user
+      #$ VCIDEInstallDir=D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\Common7\\IDE\\VC\\
+      #$ VCINSTALLDIR=D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\
+      #$ VCPKG_ROOT=D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\vcpkg
+      #$ VCToolsInstallDir=D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.38.33130\\
+      #$ VCToolsRedistDir=D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Redist\\MSVC\\14.38.33130\\
+      #$ VCToolsVersion=14.38.33130
+      #$ VisualStudioDir=C:\\Users\\user\\Documents\\Visual Studio 2022
+      #$ VisualStudioEdition=Microsoft Visual Studio Professional 2022
+      #$ VisualStudioVersion=17.0
+      #$ VS140COMNTOOLS=C:\\Program Files (x86)\\Microsoft Visual Studio 14.0\\Common7\\Tools\\
+      #$ VS170COMNTOOLS=D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\Common7\\Tools\\
+      #$ VSAPPIDDIR=D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\Common7\\IDE\\
+      #$ VSAPPIDNAME=devenv.exe
+      #$ VSCMD_ARG_app_plat=Desktop
+      #$ VSCMD_ARG_HOST_ARCH=x64
+      #$ VSCMD_ARG_TGT_ARCH=x64
+      #$ VSCMD_VER=17.8.3
+      #$ vsconsoleoutput=1
+      #$ VSINSTALLDIR=D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\
+      #$ VSLANG=1033
+      #$ VSLS_SESSION_KEEPALIVE_INTERVAL=0
+      #$ VSSKUEDITION=Professional
+      #$ VS_Perf_Session_GCHeapCount=2
+      #$ windir=C:\\Windows
+      #$ WindowsLibPath=C:\\Program Files (x86)\\Windows Kits\\10\\UnionMetadata\\10.0.22621.0;C:\\Program Files (x86)\\Windows Kits\\10\\References\\10.0.22621.0
+      #$ WindowsSdkBinPath=C:\\Program Files (x86)\\Windows Kits\\10\\bin\\
+      #$ WindowsSdkDir=C:\\Program Files (x86)\\Windows Kits\\10\\
+      #$ WindowsSDKLibVersion=10.0.22621.0\\
+      #$ WindowsSdkVerBinPath=C:\\Program Files (x86)\\Windows Kits\\10\\bin\\10.0.22621.0\\
+      #$ WindowsSDKVersion=10.0.22621.0\\
+      #$ WindowsSDK_ExecutablePath_x64=C:\\Program Files (x86)\\Microsoft SDKs\\Windows\\v10.0A\\bin\\NETFX 4.8 Tools\\x64\\
+      #$ WindowsSDK_ExecutablePath_x86=C:\\Program Files (x86)\\Microsoft SDKs\\Windows\\v10.0A\\bin\\NETFX 4.8 Tools\\
+      #$ __DOTNET_ADD_32BIT=1
+      #$ __DOTNET_ADD_64BIT=1
+      #$ __DOTNET_PREFERRED_BITNESS=64
+      #$ __VSCMD_PREINIT_PATH=C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.3\\bin;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.3\\libnvvp;;D:\\Ruby32-x64\\bin;C:\\Program Files\\Microsoft\\jdk-11.0.16.101-hotspot\\bin;D:\\Program Files\\Python311\\Scripts\\;D:\\Program Files\\Python311\\;C:\\Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files\\Eclipse Foundation\\jdk-8.0.302.8-hotspot\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\nodejs\\;C:\\ProgramData\\chocolatey\\bin;C:\\Program Files\\Docker\\Docker\\resources\\bin;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;D:\\Program Files\\Graphviz\\bin\\dot.exe;D:\\Program Files\\Tesseract-OCR;D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.38.33130\\bin\\Hostx64\\x86\\cl.exe;D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.38.33130\\bin\\Hostx64\\x86;D:\\msys64\\mingw64\\bin;D:\\Program Files\\CMake\\bin;C:\\Program Files\\NVIDIA Corporation\\Nsight Compute 2023.3.1\\;D:\\Program Files (x86)\\Intel\\oneAPI\\ipp\\latest\\bin;C:\\Ruby31-x64\\bin;C:\\Users\\user\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\user\\.dotnet\\tools;C:\\Users\\user\\AppData\\Roaming\\npm;C:\\Users\\user\\AppData\\Local\\GitHubDesktop\\bin;D:\\Program Files\\Graphviz\\bin\\dot.exe;D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.38.33130\\bin\\Hostx64\\x86\\cl.exe;D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.38.33130\\bin\\Hostx64\\x86;D:\\msys64\\mingw64\\bin;D:\\Users\\user\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;D:\\Program Files\\CMake\\bin;
+      #$ __VSCMD_PREINIT_VCToolsVersion=14.38.33130
+      #$ __VSCMD_PREINIT_VS170COMNTOOLS=D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\Common7\\Tools\\
+      #$ PATH=D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX86\\x86;D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64;D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\Common7\\IDE\\VC\\VCPackages;D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\Common7\\IDE\\CommonExtensions\\Microsoft\\TestWindow;D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\Common7\\IDE\\CommonExtensions\\Microsoft\\TeamFoundation\\Team Explorer;D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\MSBuild\\Current\\bin\\Roslyn;D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\Team Tools\\Performance Tools\\x64;D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\Team Tools\\Performance Tools;C:\\Program Files (x86)\\Microsoft SDKs\\Windows\\v10.0A\\bin\\NETFX 4.8 Tools\\x64\\;D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\Common7\\IDE\\CommonExtensions\\Microsoft\\FSharp\\Tools;D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\Team Tools\\DiagnosticsHub\\Collector;C:\\Program Files (x86)\\Windows Kits\\10\\bin\\10.0.22621.0\\\\x64;C:\\Program Files (x86)\\Windows Kits\\10\\bin\\\\x64;D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\\\MSBuild\\Current\\Bin\\amd64;C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319;D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\Common7\\IDE\\;D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\Common7\\Tools\\;D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX86\\x86;D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\Common7\\IDE\\VC\\VCPackages;D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\Common7\\IDE\\CommonExtensions\\Microsoft\\TestWindow;D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\Common7\\IDE\\CommonExtensions\\Microsoft\\TeamFoundation\\Team Explorer;D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\MSBuild\\Current\\bin\\Roslyn;D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\Team Tools\\Performance Tools;C:\\Program Files (x86)\\Microsoft SDKs\\Windows\\v10.0A\\bin\\NETFX 4.8 Tools\\;D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\Common7\\IDE\\CommonExtensions\\Microsoft\\FSharp\\Tools;D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\Team Tools\\DiagnosticsHub\\Collector;C:\\Program Files (x86)\\Windows Kits\\10\\bin\\10.0.22621.0\\\\x86;C:\\Program Files (x86)\\Windows Kits\\10\\bin\\\\x86;D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\\\MSBuild\\Current\\Bin\\amd64;C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319;D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\Common7\\IDE\\;D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\Common7\\Tools\\;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.3\\bin;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.3\\libnvvp;;D:\\Ruby32-x64\\bin;C:\\Program Files\\Microsoft\\jdk-11.0.16.101-hotspot\\bin;D:\\Program Files\\Python311\\Scripts\\;D:\\Program Files\\Python311\\;C:\\Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files\\Eclipse Foundation\\jdk-8.0.302.8-hotspot\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\nodejs\\;C:\\ProgramData\\chocolatey\\bin;C:\\Program Files\\Docker\\Docker\\resources\\bin;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;D:\\Program Files\\Graphviz\\bin\\dot.exe;D:\\Program Files\\Tesseract-OCR;D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.38.33130\\bin\\Hostx64\\x86\\cl.exe;D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.38.33130\\bin\\Hostx64\\x86;D:\\msys64\\mingw64\\bin;D:\\Program Files\\CMake\\bin;C:\\Program Files\\NVIDIA Corporation\\Nsight Compute 2023.3.1\\;D:\\Program Files (x86)\\Intel\\oneAPI\\ipp\\latest\\bin;C:\\Ruby31-x64\\bin;C:\\Users\\user\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\user\\.dotnet\\tools;C:\\Users\\user\\AppData\\Roaming\\npm;C:\\Users\\user\\AppData\\Local\\GitHubDesktop\\bin;D:\\Program Files\\Graphviz\\bin\\dot.exe;D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.38.33130\\bin\\Hostx64\\x86\\cl.exe;D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.38.33130\\bin\\Hostx64\\x86;D:\\msys64\\mingw64\\bin;D:\\Users\\user\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;D:\\Program Files\\CMake\\bin;;D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin;D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\Ninja;D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\Common7\\IDE\\VC\\Linux\\bin\\ConnectionManagerExe;D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\vcpkg;D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin;D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\Ninja;D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\Common7\\IDE\\VC\\Linux\\bin\\ConnectionManagerExe;D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\vcpkg
+      #$ _NVVM_BRANCH_=nvvm
+      #$ _SPACE_= 
+      #$ _CUDART_=cudart
+      #$ _HERE_=C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.3/bin
+      #$ _THERE_=C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.3/bin
+      #$ _TARGET_SIZE_=
+      #$ _TARGET_DIR_=
+      #$ _TARGET_SIZE_=64
+      #$ _WIN_PLATFORM_=x64
+      #$ TOP=C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.3/bin/..
+      #$ NVVMIR_LIBRARY_DIR=C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.3/bin/../nvvm/libdevice
+      #$ PATH=C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.3/bin/../nvvm/bin;C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.3/bin;C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.3/bin/../lib;D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX86\\x86;D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64;D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\Common7\\IDE\\VC\\VCPackages;D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\Common7\\IDE\\CommonExtensions\\Microsoft\\TestWindow;D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\Common7\\IDE\\CommonExtensions\\Microsoft\\TeamFoundation\\Team Explorer;D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\MSBuild\\Current\\bin\\Roslyn;D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\Team Tools\\Performance Tools\\x64;D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\Team Tools\\Performance Tools;C:\\Program Files (x86)\\Microsoft SDKs\\Windows\\v10.0A\\bin\\NETFX 4.8 Tools\\x64\\;D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\Common7\\IDE\\CommonExtensions\\Microsoft\\FSharp\\Tools;D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\Team Tools\\DiagnosticsHub\\Collector;C:\\Program Files (x86)\\Windows Kits\\10\\bin\\10.0.22621.0\\\\x64;C:\\Program Files (x86)\\Windows Kits\\10\\bin\\\\x64;D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\\\MSBuild\\Current\\Bin\\amd64;C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319;D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\Common7\\IDE\\;D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\Common7\\Tools\\;D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX86\\x86;D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\Common7\\IDE\\VC\\VCPackages;D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\Common7\\IDE\\CommonExtensions\\Microsoft\\TestWindow;D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\Common7\\IDE\\CommonExtensions\\Microsoft\\TeamFoundation\\Team Explorer;D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\MSBuild\\Current\\bin\\Roslyn;D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\Team Tools\\Performance Tools;C:\\Program Files (x86)\\Microsoft SDKs\\Windows\\v10.0A\\bin\\NETFX 4.8 Tools\\;D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\Common7\\IDE\\CommonExtensions\\Microsoft\\FSharp\\Tools;D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\Team Tools\\DiagnosticsHub\\Collector;C:\\Program Files (x86)\\Windows Kits\\10\\bin\\10.0.22621.0\\\\x86;C:\\Program Files (x86)\\Windows Kits\\10\\bin\\\\x86;D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\\\MSBuild\\Current\\Bin\\amd64;C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319;D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\Common7\\IDE\\;D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\Common7\\Tools\\;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.3\\bin;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.3\\libnvvp;;D:\\Ruby32-x64\\bin;C:\\Program Files\\Microsoft\\jdk-11.0.16.101-hotspot\\bin;D:\\Program Files\\Python311\\Scripts\\;D:\\Program Files\\Python311\\;C:\\Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files\\Eclipse Foundation\\jdk-8.0.302.8-hotspot\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\dotnet\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\nodejs\\;C:\\ProgramData\\chocolatey\\bin;C:\\Program Files\\Docker\\Docker\\resources\\bin;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;D:\\Program Files\\Graphviz\\bin\\dot.exe;D:\\Program Files\\Tesseract-OCR;D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.38.33130\\bin\\Hostx64\\x86\\cl.exe;D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.38.33130\\bin\\Hostx64\\x86;D:\\msys64\\mingw64\\bin;D:\\Program Files\\CMake\\bin;C:\\Program Files\\NVIDIA Corporation\\Nsight Compute 2023.3.1\\;D:\\Program Files (x86)\\Intel\\oneAPI\\ipp\\latest\\bin;C:\\Ruby31-x64\\bin;C:\\Users\\user\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\user\\.dotnet\\tools;C:\\Users\\user\\AppData\\Roaming\\npm;C:\\Users\\user\\AppData\\Local\\GitHubDesktop\\bin;D:\\Program Files\\Graphviz\\bin\\dot.exe;D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.38.33130\\bin\\Hostx64\\x86\\cl.exe;D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.38.33130\\bin\\Hostx64\\x86;D:\\msys64\\mingw64\\bin;D:\\Users\\user\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;D:\\Program Files\\CMake\\bin;;D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin;D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\Ninja;D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\Common7\\IDE\\VC\\Linux\\bin\\ConnectionManagerExe;D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\vcpkg;D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin;D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\Ninja;D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\Common7\\IDE\\VC\\Linux\\bin\\ConnectionManagerExe;D:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\vcpkg
+      #$ INCLUDES="-IC:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.3/bin/../include"  
+      #$ LIBRARIES=  "/LIBPATH:C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.3/bin/../lib/x64"
+      #$ CUDAFE_FLAGS=
+      #$ PTXAS_FLAGS=
+      nvcc fatal   : Don't know what to do with '__cmake_determine_cuda'
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "D:/Program Files/CMake/share/cmake-3.28/Modules/FindCUDAToolkit.cmake:644 (message)"
+      - "D:/Program Files/CMake/share/cmake-3.28/Modules/FindCUDAToolkit.cmake:766 (_CUDAToolkit_find_root_dir)"
+      - "CMakeLists.txt:10 (find_package)"
+    message: |
+      Parsed CUDAToolkit nvcc location:
+      C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.3/bin
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "D:/Program Files/CMake/share/cmake-3.28/Modules/FindCUDAToolkit.cmake:656 (message)"
+      - "D:/Program Files/CMake/share/cmake-3.28/Modules/FindCUDAToolkit.cmake:766 (_CUDAToolkit_find_root_dir)"
+      - "CMakeLists.txt:10 (find_package)"
+    message: |
+      Parsed CUDAToolkit nvcc implicit include information:
+      C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.3/include
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "D:/Program Files/CMake/share/cmake-3.28/Modules/FindCUDAToolkit.cmake:671 (message)"
+      - "D:/Program Files/CMake/share/cmake-3.28/Modules/FindCUDAToolkit.cmake:766 (_CUDAToolkit_find_root_dir)"
+      - "CMakeLists.txt:10 (find_package)"
+    message: |
+      Parsed CUDAToolkit nvcc implicit link information:
+        link line regex: [^( *|.*[/\\])(link\\.exe|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        link line: [cuda-fake-ld   "/LIBPATH:C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.3/bin/../lib/x64"]
+          arg [cuda-fake-ld] ==> ignore
+          arg [/LIBPATH:C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.3/bin/../lib/x64] ==> dir [C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.3/bin/../lib/x64]
+        collapse library dir [C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.3/bin/../lib/x64] ==> [C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.3/lib/x64]
+        implicit libs: []
+        implicit objs: []
+        implicit dirs: [C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.3/lib/x64]
+        implicit fwks: []
+      
+      C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.3/lib/x64
+      
+...
