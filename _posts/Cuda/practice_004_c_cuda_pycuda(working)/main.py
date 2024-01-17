@@ -61,9 +61,10 @@ c_float_p = lambda x: x.ctypes.data_as(POINTER(c_float))
 c_int_p = lambda x: x.ctypes.data_as(POINTER(c_int))
 
 ##
-pre_time_clang = time.time()
+
 src_clang = copy.deepcopy(src)
 dst_clang = src_clang
+pre_time_clang = time.time()
 __mul_const_clang(c_float_p(dst_clang), c_float_p(dst_clang), mul, c_int_p(pnsz))
 __add_const_clang(c_float_p(dst_clang), c_float_p(dst_clang), add, c_int_p(pnsz))
 __mul_mat_clang(c_float_p(dst_clang), c_float_p(dst_clang), c_float_p(dst_clang), c_int_p(pnsz))
