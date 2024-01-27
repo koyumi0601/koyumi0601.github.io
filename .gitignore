@@ -31,3 +31,25 @@ _site
 # datafile
 _posts/MachineLearning/Ch_05_02_sigmoid_classification/data
 _posts/MachineLearning/Ch_05_02_sigmoid_classification/trainset.pkl
+_posts/Cuda/actual_001_reverse_curved_scanconversion/transformed_data_mask_KU/test_backup/ABUS003_RMED_transformed.nrrd
+_posts/Cuda/actual_001_reverse_curved_scanconversion/transformed_data_mask_KU/test_backup/ABUS003_RLAT_transformed.nrrd
+_posts/Cuda/actual_001_reverse_curved_scanconversion/transformed_data_mask_KU/test_backup/ABUS003_RAP_transformed.nrrd
+_posts/Cuda/actual_001_reverse_curved_scanconversion/transformed_data_mask_KU/test/ABUS003_RMED_transformed.nrrd
+_posts/Cuda/actual_001_reverse_curved_scanconversion/transformed_data_mask_KU/test/ABUS003_RLAT_transformed.nrrd
+_posts/Cuda/actual_001_reverse_curved_scanconversion/transformed_data_mask_KU/test/ABUS003_RAP_transformed.nrrd
+_posts/Cuda/actual_001_reverse_curved_scanconversion/transformed_data_mask_KU/org/ABUS003_RMED_transformed.nrrd
+_posts/Cuda/actual_001_reverse_curved_scanconversion/transformed_data_mask_KU/org/ABUS003_RLAT_transformed.nrrd
+_posts/Cuda/actual_001_reverse_curved_scanconversion/transformed_data_mask_KU/org/ABUS003_RAP_transformed.nrrd
+_posts/Cuda/actual_001_reverse_curved_scanconversion/Tested_DICOM/test/ABUS-003/INVENIA0000-02724/20230508150948/US/1.2.276.0.7230010.3.1.4.301774566.4480.1683583960.534
+_posts/Cuda/actual_001_reverse_curved_scanconversion/Tested_DICOM/test/ABUS-003/INVENIA0000-02724/20230508150948/US/1.2.276.0.7230010.3.1.4.301774566.4480.1683583894.532
+_posts/Cuda/actual_001_reverse_curved_scanconversion/Tested_DICOM/test/ABUS-003/INVENIA0000-02724/20230508150948/US/1.2.276.0.7230010.3.1.4.301774566.4480.1683583826.530
+_posts/Cuda/Reverse_curved_scanconversion/Tested_DICOM/test/ABUS-003/INVENIA0000-02724/20230508150948/SR/1.2.276.0.7230010.3.1.4.1519764863.9136.1683527289.64570
+_posts/Cuda/Reverse_curved_scanconversion/Tested_DICOM/test/ABUS-003/INVENIA0000-02724/20230508150948/US/1.2.276.0.7230010.3.1.4.301774566.4480.1683583826.530
+_posts/Cuda/Reverse_curved_scanconversion/Tested_DICOM/test/ABUS-003/INVENIA0000-02724/20230508150948/US/1.2.276.0.7230010.3.1.4.301774566.4480.1683583894.532
+_posts/Cuda/Reverse_curved_scanconversion/Tested_DICOM/test/ABUS-003/INVENIA0000-02724/20230508150948/US/1.2.276.0.7230010.3.1.4.301774566.4480.1683583960.534
+_posts/Cuda/Reverse_curved_scanconversion/transformed_data_mask_KU/test/ABUS003_RAP_transformed.nrrd
+_posts/Cuda/Reverse_curved_scanconversion/transformed_data_mask_KU/test/ABUS003_RLAT_transformed.nrrd
+_posts/Cuda/Reverse_curved_scanconversion/transformed_data_mask_KU/test/ABUS003_RMED_transformed.nrrd
+_posts/Cuda/Reverse_curved_scanconversion/transformed_data_mask_KU/test_org/ABUS003_RAP_transformed.nrrd
+_posts/Cuda/Reverse_curved_scanconversion/transformed_data_mask_KU/test_org/ABUS003_RLAT_transformed.nrrd
+_posts/Cuda/Reverse_curved_scanconversion/transformed_data_mask_KU/test_org/ABUS003_RMED_transformed.nrrd
