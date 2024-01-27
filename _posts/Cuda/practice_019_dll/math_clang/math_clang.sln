@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34408.163
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "math_clang", "math_clang\math_clang.vcxproj", "{95630E53-EB46-4CE2-80D0-A86D8DFF53FE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{95630E53-EB46-4CE2-80D0-A86D8DFF53FE}.Debug|x64.ActiveCfg = Debug|x64
+		{95630E53-EB46-4CE2-80D0-A86D8DFF53FE}.Debug|x64.Build.0 = Debug|x64
+		{95630E53-EB46-4CE2-80D0-A86D8DFF53FE}.Debug|x86.ActiveCfg = Debug|Win32
+		{95630E53-EB46-4CE2-80D0-A86D8DFF53FE}.Debug|x86.Build.0 = Debug|Win32
+		{95630E53-EB46-4CE2-80D0-A86D8DFF53FE}.Release|x64.ActiveCfg = Release|x64
+		{95630E53-EB46-4CE2-80D0-A86D8DFF53FE}.Release|x64.Build.0 = Release|x64
+		{95630E53-EB46-4CE2-80D0-A86D8DFF53FE}.Release|x86.ActiveCfg = Release|Win32
+		{95630E53-EB46-4CE2-80D0-A86D8DFF53FE}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9010B177-1E58-4F1E-B563-28B1954D419B}
+	EndGlobalSection
+EndGlobal

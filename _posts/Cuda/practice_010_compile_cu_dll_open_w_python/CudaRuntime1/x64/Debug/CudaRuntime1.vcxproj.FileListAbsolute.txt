@@ -1,0 +1,1 @@
+D:\GitHub_Project\koyumi0601.github.io\_posts\Cuda\practice_010_compile_cu_dll_open_w_python\CudaRuntime1\x64\Debug\CudaRuntime1.exe

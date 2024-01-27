@@ -1,0 +1,9 @@
+﻿  Compiling CUDA source file kernel.cu...
+  
+  D:\Github_Blog\koyumi0601.github.io\_posts\Cuda\practice_022_npp\npp_add\npp_add>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.3\bin\nvcc.exe" -gencode=arch=compute_52,code=\"sm_52,compute_52\" --use-local-env -ccbin "C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.38.33130\bin\HostX64\x64" -x cu   -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.3\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.3\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.3\include"  -G   --keep-dir x64\Debug  -maxrregcount=0   --machine 64 --compile -cudart static  -g  -DWIN32 -DWIN64 -D_DEBUG -D_CONSOLE -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /FS /Zi /RTC1 /MDd " -Xcompiler "/Fdx64\Debug\vc143.pdb" -o D:\Github_Blog\koyumi0601.github.io\_posts\Cuda\practice_022_npp\npp_add\npp_add\x64\Debug\kernel.cu.obj "D:\Github_Blog\koyumi0601.github.io\_posts\Cuda\practice_022_npp\npp_add\npp_add\kernel.cu" 
+  kernel.cu
+  tmpxft_00003e80_00000000-7_kernel.cudafe1.cpp
+     Creating library D:\Github_Blog\koyumi0601.github.io\_posts\Cuda\practice_022_npp\npp_add\x64\Debug\npp_add.lib and object D:\Github_Blog\koyumi0601.github.io\_posts\Cuda\practice_022_npp\npp_add\x64\Debug\npp_add.exp
+LINK : warning LNK4098: defaultlib 'LIBCMT' conflicts with use of other libs; use /NODEFAULTLIB:library
+kernel.cu.obj : error LNK2019: unresolved external symbol nppiCopy_8u_C1R referenced in function main
+D:\Github_Blog\koyumi0601.github.io\_posts\Cuda\practice_022_npp\npp_add\x64\Debug\npp_add.exe : fatal error LNK1120: 1 unresolved externals

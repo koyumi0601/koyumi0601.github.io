@@ -1,0 +1,11 @@
+﻿  pch.cpp
+  dllmain.cpp
+  mydll.cpp
+D:\GitHub_Project\koyumi0601.github.io\_posts\Cuda\practice_016_cpp_dll\MyMath2\MyMath2\mydll.cpp(17,6): warning C4273: 'my_list_add': inconsistent dll linkage
+  (compiling source file '/mydll.cpp')
+  D:\GitHub_Project\koyumi0601.github.io\_posts\Cuda\practice_016_cpp_dll\MyMath2\MyMath2\mydll.h(10,33):
+  see previous definition of 'my_list_add'
+  
+  Generating Code...
+     Creating library D:\GitHub_Project\koyumi0601.github.io\_posts\Cuda\practice_016_cpp_dll\MyMath2\x64\Debug\MyMath2.lib and object D:\GitHub_Project\koyumi0601.github.io\_posts\Cuda\practice_016_cpp_dll\MyMath2\x64\Debug\MyMath2.exp
+  MyMath2.vcxproj -> D:\GitHub_Project\koyumi0601.github.io\_posts\Cuda\practice_016_cpp_dll\MyMath2\x64\Debug\MyMath2.dll

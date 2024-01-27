@@ -313,3 +313,6 @@ pacman -Su # 시스템에 설치된 패키지를 최신으로 업데이트
 pacman -S gcc
 g++ --version # 설치 버전 확인
 ```
+
+## msvc 컴파일러
+- visual studio 설치 시 기본으로 깔린다. 

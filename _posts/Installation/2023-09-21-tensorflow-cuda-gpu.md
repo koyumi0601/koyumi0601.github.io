@@ -15,9 +15,9 @@ search: true
 *How to setup environment for Machine Learning*
 
 
-요약하자면, 
-1 그래픽 드라이버, CUDA toolkit(11.8), ~~cuDNN~~, tensorflow
-2 그래픽 드라이버, CUDA toolkit any (12.2 > 11.8), ~~cuDNN~~, pytorch
+요약하자면
+- 그래픽 드라이버, CUDA toolkit(11.8), ~~cuDNN~~, tensorflow
+- 그래픽 드라이버, CUDA toolkit any (12.2 > 11.8), ~~cuDNN~~, pytorch
 
 주의할 점
 - tensorflow는 호환성이 아주 중요하다
@@ -84,24 +84,33 @@ echo $LD_LIBRARY_PATH # check registered paths
 - nano ~/.bashrc
 - .bashrc의 맨 아래 추가한다.
 
+```bash
 export PATH=/usr/local/cuda-11.8/bin:/usr/local/cuda-11.8/NsightCompute-2023.1:$PATH
 export LD_LIBRARY_PATH=/usr/local/cuda-11.8/lib64:/usr/local/cuda-11.8/include:$LD_LIBRARY_PATH
+```
 
 - 적용한다 
+
+```bash
   source ~/.bashrc
+```
+
 - 확인한다
+
+```bash
   echo $LD_LIBRARY_PATH
   echo $PATH
+```
 
 
-참고 중인 블로그 https://normal-engineer.tistory.com/356
+- 참고 중인 블로그 [https://normal-engineer.tistory.com/356](https://normal-engineer.tistory.com/356)
 
 
 - Install graphic driver 
 
-  ```bash 
-  dd
-  ```
+```bash 
+
+```
 
 - Install CUDA
   - Tensorflow requires CUDA Toolkit 11.8 https://developer.nvidia.com/cuda-11-8-0-download-archive
@@ -230,11 +239,10 @@ Version
 
 https://robot9710.tistory.com/29
 
-<<<<<<< HEAD
+
 https://jjuke-brain.tistory.com/entry/GPU-%EC%84%9C%EB%B2%84-%EC%82%AC%EC%9A%A9%EB%B2%95-CUDA-PyTorch-%EB%B2%84%EC%A0%84-%EB%A7%9E%EC%B6%94%EA%B8%B0-%EC%B4%9D%EC%A0%95%EB%A6%AC
 
 
 https://www.tensorflow.org/install/pip?hl=ko
-=======
+
 https://jjuke-brain.tistory.com/entry/GPU-%EC%84%9C%EB%B2%84-%EC%82%AC%EC%9A%A9%EB%B2%95-CUDA-PyTorch-%EB%B2%84%EC%A0%84-%EB%A7%9E%EC%B6%94%EA%B8%B0-%EC%B4%9D%EC%A0%95%EB%A6%AC 
->>>>>>> c0bb21443a4c8516413cf6781d6c3912b33f2df8

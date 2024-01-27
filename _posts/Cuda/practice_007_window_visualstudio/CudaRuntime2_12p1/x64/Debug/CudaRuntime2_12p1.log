@@ -1,0 +1,1 @@
+﻿D:\Program Files\Microsoft Visual Studio\2022\Professional\MSBuild\Microsoft\VC\v170\BuildCustomizations\CUDA 12.1.targets(606,9): error : The CUDA Toolkit v12.1 directory '' does not exist.  Please verify the CUDA Toolkit is installed properly or define the CudaToolkitDir property to resolve this error.

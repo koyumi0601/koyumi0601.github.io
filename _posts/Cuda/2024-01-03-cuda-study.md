@@ -38,7 +38,7 @@ search: true
 ```bash
   **CL_DEVICE_COMPUTE_CAPABILITY_NV: 2.1
   NUMBER OF MULTIPROCESSORS: 4** >> SM 4개
-  **NUMBER OF CUDA CORES: 192** >> 전체 SP 192개. 하나의 SM당 SP는 192/4 = 48개
+  **NUMBER OF CUDA CORES: 192** >> 전체 SP 192개. 하나의 SM당 SP는 192/4 = 48개. 제품에 써있는 스펙-멀티프로세서 숫자는 쿠다코어임.
   CL_DEVICE_REGISTERS_PER_BLOCK_NV: 32768 >> 레지스터 32768개
   CL_DEVICE_WARP_SIZE_NV: 32
   CL_DEVICE_GPU_OVERLAP_NV: CL_TRUE
@@ -47,6 +47,16 @@ search: true
   CL_DEVICE_PREFERRED_VECTOR_WIDTH_<t> CHAR 1, SHORT 1, INT 1, LONG 1, FLOAT 1, DOUBLE 1
   Physical Limits for GPU Compute Capability:	2.0 # 최대 한계란 뜻
   Threads per Warp	32
+<<<<<<< HEAD
+  **Warps per Multiprocessor	48** 
+  Threads per Multiprocessor	1536
+  **Thread Blocks per Multiprocessor	8**
+  **Total # of 32-bit registers per Multiprocessor	32768**
+  Register allocation unit size	64
+  Register allocation granularity	warp
+  Registers per Thread	63
+  **Shared Memory per Multiprocessor (bytes)	49152** >> Shared Memory 49152 bytes
+=======
   Warps per Multiprocessor	48
   Threads per Multiprocessor	1536
   Thread Blocks per Multiprocessor	8
@@ -55,6 +65,7 @@ search: true
   Register allocation granularity	warp
   Registers per Thread	63
   Shared Memory per Multiprocessor (bytes)	49152 # Shared Memory 49152 bytes
+>>>>>>> 13085658d6d806b0d39f3a0e058dcecde4eba73e
   Shared Memory Allocation unit size	128
   Warp allocation granularity	2
   Maximum Thread Block Size	1024
@@ -72,17 +83,28 @@ search: true
 | Barrier        | `__syncthreads()`  | -                |
 | 언어            | C/C++, ptr 사용 가능 | -                |
 
+<<<<<<< HEAD
+- grid = GPU
+- 
+
+
+# Code Samples
+
+- NVIDIA Github : [https://github.com/NVIDIA/cuda-samples](https://github.com/NVIDIA/cuda-samples)
+=======
 ![img](https://t1.daumcdn.net/cfile/tistory/16282136509A061507)
+>>>>>>> 13085658d6d806b0d39f3a0e058dcecde4eba73e
 
 
 
 # Terminology
 
-- Streaming Processor (SP): SP는 한번에 4개의 스레드를 실행. 실제로는 1개 스레드당 1클럭, 시분할 방식으로 4클럭에 걸쳐 수행하지만, 4클럭을 1사이클로 보고, 사이클 단위로 처리량을 논하기 때문에 한 사이클에 4개 스레드를 실행한다고 함. 한 사이클에 몇 개의 스레드를 처리할지는 VGA HW마다 혹은 몇 클럭을 한 사이클로 보느냐에 따라 각기 다르다. 페르미 아키텍쳐의 경우 2번의 클럭으로 2개의 스레드를 실행한다고 함.
+- Streaming Processor (SP): SP는 한번에 4개의 스레드를 실행. 실제로는 1개 스레드당 1클럭, 시분할 방식으로 4클럭에 걸쳐 수행하지만, 4클럭을 1사이클로 보고, 사이클 단위로 처리량을 논하기 때문에 한 사이클에 4개 스레드를 실행한다고 함. 한 사이클에 몇 개의 스레드를 처리할지는 VGA HW마다 혹은 몇 클럭을 한 사이클로 보느냐에 따라 각기 다르다. 페르미(2.x) 아키텍쳐의 경우 2번의 클럭으로 2개의 스레드를 실행한다고 함.
 - Streaming Multiprocessor (SM): 
-  - SM은 한번에 32개의 스레드를 실행함. 
+  - SM은 한번에 32개의 스레드를 실행함. (1 warp = 32 thread)
   - G80의 경우 SM이 8개의 SP(Cuda core, thread)를 가지므로 8*4=32. 
   - GF100은 SM1개에 SP가 32개 있으므로,  한 번에 32*4=128개의 스레드를 실행한다.
+  - warp scheduler가 4개인 경우 (ampere architecture 7.x) SM은 4 warp를 한번에 돌릴 수 있다.
 - Thread
 - Warp: 
   - 32개의 스레드를 묶어서 워프라고 함.

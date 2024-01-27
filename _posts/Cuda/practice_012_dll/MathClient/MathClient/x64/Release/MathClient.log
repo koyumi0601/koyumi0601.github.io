@@ -1,0 +1,2 @@
+﻿  MathClient.cpp
+D:\GitHub_Project\koyumi0601.github.io\_posts\Cuda\practice_012_dll\MathClient\MathClient\MathClient.cpp(4,10): error C1083: Cannot open include file: 'MathLibrary.h': No such file or directory

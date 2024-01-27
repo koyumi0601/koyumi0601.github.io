@@ -1,0 +1,9 @@
+﻿  mydll.cpp
+D:\GitHub_Project\koyumi0601.github.io\_posts\Cuda\practice_017_dll(working, maindll removal)\mydll\mydll\mydll.cpp(23,6): warning C4273: 'mul_const': inconsistent dll linkage
+  (compiling source file '/mydll.cpp')
+  D:\GitHub_Project\koyumi0601.github.io\_posts\Cuda\practice_017_dll(working, maindll removal)\mydll\mydll\mydll.h(11,33):
+  see previous definition of 'mul_const'
+  
+  LINK : D:\GitHub_Project\koyumi0601.github.io\_posts\Cuda\practice_017_dll(working, maindll removal)\mydll\x64\Debug\mydll.dll not found or not built by the last incremental link; performing full link
+     Creating library D:\GitHub_Project\koyumi0601.github.io\_posts\Cuda\practice_017_dll(working, maindll removal)\mydll\x64\Debug\mydll.lib and object D:\GitHub_Project\koyumi0601.github.io\_posts\Cuda\practice_017_dll(working, maindll removal)\mydll\x64\Debug\mydll.exp
+  mydll.vcxproj -> D:\GitHub_Project\koyumi0601.github.io\_posts\Cuda\practice_017_dll(working, maindll removal)\mydll\x64\Debug\mydll.dll
