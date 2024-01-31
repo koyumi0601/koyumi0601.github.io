@@ -15,9 +15,15 @@ search: true
 *How to setup environment for Machine Learning*
 
 
+# Window
+- 그래픽 드라이버(최신), CUDA toolkit (12.3 x -> 12.1), pytorch, python (3.12 x -> 3.8.10 downgrade) (2024. Jan)
+
+# Ubuntu
+
 요약하자면
 - 그래픽 드라이버, CUDA toolkit(11.8), ~~cuDNN~~, tensorflow
 - 그래픽 드라이버, CUDA toolkit any (12.2 > 11.8), ~~cuDNN~~, pytorch
+- tensorflow, pytorch를 같이 까는 것은 안된다고 한다
 
 주의할 점
 - tensorflow는 호환성이 아주 중요하다

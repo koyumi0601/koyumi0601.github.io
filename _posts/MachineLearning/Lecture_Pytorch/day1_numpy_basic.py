@@ -419,9 +419,32 @@ A = np.random.randn(3, 4)
 print(A)
 print(np.sum(A))
 print(np.sum(A, axis=1))
-print(np.sum(A, axis=1, keepdims=True))
+print(np.sum(A, axis=1, keepdims=True)) # 예를 들어 shape [3,4] -> [3]으로 바뀔텐데, [3,1]로 유지하라는 옵션
 print(np.mean(A))
 print(np.mean(A, axis=1))
 print(np.mean(A, axis=1, keepdims=True))
 print(np.std(A))
 
+print('-----------------')
+A=torch.randint(1, 5, size=(12,)) # 1~5미만 랜덤 integer 12x1
+print(A)
+print(A.shape)
+B=A.reshape(2,2,3)
+print(B)
+print(B.ndim)
+
+
+print('-----------------')
+# 1:37:11
+a=torch.tensor([1, 2, 3])
+b=torch.tensor([2, 2, 1])
+print(torch.sum(a*b))
+
+a=a.reshape(3, 1)
+b=b.reshape(3, 1)
+print(a.transpose(0, 1)@b) # transpose(dim1, dim2). 서로 바꿈. numpy는 a.transpose() 허용
+print(a.permute(1, 0)@b) # transpose. dim1을 1에 배치, dim0을 0에 배치 이런 식.
+print(a.T@b)
+
+A=torch.randn(4, 3, 6)
+# print(A.transpose(0, 2, 1).shape) # dim1, dim2 두 개만 받음. 여러번 수행해야 함.

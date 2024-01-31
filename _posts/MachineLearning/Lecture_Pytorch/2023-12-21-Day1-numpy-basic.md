@@ -410,7 +410,7 @@ A = np.random.randn(3, 4)
 print(A)
 print(np.max(A)) # 전체 최대값
 print(np.max(A, axis=0)) # 각 열에 대한 최대값
-print(np.max(A, axis=1)) # 각 행에 대한 최대값
+print(np.max(A, axis=1)) # 각 행에 대한 최대값 
 print(np.min(A))
 print(np.min(A, axis=0))
 print(np.min(A, axis=1))
@@ -440,7 +440,9 @@ print(torch.argmax(A, dim=0))
 print(torch.argmax(A, dim=1))
 ```
 
-- 오름차순, 내림차순정렬
+
+- 오름차순, 내림차순정렬, 1:23:50
+
 ```python
 a = np.random.randn(6, 1)
 print(a)
@@ -465,3 +467,31 @@ print(torch.sort(a, dim=0)) # 오름차순정렬, default False
 print(f'a.sort(dim=0): {a.sort(dim=0)}') # class의 함수를 쓰기도 함.
 print(f'torch.max(a): {torch.max(a)}, a.max(): {a.max()}') # max도 class의 함수를 많이 씀. 코드의 간결성. torch.max()는 추가 작업이므로 약간의 오버헤드 발생. 인덱스도 리턴한다는 장점이 있으나 최대값만 필요한 경우에는 후자를 사용한다.
 ```
+
+```python
+print(a.sort())
+print(torch.sort(a))
+```
+
+```python
+A = np.random.randn(3, 4)
+print(A)
+print(np.sum(A))
+print(np.sum(A, axis=1))
+print(np.sum(A, axis=1, keepdims=True)) # 예를 들어 shape [3,4] -> [3]으로 바뀔텐데, [3,1]로 유지하라는 옵션
+print(np.mean(A))
+print(np.mean(A, axis=1))
+print(np.mean(A, axis=1, keepdims=True))
+print(np.std(A))
+```
+
+
+```python
+A=torch.randint(1, 5, size=(12,)) # 1~5미만 랜덤 integer 12x1
+print(A)
+print(A.shape)
+B=A.reshape(2,2,3)
+print(B)
+print(B.ndim)
+```
+
