@@ -1,0 +1,3 @@
+/home/ko/Documents/Practice_class/build/CMakeFiles/ImageLoader.dir
+/home/ko/Documents/Practice_class/build/CMakeFiles/edit_cache.dir
+/home/ko/Documents/Practice_class/build/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,79 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-60c543119ed2dec757bd.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "Qt_practice_01",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt_practice_01::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt_practice_01-Debug-e127e80f0c0b56a6f944.json",
+					"name" : "Qt_practice_01",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt_practice_01_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt_practice_01_autogen-Debug-617c2be4447cdba69a95.json",
+					"name" : "Qt_practice_01_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Qt_practice_01_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Qt_practice_01_autogen_timestamp_deps-Debug-867d1fc47ebcca7aec37.json",
+					"name" : "Qt_practice_01_autogen_timestamp_deps",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/ko/Documents/GitHub/koyumi0601.github.io/_posts/Installation/Qt-Linux/build-Qt_practice_01-Desktop_Qt_6_6_1_GCC_64bit-Debug",
+		"source" : "/home/ko/Documents/GitHub/koyumi0601.github.io/_posts/Installation/Qt-Linux/Qt_practice_01"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}
