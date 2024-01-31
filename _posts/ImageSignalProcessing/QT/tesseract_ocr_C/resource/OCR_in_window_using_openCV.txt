@@ -1,0 +1,71 @@
+ubuntu opencv and tesseract
+
+https://medium.com/building-a-simple-text-correction-tool/basic-ocr-with-tesseract-and-opencv-34fae6ab3400
+
+- 설치
+sudo add-apt-repository ppa:alex-p/tesseract-ocr
+sudo apt-get update
+sudo apt install tesseract-ocr
+sudo apt install libtesseract-dev
+
+- opencv의 설치 경로를 시스템에 알려주기
+  - export PKG_CONFIG_PATH=/usr/lib/x86_64-linux-gnu/pkgconfig:$PKG_CONFIG_PATH
+  - export CROSS_COMPILE=/usr/bin/arm-linux-gnueabihf
+
+  - usr/lib/pkgconfig가 아니라 usr/lib/x86_64-linux-gnu에 있었음
+  - 실행된 터미널에 임시로 알려주는 것이라 껐다켜면 없어짐. 터미널 내에서 유효.
+
+- 컴파일
+  - g++ -O3 -std=c++11 OCR_depth.cpp $(pkg-config --cflags --libs opencv4 tesseract) -o OCR_depth
+  - arm-linux-gnueabihf-g++ -O3 -std=c++11 OCR_depth.cpp $(pkg-config --cflags --libs opencv4 tesseract) -o OCR_depth
+
+  - 컴파일러 및 옵션, 소스코드 이름, library 등등에 대한 정보를 같이 넣어서 명령어를 터미널에 입력하면, 컴파일된 오브젝트 파일 basic_ocr이 떨어진다.
+
+- 실행하기
+  - ./basic_ocr /media/opencv_images/105.png
+  - 성공율이 좀 낮은 거 같긴한데, 추출된 작은 이미지에서는 105라고 잘 출력됨을 확인했다.
+
+- 소스코드
+  - #include <opencv2/opencv.hpp>에는 여전히 빨간줄이 (vs code에서) 보이지만, 컴파일 명령어를 쓰면 무사히 컴파일 된다.
+#include <string>
+#include <tesseract/baseapi.h>
+#include <leptonica/allheaders.h>
+#include <opencv2/opencv.hpp>
+using namespace std;
+using namespace cv;
+
+int main(int argc, char* argv[]) {
+    if (argc != 2) {
+        cout << "Usage: " << argv[0] << " <image_path>" << endl;
+        return 1;
+    }
+
+    string outText, imPath = argv[1];
+    // string outText, imPath = "/media/ko/USB_07/opencv_images/105.png";
+    // string outText, imPath = "/media/ko/USB_07/opencv_images/one.jpg"; // not working
+    // string outText, imPath = "/media/ko/USB_07/opencv_images/045.png";
+
+    Mat im = cv::imread(imPath, IMREAD_COLOR);
+
+    if (im.empty()) {
+        cout << "Failed to read the image." << endl;
+        return 1;
+    }
+
+    tesseract::TessBaseAPI *ocr = new tesseract::TessBaseAPI();
+    ocr->Init(NULL, "eng", tesseract::OEM_LSTM_ONLY);
+
+    ocr->SetPageSegMode(tesseract::PSM_AUTO);
+
+    ocr->SetImage(im.data, im.cols, im.rows, 3, im.step);
+
+    ocr->SetSourceResolution(197); // image resolution (warning: invalid resolution 0 dpi. Using 70 instead. Estimatin resolution as 197)
+
+    outText = string(ocr->GetUTF8Text());
+
+    cout << outText;
+
+    ocr->End();
+
+    return 0;
+}
