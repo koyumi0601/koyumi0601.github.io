@@ -1,8 +1,0 @@
-/home/ko/Documents/Tesseract_OCR_C_OPENGL/build/CMakeFiles/Tesseract_OCR_C.dir
-/home/ko/Documents/Tesseract_OCR_C_OPENGL/build/CMakeFiles/edit_cache.dir
-/home/ko/Documents/Tesseract_OCR_C_OPENGL/build/CMakeFiles/rebuild_cache.dir
-/home/ko/Documents/Tesseract_OCR_C_OPENGL/build/CMakeFiles/list_install_components.dir
-/home/ko/Documents/Tesseract_OCR_C_OPENGL/build/CMakeFiles/install.dir
-/home/ko/Documents/Tesseract_OCR_C_OPENGL/build/CMakeFiles/install/local.dir
-/home/ko/Documents/Tesseract_OCR_C_OPENGL/build/CMakeFiles/install/strip.dir
-/home/ko/Documents/Tesseract_OCR_C_OPENGL/build/CMakeFiles/Tesseract_OCR_C_autogen.dir
