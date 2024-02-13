@@ -9,11 +9,23 @@ set(CMAKE_AUTORCC ON)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-find_package(PkgConfig REQUIRED)
-pkg_search_module(TESSERACT REQUIRED tesseract)
+
+if(WIN32)
+    # OpenCV
+    find_package(OpenCV REQUIRED)
+    # QT
+    set(CMAKE_PREFIX_PATH "D:/Qt/Qt5.12.12/5.12.12/msvc2017_64") # your installed path
+    # Tesseract OCR
+    set(TESSERACT_DIR "D:/Program Files/Tesseract-OCR")
+    find_path(TESSERACT_INCLUDE_DIR NAMES tesseract/baseapi.h PATHS ${TESSERACT_DIR}/include)
+    find_library(TESSERACT_LIB NAMES tesseract PATHS ${TESSERACT_DIR}/lib)
+else()
+    find_package(PkgConfig REQUIRED) # ubuntu
+    pkg_search_module(TESSERACT REQUIRED tesseract)
+    find_package(OpenCV REQUIRED)
+endif()
 find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets)
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets)
-find_package(OpenCV REQUIRED)
 
 set(PROJECT_SOURCES
         main.cpp
@@ -50,7 +62,9 @@ endif()
 
 include_directories(${TESSERACT_INCLUDE_DIRS})
 link_directories(${TESSERACT_LIBRARY_DIRS})
-target_link_libraries(Tesseract_OCR_C PRIVATE Qt${QT_VERSION_MAJOR}::Widgets ${OpenCV_LIBS} tesseract)
+#target_link_libraries(Tesseract_OCR_C PRIVATE Qt${QT_VERSION_MAJOR}::Widgets ${OpenCV_LIBS} tesseract)
+target_link_libraries(Tesseract_OCR_C PRIVATE Qt${QT_VERSION_MAJOR}::Widgets ${OpenCV_LIBS} ${TESSERACT_LIB})
+
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
 # If you are developing for iOS or macOS you should consider setting an
@@ -58,6 +72,9 @@ target_link_libraries(Tesseract_OCR_C PRIVATE Qt${QT_VERSION_MAJOR}::Widgets ${O
 if(${QT_VERSION} VERSION_LESS 6.1.0)
   set(BUNDLE_ID_OPTION MACOSX_BUNDLE_GUI_IDENTIFIER com.example.Tesseract_OCR_C)
 endif()
+
+
+
 set_target_properties(Tesseract_OCR_C PROPERTIES
     ${BUNDLE_ID_OPTION}
     MACOSX_BUNDLE_BUNDLE_VERSION ${PROJECT_VERSION}
