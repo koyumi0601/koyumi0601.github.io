@@ -1,8 +1,0 @@
-/home/ko/Documents/GitHub/koyumi0601.github.io/_posts/ImageSignalProcessing/QT/project_build/build-Tesseract_OCR_C_CPU_refactory-Desktop_Qt_5_12_12_GCC_64bit-Debug/CMakeFiles/install/strip.dir
-/home/ko/Documents/GitHub/koyumi0601.github.io/_posts/ImageSignalProcessing/QT/project_build/build-Tesseract_OCR_C_CPU_refactory-Desktop_Qt_5_12_12_GCC_64bit-Debug/CMakeFiles/install/local.dir
-/home/ko/Documents/GitHub/koyumi0601.github.io/_posts/ImageSignalProcessing/QT/project_build/build-Tesseract_OCR_C_CPU_refactory-Desktop_Qt_5_12_12_GCC_64bit-Debug/CMakeFiles/install.dir
-/home/ko/Documents/GitHub/koyumi0601.github.io/_posts/ImageSignalProcessing/QT/project_build/build-Tesseract_OCR_C_CPU_refactory-Desktop_Qt_5_12_12_GCC_64bit-Debug/CMakeFiles/list_install_components.dir
-/home/ko/Documents/GitHub/koyumi0601.github.io/_posts/ImageSignalProcessing/QT/project_build/build-Tesseract_OCR_C_CPU_refactory-Desktop_Qt_5_12_12_GCC_64bit-Debug/CMakeFiles/rebuild_cache.dir
-/home/ko/Documents/GitHub/koyumi0601.github.io/_posts/ImageSignalProcessing/QT/project_build/build-Tesseract_OCR_C_CPU_refactory-Desktop_Qt_5_12_12_GCC_64bit-Debug/CMakeFiles/edit_cache.dir
-/home/ko/Documents/GitHub/koyumi0601.github.io/_posts/ImageSignalProcessing/QT/project_build/build-Tesseract_OCR_C_CPU_refactory-Desktop_Qt_5_12_12_GCC_64bit-Debug/CMakeFiles/Tesseract_OCR_C.dir
-/home/ko/Documents/GitHub/koyumi0601.github.io/_posts/ImageSignalProcessing/QT/project_build/build-Tesseract_OCR_C_CPU_refactory-Desktop_Qt_5_12_12_GCC_64bit-Debug/CMakeFiles/Tesseract_OCR_C_autogen.dir
