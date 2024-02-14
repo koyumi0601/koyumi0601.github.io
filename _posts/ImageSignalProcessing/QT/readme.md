@@ -18,28 +18,43 @@
 
 # Requirement
 - Refactoring
-- Rubber band -> 마우스버튼 (done)
-    - release 시점에 사각박스 (stencil ROI box size 15)
-    - 클릭좌표 중심으로 생성
-    - 드래그 시 이동가능
-    - 드래그 시 이동은 마우스와 박스 간의 상대경로가 유지 됨
-    - 겹치는 이동은 하지 않는다. 부딪히면 놓은 것과 같은 동작
+- ~~Rubber band -> 마우스버튼 (done)~~
+    - ~~release 시점에 사각박스 (stencil ROI box size 15)~~
+    - ~~클릭좌표 중심으로 생성~~
+    - ~~드래그 시 이동가능~~
+    - ~~드래그 시 이동은 마우스와 박스 간의 상대경로가 유지 됨~~
+    - ~~겹치는 이동은 하지 않는다. 부딪히면 놓은 것과 같은 동작~~
 - export struct 
-    - 디자인 예정(~2/15)
-- OCR box는 system, probe에 대해서 단일해야 함. (done)
-    - 갱신 시 기존 데이터에 대한 유효성 검사(같은 depth가 출력되는 지) 확인 후 통과하면 새로 생성되도록
-        - invalid: 사각박스 빨간색
-        - valid: 사각박스 초록색
-        - review data 갱신
+    - 디자인 예정(~2/15, hold)
+- ~~OCR box는 system, probe에 대해서 단일해야 함. (done)~~
+    - ~~갱신 시 기존 데이터에 대한 유효성 검사(같은 depth가 출력되는 지) 확인 후 통과하면 새로 생성되도록~~
+        - ~~invalid: 사각박스 빨간색~~
+        - ~~valid: 사각박스 초록색~~
+        - ~~review data 갱신~~
+- point 6점 structdata에 넘기기
 
+```cpp
+float topLeftX;
+float topLeftY;
+float topRightX;
+float topRightY;
+float midLeftX; 중앙 수직선의 위
+float midLeftY;
+float midRightX;
+float midRightY;
+float bottomLeftX; 중앙 수직선의 아래, wingClip되지 않은 경우 mid와 bottom의 값은 같아야 함.
+float bottomLeftY;
+float bottomRightX;
+float bottomRightY;
+```
 
 # Bug
-- Generate Stencil ROI 버튼
-    - 3, 4번째 점이 좌우 갭이 크면 hanging -> center of mass에서 위 2개 좌 2개 뽑는 것으로 변경 (done)
-    - -1이 나오면 cv 크래시 -> 계산 돌지 않도록 수정 (done)
+- ~~Generate Stencil ROI 버튼~~
+    - ~~3, 4번째 점이 좌우 갭이 크면 hanging -> center of mass에서 위 2개 좌 2개 뽑는 것으로 변경 (done)~~
+    - ~~-1이 나오면 cv 크래시 -> 계산 돌지 않도록 수정 (done)~~
 
-- OCR button
-    - review 상태에서 새로 그리는 경우, select/unselect할 때 서로 mismatch
+- ~~OCR button~~
+    - ~~review 상태에서 새로 그리는 경우, select/unselect할 때 서로 mismatch -> livedata 새로 생성된 것에도 적용~~
 
 
 
