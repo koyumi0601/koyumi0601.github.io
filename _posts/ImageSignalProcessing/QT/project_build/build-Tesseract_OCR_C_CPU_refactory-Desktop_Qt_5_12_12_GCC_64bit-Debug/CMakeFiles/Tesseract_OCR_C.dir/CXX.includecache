@@ -6,6 +6,14 @@
 
 #IncludeRegexTransform: 
 
+/home/ko/Documents/GitHub/koyumi0601.github.io/_posts/ImageSignalProcessing/QT/project_build/Tesseract_OCR_C_CPU_refactory/main.cpp
+mainwindow.h
+/home/ko/Documents/GitHub/koyumi0601.github.io/_posts/ImageSignalProcessing/QT/project_build/Tesseract_OCR_C_CPU_refactory/mainwindow.h
+QApplication
+-
+QCoreApplication
+-
+
 /home/ko/Documents/GitHub/koyumi0601.github.io/_posts/ImageSignalProcessing/QT/project_build/Tesseract_OCR_C_CPU_refactory/mainwindow.cpp
 mainwindow.h
 /home/ko/Documents/GitHub/koyumi0601.github.io/_posts/ImageSignalProcessing/QT/project_build/Tesseract_OCR_C_CPU_refactory/mainwindow.h
@@ -56,6 +64,22 @@ tesseract/baseapi.h
 leptonica/allheaders.h
 -
 
+/home/ko/Documents/GitHub/koyumi0601.github.io/_posts/ImageSignalProcessing/QT/project_build/Tesseract_OCR_C_CPU_refactory/utils.cpp
+utils.h
+/home/ko/Documents/GitHub/koyumi0601.github.io/_posts/ImageSignalProcessing/QT/project_build/Tesseract_OCR_C_CPU_refactory/utils.h
+filesystem
+-
+iostream
+-
+algorithm
+-
+QDebug
+-
+QPointF
+-
+cmath
+-
+
 /home/ko/Documents/GitHub/koyumi0601.github.io/_posts/ImageSignalProcessing/QT/project_build/Tesseract_OCR_C_CPU_refactory/utils.h
 vector
 -
@@ -67,6 +91,18 @@ QPoint
 -
 QPointF
 -
+
+/home/ko/Documents/GitHub/koyumi0601.github.io/_posts/ImageSignalProcessing/QT/project_build/build-Tesseract_OCR_C_CPU_refactory-Desktop_Qt_5_12_12_GCC_64bit-Debug/Tesseract_OCR_C_autogen/EWIEGA46WW/moc_mainwindow.cpp
+../../../Tesseract_OCR_C_CPU_refactory/mainwindow.h
+/home/ko/Documents/GitHub/koyumi0601.github.io/_posts/ImageSignalProcessing/QT/project_build/Tesseract_OCR_C_CPU_refactory/mainwindow.h
+QtCore/qbytearray.h
+-
+QtCore/qmetatype.h
+-
+
+/home/ko/Documents/GitHub/koyumi0601.github.io/_posts/ImageSignalProcessing/QT/project_build/build-Tesseract_OCR_C_CPU_refactory-Desktop_Qt_5_12_12_GCC_64bit-Debug/Tesseract_OCR_C_autogen/mocs_compilation.cpp
+EWIEGA46WW/moc_mainwindow.cpp
+/home/ko/Documents/GitHub/koyumi0601.github.io/_posts/ImageSignalProcessing/QT/project_build/build-Tesseract_OCR_C_CPU_refactory-Desktop_Qt_5_12_12_GCC_64bit-Debug/Tesseract_OCR_C_autogen/EWIEGA46WW/moc_mainwindow.cpp
 
 /home/ko/Qt5.12.12/5.12.12/gcc_64/include/QtCore/QCoreApplication
 qcoreapplication.h

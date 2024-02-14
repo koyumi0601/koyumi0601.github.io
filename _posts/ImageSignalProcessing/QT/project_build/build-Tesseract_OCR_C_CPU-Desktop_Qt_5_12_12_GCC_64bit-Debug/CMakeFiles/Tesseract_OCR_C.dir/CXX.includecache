@@ -6,14 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/home/ko/Documents/GitHub/koyumi0601.github.io/_posts/ImageSignalProcessing/QT/project_build/Tesseract_OCR_C_CPU/main.cpp
-mainwindow.h
-/home/ko/Documents/GitHub/koyumi0601.github.io/_posts/ImageSignalProcessing/QT/project_build/Tesseract_OCR_C_CPU/mainwindow.h
-QApplication
--
-QCoreApplication
--
-
 /home/ko/Documents/GitHub/koyumi0601.github.io/_posts/ImageSignalProcessing/QT/project_build/Tesseract_OCR_C_CPU/mainwindow.cpp
 mainwindow.h
 /home/ko/Documents/GitHub/koyumi0601.github.io/_posts/ImageSignalProcessing/QT/project_build/Tesseract_OCR_C_CPU/mainwindow.h
@@ -35,6 +27,14 @@ stdexcept
 -
 chrono
 -
+QKeyEvent
+-
+QMessageBox
+-
+QColor
+-
+algorithm
+-
 
 /home/ko/Documents/GitHub/koyumi0601.github.io/_posts/ImageSignalProcessing/QT/project_build/Tesseract_OCR_C_CPU/mainwindow.h
 QMainWindow
@@ -44,6 +44,8 @@ QCoreApplication
 QGraphicsPixmapItem
 -
 QGraphicsRectItem
+-
+QTableWidget
 -
 QImage
 -
@@ -67,18 +69,6 @@ QPoint
 -
 QPointF
 -
-
-/home/ko/Documents/GitHub/koyumi0601.github.io/_posts/ImageSignalProcessing/QT/project_build/build-Tesseract_OCR_C_CPU-Desktop_Qt_5_12_12_GCC_64bit-Debug/Tesseract_OCR_C_autogen/EWIEGA46WW/moc_mainwindow.cpp
-../../../Tesseract_OCR_C_CPU/mainwindow.h
-/home/ko/Documents/GitHub/koyumi0601.github.io/_posts/ImageSignalProcessing/QT/project_build/Tesseract_OCR_C_CPU/mainwindow.h
-QtCore/qbytearray.h
--
-QtCore/qmetatype.h
--
-
-/home/ko/Documents/GitHub/koyumi0601.github.io/_posts/ImageSignalProcessing/QT/project_build/build-Tesseract_OCR_C_CPU-Desktop_Qt_5_12_12_GCC_64bit-Debug/Tesseract_OCR_C_autogen/mocs_compilation.cpp
-EWIEGA46WW/moc_mainwindow.cpp
-/home/ko/Documents/GitHub/koyumi0601.github.io/_posts/ImageSignalProcessing/QT/project_build/build-Tesseract_OCR_C_CPU-Desktop_Qt_5_12_12_GCC_64bit-Debug/Tesseract_OCR_C_autogen/EWIEGA46WW/moc_mainwindow.cpp
 
 /home/ko/Qt5.12.12/5.12.12/gcc_64/include/QtCore/QCoreApplication
 qcoreapplication.h
@@ -392,6 +382,18 @@ QtCore/qobjectdefs.h
 QtCore/qscopedpointer.h
 -
 QtCore/qstring.h
+-
+
+/home/ko/Qt5.12.12/5.12.12/gcc_64/include/QtCore/qitemselectionmodel.h
+QtCore/qglobal.h
+-
+QtCore/qset.h
+-
+QtCore/qvector.h
+-
+QtCore/qlist.h
+-
+QtCore/qabstractitemmodel.h
 -
 
 /home/ko/Qt5.12.12/5.12.12/gcc_64/include/QtCore/qiterator.h
@@ -858,9 +860,17 @@ QtCore/qpoint.h
 QtCore/qglobal.h
 -
 
+/home/ko/Qt5.12.12/5.12.12/gcc_64/include/QtGui/QColor
+qcolor.h
+/home/ko/Qt5.12.12/5.12.12/gcc_64/include/QtGui/qcolor.h
+
 /home/ko/Qt5.12.12/5.12.12/gcc_64/include/QtGui/QImage
 qimage.h
 /home/ko/Qt5.12.12/5.12.12/gcc_64/include/QtGui/qimage.h
+
+/home/ko/Qt5.12.12/5.12.12/gcc_64/include/QtGui/QKeyEvent
+qevent.h
+/home/ko/Qt5.12.12/5.12.12/gcc_64/include/QtGui/qevent.h
 
 /home/ko/Qt5.12.12/5.12.12/gcc_64/include/QtGui/QMouseEvent
 qevent.h
@@ -1180,6 +1190,52 @@ QtGui/qtguiglobal.h
 QtCore/qprocessordetection.h
 -
 
+/home/ko/Qt5.12.12/5.12.12/gcc_64/include/QtGui/qtextcursor.h
+QtGui/qtguiglobal.h
+-
+QtCore/qstring.h
+-
+QtCore/qshareddata.h
+-
+QtGui/qtextformat.h
+-
+
+/home/ko/Qt5.12.12/5.12.12/gcc_64/include/QtGui/qtextdocument.h
+QtGui/qtguiglobal.h
+-
+QtCore/qobject.h
+-
+QtCore/qsize.h
+-
+QtCore/qrect.h
+-
+QtCore/qvariant.h
+-
+QtGui/qfont.h
+-
+QtCore/qurl.h
+-
+
+/home/ko/Qt5.12.12/5.12.12/gcc_64/include/QtGui/qtextformat.h
+QtGui/qtguiglobal.h
+-
+QtGui/qcolor.h
+-
+QtGui/qfont.h
+-
+QtCore/qshareddata.h
+-
+QtCore/qvector.h
+-
+QtCore/qvariant.h
+-
+QtGui/qpen.h
+-
+QtGui/qbrush.h
+-
+QtGui/qtextoption.h
+-
+
 /home/ko/Qt5.12.12/5.12.12/gcc_64/include/QtGui/qtextoption.h
 QtGui/qtguiglobal.h
 -
@@ -1284,6 +1340,10 @@ qgraphicsitem.h
 qgraphicsview.h
 /home/ko/Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qgraphicsview.h
 
+/home/ko/Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/QHeaderView
+qheaderview.h
+/home/ko/Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qheaderview.h
+
 /home/ko/Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/QLabel
 qlabel.h
 /home/ko/Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qlabel.h
@@ -1292,6 +1352,10 @@ qlabel.h
 qmainwindow.h
 /home/ko/Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qmainwindow.h
 
+/home/ko/Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/QMessageBox
+qmessagebox.h
+/home/ko/Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qmessagebox.h
+
 /home/ko/Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/QPushButton
 qpushbutton.h
 /home/ko/Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qpushbutton.h
@@ -1299,6 +1363,14 @@ qpushbutton.h
 /home/ko/Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/QStatusBar
 qstatusbar.h
 /home/ko/Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qstatusbar.h
+
+/home/ko/Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/QTableWidget
+qtablewidget.h
+/home/ko/Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qtablewidget.h
+
+/home/ko/Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/QTextEdit
+qtextedit.h
+/home/ko/Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qtextedit.h
 
 /home/ko/Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/QWidget
 qwidget.h
@@ -1320,6 +1392,18 @@ QtWidgets/qtwidgetsglobal.h
 QtCore/qobject.h
 -
 QtWidgets/qstyleoption.h
+-
+
+/home/ko/Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qabstractitemview.h
+QtWidgets/qtwidgetsglobal.h
+-
+QtWidgets/qabstractscrollarea.h
+-
+QtCore/qabstractitemmodel.h
+-
+QtCore/qitemselectionmodel.h
+-
+QtWidgets/qabstractitemdelegate.h
 -
 
 /home/ko/Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qabstractscrollarea.h
@@ -1386,6 +1470,12 @@ QtWidgets/qtwidgetsglobal.h
 QtWidgets/qwidget.h
 -
 
+/home/ko/Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qdialog.h
+QtWidgets/qtwidgetsglobal.h
+-
+QtWidgets/qwidget.h
+-
+
 /home/ko/Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qframe.h
 QtWidgets/qtwidgetsglobal.h
 -
@@ -1440,6 +1530,12 @@ QtWidgets/qscrollarea.h
 QtWidgets/qgraphicsscene.h
 -
 
+/home/ko/Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qheaderview.h
+QtWidgets/qtwidgetsglobal.h
+-
+QtWidgets/qabstractitemview.h
+-
+
 /home/ko/Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qlabel.h
 QtWidgets/qtwidgetsglobal.h
 -
@@ -1452,6 +1548,12 @@ QtWidgets/qtwidgetsglobal.h
 QtWidgets/qwidget.h
 -
 QtWidgets/qtabwidget.h
+-
+
+/home/ko/Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qmessagebox.h
+QtWidgets/qtwidgetsglobal.h
+-
+QtWidgets/qdialog.h
 -
 
 /home/ko/Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qpushbutton.h
@@ -1544,12 +1646,42 @@ QtWidgets/qtwidgetsglobal.h
 QtWidgets/qwidget.h
 -
 
+/home/ko/Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qtableview.h
+QtWidgets/qtwidgetsglobal.h
+-
+QtWidgets/qabstractitemview.h
+-
+
+/home/ko/Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qtablewidget.h
+QtWidgets/qtwidgetsglobal.h
+-
+QtWidgets/qtableview.h
+-
+QtCore/qvariant.h
+-
+QtCore/qvector.h
+-
+
 /home/ko/Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qtabwidget.h
 QtWidgets/qtwidgetsglobal.h
 -
 QtWidgets/qwidget.h
 -
 QtGui/qicon.h
+-
+
+/home/ko/Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qtextedit.h
+QtWidgets/qtwidgetsglobal.h
+-
+QtWidgets/qabstractscrollarea.h
+-
+QtGui/qtextdocument.h
+-
+QtGui/qtextoption.h
+-
+QtGui/qtextcursor.h
+-
+QtGui/qtextformat.h
 -
 
 /home/ko/Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qtwidgets-config.h
@@ -2887,6 +3019,8 @@ QtWidgets/QComboBox
 -
 QtWidgets/QGraphicsView
 -
+QtWidgets/QHeaderView
+-
 QtWidgets/QLabel
 -
 QtWidgets/QMainWindow
@@ -2894,6 +3028,10 @@ QtWidgets/QMainWindow
 QtWidgets/QPushButton
 -
 QtWidgets/QStatusBar
+-
+QtWidgets/QTableWidget
+-
+QtWidgets/QTextEdit
 -
 QtWidgets/QWidget
 -
