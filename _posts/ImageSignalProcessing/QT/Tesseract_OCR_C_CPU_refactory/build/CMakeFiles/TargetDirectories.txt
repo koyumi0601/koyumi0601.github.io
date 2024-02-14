@@ -1,0 +1,4 @@
+D:/Github_Blog/koyumi0601.github.io/_posts/ImageSignalProcessing/QT/Tesseract_OCR_C_CPU_refactory/build/CMakeFiles/Tesseract_OCR_C.dir
+D:/Github_Blog/koyumi0601.github.io/_posts/ImageSignalProcessing/QT/Tesseract_OCR_C_CPU_refactory/build/CMakeFiles/INSTALL.dir
+D:/Github_Blog/koyumi0601.github.io/_posts/ImageSignalProcessing/QT/Tesseract_OCR_C_CPU_refactory/build/CMakeFiles/ALL_BUILD.dir
+D:/Github_Blog/koyumi0601.github.io/_posts/ImageSignalProcessing/QT/Tesseract_OCR_C_CPU_refactory/build/CMakeFiles/ZERO_CHECK.dir
