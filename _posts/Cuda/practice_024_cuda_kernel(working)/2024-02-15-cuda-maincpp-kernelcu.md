@@ -257,7 +257,7 @@ void calculateAverage(int N, int M, int L, dim3 numBlocks, dim3 blockSize, float
 
 - 차이점 설명
 
-- main.cpp에서는 <<< >>>와 같은 cuda 표현을 컴파일러(nvcc가 .cpp에서)가 인식하지 못한다. 따라서 함수처럼 써줘야하고 필요한 인자는 모두 넘겨줘야 한다
+- main.cpp에 <<< >>>와 같은 cuda 표현을 사용하면, nvcc 컴파일러가 .cpp를 제대로 인식하지 못한다. 따라서 함수처럼 ()를 사용해야하고 필요한 인자는 모두 넘겨줘야 한다
 - 예를 들어 기존의 main.cu (하나의 파일에 작성)에서는 아래와 같이 커널을 선언한 후
 
 ```c
@@ -276,14 +276,14 @@ __global__ void calculateAverage(float *inputData, float *outputData) {
 
 ```
 
-- 함수 실행에 <<< >>> 표현을 사용하였으나
+- 함수 실행에 <<< >>> 표현을 사용하여 잘 동작하였다.
 
 ```c
 // CUDA 커널 실행
     calculateAverage<<<numBlocks, blockSize>>>(d_inputData, d_outputData);
 ```
 
-- main.cpp로 작성하였을 때에는 함수 실행에 () 표현을 사용하여야 하며
+- 반면, main.cpp로 작성하였을 때에는 함수 실행에 () 표현을 사용하여야 하며
 
 ```cpp
 // CUDA 함수 실행
