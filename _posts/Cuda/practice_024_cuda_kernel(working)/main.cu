@@ -31,10 +31,6 @@ __global__ void calculateAverage(float *inputData, float *outputData) {
 // }
 
 
-
-
-
-
 int main() {
 
     float inputData[N][M][L] = {

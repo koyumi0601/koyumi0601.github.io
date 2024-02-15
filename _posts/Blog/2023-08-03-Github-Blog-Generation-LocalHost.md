@@ -24,7 +24,8 @@ search: true
 sudo apt-get install ruby-dev
 # sudo apt install build-essential # if required
 # sudo gem install eventmachine # if required
-sudo gem install bundler
+# sudo gem install bundler
+sudo gem install bundler -v 2.4.22
 sudo bundle install
 ```
 - Clone target repository
