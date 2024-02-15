@@ -1,0 +1,60 @@
+.
+├── create_project_structure.sh
+├── project
+│   ├── build
+│   ├── cache
+│   ├── CMakeLists.txt
+│   ├── config
+│   │   └── settings.json
+│   ├── docs
+│   │   ├── api_reference.md
+│   │   └── user_guide.md
+│   ├── include
+│   │   ├── database
+│   │   │   └── database_manager.h
+│   │   ├── imaging_system
+│   │   │   ├── image_filter.h
+│   │   │   ├── image_loader.h
+│   │   │   └── image_transform.h
+│   │   ├── networking
+│   │   │   └── network_manager.h
+│   │   └── userinterface
+│   │       └── window.h
+│   ├── LICENSE
+│   ├── logs
+│   ├── README.md
+│   ├── requirements.txt
+│   ├── resources
+│   │   ├── data
+│   │   │   └── dataset.csv
+│   │   └── images
+│   │       ├── logo.png
+│   │       └── sampleimage.png
+│   ├── scripts
+│   │   └── python_script1.py
+│   ├── src
+│   │   ├── database
+│   │   │   └── database_manager.cpp
+│   │   ├── imaging_system
+│   │   │   ├── image_filter.cpp
+│   │   │   ├── image_loader.cpp
+│   │   │   └── image_transform.cpp
+│   │   ├── main.cpp
+│   │   ├── networking
+│   │   │   └── network_manager.cpp
+│   │   ├── python_modules
+│   │   │   ├── module1
+│   │   │   │   ├── __init__.py
+│   │   │   │   └── module1_file1.py
+│   │   │   └── module2
+│   │   │       ├── __init__.py
+│   │   │       └── module2_file1.py
+│   │   └── userinterface
+│   │       └── window.cpp
+│   ├── temp
+│   ├── tests
+│   ├── vendor
+│   └── venv
+└── tree.txt
+
+27 directories, 30 files
