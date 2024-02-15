@@ -93,3 +93,12 @@ int main(int argc, char* argv[]) {
 }
 
 ```
+
+
+# window
+
+- https://github.com/UB-Mannheim/tesseract/wiki
+- cmd
+```cmd
+vcpkg install tesseract:x64-windows
+```
