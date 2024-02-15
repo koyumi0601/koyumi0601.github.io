@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/ko/Documents/GitHub/koyumi0601.github.io/_posts/Cuda/practice_025_cuda_kernel_main_cpp_kernel_cu/kernel.cuh
+cuda_runtime.h
+-
+
+/home/ko/Documents/GitHub/koyumi0601.github.io/_posts/Cuda/practice_025_cuda_kernel_main_cpp_kernel_cu/main.cpp
+stdio.h
+-
+stdlib.h
+-
+cuda_runtime.h
+-
+kernel.cuh
+/home/ko/Documents/GitHub/koyumi0601.github.io/_posts/Cuda/practice_025_cuda_kernel_main_cpp_kernel_cu/kernel.cuh
+

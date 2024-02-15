@@ -2,8 +2,8 @@
 #include <QApplication>
 #include <QCoreApplication>
 
-int fixedWindowWidth = 1024;
-int fixedWindowHeight = 674;
+int fixedWindowWidth = 1299;
+int fixedWindowHeight = 706;
 
 int main(int argc, char *argv[])
 {

@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/ko/Documents/GitHub/koyumi0601.github.io/_posts/ImageSignalProcessing/DCMTK/main.cpp
+iostream
+-
+dcmtk/config/osconfig.h
+-
+dcmtk/dcmdata/dctk.h
+-
+

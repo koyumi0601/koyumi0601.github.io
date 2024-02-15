@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/myProgram.dir/main.cpp.o CMakeFiles/myProgram.dir/myProgram_generated_kernel.cu.o  -o myProgram  /usr/lib/x86_64-linux-gnu/libcudart_static.a -lpthread -ldl /usr/lib/x86_64-linux-gnu/librt.so 

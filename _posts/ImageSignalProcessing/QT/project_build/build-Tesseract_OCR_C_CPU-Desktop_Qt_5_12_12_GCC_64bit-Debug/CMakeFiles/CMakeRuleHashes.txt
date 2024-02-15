@@ -1,2 +1,0 @@
-# Hashes of file build rules.
-06ea5f853a1f4fe0c3ac4ccde923a28a CMakeFiles/Tesseract_OCR_C_autogen

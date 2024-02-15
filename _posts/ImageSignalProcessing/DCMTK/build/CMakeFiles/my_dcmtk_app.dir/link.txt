@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/my_dcmtk_app.dir/main.cpp.o  -o my_dcmtk_app  -lofstd -loflog -loficonv -ldcmdata -li2d -ldcmxml -ldcmimgle -ldcmimage -ldcmjpeg -lijg8 -lijg12 -lijg16 -ldcmjpls -ldcmtkcharls -ldcmtls -ldcmnet -ldcmsr -lcmr -ldcmdsig -ldcmwlm -ldcmqrdb -ldcmpstat -ldcmrt -ldcmiod -ldcmfg -ldcmseg -ldcmtract -ldcmpmap -ldcmect 
