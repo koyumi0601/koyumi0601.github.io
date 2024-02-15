@@ -45,7 +45,10 @@ DLL은 여러 프로그램에서 공유되고 재사용할 수 있는 함수 및
 - .c, .cpp
 
 ## gcc
-- .c, .cpp
+- .c
+
+## gpp
+- .cpp
 
 ## nvcc
 - .c, .cpp, .cu
@@ -53,14 +56,17 @@ DLL은 여러 프로그램에서 공유되고 재사용할 수 있는 함수 및
 # 빌드
 
 ## .exe: 실행파일
+- window
 
 ## .obj: 오브젝트
 
 ## .so: shared object
 - python에서 ctypes로 불러와서 쓸 수 있다
+- linux
 
 ## .dll: 동적라이브러리
 - python에서 ctypes로 불러와서 쓸 수 있다
+- window
 
 ## .lib:
 
