@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/ko/Documents/GitHub/koyumi0601.github.io/_posts/Cuda/practice_028_project_tree_consideration/project/src/logger/logger.cpp
+logger.h
+/home/ko/Documents/GitHub/koyumi0601.github.io/_posts/Cuda/practice_028_project_tree_consideration/project/src/logger/logger.h
+
+/home/ko/Documents/GitHub/koyumi0601.github.io/_posts/Cuda/practice_028_project_tree_consideration/project/src/logger/logger.h
+iostream
+-
+fstream
+-
+ctime
+-
+string
+-
+experimental/filesystem
+-
+algorithm
+-
+
