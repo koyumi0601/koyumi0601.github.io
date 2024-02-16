@@ -2,6 +2,8 @@
 #define IMAGE_TRANSFORM_H
 
 #include <iostream>
+#include <../src/logger/logger.h>
+
 
 class imageTransform 
 {

@@ -2,6 +2,8 @@
 #define MAINWINDOW_H
 
 #include <iostream>
+#include <../src/logger/logger.h>
+
 
 class mainwindow
 {

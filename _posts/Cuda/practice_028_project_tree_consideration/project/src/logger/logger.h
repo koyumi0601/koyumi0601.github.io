@@ -25,12 +25,13 @@ enum class LogLevel
 class logger
 {
     public:
-        logger(std::string filename);
-        ~logger();
+        static logger& getInstance();
         void printLogger();
         void log(LogLevel level, const std::string& message, const std::string& function);
 
     private:
+        logger(std::string filename);
+        ~logger();
         std::string getCurrentTimestamp();
         std::string logLevelToString(LogLevel level);
 

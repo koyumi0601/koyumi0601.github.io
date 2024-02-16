@@ -1,6 +1,12 @@
 #include "logger.h"
 
 
+logger& logger::getInstance() {
+    static logger instance("log");
+    return instance;
+}
+
+
 logger::logger(std::string filename):memberFilename(filename) // init member in cpp only. 헤더에서는 초기화하지 않는다.
 {
     fs::path logsFolderPath = fs::current_path().parent_path() / "logs";

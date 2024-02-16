@@ -52,19 +52,10 @@ int main()
     dynamicMainwindowPtr->printMainwindow();
     delete dynamicMainwindowPtr;
 
-    logger* dynamicLoggerPtr = new logger("log");
-    dynamicLoggerPtr->printLogger();
-    // 로그 기록 예시
-    dynamicLoggerPtr->log(LogLevel::INFO, "This is an information message.", __func__);
-    dynamicLoggerPtr->log(LogLevel::WARNING, "This is a warning message.", __func__);
-    dynamicLoggerPtr->log(LogLevel::ERROR, "This is an error message.", __func__);
-
-    delete dynamicLoggerPtr;
-
-
-
-
-
+    // logger: singletone designed
+    logger& loggerInstance = logger::getInstance();
+    loggerInstance.printLogger();
+    
     // 프로그램이 종료되면 정적으로 할당된 클래스들의 인스턴스의 destructor가 자동으로 실행 됨.
     return 0;
         

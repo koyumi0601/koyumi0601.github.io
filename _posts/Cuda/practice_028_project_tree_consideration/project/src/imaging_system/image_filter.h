@@ -2,6 +2,7 @@
 #define IMAGE_FILTER_H
 
 #include <iostream>
+#include <../src/logger/logger.h>
 
 
 class imageFilter {

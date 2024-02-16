@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <opencv2/opencv.hpp>
+#include <../src/logger/logger.h>
 
 class imgLoader
 {

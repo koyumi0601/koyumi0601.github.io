@@ -2,6 +2,7 @@
 #define OCR_H
 
 #include <iostream>
+#include <../src/logger/logger.h>
 
 
 class ocr 

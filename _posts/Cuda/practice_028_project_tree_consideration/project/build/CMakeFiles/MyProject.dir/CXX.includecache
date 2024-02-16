@@ -6,11 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/ko/Documents/GitHub/koyumi0601.github.io/_posts/Cuda/practice_028_project_tree_consideration/project/src/logger/logger.cpp
-logger.h
-/home/ko/Documents/GitHub/koyumi0601.github.io/_posts/Cuda/practice_028_project_tree_consideration/project/src/logger/logger.h
-
-/home/ko/Documents/GitHub/koyumi0601.github.io/_posts/Cuda/practice_028_project_tree_consideration/project/src/logger/logger.h
+../src/logger/logger.h
 iostream
 -
 fstream
@@ -22,5 +18,15 @@ string
 experimental/filesystem
 -
 algorithm
+-
+
+/home/ko/Documents/GitHub/koyumi0601.github.io/_posts/Cuda/practice_028_project_tree_consideration/project/src/userinterface/mainwindow.cpp
+mainwindow.h
+/home/ko/Documents/GitHub/koyumi0601.github.io/_posts/Cuda/practice_028_project_tree_consideration/project/src/userinterface/mainwindow.h
+
+/home/ko/Documents/GitHub/koyumi0601.github.io/_posts/Cuda/practice_028_project_tree_consideration/project/src/userinterface/mainwindow.h
+iostream
+-
+../src/logger/logger.h
 -
 

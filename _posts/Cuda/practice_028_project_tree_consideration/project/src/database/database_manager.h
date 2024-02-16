@@ -2,6 +2,7 @@
 #define DATABASE_MANAGER_H
 
 #include <iostream>
+#include <../src/logger/logger.h>
 
 
 class databaseManager 
