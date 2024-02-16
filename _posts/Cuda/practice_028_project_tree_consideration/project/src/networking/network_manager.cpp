@@ -22,3 +22,29 @@ void networkManager::printNetworkManager()
         loggerInstance.log(LogLevel::ERROR, "An exception occured: " + std::string(e.what()), __PRETTY_FUNCTION__);
     }
 }
+
+
+void networkManager::handle_get(const Request& req, Response& res) {
+    std::string content = "<html><body><h1>Hello, World!</h1></body></html>";
+    res.set_content(content, "text/html");
+}
+
+
+void networkManager::openWeb()
+{
+    try
+    {
+        std::cout << "This is printHostname" << std::endl;
+        Server svr;
+        svr.Get("/", handle_get);
+        std::cout << "Server started at http://localhost:8080" << std::endl;
+        svr.listen("localhost", 8080);
+
+    }
+    catch(const std::exception& e)
+    {
+        logger& loggerInstance = logger::getInstance();
+        loggerInstance.log(LogLevel::ERROR, "An exception occured: " + std::string(e.what()), __PRETTY_FUNCTION__);
+    }
+    
+};

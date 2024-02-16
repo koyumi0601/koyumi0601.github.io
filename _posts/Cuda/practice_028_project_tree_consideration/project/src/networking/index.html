@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>간단한 웹 페이지</title>
+</head>
+<body>
+    <h1>간단한 웹 페이지</h1>
+    <p>이 페이지는 버튼을 클릭하여 서버에 요청을 보내고, 서버로부터 응답을 받습니다.</p>
+    <button id="requestButton">요청 보내기</button>
+    <div id="response"></div>
+
+    <script>
+        document.getElementById('requestButton').addEventListener('click', function() {
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', '/request', true);
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === XMLHttpRequest.DONE) {
+                    if (xhr.status === 200) {
+                        document.getElementById('response').textContent = xhr.responseText;
+                    } else {
+                        document.getElementById('response').textContent = '에러 발생: ' + xhr.status;
+                    }
+                }
+            };
+            xhr.send();
+        });
+    </script>
+</body>
+</html>

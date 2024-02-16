@@ -15,16 +15,7 @@
 
 int main()
 {
-    std::cout << "This is main\n";
 
-    databaseManager* dynamicDbMgrPtr = new databaseManager();
-    dynamicDbMgrPtr->printDatabaseManager();
-    delete dynamicDbMgrPtr;    
-
-    imageFilter* dynamicImgFiltPtr = new imageFilter();
-    dynamicImgFiltPtr->printImageFilter();
-    delete dynamicImgFiltPtr;
-    
     // 정적할당: 컴파일 시간에 메모리가 할당되고 해제되는 것
     // 지역변수 혹은 전역변수
     // imgLoader imgLoaderObject;
@@ -32,29 +23,42 @@ int main()
     
     // 동적할당: 프로그램 실행 중 메모리를 할당하고 해제하는 것
     // 포인터를 이용하여 메모리에 접근 및 조작
-    imgLoader* dynamicImgLoaderPtr = new imgLoader();
-    dynamicImgLoaderPtr->printImageLoader();
-    delete dynamicImgLoaderPtr;
 
-    imageTransform* dynamicImageTransformPtr = new imageTransform();
-    dynamicImageTransformPtr->printImageTransform();
-    delete dynamicImageTransformPtr;
+    // std::cout << "This is main\n";
 
-    ocr* dynamicOcrPtr = new ocr();
-    dynamicOcrPtr->printOcr();
-    delete dynamicOcrPtr;
+    // databaseManager* dynamicDbMgrPtr = new databaseManager();
+    // dynamicDbMgrPtr->printDatabaseManager();
+    // delete dynamicDbMgrPtr;    
+
+    // imageFilter* dynamicImgFiltPtr = new imageFilter();
+    // dynamicImgFiltPtr->printImageFilter();
+    // delete dynamicImgFiltPtr;
+    
+    // imgLoader* dynamicImgLoaderPtr = new imgLoader();
+    // dynamicImgLoaderPtr->printImageLoader();
+    // dynamicImgLoaderPtr->loadAndShow();
+    // delete dynamicImgLoaderPtr;
+
+    // imageTransform* dynamicImageTransformPtr = new imageTransform();
+    // dynamicImageTransformPtr->printImageTransform();
+    // delete dynamicImageTransformPtr;
+
+    // ocr* dynamicOcrPtr = new ocr();
+    // dynamicOcrPtr->printOcr();
+    // delete dynamicOcrPtr;
 
     networkManager* dynamicNetworkManagerPtr = new networkManager();
     dynamicNetworkManagerPtr->printNetworkManager();
+    dynamicNetworkManagerPtr->openWeb();
     delete dynamicNetworkManagerPtr;
 
-    mainwindow* dynamicMainwindowPtr = new mainwindow();
-    dynamicMainwindowPtr->printMainwindow();
-    delete dynamicMainwindowPtr;
+    // mainwindow* dynamicMainwindowPtr = new mainwindow();
+    // dynamicMainwindowPtr->printMainwindow();
+    // delete dynamicMainwindowPtr;
 
-    // logger: singletone designed
-    logger& loggerInstance = logger::getInstance();
-    loggerInstance.printLogger();
+    // // logger: singletone designed
+    // logger& loggerInstance = logger::getInstance();
+    // loggerInstance.printLogger();
     
     // 프로그램이 종료되면 정적으로 할당된 클래스들의 인스턴스의 destructor가 자동으로 실행 됨.
     return 0;

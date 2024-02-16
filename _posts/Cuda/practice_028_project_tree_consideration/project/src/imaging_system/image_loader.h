@@ -10,11 +10,12 @@ class imgLoader
     public:
         imgLoader();
         ~imgLoader();
-        void printImageLoader();   
+        void printImageLoader();
+        void loadAndShow();   
 };
 
 #endif // IMAGE_LOADER_H
 
-void loadImg();
+// void loadImg();
 void runOCR_in_imageloader();
 
