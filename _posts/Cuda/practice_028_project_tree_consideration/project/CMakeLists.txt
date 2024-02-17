@@ -40,4 +40,4 @@ src/logger/logger.cpp)
 #target_link_libraries(MyProject PRIVATE include Qt${QT_VERSION_MAJOR}::Widgets ${OpenCV_LIBS} tesseract)
 #target_link_libraries(MyProject PRIVATE tesseract)
 
-target_link_libraries(MyProject PRIVATE ${OpenCV_LIBS} tesseract stdc++fs)
+target_link_libraries(MyProject PRIVATE ${OpenCV_LIBS} tesseract stdc++fs pthread)

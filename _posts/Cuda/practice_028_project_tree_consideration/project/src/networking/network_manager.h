@@ -4,7 +4,8 @@
 #include <iostream>
 #include <../src/logger/logger.h>
 #include <string>
-#include "cpphttplib/httplib.h"
+#include "httplib.h" // downloaded and header copied (httplib.h)
+#include <thread>
 
 
 using namespace httplib;
@@ -16,8 +17,7 @@ class networkManager
         ~networkManager();
         void printNetworkManager();
         void openWeb();
-    private:
-        void handle_get(const Request& req, Response& res);
+
 };
 
 

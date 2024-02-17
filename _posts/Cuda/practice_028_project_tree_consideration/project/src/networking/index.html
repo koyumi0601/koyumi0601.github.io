@@ -1,29 +1,86 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>간단한 웹 페이지</title>
+    <title>Simple Calculator</title>
 </head>
 <body>
-    <h1>간단한 웹 페이지</h1>
-    <p>이 페이지는 버튼을 클릭하여 서버에 요청을 보내고, 서버로부터 응답을 받습니다.</p>
-    <button id="requestButton">요청 보내기</button>
-    <div id="response"></div>
+    <h1>Simple image</h1>
+    <img src="/image" alt="Smile image">
+    <h1>Simple Calculator</h1>
+    <form action="/calculate" method="post">
+        First Number: <input type="number" name="num1"><br><br>
+        Second Number: <input type="number" name="num2"><br><br>
+        <input type="submit" value="Add">
+    </form>
+    <div id="result"></div>
+
+    <input type="range" min="0" max="100" value="50" id="slider"><br><br>
+    <p>Selected value: <span id="sliderValue">50</span></p>
+    <form action="/calcSlider" method="post">
+        <input type="hidden" id="sliderInput" name="sliderValue" value="50">
+        <input type="submit" value="Calculate">
+    </form>
+    <p>Value + 200 : <span id="sliderResult"></span></p>
+
+    <button id="shutdownButton">Shutdown Server</button>
 
     <script>
-        document.getElementById('requestButton').addEventListener('click', function() {
-            var xhr = new XMLHttpRequest();
-            xhr.open('GET', '/request', true);
-            xhr.onreadystatechange = function() {
-                if (xhr.readyState === XMLHttpRequest.DONE) {
-                    if (xhr.status === 200) {
-                        document.getElementById('response').textContent = xhr.responseText;
-                    } else {
-                        document.getElementById('response').textContent = '에러 발생: ' + xhr.status;
-                    }
-                }
-            };
-            xhr.send();
+        // calculator
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            var num1 = document.querySelector('input[name="num1"]').value;
+            var num2 = document.querySelector('input[name="num2"]').value;
+
+            fetch('/calculate', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: 'num1=' + num1 + '&num2=' + num2
+            })
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('result').textContent = data;
+            });
         });
+
+        // slider
+        var slider = document.querySelector('#slider');
+        var sliderValue = document.querySelector('#sliderValue');
+        var sliderInput = document.querySelector('#sliderInput');
+        var sliderResult = document.querySelector('#sliderResult');
+
+        slider.addEventListener('input', function() {
+            sliderValue.textContent = this.value;
+            sliderInput.value = this.value;
+
+            // Update result when the slider value changes
+            fetch('/calcSlider', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: 'sliderValue=' + this.value
+            })
+            .then(response => response.text())
+            .then(data => {
+                sliderResult.textContent = data;
+            });
+        });
+
+        sliderValue.textContent = slider.value;
+
+        // shutdown button
+        document.getElementById('shutdownButton').addEventListener('click', function() {
+            fetch('/shutdown', {
+                method: 'POST'
+            })
+            .then(response => response.text())
+            .then(data => {
+                console.log(data); // Optional: log the response from the server
+            });
+        });
+
     </script>
 </body>
 </html>

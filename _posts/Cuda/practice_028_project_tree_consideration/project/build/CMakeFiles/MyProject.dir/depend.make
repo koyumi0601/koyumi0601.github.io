@@ -158,6 +158,7 @@ CMakeFiles/MyProject.dir/src/main.cpp.o: ../src/imaging_system/image_loader.h
 CMakeFiles/MyProject.dir/src/main.cpp.o: ../src/imaging_system/image_transform.h
 CMakeFiles/MyProject.dir/src/main.cpp.o: ../src/imaging_system/ocr.h
 CMakeFiles/MyProject.dir/src/main.cpp.o: ../src/logger/logger.h
+CMakeFiles/MyProject.dir/src/main.cpp.o: ../src/networking/httplib.h
 CMakeFiles/MyProject.dir/src/main.cpp.o: ../src/networking/network_manager.h
 CMakeFiles/MyProject.dir/src/main.cpp.o: ../src/userinterface/mainwindow.h
 CMakeFiles/MyProject.dir/src/main.cpp.o: ../src/main.cpp
@@ -291,6 +292,7 @@ CMakeFiles/MyProject.dir/src/main.cpp.o: /usr/include/opencv4/opencv2/viz/vizcor
 CMakeFiles/MyProject.dir/src/main.cpp.o: /usr/include/opencv4/opencv2/viz/widgets.hpp
 
 CMakeFiles/MyProject.dir/src/networking/network_manager.cpp.o: ../src/logger/logger.h
+CMakeFiles/MyProject.dir/src/networking/network_manager.cpp.o: ../src/networking/httplib.h
 CMakeFiles/MyProject.dir/src/networking/network_manager.cpp.o: ../src/networking/network_manager.cpp
 CMakeFiles/MyProject.dir/src/networking/network_manager.cpp.o: ../src/networking/network_manager.h
 
