@@ -1,0 +1,10 @@
+^D:\GITHUB_BLOG\KOYUMI0601.GITHUB.IO\_POSTS\CUDA\PRACTICE_030_CMAKE_CPP_CU\SOURCE\BUILD\CMAKEFILES\89284EEF16E67E5C22826330F8F9BF69\GENERATE.STAMP.RULE
+setlocal
+"D:\Program Files\CMake\bin\cmake.exe" -SD:/Github_Blog/koyumi0601.github.io/_posts/Cuda/practice_030_cmake_cpp_cu/source -BD:/Github_Blog/koyumi0601.github.io/_posts/Cuda/practice_030_cmake_cpp_cu/source/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file D:/Github_Blog/koyumi0601.github.io/_posts/Cuda/practice_030_cmake_cpp_cu/source/build/cuda_project.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

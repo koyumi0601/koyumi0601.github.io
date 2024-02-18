@@ -1,0 +1,26 @@
+^D:\GITHUB_BLOG\KOYUMI0601.GITHUB.IO\_POSTS\CUDA\PRACTICE_030_CMAKE_CPP_CU\SOURCE\KERNEL.CU
+setlocal
+cd D:\Github_Blog\koyumi0601.github.io\_posts\Cuda\practice_030_cmake_cpp_cu\source\build\CMakeFiles\myProgram.dir
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+"D:\Program Files\CMake\bin\cmake.exe" -E make_directory D:/Github_Blog/koyumi0601.github.io/_posts/Cuda/practice_030_cmake_cpp_cu/source/build/CMakeFiles/myProgram.dir//Debug
+if %errorlevel% neq 0 goto :cmEnd
+"D:\Program Files\CMake\bin\cmake.exe" -D verbose:BOOL=OFF -D "CCBIN:PATH=C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools/MSVC/14.38.33130/bin/Hostx64/x64" -D build_configuration:STRING=Debug -D generated_file:STRING=D:/Github_Blog/koyumi0601.github.io/_posts/Cuda/practice_030_cmake_cpp_cu/source/build/CMakeFiles/myProgram.dir//Debug/myProgram_generated_kernel.cu.obj -D generated_cubin_file:STRING=D:/Github_Blog/koyumi0601.github.io/_posts/Cuda/practice_030_cmake_cpp_cu/source/build/CMakeFiles/myProgram.dir//Debug/myProgram_generated_kernel.cu.obj.cubin.txt -P D:/Github_Blog/koyumi0601.github.io/_posts/Cuda/practice_030_cmake_cpp_cu/source/build/CMakeFiles/myProgram.dir//myProgram_generated_kernel.cu.obj.Debug.cmake
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^D:\GITHUB_BLOG\KOYUMI0601.GITHUB.IO\_POSTS\CUDA\PRACTICE_030_CMAKE_CPP_CU\SOURCE\CMAKELISTS.TXT
+setlocal
+"D:\Program Files\CMake\bin\cmake.exe" -SD:/Github_Blog/koyumi0601.github.io/_posts/Cuda/practice_030_cmake_cpp_cu/source -BD:/Github_Blog/koyumi0601.github.io/_posts/Cuda/practice_030_cmake_cpp_cu/source/build --check-stamp-file D:/Github_Blog/koyumi0601.github.io/_posts/Cuda/practice_030_cmake_cpp_cu/source/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

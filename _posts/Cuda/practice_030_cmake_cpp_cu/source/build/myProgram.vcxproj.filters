@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="D:\Github_Blog\koyumi0601.github.io\_posts\Cuda\practice_030_cmake_cpp_cu\source\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\Github_Blog\koyumi0601.github.io\_posts\Cuda\practice_030_cmake_cpp_cu\source\kernel.cu">
+      <Filter>Source Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\Github_Blog\koyumi0601.github.io\_posts\Cuda\practice_030_cmake_cpp_cu\source\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Object Include="D:\Github_Blog\koyumi0601.github.io\_posts\Cuda\practice_030_cmake_cpp_cu\source\build\CMakeFiles\myProgram.dir\$(Configuration)\myProgram_generated_kernel.cu.obj">
+      <Filter>Object Files</Filter>
+    </Object>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Object Files">
+      <UniqueIdentifier>{9F4DA8EC-BE36-3256-9114-97946DD86D07}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{8DA81E48-9531-3D68-B822-323475B724AA}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

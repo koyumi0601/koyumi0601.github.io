@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project>
+  <ProjectOutputs>
+    <ProjectOutput>
+      <FullPath>D:\Github_Blog\koyumi0601.github.io\_posts\Cuda\practice_030_cmake_cpp_cu\source\build\x64\Debug\ZERO_CHECK</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>D:\Github_Blog\koyumi0601.github.io\_posts\Cuda\practice_030_cmake_cpp_cu\source\build\Debug\myProgram.exe</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>D:\Github_Blog\koyumi0601.github.io\_posts\Cuda\practice_030_cmake_cpp_cu\source\build\x64\Debug\ALL_BUILD</FullPath>
+    </ProjectOutput>
+  </ProjectOutputs>
+  <ContentFiles />
+  <SatelliteDlls />
+  <NonRecipeFileRefs />
+</Project>
