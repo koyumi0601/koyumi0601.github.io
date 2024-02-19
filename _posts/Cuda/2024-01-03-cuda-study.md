@@ -47,16 +47,6 @@ search: true
   CL_DEVICE_PREFERRED_VECTOR_WIDTH_<t> CHAR 1, SHORT 1, INT 1, LONG 1, FLOAT 1, DOUBLE 1
   Physical Limits for GPU Compute Capability:	2.0 # 최대 한계란 뜻
   Threads per Warp	32
-<<<<<<< HEAD
-  **Warps per Multiprocessor	48** 
-  Threads per Multiprocessor	1536
-  **Thread Blocks per Multiprocessor	8**
-  **Total # of 32-bit registers per Multiprocessor	32768**
-  Register allocation unit size	64
-  Register allocation granularity	warp
-  Registers per Thread	63
-  **Shared Memory per Multiprocessor (bytes)	49152** >> Shared Memory 49152 bytes
-=======
   Warps per Multiprocessor	48
   Threads per Multiprocessor	1536
   Thread Blocks per Multiprocessor	8
@@ -65,7 +55,6 @@ search: true
   Register allocation granularity	warp
   Registers per Thread	63
   Shared Memory per Multiprocessor (bytes)	49152 # Shared Memory 49152 bytes
->>>>>>> 13085658d6d806b0d39f3a0e058dcecde4eba73e
   Shared Memory Allocation unit size	128
   Warp allocation granularity	2
   Maximum Thread Block Size	1024

@@ -17,6 +17,8 @@ pkg_search_module(TESSERACT REQUIRED tesseract)
 #find_package(Qt5 COMPONENTS Widgets REQUIRED)
 find_package(OpenCV REQUIRED)
 
+find_library(SQLITE3_LIBRARY sqlite3)
+
 file(GLOB_RECURSE SOURCES "src/*.cpp" "src/*.ui")
 set(CMAKE_BINARY_DIR ${CMAKE_SOURCE_DIR}/build)
 set(EXECUTABLE_OUTPUT_PATH ${CMAKE_BINARY_DIR})
@@ -40,4 +42,4 @@ src/logger/logger.cpp)
 #target_link_libraries(MyProject PRIVATE include Qt${QT_VERSION_MAJOR}::Widgets ${OpenCV_LIBS} tesseract)
 #target_link_libraries(MyProject PRIVATE tesseract)
 
-target_link_libraries(MyProject PRIVATE ${OpenCV_LIBS} tesseract stdc++fs pthread)
+target_link_libraries(MyProject PRIVATE ${OpenCV_LIBS} tesseract stdc++fs pthread ${SQLITE3_LIBRARY})

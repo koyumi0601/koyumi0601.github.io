@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <../src/logger/logger.h>
+#include <sqlite3.h>
 
 
 class databaseManager 
@@ -11,6 +12,9 @@ class databaseManager
         databaseManager();
         ~databaseManager();
         void printDatabaseManager();
+        void createDatabase();
+        void viewDatabase();
+        void insertDatabase();
 };
 
 

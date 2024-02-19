@@ -222,6 +222,9 @@ OpenCV_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/opencv4
 PKG_CONFIG_EXECUTABLE:FILEPATH=/usr/bin/pkg-config
 
 //Path to a library.
+SQLITE3_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libsqlite3.so
+
+//Path to a library.
 pkgcfg_lib_TESSERACT_archive:FILEPATH=/usr/lib/x86_64-linux-gnu/libarchive.so
 
 //Path to a library.

@@ -26,9 +26,12 @@ int main()
 
     // std::cout << "This is main\n";
 
-    // databaseManager* dynamicDbMgrPtr = new databaseManager();
-    // dynamicDbMgrPtr->printDatabaseManager();
-    // delete dynamicDbMgrPtr;    
+    databaseManager* dynamicDbMgrPtr = new databaseManager();
+    dynamicDbMgrPtr->printDatabaseManager();
+    dynamicDbMgrPtr->createDatabase();
+    dynamicDbMgrPtr->insertDatabase();
+    dynamicDbMgrPtr->viewDatabase();
+    delete dynamicDbMgrPtr;
 
     // imageFilter* dynamicImgFiltPtr = new imageFilter();
     // dynamicImgFiltPtr->printImageFilter();
@@ -47,10 +50,10 @@ int main()
     // dynamicOcrPtr->printOcr();
     // delete dynamicOcrPtr;
 
-    networkManager* dynamicNetworkManagerPtr = new networkManager();
-    dynamicNetworkManagerPtr->printNetworkManager();
-    dynamicNetworkManagerPtr->openWeb();
-    delete dynamicNetworkManagerPtr;
+    // networkManager* dynamicNetworkManagerPtr = new networkManager();
+    // dynamicNetworkManagerPtr->printNetworkManager();
+    // // dynamicNetworkManagerPtr->openWeb(); // test 
+    // delete dynamicNetworkManagerPtr;
 
     // mainwindow* dynamicMainwindowPtr = new mainwindow();
     // dynamicMainwindowPtr->printMainwindow();
