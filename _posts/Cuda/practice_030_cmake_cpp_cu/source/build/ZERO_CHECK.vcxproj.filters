@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="D:\Github_Blog\koyumi0601.github.io\_posts\Cuda\practice_030_cmake_cpp_cu\source\build\CMakeFiles\89284eef16e67e5c22826330f8f9bf69\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{F1AC7576-F77D-392E-8686-4E8EDF55B4FF}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

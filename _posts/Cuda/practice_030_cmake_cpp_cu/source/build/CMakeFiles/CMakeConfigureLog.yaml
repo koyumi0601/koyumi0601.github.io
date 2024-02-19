@@ -1,0 +1,436 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "D:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineSystem.cmake:233 (message)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      The system is: Windows - 10.0.19045 - AMD64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "D:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "D:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "D:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler:  
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      MSBuild version 17.8.3+195e7f5a3 for .NET Framework
+      Build started 2/18/2024 11:18:38 AM.
+      
+      Project "D:\\Github_Blog\\koyumi0601.github.io\\_posts\\Cuda\\practice_030_cmake_cpp_cu\\source\\build\\CMakeFiles\\3.28.2\\CompilerIdC\\CompilerIdC.vcxproj" on node 1 (default targets).
+      PrepareForBuild:
+        Creating directory "Debug\\".
+        Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+        Creating directory "Debug\\CompilerIdC.tlog\\".
+      InitializeBuildStatus:
+        Creating "Debug\\CompilerIdC.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+        Touching "Debug\\CompilerIdC.tlog\\unsuccessfulbuild".
+      VcpkgTripletSelection:
+        Using triplet "x64-windows" from "C:\\Users\\koyum\\vcpkg\\installed\\x64-windows\\"
+        Using normalized configuration "Release"
+      ClCompile:
+        C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\CL.exe /c /I"C:\\Users\\koyum\\vcpkg\\installed\\x64-windows\\include" /nologo /W0 /WX- /diagnostics:column /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\\\" /Fd"Debug\\vc143.pdb" /external:W0 /Gd /TC /FC /errorReport:queue CMakeCCompilerId.c
+        CMakeCCompilerId.c
+      Link:
+        C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdC.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:"C:\\Users\\koyum\\vcpkg\\installed\\x64-windows\\lib" /LIBPATH:"C:\\Users\\koyum\\vcpkg\\installed\\x64-windows\\lib\\manual-link" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib "C:\\Users\\koyum\\vcpkg\\installed\\x64-windows\\lib\\*.lib" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdC.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdC.lib" /MACHINE:X64 Debug\\CMakeCCompilerId.obj
+        CompilerIdC.vcxproj -> D:\\Github_Blog\\koyumi0601.github.io\\_posts\\Cuda\\practice_030_cmake_cpp_cu\\source\\build\\CMakeFiles\\3.28.2\\CompilerIdC\\CompilerIdC.exe
+      AppLocalFromInstalled:
+        pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\\Users\\koyum\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\Github_Blog\\koyumi0601.github.io\\_posts\\Cuda\\practice_030_cmake_cpp_cu\\source\\build\\CMakeFiles\\3.28.2\\CompilerIdC\\CompilerIdC.exe" "C:\\Users\\koyum\\vcpkg\\installed\\x64-windows\\bin" "Debug\\CompilerIdC.tlog\\CompilerIdC.write.1u.tlog" "Debug\\vcpkg.applocal.log"
+        'pwsh.exe' is not recognized as an internal or external command,
+        operable program or batch file.
+        The command "pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\\Users\\koyum\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\Github_Blog\\koyumi0601.github.io\\_posts\\Cuda\\practice_030_cmake_cpp_cu\\source\\build\\CMakeFiles\\3.28.2\\CompilerIdC\\CompilerIdC.exe" "C:\\Users\\koyum\\vcpkg\\installed\\x64-windows\\bin" "Debug\\CompilerIdC.tlog\\CompilerIdC.write.1u.tlog" "Debug\\vcpkg.applocal.log"" exited with code 9009.
+        "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -ExecutionPolicy Bypass -noprofile -File "C:\\Users\\koyum\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\Github_Blog\\koyumi0601.github.io\\_posts\\Cuda\\practice_030_cmake_cpp_cu\\source\\build\\CMakeFiles\\3.28.2\\CompilerIdC\\CompilerIdC.exe" "C:\\Users\\koyum\\vcpkg\\installed\\x64-windows\\bin" "Debug\\CompilerIdC.tlog\\CompilerIdC.write.1u.tlog" "Debug\\vcpkg.applocal.log"
+      PostBuildEvent:
+        for %%i in (cl.exe) do @echo CMAKE_C_COMPILER=%%~$PATH:i
+        :VCEnd
+        CMAKE_C_COMPILER=C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.38.33130\\bin\\Hostx64\\x64\\cl.exe
+      FinalizeBuildStatus:
+        Deleting file "Debug\\CompilerIdC.tlog\\unsuccessfulbuild".
+        Touching "Debug\\CompilerIdC.tlog\\CompilerIdC.lastbuildstate".
+      Done Building Project "D:\\Github_Blog\\koyumi0601.github.io\\_posts\\Cuda\\practice_030_cmake_cpp_cu\\source\\build\\CMakeFiles\\3.28.2\\CompilerIdC\\CompilerIdC.vcxproj" (default targets).
+      
+      Build succeeded.
+          0 Warning(s)
+          0 Error(s)
+      
+      Time Elapsed 00:00:00.76
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.vcxproj"
+      
+      The C compiler identification is MSVC, found in:
+        D:/Github_Blog/koyumi0601.github.io/_posts/Cuda/practice_030_cmake_cpp_cu/source/build/CMakeFiles/3.28.2/CompilerIdC/CompilerIdC.exe
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "D:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "D:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "D:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler:  
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      MSBuild version 17.8.3+195e7f5a3 for .NET Framework
+      Build started 2/18/2024 11:18:39 AM.
+      
+      Project "D:\\Github_Blog\\koyumi0601.github.io\\_posts\\Cuda\\practice_030_cmake_cpp_cu\\source\\build\\CMakeFiles\\3.28.2\\CompilerIdCXX\\CompilerIdCXX.vcxproj" on node 1 (default targets).
+      PrepareForBuild:
+        Creating directory "Debug\\".
+        Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+        Creating directory "Debug\\CompilerIdCXX.tlog\\".
+      InitializeBuildStatus:
+        Creating "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+        Touching "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild".
+      VcpkgTripletSelection:
+        Using triplet "x64-windows" from "C:\\Users\\koyum\\vcpkg\\installed\\x64-windows\\"
+        Using normalized configuration "Release"
+      ClCompile:
+        C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\CL.exe /c /I"C:\\Users\\koyum\\vcpkg\\installed\\x64-windows\\include" /nologo /W0 /WX- /diagnostics:column /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\\\" /Fd"Debug\\vc143.pdb" /external:W0 /Gd /TP /FC /errorReport:queue CMakeCXXCompilerId.cpp
+        CMakeCXXCompilerId.cpp
+      Link:
+        C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdCXX.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:"C:\\Users\\koyum\\vcpkg\\installed\\x64-windows\\lib" /LIBPATH:"C:\\Users\\koyum\\vcpkg\\installed\\x64-windows\\lib\\manual-link" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib "C:\\Users\\koyum\\vcpkg\\installed\\x64-windows\\lib\\*.lib" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdCXX.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdCXX.lib" /MACHINE:X64 Debug\\CMakeCXXCompilerId.obj
+        CompilerIdCXX.vcxproj -> D:\\Github_Blog\\koyumi0601.github.io\\_posts\\Cuda\\practice_030_cmake_cpp_cu\\source\\build\\CMakeFiles\\3.28.2\\CompilerIdCXX\\CompilerIdCXX.exe
+      AppLocalFromInstalled:
+        pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\\Users\\koyum\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\Github_Blog\\koyumi0601.github.io\\_posts\\Cuda\\practice_030_cmake_cpp_cu\\source\\build\\CMakeFiles\\3.28.2\\CompilerIdCXX\\CompilerIdCXX.exe" "C:\\Users\\koyum\\vcpkg\\installed\\x64-windows\\bin" "Debug\\CompilerIdCXX.tlog\\CompilerIdCXX.write.1u.tlog" "Debug\\vcpkg.applocal.log"
+        'pwsh.exe' is not recognized as an internal or external command,
+        operable program or batch file.
+        The command "pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\\Users\\koyum\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\Github_Blog\\koyumi0601.github.io\\_posts\\Cuda\\practice_030_cmake_cpp_cu\\source\\build\\CMakeFiles\\3.28.2\\CompilerIdCXX\\CompilerIdCXX.exe" "C:\\Users\\koyum\\vcpkg\\installed\\x64-windows\\bin" "Debug\\CompilerIdCXX.tlog\\CompilerIdCXX.write.1u.tlog" "Debug\\vcpkg.applocal.log"" exited with code 9009.
+        "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -ExecutionPolicy Bypass -noprofile -File "C:\\Users\\koyum\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\Github_Blog\\koyumi0601.github.io\\_posts\\Cuda\\practice_030_cmake_cpp_cu\\source\\build\\CMakeFiles\\3.28.2\\CompilerIdCXX\\CompilerIdCXX.exe" "C:\\Users\\koyum\\vcpkg\\installed\\x64-windows\\bin" "Debug\\CompilerIdCXX.tlog\\CompilerIdCXX.write.1u.tlog" "Debug\\vcpkg.applocal.log"
+      PostBuildEvent:
+        for %%i in (cl.exe) do @echo CMAKE_CXX_COMPILER=%%~$PATH:i
+        :VCEnd
+        CMAKE_CXX_COMPILER=C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.38.33130\\bin\\Hostx64\\x64\\cl.exe
+      FinalizeBuildStatus:
+        Deleting file "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild".
+        Touching "Debug\\CompilerIdCXX.tlog\\CompilerIdCXX.lastbuildstate".
+      Done Building Project "D:\\Github_Blog\\koyumi0601.github.io\\_posts\\Cuda\\practice_030_cmake_cpp_cu\\source\\build\\CMakeFiles\\3.28.2\\CompilerIdCXX\\CompilerIdCXX.vcxproj" (default targets).
+      
+      Build succeeded.
+          0 Warning(s)
+          0 Error(s)
+      
+      Time Elapsed 00:00:00.73
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.vcxproj"
+      
+      The CXX compiler identification is MSVC, found in:
+        D:/Github_Blog/koyumi0601.github.io/_posts/Cuda/practice_030_cmake_cpp_cu/source/build/CMakeFiles/3.28.2/CompilerIdCXX/CompilerIdCXX.exe
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "D:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "D:/Program Files/CMake/share/cmake-3.28/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "D:/Github_Blog/koyumi0601.github.io/_posts/Cuda/practice_030_cmake_cpp_cu/source/build/CMakeFiles/CMakeScratch/TryCompile-knv4ar"
+      binary: "D:/Github_Blog/koyumi0601.github.io/_posts/Cuda/practice_030_cmake_cpp_cu/source/build/CMakeFiles/CMakeScratch/TryCompile-knv4ar"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/Github_Blog/koyumi0601.github.io/_posts/Cuda/practice_030_cmake_cpp_cu/source/build/CMakeFiles/CMakeScratch/TryCompile-knv4ar'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Professional/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_2915b.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.8.3+195e7f5a3 for .NET Framework
+        Build started 2/18/2024 11:18:40 AM.
+        
+        Project "D:\\Github_Blog\\koyumi0601.github.io\\_posts\\Cuda\\practice_030_cmake_cpp_cu\\source\\build\\CMakeFiles\\CMakeScratch\\TryCompile-knv4ar\\cmTC_2915b.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_2915b.dir\\Debug\\".
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "D:\\Github_Blog\\koyumi0601.github.io\\_posts\\Cuda\\practice_030_cmake_cpp_cu\\source\\build\\CMakeFiles\\CMakeScratch\\TryCompile-knv4ar\\Debug\\".
+          Creating directory "cmTC_2915b.dir\\Debug\\cmTC_2915b.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_2915b.dir\\Debug\\cmTC_2915b.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_2915b.dir\\Debug\\cmTC_2915b.tlog\\unsuccessfulbuild".
+        VcpkgTripletSelection:
+          Using triplet "x64-windows" from "C:\\Users\\koyum\\vcpkg\\installed\\x64-windows\\"
+          Using normalized configuration "Release"
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\CL.exe /c /I"C:\\Users\\koyum\\vcpkg\\installed\\x64-windows\\include" /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_2915b.dir\\Debug\\\\" /Fd"cmTC_2915b.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\Program Files\\CMake\\share\\cmake-3.28\\Modules\\CMakeCCompilerABI.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.38.33134 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /I"C:\\Users\\koyum\\vcpkg\\installed\\x64-windows\\include" /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_2915b.dir\\Debug\\\\" /Fd"cmTC_2915b.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\Program Files\\CMake\\share\\cmake-3.28\\Modules\\CMakeCCompilerABI.c"
+          CMakeCCompilerABI.c
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"D:\\Github_Blog\\koyumi0601.github.io\\_posts\\Cuda\\practice_030_cmake_cpp_cu\\source\\build\\CMakeFiles\\CMakeScratch\\TryCompile-knv4ar\\Debug\\cmTC_2915b.exe" /INCREMENTAL /ILK:"cmTC_2915b.dir\\Debug\\cmTC_2915b.ilk" /NOLOGO /LIBPATH:"C:\\Users\\koyum\\vcpkg\\installed\\x64-windows\\lib" /LIBPATH:"C:\\Users\\koyum\\vcpkg\\installed\\x64-windows\\lib\\manual-link" kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib "C:\\Users\\koyum\\vcpkg\\installed\\x64-windows\\lib\\*.lib" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/Github_Blog/koyumi0601.github.io/_posts/Cuda/practice_030_cmake_cpp_cu/source/build/CMakeFiles/CMakeScratch/TryCompile-knv4ar/Debug/cmTC_2915b.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/Github_Blog/koyumi0601.github.io/_posts/Cuda/practice_030_cmake_cpp_cu/source/build/CMakeFiles/CMakeScratch/TryCompile-knv4ar/Debug/cmTC_2915b.lib" /MACHINE:X64  /machine:x64 cmTC_2915b.dir\\Debug\\CMakeCCompilerABI.obj
+          cmTC_2915b.vcxproj -> D:\\Github_Blog\\koyumi0601.github.io\\_posts\\Cuda\\practice_030_cmake_cpp_cu\\source\\build\\CMakeFiles\\CMakeScratch\\TryCompile-knv4ar\\Debug\\cmTC_2915b.exe
+        AppLocalFromInstalled:
+          pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\\Users\\koyum\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\Github_Blog\\koyumi0601.github.io\\_posts\\Cuda\\practice_030_cmake_cpp_cu\\source\\build\\CMakeFiles\\CMakeScratch\\TryCompile-knv4ar\\Debug\\cmTC_2915b.exe" "C:\\Users\\koyum\\vcpkg\\installed\\x64-windows\\bin" "cmTC_2915b.dir\\Debug\\cmTC_2915b.tlog\\cmTC_2915b.write.1u.tlog" "cmTC_2915b.dir\\Debug\\vcpkg.applocal.log"
+          'pwsh.exe' is not recognized as an internal or external command,
+          operable program or batch file.
+          The command "pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\\Users\\koyum\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\Github_Blog\\koyumi0601.github.io\\_posts\\Cuda\\practice_030_cmake_cpp_cu\\source\\build\\CMakeFiles\\CMakeScratch\\TryCompile-knv4ar\\Debug\\cmTC_2915b.exe" "C:\\Users\\koyum\\vcpkg\\installed\\x64-windows\\bin" "cmTC_2915b.dir\\Debug\\cmTC_2915b.tlog\\cmTC_2915b.write.1u.tlog" "cmTC_2915b.dir\\Debug\\vcpkg.applocal.log"" exited with code 9009.
+          "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -ExecutionPolicy Bypass -noprofile -File "C:\\Users\\koyum\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\Github_Blog\\koyumi0601.github.io\\_posts\\Cuda\\practice_030_cmake_cpp_cu\\source\\build\\CMakeFiles\\CMakeScratch\\TryCompile-knv4ar\\Debug\\cmTC_2915b.exe" "C:\\Users\\koyum\\vcpkg\\installed\\x64-windows\\bin" "cmTC_2915b.dir\\Debug\\cmTC_2915b.tlog\\cmTC_2915b.write.1u.tlog" "cmTC_2915b.dir\\Debug\\vcpkg.applocal.log"
+        FinalizeBuildStatus:
+          Deleting file "cmTC_2915b.dir\\Debug\\cmTC_2915b.tlog\\unsuccessfulbuild".
+          Touching "cmTC_2915b.dir\\Debug\\cmTC_2915b.tlog\\cmTC_2915b.lastbuildstate".
+        Done Building Project "D:\\Github_Blog\\koyumi0601.github.io\\_posts\\Cuda\\practice_030_cmake_cpp_cu\\source\\build\\CMakeFiles\\CMakeScratch\\TryCompile-knv4ar\\cmTC_2915b.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:00.74
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "D:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "D:/Program Files/CMake/share/cmake-3.28/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "D:/Github_Blog/koyumi0601.github.io/_posts/Cuda/practice_030_cmake_cpp_cu/source/build/CMakeFiles/CMakeScratch/TryCompile-147i4v"
+      binary: "D:/Github_Blog/koyumi0601.github.io/_posts/Cuda/practice_030_cmake_cpp_cu/source/build/CMakeFiles/CMakeScratch/TryCompile-147i4v"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/Github_Blog/koyumi0601.github.io/_posts/Cuda/practice_030_cmake_cpp_cu/source/build/CMakeFiles/CMakeScratch/TryCompile-147i4v'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Professional/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_97920.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.8.3+195e7f5a3 for .NET Framework
+        Build started 2/18/2024 11:18:42 AM.
+        
+        Project "D:\\Github_Blog\\koyumi0601.github.io\\_posts\\Cuda\\practice_030_cmake_cpp_cu\\source\\build\\CMakeFiles\\CMakeScratch\\TryCompile-147i4v\\cmTC_97920.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_97920.dir\\Debug\\".
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "D:\\Github_Blog\\koyumi0601.github.io\\_posts\\Cuda\\practice_030_cmake_cpp_cu\\source\\build\\CMakeFiles\\CMakeScratch\\TryCompile-147i4v\\Debug\\".
+          Creating directory "cmTC_97920.dir\\Debug\\cmTC_97920.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_97920.dir\\Debug\\cmTC_97920.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_97920.dir\\Debug\\cmTC_97920.tlog\\unsuccessfulbuild".
+        VcpkgTripletSelection:
+          Using triplet "x64-windows" from "C:\\Users\\koyum\\vcpkg\\installed\\x64-windows\\"
+          Using normalized configuration "Release"
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\CL.exe /c /I"C:\\Users\\koyum\\vcpkg\\installed\\x64-windows\\include" /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_97920.dir\\Debug\\\\" /Fd"cmTC_97920.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "D:\\Program Files\\CMake\\share\\cmake-3.28\\Modules\\CMakeCXXCompilerABI.cpp"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.38.33134 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /I"C:\\Users\\koyum\\vcpkg\\installed\\x64-windows\\include" /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_97920.dir\\Debug\\\\" /Fd"cmTC_97920.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "D:\\Program Files\\CMake\\share\\cmake-3.28\\Modules\\CMakeCXXCompilerABI.cpp"
+          CMakeCXXCompilerABI.cpp
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"D:\\Github_Blog\\koyumi0601.github.io\\_posts\\Cuda\\practice_030_cmake_cpp_cu\\source\\build\\CMakeFiles\\CMakeScratch\\TryCompile-147i4v\\Debug\\cmTC_97920.exe" /INCREMENTAL /ILK:"cmTC_97920.dir\\Debug\\cmTC_97920.ilk" /NOLOGO /LIBPATH:"C:\\Users\\koyum\\vcpkg\\installed\\x64-windows\\lib" /LIBPATH:"C:\\Users\\koyum\\vcpkg\\installed\\x64-windows\\lib\\manual-link" kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib "C:\\Users\\koyum\\vcpkg\\installed\\x64-windows\\lib\\*.lib" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/Github_Blog/koyumi0601.github.io/_posts/Cuda/practice_030_cmake_cpp_cu/source/build/CMakeFiles/CMakeScratch/TryCompile-147i4v/Debug/cmTC_97920.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/Github_Blog/koyumi0601.github.io/_posts/Cuda/practice_030_cmake_cpp_cu/source/build/CMakeFiles/CMakeScratch/TryCompile-147i4v/Debug/cmTC_97920.lib" /MACHINE:X64  /machine:x64 cmTC_97920.dir\\Debug\\CMakeCXXCompilerABI.obj
+          cmTC_97920.vcxproj -> D:\\Github_Blog\\koyumi0601.github.io\\_posts\\Cuda\\practice_030_cmake_cpp_cu\\source\\build\\CMakeFiles\\CMakeScratch\\TryCompile-147i4v\\Debug\\cmTC_97920.exe
+        AppLocalFromInstalled:
+          pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\\Users\\koyum\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\Github_Blog\\koyumi0601.github.io\\_posts\\Cuda\\practice_030_cmake_cpp_cu\\source\\build\\CMakeFiles\\CMakeScratch\\TryCompile-147i4v\\Debug\\cmTC_97920.exe" "C:\\Users\\koyum\\vcpkg\\installed\\x64-windows\\bin" "cmTC_97920.dir\\Debug\\cmTC_97920.tlog\\cmTC_97920.write.1u.tlog" "cmTC_97920.dir\\Debug\\vcpkg.applocal.log"
+          'pwsh.exe' is not recognized as an internal or external command,
+          operable program or batch file.
+          The command "pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\\Users\\koyum\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\Github_Blog\\koyumi0601.github.io\\_posts\\Cuda\\practice_030_cmake_cpp_cu\\source\\build\\CMakeFiles\\CMakeScratch\\TryCompile-147i4v\\Debug\\cmTC_97920.exe" "C:\\Users\\koyum\\vcpkg\\installed\\x64-windows\\bin" "cmTC_97920.dir\\Debug\\cmTC_97920.tlog\\cmTC_97920.write.1u.tlog" "cmTC_97920.dir\\Debug\\vcpkg.applocal.log"" exited with code 9009.
+          "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -ExecutionPolicy Bypass -noprofile -File "C:\\Users\\koyum\\vcpkg\\scripts\\buildsystems\\msbuild\\applocal.ps1" "D:\\Github_Blog\\koyumi0601.github.io\\_posts\\Cuda\\practice_030_cmake_cpp_cu\\source\\build\\CMakeFiles\\CMakeScratch\\TryCompile-147i4v\\Debug\\cmTC_97920.exe" "C:\\Users\\koyum\\vcpkg\\installed\\x64-windows\\bin" "cmTC_97920.dir\\Debug\\cmTC_97920.tlog\\cmTC_97920.write.1u.tlog" "cmTC_97920.dir\\Debug\\vcpkg.applocal.log"
+        FinalizeBuildStatus:
+          Deleting file "cmTC_97920.dir\\Debug\\cmTC_97920.tlog\\unsuccessfulbuild".
+          Touching "cmTC_97920.dir\\Debug\\cmTC_97920.tlog\\cmTC_97920.lastbuildstate".
+        Done Building Project "D:\\Github_Blog\\koyumi0601.github.io\\_posts\\Cuda\\practice_030_cmake_cpp_cu\\source\\build\\CMakeFiles\\CMakeScratch\\TryCompile-147i4v\\cmTC_97920.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:00.72
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "D:/Program Files/CMake/share/cmake-3.28/Modules/FindCUDAToolkit.cmake:640 (message)"
+      - "D:/Program Files/CMake/share/cmake-3.28/Modules/FindCUDAToolkit.cmake:766 (_CUDAToolkit_find_root_dir)"
+      - "CMakeLists.txt:5 (find_package)"
+    message: |
+      Executed nvcc to extract CUDAToolkit information:
+      
+      D:\\Github_Blog\\koyumi0601.github.io\\_posts\\Cuda\\practice_030_cmake_cpp_cu\\source\\build>call "C:/Program Files/Microsoft Visual Studio/2022/Professional/VC/Tools/MSVC/14.38.33130/bin/Hostx64/x64/../../../../../../../VC/Auxiliary/Build/vcvars64.bat" 
+      **********************************************************************
+      ** Visual Studio 2022 Developer Command Prompt v17.8.4
+      ** Copyright (c) 2022 Microsoft Corporation
+      **********************************************************************
+      [vcvarsall.bat] Environment initialized for: 'x64'
+      #$ C:/Program Files/Microsoft Visual Studio/2022/Professional/VC/Tools/MSVC/14.38.33130/bin/Hostx64/x64/../../../../../../../VC/Auxiliary/Build/vcvars64.bat
+      #$ ALLUSERSPROFILE=C:\\ProgramData
+      #$ APPDATA=C:\\Users\\koyum\\AppData\\Roaming
+      #$ CHROME_CRASHPAD_PIPE_NAME=\\\\.\\pipe\\crashpad_13904_GMQWZVGWVOCHXZRJ
+      #$ CommandPromptType=Native
+      #$ CommonProgramFiles=C:\\Program Files\\Common Files
+      #$ CommonProgramFiles(x86)=C:\\Program Files (x86)\\Common Files
+      #$ CommonProgramW6432=C:\\Program Files\\Common Files
+      #$ COMPUTERNAME=DESKTOP-527KP6S
+      #$ ComSpec=C:\\Windows\\system32\\cmd.exe
+      #$ CUDA_PATH=C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.1
+      #$ CUDA_PATH_V12_1=C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.1
+      #$ CUDA_PATH_V12_3=C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.3
+      #$ DevEnvDir=C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\Common7\\IDE\\
+      #$ DriverData=C:\\Windows\\System32\\Drivers\\DriverData
+      #$ ExtensionSdkDir=C:\\Program Files (x86)\\Microsoft SDKs\\Windows Kits\\10\\ExtensionSDKs
+      #$ EXTERNAL_INCLUDE=C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.38.33130\\include;C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.38.33130\\ATLMFC\\include;C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Auxiliary\\VS\\include;C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.22621.0\\ucrt;C:\\Program Files (x86)\\Windows Kits\\10\\\\include\\10.0.22621.0\\\\um;C:\\Program Files (x86)\\Windows Kits\\10\\\\include\\10.0.22621.0\\\\shared;C:\\Program Files (x86)\\Windows Kits\\10\\\\include\\10.0.22621.0\\\\winrt;C:\\Program Files (x86)\\Windows Kits\\10\\\\include\\10.0.22621.0\\\\cppwinrt
+      #$ Framework40Version=v4.0
+      #$ FrameworkDir=C:\\Windows\\Microsoft.NET\\Framework64\\
+      #$ FrameworkDir64=C:\\Windows\\Microsoft.NET\\Framework64\\
+      #$ FrameworkVersion=v4.0.30319
+      #$ FrameworkVersion64=v4.0.30319
+      #$ HOMEDRIVE=C:
+      #$ HOMEPATH=\\Users\\koyum
+      #$ INCLUDE=C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.38.33130\\include;C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.38.33130\\ATLMFC\\include;C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Auxiliary\\VS\\include;C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.22621.0\\ucrt;C:\\Program Files (x86)\\Windows Kits\\10\\\\include\\10.0.22621.0\\\\um;C:\\Program Files (x86)\\Windows Kits\\10\\\\include\\10.0.22621.0\\\\shared;C:\\Program Files (x86)\\Windows Kits\\10\\\\include\\10.0.22621.0\\\\winrt;C:\\Program Files (x86)\\Windows Kits\\10\\\\include\\10.0.22621.0\\\\cppwinrt
+      #$ LIB=C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.38.33130\\ATLMFC\\lib\\x64;C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.38.33130\\lib\\x64;C:\\Program Files (x86)\\Windows Kits\\10\\lib\\10.0.22621.0\\ucrt\\x64;C:\\Program Files (x86)\\Windows Kits\\10\\\\lib\\10.0.22621.0\\\\um\\x64
+      #$ LIBPATH=C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.38.33130\\ATLMFC\\lib\\x64;C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.38.33130\\lib\\x64;C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.38.33130\\lib\\x86\\store\\references;C:\\Program Files (x86)\\Windows Kits\\10\\UnionMetadata\\10.0.22621.0;C:\\Program Files (x86)\\Windows Kits\\10\\References\\10.0.22621.0;C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319
+      #$ LOCALAPPDATA=C:\\Users\\koyum\\AppData\\Local
+      #$ LOGONSERVER=\\\\DESKTOP-527KP6S
+      #$ NUMBER_OF_PROCESSORS=12
+      #$ OneDrive=C:\\Users\\koyum\\OneDrive
+      #$ OneDriveConsumer=C:\\Users\\koyum\\OneDrive
+      #$ OPENCV_DIR=D:\\opencv\\build
+      #$ ORIGINAL_XDG_CURRENT_DESKTOP=undefined
+      #$ OS=Windows_NT
+      #$ Path=C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64;C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\Common7\\IDE\\VC\\VCPackages;C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\Common7\\IDE\\CommonExtensions\\Microsoft\\TestWindow;C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\Common7\\IDE\\CommonExtensions\\Microsoft\\TeamFoundation\\Team Explorer;C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\MSBuild\\Current\\bin\\Roslyn;C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\Team Tools\\Performance Tools\\x64;C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\Team Tools\\Performance Tools;C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\Team Tools\\DiagnosticsHub\\Collector;C:\\Program Files (x86)\\Windows Kits\\10\\bin\\10.0.22621.0\\\\x64;C:\\Program Files (x86)\\Windows Kits\\10\\bin\\\\x64;C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\\\MSBuild\\Current\\Bin\\amd64;C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319;C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\Common7\\IDE\\;C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\Common7\\Tools\\;D:\\Users\\koyum\\AppData\\Local\\Programs\\Python\\Python38\\Scripts\\;D:\\Users\\koyum\\AppData\\Local\\Programs\\Python\\Python38\\;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.1\\bin;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.1\\libnvvp;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.3\\bin;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.3\\libnvvp;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.38.33130\\bin\\Hostx64\\x64;D:\\Program Files\\Git\\cmd;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\NVIDIA Corporation\\Nsight Compute 2023.1.0\\;D:\\Program Files\\CMake\\bin;D:\\Program Files\\Tesseract-OCR;C:\\Users\\koyum\\AppData\\Local\\Microsoft\\WindowsApps;D:\\Users\\koyum\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\koyum\\AppData\\Local\\GitHubDesktop\\bin;C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin;C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\Ninja;C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\Common7\\IDE\\VC\\Linux\\bin\\ConnectionManagerExe;C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\vcpkg
+      #$ PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW;.CPL
+      #$ Platform=x64
+      #$ PROCESSOR_ARCHITECTURE=AMD64
+      #$ PROCESSOR_IDENTIFIER=AMD64 Family 25 Model 33 Stepping 0, AuthenticAMD
+      #$ PROCESSOR_LEVEL=25
+      #$ PROCESSOR_REVISION=2100
+      #$ ProgramData=C:\\ProgramData
+      #$ ProgramFiles=C:\\Program Files
+      #$ ProgramFiles(x86)=C:\\Program Files (x86)
+      #$ ProgramW6432=C:\\Program Files
+      #$ PROMPT=$P$G
+      #$ PSModulePath=C:\\Users\\koyum\\OneDrive\\??\\WindowsPowerShell\\Modules;C:\\Program Files\\WindowsPowerShell\\Modules;C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules
+      #$ PUBLIC=C:\\Users\\Public
+      #$ SESSIONNAME=Console
+      #$ SystemDrive=C:
+      #$ SystemRoot=C:\\Windows
+      #$ TESSDATA_PREFIX=C:\\Users\\koyum\\vcpkg\\packages\\tesseract_x64-windows\\share\\tessdata
+      #$ UCRTVersion=10.0.22621.0
+      #$ UniversalCRTSdkDir=C:\\Program Files (x86)\\Windows Kits\\10\\
+      #$ USERDOMAIN=DESKTOP-527KP6S
+      #$ USERDOMAIN_ROAMINGPROFILE=DESKTOP-527KP6S
+      #$ USERNAME=koyum
+      #$ USERPROFILE=C:\\Users\\koyum
+      #$ VCIDEInstallDir=C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\Common7\\IDE\\VC\\
+      #$ VCINSTALLDIR=C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\
+      #$ VCPKG_ROOT=C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\vcpkg
+      #$ VCToolsInstallDir=C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.38.33130\\
+      #$ VCToolsRedistDir=C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Redist\\MSVC\\14.38.33130\\
+      #$ VCToolsVersion=14.38.33130
+      #$ VisualStudioVersion=17.0
+      #$ VS170COMNTOOLS=C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\Common7\\Tools\\
+      #$ VSCMD_ARG_app_plat=Desktop
+      #$ VSCMD_ARG_HOST_ARCH=x64
+      #$ VSCMD_ARG_TGT_ARCH=x64
+      #$ VSCMD_VER=17.8.4
+      #$ vsconsoleoutput=1
+      #$ VSINSTALLDIR=C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\
+      #$ windir=C:\\Windows
+      #$ TERM_PROGRAM=vscode
+      #$ TERM_PROGRAM_VERSION=1.86.2
+      #$ LANG=en_US.UTF-8
+      #$ COLORTERM=truecolor
+      #$ GIT_ASKPASS=d:\\Users\\koyum\\AppData\\Local\\Programs\\Microsoft VS Code\\resources\\app\\extensions\\git\\dist\\askpass.sh
+      #$ VSCODE_GIT_ASKPASS_NODE=D:\\Users\\koyum\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe
+      #$ VSCODE_GIT_ASKPASS_EXTRA_ARGS=
+      #$ VSCODE_GIT_ASKPASS_MAIN=d:\\Users\\koyum\\AppData\\Local\\Programs\\Microsoft VS Code\\resources\\app\\extensions\\git\\dist\\askpass-main.js
+      #$ VSCODE_GIT_IPC_HANDLE=\\\\.\\pipe\\vscode-git-0376dc2a1b-sock
+      #$ VSCODE_INJECTION=1
+      #$ VSCODE_NONCE=de219567-1299-4ee3-82b4-4bce04b6e60f
+      #$ WindowsLibPath=C:\\Program Files (x86)\\Windows Kits\\10\\UnionMetadata\\10.0.22621.0;C:\\Program Files (x86)\\Windows Kits\\10\\References\\10.0.22621.0
+      #$ WindowsSdkBinPath=C:\\Program Files (x86)\\Windows Kits\\10\\bin\\
+      #$ WindowsSdkDir=C:\\Program Files (x86)\\Windows Kits\\10\\
+      #$ WindowsSDKLibVersion=10.0.22621.0\\
+      #$ WindowsSdkVerBinPath=C:\\Program Files (x86)\\Windows Kits\\10\\bin\\10.0.22621.0\\
+      #$ WindowsSDKVersion=10.0.22621.0\\
+      #$ __DOTNET_ADD_64BIT=1
+      #$ __DOTNET_PREFERRED_BITNESS=64
+      #$ __VSCMD_PREINIT_PATH=D:\\Users\\koyum\\AppData\\Local\\Programs\\Python\\Python38\\Scripts\\;D:\\Users\\koyum\\AppData\\Local\\Programs\\Python\\Python38\\;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.1\\bin;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.1\\libnvvp;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.3\\bin;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.3\\libnvvp;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.38.33130\\bin\\Hostx64\\x64;D:\\Program Files\\Git\\cmd;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\NVIDIA Corporation\\Nsight Compute 2023.1.0\\;D:\\Program Files\\CMake\\bin;D:\\Program Files\\Tesseract-OCR;C:\\Users\\koyum\\AppData\\Local\\Microsoft\\WindowsApps;D:\\Users\\koyum\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\koyum\\AppData\\Local\\GitHubDesktop\\bin
+      #$ PATH=C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.38.33130\\bin\\Hostx64\\x64;C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64;C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\Common7\\IDE\\VC\\VCPackages;C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\Common7\\IDE\\CommonExtensions\\Microsoft\\TestWindow;C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\Common7\\IDE\\CommonExtensions\\Microsoft\\TeamFoundation\\Team Explorer;C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\MSBuild\\Current\\bin\\Roslyn;C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\Team Tools\\Performance Tools\\x64;C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\Team Tools\\Performance Tools;C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\Team Tools\\DiagnosticsHub\\Collector;C:\\Program Files (x86)\\Windows Kits\\10\\bin\\10.0.22621.0\\\\x64;C:\\Program Files (x86)\\Windows Kits\\10\\bin\\\\x64;C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\\\MSBuild\\Current\\Bin\\amd64;C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319;C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\Common7\\IDE\\;C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\Common7\\Tools\\;D:\\Users\\koyum\\AppData\\Local\\Programs\\Python\\Python38\\Scripts\\;D:\\Users\\koyum\\AppData\\Local\\Programs\\Python\\Python38\\;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.1\\bin;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.1\\libnvvp;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.3\\bin;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.3\\libnvvp;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.38.33130\\bin\\Hostx64\\x64;D:\\Program Files\\Git\\cmd;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\NVIDIA Corporation\\Nsight Compute 2023.1.0\\;D:\\Program Files\\CMake\\bin;D:\\Program Files\\Tesseract-OCR;C:\\Users\\koyum\\AppData\\Local\\Microsoft\\WindowsApps;D:\\Users\\koyum\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\koyum\\AppData\\Local\\GitHubDesktop\\bin;C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin;C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\Ninja;C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\Common7\\IDE\\VC\\Linux\\bin\\ConnectionManagerExe;C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\vcpkg
+      #$ _NVVM_BRANCH_=nvvm
+      #$ _SPACE_= 
+      #$ _CUDART_=cudart
+      #$ _HERE_=C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.1/bin
+      #$ _THERE_=C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.1/bin
+      #$ _TARGET_SIZE_=
+      #$ _TARGET_DIR_=
+      #$ _TARGET_SIZE_=64
+      #$ _WIN_PLATFORM_=x64
+      #$ TOP=C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.1/bin/..
+      #$ NVVMIR_LIBRARY_DIR=C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.1/bin/../nvvm/libdevice
+      #$ PATH=C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.1/bin/../nvvm/bin;C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.1/bin;C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.1/bin/../lib;C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.38.33130\\bin\\Hostx64\\x64;C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.38.33130\\bin\\HostX64\\x64;C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\Common7\\IDE\\VC\\VCPackages;C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\Common7\\IDE\\CommonExtensions\\Microsoft\\TestWindow;C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\Common7\\IDE\\CommonExtensions\\Microsoft\\TeamFoundation\\Team Explorer;C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\MSBuild\\Current\\bin\\Roslyn;C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\Team Tools\\Performance Tools\\x64;C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\Team Tools\\Performance Tools;C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\Team Tools\\DiagnosticsHub\\Collector;C:\\Program Files (x86)\\Windows Kits\\10\\bin\\10.0.22621.0\\\\x64;C:\\Program Files (x86)\\Windows Kits\\10\\bin\\\\x64;C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\\\MSBuild\\Current\\Bin\\amd64;C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319;C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\Common7\\IDE\\;C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\Common7\\Tools\\;D:\\Users\\koyum\\AppData\\Local\\Programs\\Python\\Python38\\Scripts\\;D:\\Users\\koyum\\AppData\\Local\\Programs\\Python\\Python38\\;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.1\\bin;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.1\\libnvvp;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.3\\bin;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.3\\libnvvp;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.38.33130\\bin\\Hostx64\\x64;D:\\Program Files\\Git\\cmd;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\NVIDIA Corporation\\Nsight Compute 2023.1.0\\;D:\\Program Files\\CMake\\bin;D:\\Program Files\\Tesseract-OCR;C:\\Users\\koyum\\AppData\\Local\\Microsoft\\WindowsApps;D:\\Users\\koyum\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\koyum\\AppData\\Local\\GitHubDesktop\\bin;C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin;C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\Ninja;C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\Common7\\IDE\\VC\\Linux\\bin\\ConnectionManagerExe;C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\vcpkg
+      #$ INCLUDES="-IC:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.1/bin/../include"  
+      #$ LIBRARIES=  "/LIBPATH:C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.1/bin/../lib/x64"
+      #$ CUDAFE_FLAGS=
+      #$ PTXAS_FLAGS=
+      nvcc fatal   : Don't know what to do with '__cmake_determine_cuda'
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "D:/Program Files/CMake/share/cmake-3.28/Modules/FindCUDAToolkit.cmake:644 (message)"
+      - "D:/Program Files/CMake/share/cmake-3.28/Modules/FindCUDAToolkit.cmake:766 (_CUDAToolkit_find_root_dir)"
+      - "CMakeLists.txt:5 (find_package)"
+    message: |
+      Parsed CUDAToolkit nvcc location:
+      C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.1/bin
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "D:/Program Files/CMake/share/cmake-3.28/Modules/FindCUDAToolkit.cmake:656 (message)"
+      - "D:/Program Files/CMake/share/cmake-3.28/Modules/FindCUDAToolkit.cmake:766 (_CUDAToolkit_find_root_dir)"
+      - "CMakeLists.txt:5 (find_package)"
+    message: |
+      Parsed CUDAToolkit nvcc implicit include information:
+      C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.1/include
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "D:/Program Files/CMake/share/cmake-3.28/Modules/FindCUDAToolkit.cmake:671 (message)"
+      - "D:/Program Files/CMake/share/cmake-3.28/Modules/FindCUDAToolkit.cmake:766 (_CUDAToolkit_find_root_dir)"
+      - "CMakeLists.txt:5 (find_package)"
+    message: |
+      Parsed CUDAToolkit nvcc implicit link information:
+        link line regex: [^( *|.*[/\\])(link\\.exe|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        link line: [cuda-fake-ld   "/LIBPATH:C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.1/bin/../lib/x64"]
+          arg [cuda-fake-ld] ==> ignore
+          arg [/LIBPATH:C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.1/bin/../lib/x64] ==> dir [C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.1/bin/../lib/x64]
+        collapse library dir [C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.1/bin/../lib/x64] ==> [C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.1/lib/x64]
+        implicit libs: []
+        implicit objs: []
+        implicit dirs: [C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.1/lib/x64]
+        implicit fwks: []
+      
+      C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.1/lib/x64
+      
+...
