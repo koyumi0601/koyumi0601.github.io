@@ -214,3 +214,54 @@ Device 0: NVIDIA GeForce GTX 960
 ```
 
 - Ray tracing, 메모리 버스 너비, 클럭 속도, AI 및 machine learning 지원 여부 확인 요망
+
+
+
+
+# Visual Studio 2022에서 환경 설정하기
+
+## solution 생성
+- cuda runtime 12.3 (설치된 것) 선택
+    - property pages > CUDA C/C++ 페이지 생성 및 기본 설정 되어 있음
+- 기타 library 추가하기
+    - opencv
+        - opencv library: opencv_world480d.lib
+        - ~~trial 1) vcpkg 설치 후 property pages > vcpkg > use 선택 후 > 되지 않음.~~
+        - trial 2) CUDA C/C++ > additional include directories > 추가 > 코드 내 빨간줄 표시되나 빌드 됨.
+            - 일반 linker에 .lib 추가
+            - 일반 linker에 opencvworldxxd.lib 추가 > 됨
+            - ~~일반 linker에 opencvworldxx.lib 추가 > 안됨~~
+        - trial 3) VC++ > additional include directories > 추가 > 코드 내 빨간줄 없음
+    - dcmtk
+        - trial 1) build에 있는 것을 VC directories에 include함 > #include 빨간줄 없어짐. 빌드 되지 않음
+
+```cpp
+Severity	Code	Description	Project	File	Line	Suppression State	Details
+Error	LNK2019	unresolved external symbol "__declspec(dllimport) public: __cdecl DcmFileFormat::DcmFileFormat(void)" (__imp_??0DcmFileFormat@@QEAA@XZ) referenced in function main	CudaRuntime1	D:\Github_Blog\koyumi0601.github.io\_posts\Cuda\practice_036_cuda_dcmtk_opencv\CudaRuntime1\CudaRuntime1\kernel.cu.obj	1		
+```
+
+        - ~~trial 2) build에 있는 것을 CUDA C/C++에 include함 위와 다르지 않음~~
+        - trial 3) build에 있는 것을 일반 linker에 lib 경로, .lib 넣음 > 빌드됨 > 실행 시스템 에러 > The code execution cannt proceed because dcmtk.dll was not found. reinstalling the program may fix this problem.
+            > dcmtk*.dll 카피하여 실행경로에 넣음 > 실행 됨.
+
+
+- cuda 라이브러리
+    - 헤더: C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.3\include
+    - 라이브러리: C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.3\lib\x64 ?
+
+
+```cpp
+cudart_static.lib
+kernel32.lib
+user32.lib
+gdi32.lib
+winspool.lib
+comdlg32.lib
+advapi32.lib
+shell32.lib
+ole32.lib
+oleaut32.lib
+uuid.lib
+odbc32.lib
+odbccp32.lib
+```
