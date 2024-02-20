@@ -5,14 +5,15 @@
 #include <fstream>
 #include <ctime>
 #include <string>
+#ifdef _WIN32
+#include <filesystem>
+namespace fs = std::filesystem;
+#else
 #include <experimental/filesystem>
+namespace fs = std::experimental::filesystem;
+#endif
+
 #include <algorithm> // replace
-
-namespace fs // forward declaration
-{
-    using namespace std::experimental::filesystem;
-}
-
 
 enum class LogLevel 
 {

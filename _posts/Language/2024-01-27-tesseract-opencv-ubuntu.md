@@ -97,8 +97,45 @@ int main(int argc, char* argv[]) {
 
 # window
 
-- https://github.com/UB-Mannheim/tesseract/wiki
-- cmd
+- visual studio가 설치되어 있어야 한다고 함.
+- vcpkg(패키지 매니저) 다운받기 [https://github.com/microsoft/vcpkg/tree/master](https://github.com/microsoft/vcpkg/tree/master)
+- 배치파일 실행 
 ```cmd
-vcpkg install tesseract:x64-windows
+.\vcpkg\bootstrap-vcpkg.bat
 ```
+- vcpkg 경로에서 cmd 열기
+- vcpkg를 통해서 tesseract 설치
+```bash
+vcpkg install tesseract:x64-windows
+# 꽤 오래 걸림 10 분 이상...?
+```
+- vcpkg에서 관리하는 installed경로로 이동 D:\Github_Blog\vcpkg\installed\x64-windows
+    - 아래가 생성 되어 있음.
+    - D:\Github_Blog\vcpkg\installed\tesseract_x64-windows\bin\tesseract53.dll 
+    - D:\Github_Blog\vcpkg\installed\tesseract_x64-windows\include
+    - D:\Github_Blog\vcpkg\installed\tesseract_x64-windows\lib\tesseract53.lib
+
+- 참고(메인): https://m.blog.naver.com/killkimno/222338574004
+- 참고(보조) https://tayrelgrin.blogspot.com/2021/08/mfc-windows-10-ocr-1tesseract.html
+
+
+- CMakeLists.txt 수정
+```cmake
+if (UNIX AND NOT APPLE)
+    find_package(PkgConfig REQUIRED)
+    pkg_search_module(TESSERACT REQUIRED tesseract)
+elseif(WIN32)
+    # CMAKE_PREFIX_PATH, Tesseract_DIR  
+    find_package(Tesseract REQUIRED PATHS "D:/Github_Blog/vcpkg/installed/tesseract_x64-windows")
+    set(CMAKE_PREFIX_PATH "D:/Github_Blog/vcpkg/installed/tesseract_x64-windows")
+endif()
+
+include_directories(${TESSERACT_INCLUDE_DIRS})
+
+if(UNIX AND NOT APPLE)
+    target_link_libraries(MyProject PRIVATE tesseract)
+elseif(WIN32)
+    target_link_libraries(MyProject PRIVATE ${TESSERACT_LIBRARIES})
+endif()
+```
+
