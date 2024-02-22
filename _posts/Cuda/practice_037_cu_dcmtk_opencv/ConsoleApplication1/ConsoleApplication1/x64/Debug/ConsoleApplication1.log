@@ -1,2 +1,0 @@
-﻿main.obj : error LNK2019: unresolved external symbol "void __cdecl cudaKernel(int,float *,float *)" (?cudaKernel@@YAXHPEAM0@Z) referenced in function main
-D:\Github_Blog\koyumi0601.github.io\_posts\Cuda\practice_037_cu_dcmtk_opencv\ConsoleApplication1\x64\Debug\ConsoleApplication1.exe : fatal error LNK1120: 1 unresolved externals
