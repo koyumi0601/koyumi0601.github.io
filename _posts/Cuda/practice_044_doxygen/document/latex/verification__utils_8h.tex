@@ -1,0 +1,266 @@
+\doxysection{inverse\+Scan\+Convert/verification\+\_\+utils.h File Reference}
+\hypertarget{verification__utils_8h}{}\label{verification__utils_8h}\index{inverseScanConvert/verification\_utils.h@{inverseScanConvert/verification\_utils.h}}
+{\ttfamily \#include $<$opencv2/opencv.\+hpp$>$}\newline
+{\ttfamily \#include $<$Eigen$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$chrono$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+Include dependency graph for verification\+\_\+utils.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{verification__utils_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=304pt]{verification__utils_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_timer}{Timer}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{define}} \mbox{\hyperlink{verification__utils_8h_a285e216781a4ee1fb2b3b4dfd73234f2}{PRINTARRAY}}(\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{var}})
+\begin{DoxyCompactList}\small\item\em Macro for printing array elements. \end{DoxyCompactList}\item 
+\#\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{define}} \mbox{\hyperlink{verification__utils_8h_a0be5437e2a8a7eefb64a891b3c1e72f5}{PRINTSCALAR}}(\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{var}})~\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::cout}} $<$$<$ \#\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{var}} $<$$<$ "{}\+: "{} $<$$<$ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{var}} $<$$<$ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::endl}};
+\begin{DoxyCompactList}\small\item\em Macro for printing scalar values. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{verification__utils_8h_acbda946f4b81b6085d92a704908b1477}{Mat\+Orientation}} \{ \mbox{\hyperlink{verification__utils_8h_acbda946f4b81b6085d92a704908b1477afea087517c26fadd409bd4b9dc642555}{normal}}
+, \mbox{\hyperlink{verification__utils_8h_acbda946f4b81b6085d92a704908b1477aeb3bac16ce0b10104556989311d71e56}{twist}}
+, \mbox{\hyperlink{verification__utils_8h_acbda946f4b81b6085d92a704908b1477afea59e1c84f9af7d348aeab95e5d2d30}{normal\+Transpose}}
+, \mbox{\hyperlink{verification__utils_8h_acbda946f4b81b6085d92a704908b1477a80bdfcf2886efd525516dc61f6f1d9c9}{twist\+Transpose}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{void}} \mbox{\hyperlink{verification__utils_8h_a9b67a973b6971c51f1ef9a1cd2c14ce7}{show\+Volume\+Vec}} (\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{const}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::vector}}$<$ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{unsigned}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{char}} $>$ \&\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{volume\+Data}}, \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{int}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{num\+Rows}}, \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{int}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{num\+Cols}}, \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{int}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{slice\+Idx}})
+\item 
+\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{void}} \mbox{\hyperlink{verification__utils_8h_a9b80e905be3730c879ba61167cdc2463}{show\+Matrix}} (\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{const}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{Eigen\+::\+Matrix\+Xd}} \&\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{eigen\+Matrix}})
+\item 
+{\footnotesize template$<$\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{typename}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{T}} $>$ }\\\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{void}} \mbox{\hyperlink{verification__utils_8h_aa7e8d08b1b3e57f434cf2e318131db2a}{show\+Mesh\+Vec}} (\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{const}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::vector}}$<$ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{T}} $>$ \&\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{Mesh\+Vec}}, \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{int}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{cols}}, \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{int}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{rows}}, \mbox{\hyperlink{verification__utils_8h_acbda946f4b81b6085d92a704908b1477}{Mat\+Orientation}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{orientation}})
+\item 
+\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{void}} \mbox{\hyperlink{verification__utils_8h_a57c89691cc7178bab8178e2e3a0b958b}{print\+Vector\+Stats}} (\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{const}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::vector}}$<$ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{double}} $>$ \&\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{vec}})
+\begin{DoxyCompactList}\small\item\em Print statistics of a given vector of doubles. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{void}} \mbox{\hyperlink{verification__utils_8h_a346669b1a6d10d55f322a54c729cc6d6}{print\+Matrix\+Stats}} (\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{const}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{Eigen\+::\+Matrix\+Xd}} \&\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{matrix}})
+\begin{DoxyCompactList}\small\item\em Print statistics of a given Eigen matrix. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{verification__utils_8h_a285e216781a4ee1fb2b3b4dfd73234f2}\label{verification__utils_8h_a285e216781a4ee1fb2b3b4dfd73234f2} 
+\index{verification\_utils.h@{verification\_utils.h}!PRINTARRAY@{PRINTARRAY}}
+\index{PRINTARRAY@{PRINTARRAY}!verification\_utils.h@{verification\_utils.h}}
+\doxysubsubsection{\texorpdfstring{PRINTARRAY}{PRINTARRAY}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{define}} PRINTARRAY(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{var}} }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{\ std::cout\ <<\ \#\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{var}}\ <<\ \textcolor{stringliteral}{"{}:\ "{}}\ <<\ std::endl;\ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{\(\backslash\)}}}
+\DoxyCodeLine{\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ for}}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{elem}}\ :\ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{var}})\ \{\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{elem}}\ <<\ \textcolor{stringliteral}{"{}\ "{}};\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ std::endl;\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Macro for printing array elements. 
+
+This macro prints the name and elements of the given array. 
+\begin{DoxyParams}{Parameters}
+{\em var} & The array whose elements will be printed.\\
+\hline
+\end{DoxyParams}
+Here is an example\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{std::vector<int>\ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{vec}}\ =\ \{1,\ 2,\ 3,\ 4,\ 5\};}
+\DoxyCodeLine{\mbox{\hyperlink{verification__utils_8h_a285e216781a4ee1fb2b3b4dfd73234f2}{PRINTARRAY}}(\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{vec}});}
+\DoxyCodeLine{\textcolor{comment}{//\ Output:\ vec:}}
+\DoxyCodeLine{\textcolor{comment}{//\ 1\ 2\ 3\ 4\ 5}}
+
+\end{DoxyCode}
+ 
+
+Definition at line \mbox{\hyperlink{verification__utils_8h_source_l00049}{49}} of file \mbox{\hyperlink{verification__utils_8h_source}{verification\+\_\+utils.\+h}}.
+
+\Hypertarget{verification__utils_8h_a0be5437e2a8a7eefb64a891b3c1e72f5}\label{verification__utils_8h_a0be5437e2a8a7eefb64a891b3c1e72f5} 
+\index{verification\_utils.h@{verification\_utils.h}!PRINTSCALAR@{PRINTSCALAR}}
+\index{PRINTSCALAR@{PRINTSCALAR}!verification\_utils.h@{verification\_utils.h}}
+\doxysubsubsection{\texorpdfstring{PRINTSCALAR}{PRINTSCALAR}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{define}} PRINTSCALAR(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{var}} }\end{DoxyParamCaption})~\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::cout}} $<$$<$ \#\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{var}} $<$$<$ "{}\+: "{} $<$$<$ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{var}} $<$$<$ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::endl}};}
+
+
+
+Macro for printing scalar values. 
+
+This macro prints the name and value of the given variable. 
+\begin{DoxyParams}{Parameters}
+{\em var} & The variable whose scalar value will be printed.\\
+\hline
+\end{DoxyParams}
+Here is an example\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{int}\ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{x}}\ =\ 10;}
+\DoxyCodeLine{\mbox{\hyperlink{verification__utils_8h_a0be5437e2a8a7eefb64a891b3c1e72f5}{PRINTSCALAR}}(\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{x}});}
+\DoxyCodeLine{\textcolor{comment}{//\ Output:\ x:\ 10}}
+
+\end{DoxyCode}
+ 
+
+Definition at line \mbox{\hyperlink{verification__utils_8h_source_l00070}{70}} of file \mbox{\hyperlink{verification__utils_8h_source}{verification\+\_\+utils.\+h}}.
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{verification__utils_8h_acbda946f4b81b6085d92a704908b1477}\label{verification__utils_8h_acbda946f4b81b6085d92a704908b1477} 
+\index{verification\_utils.h@{verification\_utils.h}!MatOrientation@{MatOrientation}}
+\index{MatOrientation@{MatOrientation}!verification\_utils.h@{verification\_utils.h}}
+\doxysubsubsection{\texorpdfstring{MatOrientation}{MatOrientation}}
+{\footnotesize\ttfamily \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{enum}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{class}} \mbox{\hyperlink{verification__utils_8h_acbda946f4b81b6085d92a704908b1477}{Mat\+Orientation}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{normal@{normal}!verification\_utils.h@{verification\_utils.h}}\index{verification\_utils.h@{verification\_utils.h}!normal@{normal}}}\Hypertarget{verification__utils_8h_acbda946f4b81b6085d92a704908b1477afea087517c26fadd409bd4b9dc642555}\label{verification__utils_8h_acbda946f4b81b6085d92a704908b1477afea087517c26fadd409bd4b9dc642555} 
+normal&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{twist@{twist}!verification\_utils.h@{verification\_utils.h}}\index{verification\_utils.h@{verification\_utils.h}!twist@{twist}}}\Hypertarget{verification__utils_8h_acbda946f4b81b6085d92a704908b1477aeb3bac16ce0b10104556989311d71e56}\label{verification__utils_8h_acbda946f4b81b6085d92a704908b1477aeb3bac16ce0b10104556989311d71e56} 
+twist&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{normalTranspose@{normalTranspose}!verification\_utils.h@{verification\_utils.h}}\index{verification\_utils.h@{verification\_utils.h}!normalTranspose@{normalTranspose}}}\Hypertarget{verification__utils_8h_acbda946f4b81b6085d92a704908b1477afea59e1c84f9af7d348aeab95e5d2d30}\label{verification__utils_8h_acbda946f4b81b6085d92a704908b1477afea59e1c84f9af7d348aeab95e5d2d30} 
+normal\+Transpose&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{twistTranspose@{twistTranspose}!verification\_utils.h@{verification\_utils.h}}\index{verification\_utils.h@{verification\_utils.h}!twistTranspose@{twistTranspose}}}\Hypertarget{verification__utils_8h_acbda946f4b81b6085d92a704908b1477a80bdfcf2886efd525516dc61f6f1d9c9}\label{verification__utils_8h_acbda946f4b81b6085d92a704908b1477a80bdfcf2886efd525516dc61f6f1d9c9} 
+twist\+Transpose&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line \mbox{\hyperlink{verification__utils_8h_source_l00013}{13}} of file \mbox{\hyperlink{verification__utils_8h_source}{verification\+\_\+utils.\+h}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{verification__utils_8h_a346669b1a6d10d55f322a54c729cc6d6}\label{verification__utils_8h_a346669b1a6d10d55f322a54c729cc6d6} 
+\index{verification\_utils.h@{verification\_utils.h}!printMatrixStats@{printMatrixStats}}
+\index{printMatrixStats@{printMatrixStats}!verification\_utils.h@{verification\_utils.h}}
+\doxysubsubsection{\texorpdfstring{printMatrixStats()}{printMatrixStats()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{void}} print\+Matrix\+Stats (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{const}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{Eigen\+::\+Matrix\+Xd}} \&}]{matrix }\end{DoxyParamCaption})}
+
+
+
+Print statistics of a given Eigen matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em matrix} & The Eigen matrix to compute statistics for.\\
+\hline
+\end{DoxyParams}
+This function computes and prints statistics such as mean, variance, minimum, and maximum values of the elements in the given Eigen matrix. 
+
+Definition at line \mbox{\hyperlink{verification__utils_8cpp_source_l00152}{152}} of file \mbox{\hyperlink{verification__utils_8cpp_source}{verification\+\_\+utils.\+cpp}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=246pt]{verification__utils_8h_a346669b1a6d10d55f322a54c729cc6d6_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{verification__utils_8h_a57c89691cc7178bab8178e2e3a0b958b}\label{verification__utils_8h_a57c89691cc7178bab8178e2e3a0b958b} 
+\index{verification\_utils.h@{verification\_utils.h}!printVectorStats@{printVectorStats}}
+\index{printVectorStats@{printVectorStats}!verification\_utils.h@{verification\_utils.h}}
+\doxysubsubsection{\texorpdfstring{printVectorStats()}{printVectorStats()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{void}} print\+Vector\+Stats (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{const}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::vector}}$<$ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{double}} $>$ \&}]{vec }\end{DoxyParamCaption})}
+
+
+
+Print statistics of a given vector of doubles. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vec} & The vector of doubles to compute statistics for.\\
+\hline
+\end{DoxyParams}
+This function computes and prints statistics such as mean, variance, minimum, and maximum values of the elements in the given vector of doubles. 
+
+Definition at line \mbox{\hyperlink{verification__utils_8cpp_source_l00126}{126}} of file \mbox{\hyperlink{verification__utils_8cpp_source}{verification\+\_\+utils.\+cpp}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=248pt]{verification__utils_8h_a57c89691cc7178bab8178e2e3a0b958b_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{verification__utils_8h_a9b80e905be3730c879ba61167cdc2463}\label{verification__utils_8h_a9b80e905be3730c879ba61167cdc2463} 
+\index{verification\_utils.h@{verification\_utils.h}!showMatrix@{showMatrix}}
+\index{showMatrix@{showMatrix}!verification\_utils.h@{verification\_utils.h}}
+\doxysubsubsection{\texorpdfstring{showMatrix()}{showMatrix()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{void}} show\+Matrix (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{const}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{Eigen\+::\+Matrix\+Xd}} \&}]{eigen\+Matrix }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{verification__utils_8cpp_source_l00012}{12}} of file \mbox{\hyperlink{verification__utils_8cpp_source}{verification\+\_\+utils.\+cpp}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=227pt]{verification__utils_8h_a9b80e905be3730c879ba61167cdc2463_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{verification__utils_8h_aa7e8d08b1b3e57f434cf2e318131db2a}\label{verification__utils_8h_aa7e8d08b1b3e57f434cf2e318131db2a} 
+\index{verification\_utils.h@{verification\_utils.h}!showMeshVec@{showMeshVec}}
+\index{showMeshVec@{showMeshVec}!verification\_utils.h@{verification\_utils.h}}
+\doxysubsubsection{\texorpdfstring{showMeshVec()}{showMeshVec()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{typename}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{T}} $>$ \\
+\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{void}} show\+Mesh\+Vec (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{const}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::vector}}$<$ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{T}} $>$ \&}]{Mesh\+Vec,  }\item[{\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{int}}}]{cols,  }\item[{\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{int}}}]{rows,  }\item[{\mbox{\hyperlink{verification__utils_8h_acbda946f4b81b6085d92a704908b1477}{Mat\+Orientation}}}]{orientation }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{verification__utils_8cpp_source_l00071}{71}} of file \mbox{\hyperlink{verification__utils_8cpp_source}{verification\+\_\+utils.\+cpp}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=241pt]{verification__utils_8h_aa7e8d08b1b3e57f434cf2e318131db2a_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{verification__utils_8h_a9b67a973b6971c51f1ef9a1cd2c14ce7}\label{verification__utils_8h_a9b67a973b6971c51f1ef9a1cd2c14ce7} 
+\index{verification\_utils.h@{verification\_utils.h}!showVolumeVec@{showVolumeVec}}
+\index{showVolumeVec@{showVolumeVec}!verification\_utils.h@{verification\_utils.h}}
+\doxysubsubsection{\texorpdfstring{showVolumeVec()}{showVolumeVec()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{void}} show\+Volume\+Vec (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{const}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::vector}}$<$ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{unsigned}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{char}} $>$ \&}]{volume\+Data,  }\item[{\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{int}}}]{num\+Rows,  }\item[{\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{int}}}]{num\+Cols,  }\item[{\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{int}}}]{slice\+Idx }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{verification__utils_8cpp_source_l00004}{4}} of file \mbox{\hyperlink{verification__utils_8cpp_source}{verification\+\_\+utils.\+cpp}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=250pt]{verification__utils_8h_a9b67a973b6971c51f1ef9a1cd2c14ce7_cgraph}
+\end{center}
+\end{figure}

@@ -1,0 +1,59 @@
+\doxysection{D\+:/\+Github\+\_\+\+Blog/koyumi0601.\+github.\+io/\+\_\+posts/\+Cuda/practice\+\_\+044\+\_\+doxygen/inverse\+Scan\+Convert/verification\+\_\+utils.\+h}
+\hypertarget{_d_1_2_github__blog_2koyumi0601_8github_8io_2_posts_2_cuda_2practice_044_doxygen_2inverse_scan_c2d9873b3f3b398c6c73ea54b26e6f339}{}\label{_d_1_2_github__blog_2koyumi0601_8github_8io_2_posts_2_cuda_2practice_044_doxygen_2inverse_scan_c2d9873b3f3b398c6c73ea54b26e6f339}Create an image with a colorbar.
+
+Create an image with a colorbar.\+This function combines the input image with a colorbar to represent pixel values.
+
+
+\begin{DoxyParams}{Parameters}
+{\em image} & The input image. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new image with the input image and a colorbar.
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+The colorbar is added to the right side of the input image.
+\end{DoxyNote}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cv::Mat\ inputImage\ =\ cv::imread(\textcolor{stringliteral}{"{}input\_image.jpg"{}},\ cv::IMREAD\_COLOR);}
+\DoxyCodeLine{cv::Mat\ outputImage\ =\ \mbox{\hyperlink{verification__utils_8cpp_a57aaa35703f2361b2382687200a50108}{createImageWithColorbar}}(inputImage);}
+\DoxyCodeLine{cv::imshow(\textcolor{stringliteral}{"{}Image\ with\ Colorbar"{}},\ outputImage);}
+\DoxyCodeLine{cv::waitKey(0);}
+
+\end{DoxyCode}
+
+
+
+\begin{DoxyCodeInclude}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include\ <opencv2/opencv.hpp>}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include\ <Eigen>}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include\ <algorithm>}\ \textcolor{comment}{//\ std::min\_element,\ std::max\_element}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{\textcolor{comment}{//const\ double\ PI\ =\ 3.14159265358979323846;}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{void}\ \mbox{\hyperlink{verification__utils_8cpp_ab26d20eeefdd0ff4119fe63bf30e9381}{displayEigenMatrixAsImage}}(\textcolor{keyword}{const}\ Eigen::MatrixXd\&\ eigenMatrix);}
+\DoxyCodeLine{\textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{verification__utils_8cpp_a2417aec252cc56e580638e95af35d9c9}{displayMeshVec2Mat}}(\textcolor{keyword}{const}\ std::vector<T>\&\ MeshVec,\ \textcolor{keywordtype}{int}\ cols,\ \textcolor{keywordtype}{int}\ rows);}
+\DoxyCodeLine{\textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{verification__utils_8cpp_a428ccedc4df674620f88f9130688d0e1}{displayMeshVec2MatT}}(\textcolor{keyword}{const}\ std::vector<T>\&\ MeshVec,\ \textcolor{keywordtype}{int}\ cols,\ \textcolor{keywordtype}{int}\ rows);}
+\DoxyCodeLine{\textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{verification__utils_8cpp_a930c38ca7a2fd7ef8838700cabd9d1e3}{displayMeshVec2MatTwist}}(\textcolor{keyword}{const}\ std::vector<T>\&\ MeshVec,\ \textcolor{keywordtype}{int}\ cols,\ \textcolor{keywordtype}{int}\ rows);}
+\DoxyCodeLine{\textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{verification__utils_8cpp_a7ecb6084643fd3ba90160b32b8a29202}{displayMeshVec2MatTwistT}}(\textcolor{keyword}{const}\ std::vector<T>\&\ MeshVec,\ \textcolor{keywordtype}{int}\ cols,\ \textcolor{keywordtype}{int}\ rows);}
+\DoxyCodeLine{}
+\DoxyCodeLine{cv::Mat\ \mbox{\hyperlink{verification__utils_8cpp_a57aaa35703f2361b2382687200a50108}{createImageWithColorbar}}(\textcolor{keyword}{const}\ cv::Mat\&\ image);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{void}\ \mbox{\hyperlink{verification__utils_8cpp_a57c89691cc7178bab8178e2e3a0b958b}{printVectorStats}}(\textcolor{keyword}{const}\ std::vector<double>\&\ vec);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{void}\ \mbox{\hyperlink{verification__utils_8cpp_a346669b1a6d10d55f322a54c729cc6d6}{printMatrixStats}}(\textcolor{keyword}{const}\ Eigen::MatrixXd\&\ matrix);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define\ PRINTARRAY(var)\ \{\ std::cout\ <<\ \#var\ <<\ "{}:\ "{}\ <<\ std::endl;\ \(\backslash\)}}
+\DoxyCodeLine{\textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ for\ (const\ auto\&\ elem\ :\ var)\ \{\ \(\backslash\)}}
+\DoxyCodeLine{\textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ elem\ <<\ "{}\ "{};\ \(\backslash\)}}
+\DoxyCodeLine{\textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \(\backslash\)}}
+\DoxyCodeLine{\textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ std::endl;\ \(\backslash\)}}
+\DoxyCodeLine{\textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define\ PRINTSCALAR(var)\ std::cout\ <<\ \#var\ <<\ "{}:\ "{}\ <<\ var\ <<\ std::endl;}}
+
+\end{DoxyCodeInclude}
+ 

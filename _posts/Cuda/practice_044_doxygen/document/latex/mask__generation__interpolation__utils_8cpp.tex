@@ -1,0 +1,360 @@
+\doxysection{inverse\+Scan\+Convert/mask\+\_\+generation\+\_\+interpolation\+\_\+utils.cpp File Reference}
+\hypertarget{mask__generation__interpolation__utils_8cpp}{}\label{mask__generation__interpolation__utils_8cpp}\index{inverseScanConvert/mask\_generation\_interpolation\_utils.cpp@{inverseScanConvert/mask\_generation\_interpolation\_utils.cpp}}
+{\ttfamily \#include "{}mask\+\_\+generation\+\_\+interpolation\+\_\+utils.\+h"{}}\newline
+Include dependency graph for mask\+\_\+generation\+\_\+interpolation\+\_\+utils.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mask__generation__interpolation__utils_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#\mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{define}} \mbox{\hyperlink{mask__generation__interpolation__utils_8cpp_a598a3330b3c21701223ee0ca14316eca}{PI}}~3.\+14159265358979323846
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$\mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{typename}} \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{T}} $>$ }\\\mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{std\+::vector}}$<$ \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{T}} $>$ \mbox{\hyperlink{mask__generation__interpolation__utils_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{arange}} (\mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{T}} start, \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{T}} end, \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{T}} \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{step}})
+\item 
+{\footnotesize template$<$\mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{typename}} \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{T}} $>$ }\\\mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{std\+::vector}}$<$ \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{T}} $>$ \mbox{\hyperlink{mask__generation__interpolation__utils_8cpp_acb6c9a4be4f2ead5ba224e2312f6f52f}{linspace}} (\mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{T}} start, \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{T}} end, \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{int}} \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{num}}, \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{bool}} \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{endpoint}})
+\item 
+\mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{std\+::pair}}$<$ \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{Eigen\+::\+Matrix\+Xd}}, \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{Eigen\+::\+Matrix\+Xd}} $>$ \mbox{\hyperlink{mask__generation__interpolation__utils_8cpp_af2080d680f92a83b497ec19f2c7fe5ab}{meshgrid}} (\mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{const}} \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{std\+::vector}}$<$ \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{double}} $>$ \&\mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{vector1}}, \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{const}} \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{std\+::vector}}$<$ \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{double}} $>$ \&\mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{vector2}})
+\item 
+\mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{double}} \mbox{\hyperlink{mask__generation__interpolation__utils_8cpp_a99d073ec7a02f0bce53ed3f18671ce2c}{calculate\+Index\+Wise\+Position}} (\mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{const}} \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{std\+::vector}}$<$ \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{double}} $>$ \&\mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{src}}, \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{double}} \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{target}})
+\item 
+\mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{std\+::pair}}$<$ \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{std\+::vector}}$<$ \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{double}} $>$, \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{std\+::vector}}$<$ \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{double}} $>$ $>$ \mbox{\hyperlink{mask__generation__interpolation__utils_8cpp_ad04eb32fb1e182bd887be2cbd5b27d9d}{generate\+XY}} (\mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{const}} \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{std\+::vector}}$<$ \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{double}} $>$ \&\mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{src\+RangeA}}, \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{const}} \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{std\+::vector}}$<$ \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{double}} $>$ \&\mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{src\+AngleA}}, \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{double}} \mbox{\hyperlink{main_8cu_aece2afe7d2c47294d3a23175a46d7e1a}{target\+Resampling\+Unit\+Length}})
+\item 
+\mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{Eigen\+::\+Matrix\+Xd}} \mbox{\hyperlink{mask__generation__interpolation__utils_8cpp_a780e47a0f150c3cfaf936c3d3d5233be}{generate\+Index\+Wise\+Mesh}} (\mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{const}} \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{Eigen\+::\+Matrix\+Xd}} \&\mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{target\+Mesh}}, \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{const}} \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{std\+::vector}}$<$ \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{double}} $>$ \&\mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{source\+Array}})
+\item 
+\mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{Eigen\+::\+Matrix\+Xd}} \mbox{\hyperlink{mask__generation__interpolation__utils_8cpp_a64c5336dbbcaba42dacb281cfeb34e1b}{generate\+Mask\+Mesh}} (\mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{const}} \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{Eigen\+::\+Matrix\+Xd}} \&\mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{dst\+Index\+Wise\+Range\+Mesh}}, \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{const}} \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{Eigen\+::\+Matrix\+Xd}} \&\mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{dst\+Index\+Wise\+Angle\+Mesh}}, \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{const}} \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{Eigen\+::\+Matrix\+Xd}} \&\mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{dicom\+Stencil\+Mask}})
+\item 
+\mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{Eigen\+::\+Matrix\+Xd}} \mbox{\hyperlink{mask__generation__interpolation__utils_8cpp_a94f9f1b1747bcd900b3b051283408173}{generate\+Stencil\+Mask}} (\mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{int}} \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{height}}, \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{int}} \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{width}}, \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{double}} \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{max\+Cut}})
+\item 
+\mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{std\+::vector}}$<$ \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{double}} $>$ \mbox{\hyperlink{mask__generation__interpolation__utils_8cpp_a4edf638d9089b9e37dd3dc2736d6feff}{generate\+Stencil\+Mask\+Vec}} (\mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{int}} \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{height}}, \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{int}} \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{width}}, \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{double}} \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{max\+Cut}})
+\item 
+\mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{std\+::vector}}$<$ \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{unsigned}} \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{char}} $>$ \mbox{\hyperlink{mask__generation__interpolation__utils_8cpp_a98e18d81433acf46a50a574e99c00936}{generate\+Stencil\+Mask\+Vec\+Twist}} (\mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{int}} \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{width}}, \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{int}} \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{height}}, \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{double}} \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{max\+Cut}})
+\item 
+\mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{Eigen\+::\+Matrix\+Xd}} \mbox{\hyperlink{mask__generation__interpolation__utils_8cpp_a5b38bcf3fcb930efcc14895c73c89892}{bilinear\+Interp\+Index\+Wise\+Mesh}} (\mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{const}} \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{Eigen\+::\+Matrix\+Xd}} \&\mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{dst\+Index\+Wise\+Range\+Mesh}}, \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{const}} \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{Eigen\+::\+Matrix\+Xd}} \&\mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{dst\+Index\+Wise\+Angle\+Mesh}}, \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{const}} \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{Eigen\+::\+Matrix\+Xd}} \&\mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{dst\+Mask\+Mesh}}, \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{const}} \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{Eigen\+::\+Matrix\+Xd}} \&\mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{stencil\+Dicom\+Single\+Frame}})
+\item 
+\mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{Eigen\+::\+Matrix\+Xd}} \mbox{\hyperlink{mask__generation__interpolation__utils_8cpp_a0b6bc55fb5249c758aa7822a34d01927}{convert\+Dicom\+Volume\+Vec\+To\+Matrix}} (\mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{const}} \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{std\+::vector}}$<$ \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{unsigned}} \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{char}} $>$ \&\mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{image}}, \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{int}} \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{frame}}, \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{int}} \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{rows}}, \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{int}} \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{columns}})
+\item 
+\mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{std\+::vector}}$<$ \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{unsigned}} \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{char}} $>$ \mbox{\hyperlink{mask__generation__interpolation__utils_8cpp_a33bfc5fd4ef604ad02c2f6d77e19dff1}{flip\+Volume\+Vector}} (\mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{std\+::vector}}$<$ \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{unsigned}} \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{char}} $>$ \&\mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{image\+Volume}}, \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{int}} \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{rows}}, \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{int}} \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{columns}}, \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{int}} \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{frames}}, \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{bool}} \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{flip\+Mode}})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{mask__generation__interpolation__utils_8cpp_a598a3330b3c21701223ee0ca14316eca}\label{mask__generation__interpolation__utils_8cpp_a598a3330b3c21701223ee0ca14316eca} 
+\index{mask\_generation\_interpolation\_utils.cpp@{mask\_generation\_interpolation\_utils.cpp}!PI@{PI}}
+\index{PI@{PI}!mask\_generation\_interpolation\_utils.cpp@{mask\_generation\_interpolation\_utils.cpp}}
+\doxysubsubsection{\texorpdfstring{PI}{PI}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{define}} PI~3.\+14159265358979323846}
+
+
+
+Definition at line \mbox{\hyperlink{mask__generation__interpolation__utils_8cpp_source_l00004}{4}} of file \mbox{\hyperlink{mask__generation__interpolation__utils_8cpp_source}{mask\+\_\+generation\+\_\+interpolation\+\_\+utils.\+cpp}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{mask__generation__interpolation__utils_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}\label{mask__generation__interpolation__utils_8cpp_a549e407a8c13ac96b74fbe2022dd13cb} 
+\index{mask\_generation\_interpolation\_utils.cpp@{mask\_generation\_interpolation\_utils.cpp}!arange@{arange}}
+\index{arange@{arange}!mask\_generation\_interpolation\_utils.cpp@{mask\_generation\_interpolation\_utils.cpp}}
+\doxysubsubsection{\texorpdfstring{arange()}{arange()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{typename}} \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{T}} $>$ \\
+\mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{std\+::vector}}$<$ \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{T}} $>$ arange (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{T}}}]{start,  }\item[{\mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{T}}}]{end,  }\item[{\mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{T}}}]{step }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mask__generation__interpolation__utils_8cpp_source_l00007}{7}} of file \mbox{\hyperlink{mask__generation__interpolation__utils_8cpp_source}{mask\+\_\+generation\+\_\+interpolation\+\_\+utils.\+cpp}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=316pt]{mask__generation__interpolation__utils_8cpp_a549e407a8c13ac96b74fbe2022dd13cb_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=125pt]{mask__generation__interpolation__utils_8cpp_a549e407a8c13ac96b74fbe2022dd13cb_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mask__generation__interpolation__utils_8cpp_a5b38bcf3fcb930efcc14895c73c89892}\label{mask__generation__interpolation__utils_8cpp_a5b38bcf3fcb930efcc14895c73c89892} 
+\index{mask\_generation\_interpolation\_utils.cpp@{mask\_generation\_interpolation\_utils.cpp}!bilinearInterpIndexWiseMesh@{bilinearInterpIndexWiseMesh}}
+\index{bilinearInterpIndexWiseMesh@{bilinearInterpIndexWiseMesh}!mask\_generation\_interpolation\_utils.cpp@{mask\_generation\_interpolation\_utils.cpp}}
+\doxysubsubsection{\texorpdfstring{bilinearInterpIndexWiseMesh()}{bilinearInterpIndexWiseMesh()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{Eigen\+::\+Matrix\+Xd}} bilinear\+Interp\+Index\+Wise\+Mesh (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{const}} \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{Eigen\+::\+Matrix\+Xd}} \&}]{dst\+Index\+Wise\+Range\+Mesh,  }\item[{\mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{const}} \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{Eigen\+::\+Matrix\+Xd}} \&}]{dst\+Index\+Wise\+Angle\+Mesh,  }\item[{\mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{const}} \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{Eigen\+::\+Matrix\+Xd}} \&}]{dst\+Mask\+Mesh,  }\item[{\mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{const}} \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{Eigen\+::\+Matrix\+Xd}} \&}]{stencil\+Dicom\+Single\+Frame }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mask__generation__interpolation__utils_8cpp_source_l00187}{187}} of file \mbox{\hyperlink{mask__generation__interpolation__utils_8cpp_source}{mask\+\_\+generation\+\_\+interpolation\+\_\+utils.\+cpp}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mask__generation__interpolation__utils_8cpp_a5b38bcf3fcb930efcc14895c73c89892_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mask__generation__interpolation__utils_8cpp_a5b38bcf3fcb930efcc14895c73c89892_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mask__generation__interpolation__utils_8cpp_a99d073ec7a02f0bce53ed3f18671ce2c}\label{mask__generation__interpolation__utils_8cpp_a99d073ec7a02f0bce53ed3f18671ce2c} 
+\index{mask\_generation\_interpolation\_utils.cpp@{mask\_generation\_interpolation\_utils.cpp}!calculateIndexWisePosition@{calculateIndexWisePosition}}
+\index{calculateIndexWisePosition@{calculateIndexWisePosition}!mask\_generation\_interpolation\_utils.cpp@{mask\_generation\_interpolation\_utils.cpp}}
+\doxysubsubsection{\texorpdfstring{calculateIndexWisePosition()}{calculateIndexWisePosition()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{double}} calculate\+Index\+Wise\+Position (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{const}} \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{std\+::vector}}$<$ \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{double}} $>$ \&}]{src,  }\item[{\mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{double}}}]{target }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mask__generation__interpolation__utils_8cpp_source_l00045}{45}} of file \mbox{\hyperlink{mask__generation__interpolation__utils_8cpp_source}{mask\+\_\+generation\+\_\+interpolation\+\_\+utils.\+cpp}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mask__generation__interpolation__utils_8cpp_a99d073ec7a02f0bce53ed3f18671ce2c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mask__generation__interpolation__utils_8cpp_a99d073ec7a02f0bce53ed3f18671ce2c_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mask__generation__interpolation__utils_8cpp_a0b6bc55fb5249c758aa7822a34d01927}\label{mask__generation__interpolation__utils_8cpp_a0b6bc55fb5249c758aa7822a34d01927} 
+\index{mask\_generation\_interpolation\_utils.cpp@{mask\_generation\_interpolation\_utils.cpp}!convertDicomVolumeVecToMatrix@{convertDicomVolumeVecToMatrix}}
+\index{convertDicomVolumeVecToMatrix@{convertDicomVolumeVecToMatrix}!mask\_generation\_interpolation\_utils.cpp@{mask\_generation\_interpolation\_utils.cpp}}
+\doxysubsubsection{\texorpdfstring{convertDicomVolumeVecToMatrix()}{convertDicomVolumeVecToMatrix()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{Eigen\+::\+Matrix\+Xd}} convert\+Dicom\+Volume\+Vec\+To\+Matrix (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{const}} \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{std\+::vector}}$<$ \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{unsigned}} \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{char}} $>$ \&}]{image,  }\item[{\mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{int}}}]{frame,  }\item[{\mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{int}}}]{rows,  }\item[{\mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{int}}}]{columns }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mask__generation__interpolation__utils_8cpp_source_l00234}{234}} of file \mbox{\hyperlink{mask__generation__interpolation__utils_8cpp_source}{mask\+\_\+generation\+\_\+interpolation\+\_\+utils.\+cpp}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mask__generation__interpolation__utils_8cpp_a0b6bc55fb5249c758aa7822a34d01927_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=315pt]{mask__generation__interpolation__utils_8cpp_a0b6bc55fb5249c758aa7822a34d01927_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mask__generation__interpolation__utils_8cpp_a33bfc5fd4ef604ad02c2f6d77e19dff1}\label{mask__generation__interpolation__utils_8cpp_a33bfc5fd4ef604ad02c2f6d77e19dff1} 
+\index{mask\_generation\_interpolation\_utils.cpp@{mask\_generation\_interpolation\_utils.cpp}!flipVolumeVector@{flipVolumeVector}}
+\index{flipVolumeVector@{flipVolumeVector}!mask\_generation\_interpolation\_utils.cpp@{mask\_generation\_interpolation\_utils.cpp}}
+\doxysubsubsection{\texorpdfstring{flipVolumeVector()}{flipVolumeVector()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{std\+::vector}}$<$ \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{unsigned}} \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{char}} $>$ flip\+Volume\+Vector (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{std\+::vector}}$<$ \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{unsigned}} \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{char}} $>$ \&}]{image\+Volume,  }\item[{\mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{int}}}]{rows,  }\item[{\mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{int}}}]{columns,  }\item[{\mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{int}}}]{frames,  }\item[{\mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{bool}}}]{flip\+Mode }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mask__generation__interpolation__utils_8cpp_source_l00248}{248}} of file \mbox{\hyperlink{mask__generation__interpolation__utils_8cpp_source}{mask\+\_\+generation\+\_\+interpolation\+\_\+utils.\+cpp}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mask__generation__interpolation__utils_8cpp_a33bfc5fd4ef604ad02c2f6d77e19dff1_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=243pt]{mask__generation__interpolation__utils_8cpp_a33bfc5fd4ef604ad02c2f6d77e19dff1_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mask__generation__interpolation__utils_8cpp_a780e47a0f150c3cfaf936c3d3d5233be}\label{mask__generation__interpolation__utils_8cpp_a780e47a0f150c3cfaf936c3d3d5233be} 
+\index{mask\_generation\_interpolation\_utils.cpp@{mask\_generation\_interpolation\_utils.cpp}!generateIndexWiseMesh@{generateIndexWiseMesh}}
+\index{generateIndexWiseMesh@{generateIndexWiseMesh}!mask\_generation\_interpolation\_utils.cpp@{mask\_generation\_interpolation\_utils.cpp}}
+\doxysubsubsection{\texorpdfstring{generateIndexWiseMesh()}{generateIndexWiseMesh()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{Eigen\+::\+Matrix\+Xd}} generate\+Index\+Wise\+Mesh (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{const}} \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{Eigen\+::\+Matrix\+Xd}} \&}]{target\+Mesh,  }\item[{\mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{const}} \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{std\+::vector}}$<$ \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{double}} $>$ \&}]{source\+Array }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mask__generation__interpolation__utils_8cpp_source_l00082}{82}} of file \mbox{\hyperlink{mask__generation__interpolation__utils_8cpp_source}{mask\+\_\+generation\+\_\+interpolation\+\_\+utils.\+cpp}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mask__generation__interpolation__utils_8cpp_a780e47a0f150c3cfaf936c3d3d5233be_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=276pt]{mask__generation__interpolation__utils_8cpp_a780e47a0f150c3cfaf936c3d3d5233be_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mask__generation__interpolation__utils_8cpp_a64c5336dbbcaba42dacb281cfeb34e1b}\label{mask__generation__interpolation__utils_8cpp_a64c5336dbbcaba42dacb281cfeb34e1b} 
+\index{mask\_generation\_interpolation\_utils.cpp@{mask\_generation\_interpolation\_utils.cpp}!generateMaskMesh@{generateMaskMesh}}
+\index{generateMaskMesh@{generateMaskMesh}!mask\_generation\_interpolation\_utils.cpp@{mask\_generation\_interpolation\_utils.cpp}}
+\doxysubsubsection{\texorpdfstring{generateMaskMesh()}{generateMaskMesh()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{Eigen\+::\+Matrix\+Xd}} generate\+Mask\+Mesh (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{const}} \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{Eigen\+::\+Matrix\+Xd}} \&}]{dst\+Index\+Wise\+Range\+Mesh,  }\item[{\mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{const}} \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{Eigen\+::\+Matrix\+Xd}} \&}]{dst\+Index\+Wise\+Angle\+Mesh,  }\item[{\mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{const}} \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{Eigen\+::\+Matrix\+Xd}} \&}]{dicom\+Stencil\+Mask }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mask__generation__interpolation__utils_8cpp_source_l00098}{98}} of file \mbox{\hyperlink{mask__generation__interpolation__utils_8cpp_source}{mask\+\_\+generation\+\_\+interpolation\+\_\+utils.\+cpp}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mask__generation__interpolation__utils_8cpp_a64c5336dbbcaba42dacb281cfeb34e1b_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=255pt]{mask__generation__interpolation__utils_8cpp_a64c5336dbbcaba42dacb281cfeb34e1b_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mask__generation__interpolation__utils_8cpp_a94f9f1b1747bcd900b3b051283408173}\label{mask__generation__interpolation__utils_8cpp_a94f9f1b1747bcd900b3b051283408173} 
+\index{mask\_generation\_interpolation\_utils.cpp@{mask\_generation\_interpolation\_utils.cpp}!generateStencilMask@{generateStencilMask}}
+\index{generateStencilMask@{generateStencilMask}!mask\_generation\_interpolation\_utils.cpp@{mask\_generation\_interpolation\_utils.cpp}}
+\doxysubsubsection{\texorpdfstring{generateStencilMask()}{generateStencilMask()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{Eigen\+::\+Matrix\+Xd}} generate\+Stencil\+Mask (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{int}}}]{height,  }\item[{\mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{int}}}]{width,  }\item[{\mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{double}}}]{max\+Cut }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mask__generation__interpolation__utils_8cpp_source_l00129}{129}} of file \mbox{\hyperlink{mask__generation__interpolation__utils_8cpp_source}{mask\+\_\+generation\+\_\+interpolation\+\_\+utils.\+cpp}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mask__generation__interpolation__utils_8cpp_a94f9f1b1747bcd900b3b051283408173_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=261pt]{mask__generation__interpolation__utils_8cpp_a94f9f1b1747bcd900b3b051283408173_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mask__generation__interpolation__utils_8cpp_a4edf638d9089b9e37dd3dc2736d6feff}\label{mask__generation__interpolation__utils_8cpp_a4edf638d9089b9e37dd3dc2736d6feff} 
+\index{mask\_generation\_interpolation\_utils.cpp@{mask\_generation\_interpolation\_utils.cpp}!generateStencilMaskVec@{generateStencilMaskVec}}
+\index{generateStencilMaskVec@{generateStencilMaskVec}!mask\_generation\_interpolation\_utils.cpp@{mask\_generation\_interpolation\_utils.cpp}}
+\doxysubsubsection{\texorpdfstring{generateStencilMaskVec()}{generateStencilMaskVec()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{std\+::vector}}$<$ \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{double}} $>$ generate\+Stencil\+Mask\+Vec (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{int}}}]{height,  }\item[{\mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{int}}}]{width,  }\item[{\mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{double}}}]{max\+Cut }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mask__generation__interpolation__utils_8cpp_source_l00147}{147}} of file \mbox{\hyperlink{mask__generation__interpolation__utils_8cpp_source}{mask\+\_\+generation\+\_\+interpolation\+\_\+utils.\+cpp}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mask__generation__interpolation__utils_8cpp_a4edf638d9089b9e37dd3dc2736d6feff_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mask__generation__interpolation__utils_8cpp_a98e18d81433acf46a50a574e99c00936}\label{mask__generation__interpolation__utils_8cpp_a98e18d81433acf46a50a574e99c00936} 
+\index{mask\_generation\_interpolation\_utils.cpp@{mask\_generation\_interpolation\_utils.cpp}!generateStencilMaskVecTwist@{generateStencilMaskVecTwist}}
+\index{generateStencilMaskVecTwist@{generateStencilMaskVecTwist}!mask\_generation\_interpolation\_utils.cpp@{mask\_generation\_interpolation\_utils.cpp}}
+\doxysubsubsection{\texorpdfstring{generateStencilMaskVecTwist()}{generateStencilMaskVecTwist()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{std\+::vector}}$<$ \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{unsigned}} \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{char}} $>$ generate\+Stencil\+Mask\+Vec\+Twist (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{int}}}]{width,  }\item[{\mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{int}}}]{height,  }\item[{\mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{double}}}]{max\+Cut }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mask__generation__interpolation__utils_8cpp_source_l00167}{167}} of file \mbox{\hyperlink{mask__generation__interpolation__utils_8cpp_source}{mask\+\_\+generation\+\_\+interpolation\+\_\+utils.\+cpp}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mask__generation__interpolation__utils_8cpp_a98e18d81433acf46a50a574e99c00936_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=300pt]{mask__generation__interpolation__utils_8cpp_a98e18d81433acf46a50a574e99c00936_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mask__generation__interpolation__utils_8cpp_ad04eb32fb1e182bd887be2cbd5b27d9d}\label{mask__generation__interpolation__utils_8cpp_ad04eb32fb1e182bd887be2cbd5b27d9d} 
+\index{mask\_generation\_interpolation\_utils.cpp@{mask\_generation\_interpolation\_utils.cpp}!generateXY@{generateXY}}
+\index{generateXY@{generateXY}!mask\_generation\_interpolation\_utils.cpp@{mask\_generation\_interpolation\_utils.cpp}}
+\doxysubsubsection{\texorpdfstring{generateXY()}{generateXY()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{std\+::pair}}$<$ \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{std\+::vector}}$<$ \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{double}} $>$, \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{std\+::vector}}$<$ \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{double}} $>$ $>$ generate\+XY (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{const}} \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{std\+::vector}}$<$ \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{double}} $>$ \&}]{src\+RangeA,  }\item[{\mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{const}} \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{std\+::vector}}$<$ \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{double}} $>$ \&}]{src\+AngleA,  }\item[{\mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{double}}}]{target\+Resampling\+Unit\+Length }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mask__generation__interpolation__utils_8cpp_source_l00067}{67}} of file \mbox{\hyperlink{mask__generation__interpolation__utils_8cpp_source}{mask\+\_\+generation\+\_\+interpolation\+\_\+utils.\+cpp}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=333pt]{mask__generation__interpolation__utils_8cpp_ad04eb32fb1e182bd887be2cbd5b27d9d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=219pt]{mask__generation__interpolation__utils_8cpp_ad04eb32fb1e182bd887be2cbd5b27d9d_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mask__generation__interpolation__utils_8cpp_acb6c9a4be4f2ead5ba224e2312f6f52f}\label{mask__generation__interpolation__utils_8cpp_acb6c9a4be4f2ead5ba224e2312f6f52f} 
+\index{mask\_generation\_interpolation\_utils.cpp@{mask\_generation\_interpolation\_utils.cpp}!linspace@{linspace}}
+\index{linspace@{linspace}!mask\_generation\_interpolation\_utils.cpp@{mask\_generation\_interpolation\_utils.cpp}}
+\doxysubsubsection{\texorpdfstring{linspace()}{linspace()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{typename}} \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{T}} $>$ \\
+\mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{std\+::vector}}$<$ \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{T}} $>$ linspace (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{T}}}]{start,  }\item[{\mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{T}}}]{end,  }\item[{\mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{int}}}]{num,  }\item[{\mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{bool}}}]{endpoint }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mask__generation__interpolation__utils_8cpp_source_l00019}{19}} of file \mbox{\hyperlink{mask__generation__interpolation__utils_8cpp_source}{mask\+\_\+generation\+\_\+interpolation\+\_\+utils.\+cpp}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=320pt]{mask__generation__interpolation__utils_8cpp_acb6c9a4be4f2ead5ba224e2312f6f52f_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{mask__generation__interpolation__utils_8cpp_af2080d680f92a83b497ec19f2c7fe5ab}\label{mask__generation__interpolation__utils_8cpp_af2080d680f92a83b497ec19f2c7fe5ab} 
+\index{mask\_generation\_interpolation\_utils.cpp@{mask\_generation\_interpolation\_utils.cpp}!meshgrid@{meshgrid}}
+\index{meshgrid@{meshgrid}!mask\_generation\_interpolation\_utils.cpp@{mask\_generation\_interpolation\_utils.cpp}}
+\doxysubsubsection{\texorpdfstring{meshgrid()}{meshgrid()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{std\+::pair}}$<$ \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{Eigen\+::\+Matrix\+Xd}}, \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{Eigen\+::\+Matrix\+Xd}} $>$ meshgrid (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{const}} \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{std\+::vector}}$<$ \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{double}} $>$ \&}]{vector1,  }\item[{\mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{const}} \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{std\+::vector}}$<$ \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_aaf6897c58c280ff8d4a11aa07ae9189b}{double}} $>$ \&}]{vector2 }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mask__generation__interpolation__utils_8cpp_source_l00030}{30}} of file \mbox{\hyperlink{mask__generation__interpolation__utils_8cpp_source}{mask\+\_\+generation\+\_\+interpolation\+\_\+utils.\+cpp}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=324pt]{mask__generation__interpolation__utils_8cpp_af2080d680f92a83b497ec19f2c7fe5ab_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=209pt]{mask__generation__interpolation__utils_8cpp_af2080d680f92a83b497ec19f2c7fe5ab_icgraph}
+\end{center}
+\end{figure}

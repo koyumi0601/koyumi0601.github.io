@@ -1,0 +1,6 @@
+<map id="displayEigenMatrixAsImage" name="displayEigenMatrixAsImage">
+<area shape="rect" id="Node000001" title="Display an Eigen matrix as an image." alt="" coords="5,29,188,56"/>
+<area shape="rect" id="Node000002" href="$utils_8cpp.html#acb6c9a4be4f2ead5ba224e2312f6f52f" title=" " alt="" coords="236,29,305,56"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="188,40,220,40,220,45,188,45"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="240,30,235,21,239,11,251,5,270,3,291,5,302,12,300,16,290,10,270,8,252,10,243,15,240,20,245,28"/>
+</map>

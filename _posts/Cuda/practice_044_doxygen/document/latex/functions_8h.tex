@@ -1,0 +1,445 @@
+\doxysection{inverse\+Scan\+Convert/functions.h File Reference}
+\hypertarget{functions_8h}{}\label{functions_8h}\index{inverseScanConvert/functions.h@{inverseScanConvert/functions.h}}
+{\ttfamily \#include $<$opencv2/opencv.\+hpp$>$}\newline
+{\ttfamily \#include $<$Eigen$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+Include dependency graph for functions.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{functions_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=300pt]{functions_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ T $>$ \mbox{\hyperlink{functions_8h_a549e407a8c13ac96b74fbe2022dd13cb}{arange}} (T start, T end, T step)
+\begin{DoxyCompactList}\small\item\em Generates a range of values with a specified step size. \end{DoxyCompactList}\item 
+{\footnotesize template$<$\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{typename}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{T}} $>$ }\\\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::vector}}$<$ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{T}} $>$ \mbox{\hyperlink{functions_8h_ad5c042aa340c788fca92fabca033dd5c}{linspace}} (\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{T}} start, \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{T}} end, \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{int}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{num}}, \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{bool}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{endpoint}}=\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{true}})
+\begin{DoxyCompactList}\small\item\em Generate evenly spaced values over a specified interval using linear interpolation. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::pair}}$<$ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{Eigen\+::\+Matrix\+Xd}}, \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{Eigen\+::\+Matrix\+Xd}} $>$ \mbox{\hyperlink{functions_8h_af2080d680f92a83b497ec19f2c7fe5ab}{meshgrid}} (\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{const}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::vector}}$<$ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{double}} $>$ \&\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{vector1}}, \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{const}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::vector}}$<$ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{double}} $>$ \&\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{vector2}})
+\begin{DoxyCompactList}\small\item\em Generate 2D mesh grids from two vectors. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{double}} \mbox{\hyperlink{functions_8h_a99d073ec7a02f0bce53ed3f18671ce2c}{calculate\+Index\+Wise\+Position}} (\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{const}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::vector}}$<$ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{double}} $>$ \&\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{src}}, \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{double}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{target}})
+\begin{DoxyCompactList}\small\item\em Calculate the index-\/wise position of a target value in a sorted vector. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::pair}}$<$ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::vector}}$<$ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{double}} $>$, \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::vector}}$<$ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{double}} $>$ $>$ \mbox{\hyperlink{functions_8h_ad04eb32fb1e182bd887be2cbd5b27d9d}{generate\+XY}} (\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{const}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::vector}}$<$ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{double}} $>$ \&\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{src\+RangeA}}, \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{const}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::vector}}$<$ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{double}} $>$ \&\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{src\+AngleA}}, \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{double}} \mbox{\hyperlink{main_8cu_aece2afe7d2c47294d3a23175a46d7e1a}{target\+Resampling\+Unit\+Length}})
+\begin{DoxyCompactList}\small\item\em Generate X and Y vectors based on source range and angle vectors. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{Eigen\+::\+Matrix\+Xd}} \mbox{\hyperlink{functions_8h_a780e47a0f150c3cfaf936c3d3d5233be}{generate\+Index\+Wise\+Mesh}} (\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{const}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{Eigen\+::\+Matrix\+Xd}} \&\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{target\+Mesh}}, \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{const}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::vector}}$<$ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{double}} $>$ \&\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{source\+Array}})
+\item 
+\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{Eigen\+::\+Matrix\+Xd}} \mbox{\hyperlink{functions_8h_a64c5336dbbcaba42dacb281cfeb34e1b}{generate\+Mask\+Mesh}} (\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{const}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{Eigen\+::\+Matrix\+Xd}} \&\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{dst\+Index\+Wise\+Range\+Mesh}}, \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{const}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{Eigen\+::\+Matrix\+Xd}} \&\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{dst\+Index\+Wise\+Angle\+Mesh}}, \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{const}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{Eigen\+::\+Matrix\+Xd}} \&\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{dicom\+Stencil\+Mask}})
+\item 
+\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{Eigen\+::\+Matrix\+Xd}} \mbox{\hyperlink{functions_8h_a94f9f1b1747bcd900b3b051283408173}{generate\+Stencil\+Mask}} (\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{int}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{height}}, \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{int}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{width}}, \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{double}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{max\+Cut}})
+\item 
+\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::vector}}$<$ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{double}} $>$ \mbox{\hyperlink{functions_8h_a4edf638d9089b9e37dd3dc2736d6feff}{generate\+Stencil\+Mask\+Vec}} (\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{int}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{height}}, \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{int}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{width}}, \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{double}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{max\+Cut}})
+\item 
+\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::vector}}$<$ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{unsigned}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{char}} $>$ \mbox{\hyperlink{functions_8h_a5943734704aaa6d99232fb4593522346}{generate\+Stencil\+Mask\+Vec\+Twist}} (\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{int}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{height}}, \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{int}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{width}}, \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{double}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{max\+Cut}})
+\item 
+\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{Eigen\+::\+Matrix\+Xd}} \mbox{\hyperlink{functions_8h_abd00b11657f8a4516d28d92e2bdce46e}{bilinear\+Interp\+Index\+Wise\+Mesh}} (\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{const}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{Eigen\+::\+Matrix\+Xd}} \&\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{dst\+Range\+Index\+Wise\+Mesh}}, \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{const}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{Eigen\+::\+Matrix\+Xd}} \&\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{dst\+Angle\+Index\+Wise\+Mesh}}, \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{const}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{Eigen\+::\+Matrix\+Xd}} \&\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{mask\+Mesh}}, \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{const}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{Eigen\+::\+Matrix\+Xd}} \&\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{stencil\+Dicom\+Single\+Frame}})
+\item 
+\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{Eigen\+::\+Matrix\+Xd}} \mbox{\hyperlink{functions_8h_a0b6bc55fb5249c758aa7822a34d01927}{convert\+Dicom\+Volume\+Vec\+To\+Matrix}} (\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{const}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::vector}}$<$ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{unsigned}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{char}} $>$ \&\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{image}}, \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{int}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{frame}}, \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{int}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{rows}}, \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{int}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{columns}})
+\item 
+\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::vector}}$<$ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{unsigned}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{char}} $>$ \mbox{\hyperlink{functions_8h_a33bfc5fd4ef604ad02c2f6d77e19dff1}{flip\+Volume\+Vector}} (\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::vector}}$<$ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{unsigned}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{char}} $>$ \&\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{image\+Volume}}, \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{int}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{rows}}, \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{int}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{columns}}, \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{int}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{frames}}, \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{bool}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{flip\+Mode}})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{functions_8h_a549e407a8c13ac96b74fbe2022dd13cb}\label{functions_8h_a549e407a8c13ac96b74fbe2022dd13cb} 
+\index{functions.h@{functions.h}!arange@{arange}}
+\index{arange@{arange}!functions.h@{functions.h}}
+\doxysubsubsection{\texorpdfstring{arange()}{arange()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::vector$<$ T $>$ arange (\begin{DoxyParamCaption}\item[{T}]{start,  }\item[{T}]{end,  }\item[{T}]{step }\end{DoxyParamCaption})}
+
+
+
+Generates a range of values with a specified step size. 
+
+This template function generates a range of values starting from \textquotesingle{}start\textquotesingle{} to \textquotesingle{}end\textquotesingle{} (inclusive), with a specified step size.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Data type of the range values. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em start} & Starting value of the range. \\
+\hline
+{\em end} & Ending value of the range. \\
+\hline
+{\em step} & Step size between consecutive values. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A vector containing the generated range of values. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{functions_8cpp_source_l00018}{18}} of file \mbox{\hyperlink{functions_8cpp_source}{functions.\+cpp}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=125pt]{functions_8h_a549e407a8c13ac96b74fbe2022dd13cb_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{functions_8h_a549e407a8c13ac96b74fbe2022dd13cb_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{functions_8h_abd00b11657f8a4516d28d92e2bdce46e}\label{functions_8h_abd00b11657f8a4516d28d92e2bdce46e} 
+\index{functions.h@{functions.h}!bilinearInterpIndexWiseMesh@{bilinearInterpIndexWiseMesh}}
+\index{bilinearInterpIndexWiseMesh@{bilinearInterpIndexWiseMesh}!functions.h@{functions.h}}
+\doxysubsubsection{\texorpdfstring{bilinearInterpIndexWiseMesh()}{bilinearInterpIndexWiseMesh()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{Eigen\+::\+Matrix\+Xd}} bilinear\+Interp\+Index\+Wise\+Mesh (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{const}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{Eigen\+::\+Matrix\+Xd}} \&}]{dst\+Range\+Index\+Wise\+Mesh,  }\item[{\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{const}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{Eigen\+::\+Matrix\+Xd}} \&}]{dst\+Angle\+Index\+Wise\+Mesh,  }\item[{\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{const}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{Eigen\+::\+Matrix\+Xd}} \&}]{mask\+Mesh,  }\item[{\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{const}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{Eigen\+::\+Matrix\+Xd}} \&}]{stencil\+Dicom\+Single\+Frame }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{functions_8cpp_source_l00239}{239}} of file \mbox{\hyperlink{functions_8cpp_source}{functions.\+cpp}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=302pt]{functions_8h_abd00b11657f8a4516d28d92e2bdce46e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{functions_8h_abd00b11657f8a4516d28d92e2bdce46e_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{functions_8h_a99d073ec7a02f0bce53ed3f18671ce2c}\label{functions_8h_a99d073ec7a02f0bce53ed3f18671ce2c} 
+\index{functions.h@{functions.h}!calculateIndexWisePosition@{calculateIndexWisePosition}}
+\index{calculateIndexWisePosition@{calculateIndexWisePosition}!functions.h@{functions.h}}
+\doxysubsubsection{\texorpdfstring{calculateIndexWisePosition()}{calculateIndexWisePosition()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{double}} calculate\+Index\+Wise\+Position (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{const}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::vector}}$<$ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{double}} $>$ \&}]{src,  }\item[{\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{double}}}]{target }\end{DoxyParamCaption})}
+
+
+
+Calculate the index-\/wise position of a target value in a sorted vector. 
+
+This function calculates the index-\/wise position of a target value in a sorted vector.
+
+
+\begin{DoxyParams}{Parameters}
+{\em src} & The sorted vector. \\
+\hline
+{\em target} & The target value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The index-\/wise position of the target value. Returns -\/1 if the vector is empty or the target value is out of range. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{functions_8cpp_source_l00086}{86}} of file \mbox{\hyperlink{functions_8cpp_source}{functions.\+cpp}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{functions_8h_a99d073ec7a02f0bce53ed3f18671ce2c_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{functions_8h_a0b6bc55fb5249c758aa7822a34d01927}\label{functions_8h_a0b6bc55fb5249c758aa7822a34d01927} 
+\index{functions.h@{functions.h}!convertDicomVolumeVecToMatrix@{convertDicomVolumeVecToMatrix}}
+\index{convertDicomVolumeVecToMatrix@{convertDicomVolumeVecToMatrix}!functions.h@{functions.h}}
+\doxysubsubsection{\texorpdfstring{convertDicomVolumeVecToMatrix()}{convertDicomVolumeVecToMatrix()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{Eigen\+::\+Matrix\+Xd}} convert\+Dicom\+Volume\+Vec\+To\+Matrix (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{const}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::vector}}$<$ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{unsigned}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{char}} $>$ \&}]{image,  }\item[{\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{int}}}]{frame,  }\item[{\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{int}}}]{rows,  }\item[{\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{int}}}]{columns }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{functions_8cpp_source_l00286}{286}} of file \mbox{\hyperlink{functions_8cpp_source}{functions.\+cpp}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=326pt]{functions_8h_a0b6bc55fb5249c758aa7822a34d01927_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=315pt]{functions_8h_a0b6bc55fb5249c758aa7822a34d01927_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{functions_8h_a33bfc5fd4ef604ad02c2f6d77e19dff1}\label{functions_8h_a33bfc5fd4ef604ad02c2f6d77e19dff1} 
+\index{functions.h@{functions.h}!flipVolumeVector@{flipVolumeVector}}
+\index{flipVolumeVector@{flipVolumeVector}!functions.h@{functions.h}}
+\doxysubsubsection{\texorpdfstring{flipVolumeVector()}{flipVolumeVector()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::vector}}$<$ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{unsigned}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{char}} $>$ flip\+Volume\+Vector (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::vector}}$<$ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{unsigned}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{char}} $>$ \&}]{image\+Volume,  }\item[{\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{int}}}]{rows,  }\item[{\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{int}}}]{columns,  }\item[{\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{int}}}]{frames,  }\item[{\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{bool}}}]{flip\+Mode }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{functions_8cpp_source_l00300}{300}} of file \mbox{\hyperlink{functions_8cpp_source}{functions.\+cpp}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=251pt]{functions_8h_a33bfc5fd4ef604ad02c2f6d77e19dff1_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=243pt]{functions_8h_a33bfc5fd4ef604ad02c2f6d77e19dff1_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{functions_8h_a780e47a0f150c3cfaf936c3d3d5233be}\label{functions_8h_a780e47a0f150c3cfaf936c3d3d5233be} 
+\index{functions.h@{functions.h}!generateIndexWiseMesh@{generateIndexWiseMesh}}
+\index{generateIndexWiseMesh@{generateIndexWiseMesh}!functions.h@{functions.h}}
+\doxysubsubsection{\texorpdfstring{generateIndexWiseMesh()}{generateIndexWiseMesh()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{Eigen\+::\+Matrix\+Xd}} generate\+Index\+Wise\+Mesh (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{const}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{Eigen\+::\+Matrix\+Xd}} \&}]{target\+Mesh,  }\item[{\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{const}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::vector}}$<$ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{double}} $>$ \&}]{source\+Array }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{functions_8cpp_source_l00134}{134}} of file \mbox{\hyperlink{functions_8cpp_source}{functions.\+cpp}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{functions_8h_a780e47a0f150c3cfaf936c3d3d5233be_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=276pt]{functions_8h_a780e47a0f150c3cfaf936c3d3d5233be_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{functions_8h_a64c5336dbbcaba42dacb281cfeb34e1b}\label{functions_8h_a64c5336dbbcaba42dacb281cfeb34e1b} 
+\index{functions.h@{functions.h}!generateMaskMesh@{generateMaskMesh}}
+\index{generateMaskMesh@{generateMaskMesh}!functions.h@{functions.h}}
+\doxysubsubsection{\texorpdfstring{generateMaskMesh()}{generateMaskMesh()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{Eigen\+::\+Matrix\+Xd}} generate\+Mask\+Mesh (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{const}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{Eigen\+::\+Matrix\+Xd}} \&}]{dst\+Index\+Wise\+Range\+Mesh,  }\item[{\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{const}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{Eigen\+::\+Matrix\+Xd}} \&}]{dst\+Index\+Wise\+Angle\+Mesh,  }\item[{\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{const}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{Eigen\+::\+Matrix\+Xd}} \&}]{dicom\+Stencil\+Mask }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{functions_8cpp_source_l00150}{150}} of file \mbox{\hyperlink{functions_8cpp_source}{functions.\+cpp}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{functions_8h_a64c5336dbbcaba42dacb281cfeb34e1b_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=255pt]{functions_8h_a64c5336dbbcaba42dacb281cfeb34e1b_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{functions_8h_a94f9f1b1747bcd900b3b051283408173}\label{functions_8h_a94f9f1b1747bcd900b3b051283408173} 
+\index{functions.h@{functions.h}!generateStencilMask@{generateStencilMask}}
+\index{generateStencilMask@{generateStencilMask}!functions.h@{functions.h}}
+\doxysubsubsection{\texorpdfstring{generateStencilMask()}{generateStencilMask()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{Eigen\+::\+Matrix\+Xd}} generate\+Stencil\+Mask (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{int}}}]{height,  }\item[{\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{int}}}]{width,  }\item[{\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{double}}}]{max\+Cut }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{functions_8cpp_source_l00181}{181}} of file \mbox{\hyperlink{functions_8cpp_source}{functions.\+cpp}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=269pt]{functions_8h_a94f9f1b1747bcd900b3b051283408173_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=261pt]{functions_8h_a94f9f1b1747bcd900b3b051283408173_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{functions_8h_a4edf638d9089b9e37dd3dc2736d6feff}\label{functions_8h_a4edf638d9089b9e37dd3dc2736d6feff} 
+\index{functions.h@{functions.h}!generateStencilMaskVec@{generateStencilMaskVec}}
+\index{generateStencilMaskVec@{generateStencilMaskVec}!functions.h@{functions.h}}
+\doxysubsubsection{\texorpdfstring{generateStencilMaskVec()}{generateStencilMaskVec()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::vector}}$<$ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{double}} $>$ generate\+Stencil\+Mask\+Vec (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{int}}}]{height,  }\item[{\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{int}}}]{width,  }\item[{\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{double}}}]{max\+Cut }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{functions_8cpp_source_l00199}{199}} of file \mbox{\hyperlink{functions_8cpp_source}{functions.\+cpp}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=286pt]{functions_8h_a4edf638d9089b9e37dd3dc2736d6feff_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{functions_8h_a5943734704aaa6d99232fb4593522346}\label{functions_8h_a5943734704aaa6d99232fb4593522346} 
+\index{functions.h@{functions.h}!generateStencilMaskVecTwist@{generateStencilMaskVecTwist}}
+\index{generateStencilMaskVecTwist@{generateStencilMaskVecTwist}!functions.h@{functions.h}}
+\doxysubsubsection{\texorpdfstring{generateStencilMaskVecTwist()}{generateStencilMaskVecTwist()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::vector}}$<$ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{unsigned}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{char}} $>$ generate\+Stencil\+Mask\+Vec\+Twist (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{int}}}]{height,  }\item[{\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{int}}}]{width,  }\item[{\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{double}}}]{max\+Cut }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{functions_8cpp_source_l00219}{219}} of file \mbox{\hyperlink{functions_8cpp_source}{functions.\+cpp}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=309pt]{functions_8h_a5943734704aaa6d99232fb4593522346_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=300pt]{functions_8h_a5943734704aaa6d99232fb4593522346_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{functions_8h_ad04eb32fb1e182bd887be2cbd5b27d9d}\label{functions_8h_ad04eb32fb1e182bd887be2cbd5b27d9d} 
+\index{functions.h@{functions.h}!generateXY@{generateXY}}
+\index{generateXY@{generateXY}!functions.h@{functions.h}}
+\doxysubsubsection{\texorpdfstring{generateXY()}{generateXY()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::pair}}$<$ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::vector}}$<$ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{double}} $>$, \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::vector}}$<$ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{double}} $>$ $>$ generate\+XY (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{const}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::vector}}$<$ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{double}} $>$ \&}]{src\+RangeA,  }\item[{\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{const}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::vector}}$<$ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{double}} $>$ \&}]{src\+AngleA,  }\item[{\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{double}}}]{target\+Resampling\+Unit\+Length }\end{DoxyParamCaption})}
+
+
+
+Generate X and Y vectors based on source range and angle vectors. 
+
+This function generates X and Y vectors based on the source range and angle vectors, with a target resampling unit length.
+
+
+\begin{DoxyParams}{Parameters}
+{\em src\+RangeA} & The source range vector. \\
+\hline
+{\em src\+AngleA} & The source angle vector. \\
+\hline
+{\em target\+Resampling\+Unit\+Length} & The target resampling unit length. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pair of X and Y vectors. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{functions_8cpp_source_l00119}{119}} of file \mbox{\hyperlink{functions_8cpp_source}{functions.\+cpp}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=227pt]{functions_8h_ad04eb32fb1e182bd887be2cbd5b27d9d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=219pt]{functions_8h_ad04eb32fb1e182bd887be2cbd5b27d9d_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{functions_8h_ad5c042aa340c788fca92fabca033dd5c}\label{functions_8h_ad5c042aa340c788fca92fabca033dd5c} 
+\index{functions.h@{functions.h}!linspace@{linspace}}
+\index{linspace@{linspace}!functions.h@{functions.h}}
+\doxysubsubsection{\texorpdfstring{linspace()}{linspace()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{typename}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{T}} $>$ \\
+\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::vector}}$<$ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{T}} $>$ linspace (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{T}}}]{start,  }\item[{\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{T}}}]{end,  }\item[{\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{int}}}]{num,  }\item[{\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{bool}}}]{endpoint }\end{DoxyParamCaption})}
+
+
+
+Generate evenly spaced values over a specified interval using linear interpolation. 
+
+This function generates evenly spaced values over a specified interval using linear interpolation.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Data type of the vector elements. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em start} & Starting value of the interval. \\
+\hline
+{\em end} & Ending value of the interval. \\
+\hline
+{\em num} & Number of samples to generate. \\
+\hline
+{\em endpoint} & True to include the endpoint value in the result, false otherwise. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vector containing the evenly spaced values. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{functions_8cpp_source_l00042}{42}} of file \mbox{\hyperlink{functions_8cpp_source}{functions.\+cpp}}.
+
+\Hypertarget{functions_8h_af2080d680f92a83b497ec19f2c7fe5ab}\label{functions_8h_af2080d680f92a83b497ec19f2c7fe5ab} 
+\index{functions.h@{functions.h}!meshgrid@{meshgrid}}
+\index{meshgrid@{meshgrid}!functions.h@{functions.h}}
+\doxysubsubsection{\texorpdfstring{meshgrid()}{meshgrid()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::pair}}$<$ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{Eigen\+::\+Matrix\+Xd}}, \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{Eigen\+::\+Matrix\+Xd}} $>$ meshgrid (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{const}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::vector}}$<$ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{double}} $>$ \&}]{vector1,  }\item[{\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{const}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::vector}}$<$ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{double}} $>$ \&}]{vector2 }\end{DoxyParamCaption})}
+
+
+
+Generate 2D mesh grids from two vectors. 
+
+This function generates two 2D mesh grids from two input vectors.
+
+
+\begin{DoxyParams}{Parameters}
+{\em vector1} & First vector. \\
+\hline
+{\em vector2} & Second vector. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pair of Eigen matrices representing the mesh grids. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{functions_8cpp_source_l00062}{62}} of file \mbox{\hyperlink{functions_8cpp_source}{functions.\+cpp}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=209pt]{functions_8h_af2080d680f92a83b497ec19f2c7fe5ab_icgraph}
+\end{center}
+\end{figure}

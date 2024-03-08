@@ -1,0 +1,362 @@
+\doxysection{inverse\+Scan\+Convert/kernel\+\_\+bilinearinterpolation.cuh File Reference}
+\hypertarget{kernel__bilinearinterpolation_8cuh}{}\label{kernel__bilinearinterpolation_8cuh}\index{inverseScanConvert/kernel\_bilinearinterpolation.cuh@{inverseScanConvert/kernel\_bilinearinterpolation.cuh}}
+{\ttfamily \#include $<$cuda\+\_\+runtime.\+h$>$}\newline
+{\ttfamily \#include "{}device\+\_\+launch\+\_\+parameters.\+h"{}}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$chrono$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{define}} \mbox{\hyperlink{kernel__bilinearinterpolation_8cuh_ae5c7f170d182efbff0dc8bc297002962}{KERNEL\+\_\+\+CUH}}
+\item 
+\#\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{define}} \mbox{\hyperlink{kernel__bilinearinterpolation_8cuh_a598a3330b3c21701223ee0ca14316eca}{PI}}~3.\+14159265358979323846
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{\+\_\+\+\_\+global\+\_\+\+\_\+}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{void}} \mbox{\hyperlink{kernel__bilinearinterpolation_8cuh_aa790cdc397c55afe58c97be3d1c77ca3}{inverse\+Scan\+Conversion\+Kernels}} (\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{unsigned}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{char}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{device\+Output\+Vec\+Vol}}, \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{unsigned}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{char}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{device\+Vec\+Vol\+Slices}}, \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{int}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{num\+Rows}}, \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{int}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{num\+Cols}}, \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{int}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{num\+Vectors}}, \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{int}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{dst\+Rows}}, \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{int}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{dst\+Columns}}, \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{double}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{device\+IndexX}}, \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{double}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{device\+IndexY}})
+\begin{DoxyCompactList}\small\item\em Performs inverse scan conversion to generate output vectors from input vector volumes. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{cuda\+Error\+\_\+t}} \mbox{\hyperlink{kernel__bilinearinterpolation_8cuh_a1ecb4c9ae2d426bffedc636759a73a57}{inverse\+Scan\+Conversion\+With\+Cuda}} (\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::vector}}$<$ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{unsigned}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{char}} $>$ \&\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{output\+Vec\+Vol}}, \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::vector}}$<$ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{unsigned}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{char}} $>$ \&\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{nrrd\+Data}}, \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{unsigned}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{int}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{rows}}, \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{unsigned}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{int}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{columns}}, \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{unsigned}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{int}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{number\+Of\+Frames}}, \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{unsigned}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{int}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{dst\+Rows}}, \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{unsigned}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{int}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{dst\+Columns}}, \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::vector}}$<$ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{double}} $>$ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{src\+Index\+Wise\+XVec}}, \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::vector}}$<$ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{double}} $>$ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{src\+Index\+Wise\+YVec}})
+\begin{DoxyCompactList}\small\item\em Performs inverse scan conversion using CUDA. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{\+\_\+\+\_\+global\+\_\+\+\_\+}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{void}} \mbox{\hyperlink{kernel__bilinearinterpolation_8cuh_a705dcd23a477b6b499ffaf04a0d6c028}{bilinear\+Interpolation\+Kernels}} (\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{unsigned}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{char}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{device\+Output\+Vec\+Vol}}, \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{unsigned}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{char}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{device\+Vec\+Vol\+Slices}}, \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{int}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{num\+Rows}}, \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{int}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{num\+Cols}}, \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{int}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{num\+Vectors}}, \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{int}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{dst\+Rows}}, \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{int}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{dst\+Columns}}, \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{float}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{device\+IndexX}}, \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{float}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{device\+IndexY}}, \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{unsigned}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{char}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{device\+Mask\+Mesh\+Vec\+Ptr}})
+\begin{DoxyCompactList}\small\item\em Performs bilinear interpolation using CUDA. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{cuda\+Error\+\_\+t}} \mbox{\hyperlink{kernel__bilinearinterpolation_8cuh_aec635ff571cf294b146ea23ea460cc33}{bilinear\+Interpolation\+With\+Cuda}} (\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::vector}}$<$ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{unsigned}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{char}} $>$ \&\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{output\+Vec\+Vol}}, \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::vector}}$<$ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{unsigned}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{char}} $>$ \&\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{nrrd\+Data}}, \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{unsigned}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{int}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{src\+Rows}}, \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{unsigned}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{int}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{src\+Columns}}, \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{unsigned}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{int}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{number\+Of\+Frames}}, \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{unsigned}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{int}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{dst\+Rows}}, \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{unsigned}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{int}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{dst\+Columns}}, \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::vector}}$<$ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{float}} $>$ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{src\+Index\+Wise\+XVec}}, \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::vector}}$<$ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{float}} $>$ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{src\+Index\+Wise\+YVec}}, \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::vector}}$<$ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{unsigned}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{char}} $>$ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{host\+Mask\+Mesh\+Vec}}=\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::vector}}$<$ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{unsigned}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{char}} $>$())
+\begin{DoxyCompactList}\small\item\em Performs bilinear interpolation on the GPU using CUDA. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{\+\_\+\+\_\+global\+\_\+\+\_\+}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{void}} \mbox{\hyperlink{kernel__bilinearinterpolation_8cuh_aaf6897c58c280ff8d4a11aa07ae9189b}{generate\+Index\+Wise\+Range\+Angle\+Mesh\+Vec\+Kernel}} (\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{float}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{device\+Index\+Wise\+Range\+Mesh\+Vec\+Ptr}}, \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{float}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{device\+Index\+Wise\+Angle\+Mesh\+Vec\+Ptr}}, \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{double}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{device\+XPtr}}, \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{double}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{device\+YPtr}}, \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{int}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{cols}}, \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{int}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{rows}}, \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{float}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{first\+Src\+Range\+Value}}, \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{float}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{last\+Src\+Range\+Value}}, \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{int}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{num\+Ranges}}, \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{float}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{first\+Src\+Angle\+Value}}, \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{float}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{last\+Src\+Angle\+Value}}, \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{int}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{num\+Angles}})
+\begin{DoxyCompactList}\small\item\em CUDA kernel\+: Generates index-\/wise range and angle meshes based on given ranges and angles. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::pair}}$<$ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::vector}}$<$ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{float}} $>$, \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::vector}}$<$ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{float}} $>$ $>$ \mbox{\hyperlink{kernel__bilinearinterpolation_8cuh_af072da814806af3fd62d5f6ff33354b6}{generate\+Index\+Wise\+Range\+Angle\+Mesh\+Vec\+With\+Cuda}} (\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::vector}}$<$ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{double}} $>$ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{X}}, \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::vector}}$<$ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{double}} $>$ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{Y}}, \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::vector}}$<$ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{double}} $>$ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{src\+RangeA}}, \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::vector}}$<$ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{double}} $>$ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{src\+AngleA}})
+\begin{DoxyCompactList}\small\item\em Generates index-\/wise range and angle mesh vectors using CUDA. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{kernel__bilinearinterpolation_8cuh_ae5c7f170d182efbff0dc8bc297002962}\label{kernel__bilinearinterpolation_8cuh_ae5c7f170d182efbff0dc8bc297002962} 
+\index{kernel\_bilinearinterpolation.cuh@{kernel\_bilinearinterpolation.cuh}!KERNEL\_CUH@{KERNEL\_CUH}}
+\index{KERNEL\_CUH@{KERNEL\_CUH}!kernel\_bilinearinterpolation.cuh@{kernel\_bilinearinterpolation.cuh}}
+\doxysubsubsection{\texorpdfstring{KERNEL\_CUH}{KERNEL\_CUH}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{define}} KERNEL\+\_\+\+CUH}
+
+
+
+Definition at line \mbox{\hyperlink{kernel__bilinearinterpolation_8cuh_source_l00003}{3}} of file \mbox{\hyperlink{kernel__bilinearinterpolation_8cuh_source}{kernel\+\_\+bilinearinterpolation.\+cuh}}.
+
+\Hypertarget{kernel__bilinearinterpolation_8cuh_a598a3330b3c21701223ee0ca14316eca}\label{kernel__bilinearinterpolation_8cuh_a598a3330b3c21701223ee0ca14316eca} 
+\index{kernel\_bilinearinterpolation.cuh@{kernel\_bilinearinterpolation.cuh}!PI@{PI}}
+\index{PI@{PI}!kernel\_bilinearinterpolation.cuh@{kernel\_bilinearinterpolation.cuh}}
+\doxysubsubsection{\texorpdfstring{PI}{PI}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{define}} PI~3.\+14159265358979323846}
+
+
+
+Definition at line \mbox{\hyperlink{kernel__bilinearinterpolation_8cuh_source_l00010}{10}} of file \mbox{\hyperlink{kernel__bilinearinterpolation_8cuh_source}{kernel\+\_\+bilinearinterpolation.\+cuh}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{kernel__bilinearinterpolation_8cuh_a705dcd23a477b6b499ffaf04a0d6c028}\label{kernel__bilinearinterpolation_8cuh_a705dcd23a477b6b499ffaf04a0d6c028} 
+\index{kernel\_bilinearinterpolation.cuh@{kernel\_bilinearinterpolation.cuh}!bilinearInterpolationKernels@{bilinearInterpolationKernels}}
+\index{bilinearInterpolationKernels@{bilinearInterpolationKernels}!kernel\_bilinearinterpolation.cuh@{kernel\_bilinearinterpolation.cuh}}
+\doxysubsubsection{\texorpdfstring{bilinearInterpolationKernels()}{bilinearInterpolationKernels()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{\+\_\+\+\_\+global\+\_\+\+\_\+}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{void}} bilinear\+Interpolation\+Kernels (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{unsigned}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{char}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{device\+Output\+Vec\+Vol,  }\item[{\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{unsigned}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{char}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{device\+Vec\+Vol,  }\item[{\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{int}}}]{src\+Rows,  }\item[{\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{int}}}]{src\+Cols,  }\item[{\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{int}}}]{num\+Vectors,  }\item[{\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{int}}}]{dst\+Rows,  }\item[{\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{int}}}]{dst\+Cols,  }\item[{\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{float}} \texorpdfstring{$\ast$}{*}}]{device\+IndexX,  }\item[{\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{float}} \texorpdfstring{$\ast$}{*}}]{device\+IndexY,  }\item[{\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{unsigned}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{char}} \texorpdfstring{$\ast$}{*}}]{device\+Mask\+Mesh\+Vec\+Ptr }\end{DoxyParamCaption})}
+
+
+
+Performs bilinear interpolation using CUDA. 
+
+This kernel function performs bilinear interpolation on the device. It interpolates values from the input volume to the output volume using bilinear interpolation method.
+
+
+\begin{DoxyParams}{Parameters}
+{\em device\+Output\+Vec\+Vol} & Output vector volume where the result will be stored. \\
+\hline
+{\em device\+Vec\+Vol} & Input vector volume. \\
+\hline
+{\em src\+Rows} & Number of rows in the source data. \\
+\hline
+{\em src\+Cols} & Number of columns in the source data. \\
+\hline
+{\em num\+Vectors} & Number of vectors in the input volume. \\
+\hline
+{\em dst\+Rows} & Number of rows in the destination volume. \\
+\hline
+{\em dst\+Cols} & Number of columns in the destination volume. \\
+\hline
+{\em device\+IndexX} & Vector containing index-\/wise X coordinates on the device. \\
+\hline
+{\em device\+IndexY} & Vector containing index-\/wise Y coordinates on the device. \\
+\hline
+{\em device\+Mask\+Mesh\+Vec\+Ptr} & Pointer to the mask mesh vector. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_source_l00379}{379}} of file \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_source}{kernel\+\_\+bilinearinterpolation.\+cu}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=294pt]{kernel__bilinearinterpolation_8cuh_a705dcd23a477b6b499ffaf04a0d6c028_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{kernel__bilinearinterpolation_8cuh_aec635ff571cf294b146ea23ea460cc33}\label{kernel__bilinearinterpolation_8cuh_aec635ff571cf294b146ea23ea460cc33} 
+\index{kernel\_bilinearinterpolation.cuh@{kernel\_bilinearinterpolation.cuh}!bilinearInterpolationWithCuda@{bilinearInterpolationWithCuda}}
+\index{bilinearInterpolationWithCuda@{bilinearInterpolationWithCuda}!kernel\_bilinearinterpolation.cuh@{kernel\_bilinearinterpolation.cuh}}
+\doxysubsubsection{\texorpdfstring{bilinearInterpolationWithCuda()}{bilinearInterpolationWithCuda()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{cuda\+Error\+\_\+t}} bilinear\+Interpolation\+With\+Cuda (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::vector}}$<$ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{unsigned}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{char}} $>$ \&}]{output\+Vec\+Vol,  }\item[{\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::vector}}$<$ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{unsigned}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{char}} $>$ \&}]{nrrd\+Data,  }\item[{\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{unsigned}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{int}}}]{src\+Rows,  }\item[{\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{unsigned}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{int}}}]{src\+Columns,  }\item[{\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{unsigned}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{int}}}]{number\+Of\+Frames,  }\item[{\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{unsigned}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{int}}}]{dst\+Rows,  }\item[{\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{unsigned}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{int}}}]{dst\+Columns,  }\item[{\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::vector}}$<$ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{float}} $>$}]{src\+Index\+Wise\+XVec,  }\item[{\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::vector}}$<$ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{float}} $>$}]{src\+Index\+Wise\+YVec,  }\item[{\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::vector}}$<$ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{unsigned}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{char}} $>$}]{host\+Mask\+Mesh\+Vec }\end{DoxyParamCaption})}
+
+
+
+Performs bilinear interpolation on the GPU using CUDA. 
+
+This function performs bilinear interpolation on the GPU using CUDA. It interpolates values from the input volume to the output volume using bilinear interpolation method.
+
+
+\begin{DoxyParams}{Parameters}
+{\em output\+Vec\+Vol} & Output vector volume where the interpolated result will be stored. \\
+\hline
+{\em nrrd\+Data} & Input vector volume. \\
+\hline
+{\em src\+Rows} & Number of rows in the source data. \\
+\hline
+{\em src\+Columns} & Number of columns in the source data. \\
+\hline
+{\em number\+Of\+Frames} & Number of frames in the input volume. \\
+\hline
+{\em dst\+Rows} & Number of rows in the destination volume. \\
+\hline
+{\em dst\+Columns} & Number of columns in the destination volume. \\
+\hline
+{\em src\+Index\+Wise\+XVec} & Vector containing index-\/wise X coordinates on the host. \\
+\hline
+{\em src\+Index\+Wise\+YVec} & Vector containing index-\/wise Y coordinates on the host. \\
+\hline
+{\em host\+Mask\+Mesh\+Vec} & Mask mesh vector on the host. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+cuda\+Error\+\_\+t Returns the status of CUDA operations. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_source_l00442}{442}} of file \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_source}{kernel\+\_\+bilinearinterpolation.\+cu}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=304pt]{kernel__bilinearinterpolation_8cuh_aec635ff571cf294b146ea23ea460cc33_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=295pt]{kernel__bilinearinterpolation_8cuh_aec635ff571cf294b146ea23ea460cc33_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{kernel__bilinearinterpolation_8cuh_aaf6897c58c280ff8d4a11aa07ae9189b}\label{kernel__bilinearinterpolation_8cuh_aaf6897c58c280ff8d4a11aa07ae9189b} 
+\index{kernel\_bilinearinterpolation.cuh@{kernel\_bilinearinterpolation.cuh}!generateIndexWiseRangeAngleMeshVecKernel@{generateIndexWiseRangeAngleMeshVecKernel}}
+\index{generateIndexWiseRangeAngleMeshVecKernel@{generateIndexWiseRangeAngleMeshVecKernel}!kernel\_bilinearinterpolation.cuh@{kernel\_bilinearinterpolation.cuh}}
+\doxysubsubsection{\texorpdfstring{generateIndexWiseRangeAngleMeshVecKernel()}{generateIndexWiseRangeAngleMeshVecKernel()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{\+\_\+\+\_\+global\+\_\+\+\_\+}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{void}} generate\+Index\+Wise\+Range\+Angle\+Mesh\+Vec\+Kernel (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{float}} \texorpdfstring{$\ast$}{*}}]{device\+Index\+Wise\+Range\+Mesh\+Vec\+Ptr,  }\item[{\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{float}} \texorpdfstring{$\ast$}{*}}]{device\+Index\+Wise\+Angle\+Mesh\+Vec\+Ptr,  }\item[{\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{double}} \texorpdfstring{$\ast$}{*}}]{device\+XPtr,  }\item[{\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{double}} \texorpdfstring{$\ast$}{*}}]{device\+YPtr,  }\item[{\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{int}}}]{cols,  }\item[{\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{int}}}]{rows,  }\item[{\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{float}}}]{first\+Src\+Range\+Value,  }\item[{\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{float}}}]{last\+Src\+Range\+Value,  }\item[{\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{int}}}]{num\+Ranges,  }\item[{\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{float}}}]{first\+Src\+Angle\+Value,  }\item[{\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{float}}}]{last\+Src\+Angle\+Value,  }\item[{\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{int}}}]{num\+Angles }\end{DoxyParamCaption})}
+
+
+
+CUDA kernel\+: Generates index-\/wise range and angle meshes based on given ranges and angles. 
+
+This function calculates the index-\/wise interpolation position based on the provided range and angle values, and the specified grid dimensions. It is used to quickly determine the interpolation position within a mesh represented by a 2D array.
+
+
+\begin{DoxyParams}{Parameters}
+{\em device\+Index\+Wise\+Range\+Mesh\+Vec\+Ptr} & Device pointer to store the range mesh. \\
+\hline
+{\em device\+Index\+Wise\+Angle\+Mesh\+Vec\+Ptr} & Device pointer to store the angle mesh. \\
+\hline
+{\em device\+XPtr} & Device pointer to store X coordinates. \\
+\hline
+{\em device\+YPtr} & Device pointer to store Y coordinates. \\
+\hline
+{\em cols} & Number of columns in the mesh. \\
+\hline
+{\em rows} & Number of rows in the mesh. \\
+\hline
+{\em first\+Src\+Range\+Value} & First source range value. \\
+\hline
+{\em last\+Src\+Range\+Value} & Last source range value. \\
+\hline
+{\em num\+Ranges} & Number of ranges. \\
+\hline
+{\em first\+Src\+Angle\+Value} & First source angle value. \\
+\hline
+{\em last\+Src\+Angle\+Value} & Last source angle value. \\
+\hline
+{\em num\+Angles} & Number of angles.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_source_l00025}{25}} of file \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_source}{kernel\+\_\+bilinearinterpolation.\+cu}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=314pt]{kernel__bilinearinterpolation_8cuh_aaf6897c58c280ff8d4a11aa07ae9189b_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{kernel__bilinearinterpolation_8cuh_af072da814806af3fd62d5f6ff33354b6}\label{kernel__bilinearinterpolation_8cuh_af072da814806af3fd62d5f6ff33354b6} 
+\index{kernel\_bilinearinterpolation.cuh@{kernel\_bilinearinterpolation.cuh}!generateIndexWiseRangeAngleMeshVecWithCuda@{generateIndexWiseRangeAngleMeshVecWithCuda}}
+\index{generateIndexWiseRangeAngleMeshVecWithCuda@{generateIndexWiseRangeAngleMeshVecWithCuda}!kernel\_bilinearinterpolation.cuh@{kernel\_bilinearinterpolation.cuh}}
+\doxysubsubsection{\texorpdfstring{generateIndexWiseRangeAngleMeshVecWithCuda()}{generateIndexWiseRangeAngleMeshVecWithCuda()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::pair}}$<$ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::vector}}$<$ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{float}} $>$, \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::vector}}$<$ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{float}} $>$ $>$ generate\+Index\+Wise\+Range\+Angle\+Mesh\+Vec\+With\+Cuda (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::vector}}$<$ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{double}} $>$}]{X,  }\item[{\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::vector}}$<$ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{double}} $>$}]{Y,  }\item[{\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::vector}}$<$ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{double}} $>$}]{src\+RangeA,  }\item[{\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::vector}}$<$ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{double}} $>$}]{src\+AngleA }\end{DoxyParamCaption})}
+
+
+
+Generates index-\/wise range and angle mesh vectors using CUDA. 
+
+This function generates index-\/wise range and angle mesh vectors using CUDA parallel processing. It interpolates the given X and Y coordinates to calculate the range and angle values for each index in the mesh grid defined by X and Y.
+
+
+\begin{DoxyParams}{Parameters}
+{\em X} & Vector containing X coordinates. \\
+\hline
+{\em Y} & Vector containing Y coordinates. \\
+\hline
+{\em src\+RangeA} & Vector containing source range values. \\
+\hline
+{\em src\+AngleA} & Vector containing source angle values. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pair of vectors containing index-\/wise range and angle mesh values.
+\begin{DoxyItemize}
+\item The first vector contains index-\/wise range mesh values.
+\item The second vector contains index-\/wise angle mesh values. 
+\end{DoxyItemize}
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_source_l00145}{145}} of file \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_source}{kernel\+\_\+bilinearinterpolation.\+cu}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=314pt]{kernel__bilinearinterpolation_8cuh_af072da814806af3fd62d5f6ff33354b6_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=305pt]{kernel__bilinearinterpolation_8cuh_af072da814806af3fd62d5f6ff33354b6_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{kernel__bilinearinterpolation_8cuh_aa790cdc397c55afe58c97be3d1c77ca3}\label{kernel__bilinearinterpolation_8cuh_aa790cdc397c55afe58c97be3d1c77ca3} 
+\index{kernel\_bilinearinterpolation.cuh@{kernel\_bilinearinterpolation.cuh}!inverseScanConversionKernels@{inverseScanConversionKernels}}
+\index{inverseScanConversionKernels@{inverseScanConversionKernels}!kernel\_bilinearinterpolation.cuh@{kernel\_bilinearinterpolation.cuh}}
+\doxysubsubsection{\texorpdfstring{inverseScanConversionKernels()}{inverseScanConversionKernels()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{\+\_\+\+\_\+global\+\_\+\+\_\+}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{void}} inverse\+Scan\+Conversion\+Kernels (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{unsigned}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{char}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{device\+Output\+Vec\+Vol,  }\item[{\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{unsigned}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{char}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{device\+Vec\+Vol,  }\item[{\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{int}}}]{src\+Rows,  }\item[{\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{int}}}]{src\+Cols,  }\item[{\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{int}}}]{num\+Vectors,  }\item[{\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{int}}}]{dst\+Rows,  }\item[{\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{int}}}]{dst\+Cols,  }\item[{\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{double}} \texorpdfstring{$\ast$}{*}}]{device\+IndexX,  }\item[{\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{double}} \texorpdfstring{$\ast$}{*}}]{device\+IndexY }\end{DoxyParamCaption})}
+
+
+
+Performs inverse scan conversion to generate output vectors from input vector volumes. 
+
+This function performs inverse scan conversion to generate output vectors from input vector volumes. It uses bilinear interpolation to calculate the output vector values based on the input vector volumes and the specified interpolation indices.
+
+
+\begin{DoxyParams}{Parameters}
+{\em device\+Output\+Vec\+Vol} & Pointer to the device memory containing the output vector volumes. \\
+\hline
+{\em device\+Vec\+Vol} & Pointer to the device memory containing the input vector volumes. \\
+\hline
+{\em src\+Rows} & Number of rows in the input vector volumes. \\
+\hline
+{\em src\+Cols} & Number of columns in the input vector volumes. \\
+\hline
+{\em num\+Vectors} & Number of vectors in the input and output volumes. \\
+\hline
+{\em dst\+Rows} & Number of rows in the output vector volumes. \\
+\hline
+{\em dst\+Cols} & Number of columns in the output vector volumes. \\
+\hline
+{\em device\+IndexX} & Pointer to the device memory containing the X interpolation indices. \\
+\hline
+{\em device\+IndexY} & Pointer to the device memory containing the Y interpolation indices. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_source_l00088}{88}} of file \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_source}{kernel\+\_\+bilinearinterpolation.\+cu}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=311pt]{kernel__bilinearinterpolation_8cuh_aa790cdc397c55afe58c97be3d1c77ca3_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{kernel__bilinearinterpolation_8cuh_a1ecb4c9ae2d426bffedc636759a73a57}\label{kernel__bilinearinterpolation_8cuh_a1ecb4c9ae2d426bffedc636759a73a57} 
+\index{kernel\_bilinearinterpolation.cuh@{kernel\_bilinearinterpolation.cuh}!inverseScanConversionWithCuda@{inverseScanConversionWithCuda}}
+\index{inverseScanConversionWithCuda@{inverseScanConversionWithCuda}!kernel\_bilinearinterpolation.cuh@{kernel\_bilinearinterpolation.cuh}}
+\doxysubsubsection{\texorpdfstring{inverseScanConversionWithCuda()}{inverseScanConversionWithCuda()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{cuda\+Error\+\_\+t}} inverse\+Scan\+Conversion\+With\+Cuda (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::vector}}$<$ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{unsigned}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{char}} $>$ \&}]{output\+Vec\+Vol,  }\item[{\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::vector}}$<$ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{unsigned}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{char}} $>$ \&}]{nrrd\+Data,  }\item[{\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{unsigned}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{int}}}]{src\+Rows,  }\item[{\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{unsigned}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{int}}}]{src\+Columns,  }\item[{\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{unsigned}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{int}}}]{number\+Of\+Frames,  }\item[{\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{unsigned}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{int}}}]{dst\+Rows,  }\item[{\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{unsigned}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{int}}}]{dst\+Columns,  }\item[{\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::vector}}$<$ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{double}} $>$}]{src\+Index\+Wise\+XVec,  }\item[{\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::vector}}$<$ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{double}} $>$}]{src\+Index\+Wise\+YVec }\end{DoxyParamCaption})}
+
+
+
+Performs inverse scan conversion using CUDA. 
+
+This function performs inverse scan conversion using CUDA parallel processing. It converts a given NRRD data into output volume data based on the provided index-\/wise X and Y vectors.
+
+
+\begin{DoxyParams}{Parameters}
+{\em output\+Vec\+Vol} & Output vector volume where the result will be stored. \\
+\hline
+{\em nrrd\+Data} & Input NRRD data. \\
+\hline
+{\em src\+Rows} & Number of rows in the source data. \\
+\hline
+{\em src\+Columns} & Number of columns in the source data. \\
+\hline
+{\em number\+Of\+Frames} & Number of frames in the source data. \\
+\hline
+{\em dst\+Rows} & Number of rows in the destination volume. \\
+\hline
+{\em dst\+Columns} & Number of columns in the destination volume. \\
+\hline
+{\em src\+Index\+Wise\+XVec} & Vector containing index-\/wise X coordinates. \\
+\hline
+{\em src\+Index\+Wise\+YVec} & Vector containing index-\/wise Y coordinates. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+CUDA error status. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_source_l00211}{211}} of file \mbox{\hyperlink{kernel__bilinearinterpolation_8cu_source}{kernel\+\_\+bilinearinterpolation.\+cu}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=321pt]{kernel__bilinearinterpolation_8cuh_a1ecb4c9ae2d426bffedc636759a73a57_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=312pt]{kernel__bilinearinterpolation_8cuh_a1ecb4c9ae2d426bffedc636759a73a57_icgraph}
+\end{center}
+\end{figure}

@@ -1,0 +1,8 @@
+<map id="generateMaskMesh" name="generateMaskMesh">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,31,141,57"/>
+<area shape="rect" id="Node000002" href="$mask__generation__interpolation__utils_8cpp.html#a5b38bcf3fcb930efcc14895c73c89892" title=" " alt="" coords="189,5,376,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="141,33,173,29,174,35,141,38"/>
+<area shape="rect" id="Node000003" href="$kernel__bilinearinterpolation_8cu.html#aaf6897c58c280ff8d4a11aa07ae9189b" title="CUDA kernel: Generates index&#45;wise range and angle meshes based on given ranges and angles." alt="" coords="424,23,626,65"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="141,41,409,41,409,47,141,47"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="377,26,409,29,408,34,376,31"/>
+</map>

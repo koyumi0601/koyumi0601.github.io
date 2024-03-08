@@ -7,19 +7,20 @@
 
 __global__ void averageVectorForKernels(unsigned char* deviceOutputPlane, unsigned char** deviceVecVolSlices, int numElements, int numVectors)
 {
-  int i = blockIdx.x * blockDim.x + threadIdx.x;
-
-  if (i < numElements) {
-    unsigned int sum = 0;
-    for (int vec = 0; vec < numVectors; ++vec) {
-      sum += deviceVecVolSlices[vec][i];
-    }
-    deviceOutputPlane[i] = sum / numVectors;
+  int idx = blockIdx.x * blockDim.x + threadIdx.x;
+  if (idx >= numElements)
+    return;
+  unsigned int sum = 0;
+  for (int vec = 0; vec < numVectors; ++vec)
+  {
+    sum += deviceVecVolSlices[vec][idx];
   }
+  deviceOutputPlane[idx] = sum / numVectors;
 }
 
 
-cudaError_t averageVectorForWithCuda(std::vector<unsigned char>& outputPlane, std::vector<unsigned char>& vecVol, unsigned int dim1Size, unsigned int dim2Size, unsigned int dim3Size) {
+cudaError_t averageVectorForWithCuda(std::vector<unsigned char>& outputPlane, std::vector<unsigned char>& vecVol, unsigned int dim1Size, unsigned int dim2Size, unsigned int dim3Size)
+{
   unsigned char* deviceOutputPlane;
   std::vector<unsigned char*> deviceVecVolSlicesHost(dim3Size, nullptr); // Host-side vector slice pointers
   unsigned char** deviceVecVolSlices; // Device-side pointer array
@@ -70,7 +71,7 @@ cudaError_t averageVectorForWithCuda(std::vector<unsigned char>& outputPlane, st
   // Launch kernel
   dim3 threadsPerBlock(256);
   dim3 numBlocks((outputPlane.size() + threadsPerBlock.x - 1) / threadsPerBlock.x);
-  averageVectorForKernels << <numBlocks, threadsPerBlock >> > (deviceOutputPlane, deviceVecVolSlices, dim1Size * dim2Size, dim3Size);
+  averageVectorForKernels <<< numBlocks, threadsPerBlock >>> (deviceOutputPlane, deviceVecVolSlices, dim1Size * dim2Size, dim3Size);
 
   // Check for kernel launch errors
   cudaStatus = cudaGetLastError();

@@ -1,0 +1,42 @@
+TransactionData:
+  - { TransactionId: 44,
+      VersionNum: 0,
+      SizeBytes: 256,
+      StreamType: 0,
+      StreamNum: 0,
+      StreamDataType: 1,
+      BeginChunkId: 0,
+      BeginChunkIdTimestamp: 523777823,
+      EndChunkId: 105,
+      EndChunkIdTimestamp: 526124783,
+      MaxChunkSizeBytes: 524288,
+      MaxNumChunks: 1260,
+      steeringAngleAzimuthDeg: 0
+      CineTimestamp: 523328000
+      radiusOfCurvatureElevationMm: 0
+      radiusOfCurvatureAzimuthMm: 0
+      elevationTwistRate: 0
+      StreamSubType: 0,
+      AcquiredLateralMin: -25.5,
+      AcquiredLateralSpan: 51,
+      DisplayedLateralMin: -25.5,
+      DisplayedLateralSpan: 51,
+      AcquiredAxialMin: -0.303187,
+      AcquiredAxialSpan: 41.58,
+      DisplayedAxialMin: 0,
+      DisplayedAxialSpan: 40
+      AcquiredElevationMin: 0,
+      AcquiredElevationSpan: 0,
+      DisplayedElevationMin: 0,
+      DisplayedElevationSpan: 0,
+      ChunkDurationUs: 22352,
+      VectorApexElevZMm: -9.45,
+      VectorApexAzimZMm: 0,
+      AzimBeamSpacing: NO,
+      ElevBeamSpacing: NO,
+      NumBytesPerSample: 1,
+      NumSamplesPerLine: 688,
+      NumLinesPerSlice: 440,
+      NumSlicesPerChunk: 1,
+      FovShape: Linear
+    }

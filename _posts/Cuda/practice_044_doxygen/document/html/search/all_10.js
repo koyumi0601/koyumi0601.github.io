@@ -1,0 +1,26 @@
+var searchData=
+[
+  ['tag_5fbitsallocated_0',['tag_BitsAllocated',['../struct_dicom_struct.html#a5c6e11189773b1b9c6419629074f7482',1,'DicomStruct']]],
+  ['tag_5fbitsstored_1',['tag_BitsStored',['../struct_dicom_struct.html#a93cfc21785b160e0b6f811e1ff1b2f12',1,'DicomStruct']]],
+  ['tag_5fcolumns_2',['tag_Columns',['../struct_dicom_struct.html#a905434a3815fd1effa2f4be8fd2e90ec',1,'DicomStruct']]],
+  ['tag_5fhighbit_3',['tag_HighBit',['../struct_dicom_struct.html#a5524ddf83aa17294dec0d7570158cbea',1,'DicomStruct']]],
+  ['tag_5fmaxcut_4',['tag_MaxCut',['../struct_dicom_struct.html#a59bc617961b4ce08424525cb61fa1204',1,'DicomStruct']]],
+  ['tag_5fnumberofframes_5',['tag_NumberOfFrames',['../struct_dicom_struct.html#a454aa3ae65206db742cffde9f4599f52',1,'DicomStruct']]],
+  ['tag_5fpatientid_6',['tag_PatientID',['../struct_dicom_struct.html#a49d5b4fed0e9b1f959a929b8b0403ea0',1,'DicomStruct']]],
+  ['tag_5fpatientname_7',['tag_PatientName',['../struct_dicom_struct.html#ad1700589cf8852bb4d4db45cb72a4f5d',1,'DicomStruct']]],
+  ['tag_5fpixeldata_8',['tag_PixelData',['../struct_dicom_struct.html#a3c51640541febcd4a1438aa9cd42836b',1,'DicomStruct']]],
+  ['tag_5fpixelrepresentation_9',['tag_PixelRepresentation',['../struct_dicom_struct.html#a002ed0e80f793f140f1c56372502adb2',1,'DicomStruct']]],
+  ['tag_5fpixelspacing_10',['tag_PixelSpacing',['../struct_dicom_struct.html#aff9c25bd61336b68eb796c55d4e36100',1,'DicomStruct']]],
+  ['tag_5fproberadius_11',['tag_ProbeRadius',['../struct_dicom_struct.html#a1ce6b377514c45d2f68834fa6a1a09dd',1,'DicomStruct']]],
+  ['tag_5frows_12',['tag_Rows',['../struct_dicom_struct.html#af74685ae111390a083b4a98752096b60',1,'DicomStruct']]],
+  ['tag_5fsamplesperpixel_13',['tag_SamplesPerPixel',['../struct_dicom_struct.html#a475c0af414a4ad4510b5d87226433493',1,'DicomStruct']]],
+  ['tag_5fseriesdescription_14',['tag_SeriesDescription',['../struct_dicom_struct.html#a3a9362bd0968fb7bb01960569ab2baf6',1,'DicomStruct']]],
+  ['tag_5fslicethickness_15',['tag_SliceThickness',['../struct_dicom_struct.html#a912edf80d83e851e0f5fcbf0d81d2de3',1,'DicomStruct']]],
+  ['tag_5fspacingbetweenslices_16',['tag_SpacingBetweenSlices',['../struct_dicom_struct.html#a3ca18394d26b35b090200f7eb8b5fc19',1,'DicomStruct']]],
+  ['targetprecision_17',['targetPrecision',['../main_8cu.html#a12de8c0c14ab04b8e8fd7aa146d8e353',1,'main.cu']]],
+  ['targetresamplingunitlength_18',['targetResamplingUnitLength',['../main_8cu.html#aece2afe7d2c47294d3a23175a46d7e1a',1,'main.cu']]],
+  ['timer_19',['Timer',['../class_timer.html',1,'Timer'],['../class_timer.html#a5f16e8da27d2a5a5242dead46de05d97',1,'Timer::Timer()']]],
+  ['trimstring_20',['trimString',['../file__utils_8cpp.html#a477087dd040a72711ac30db768f0c186',1,'trimString(std::string str):&#160;file_utils.cpp'],['../file__utils_8h.html#a477087dd040a72711ac30db768f0c186',1,'trimString(std::string str):&#160;file_utils.cpp']]],
+  ['twist_21',['twist',['../verification__utils_8h.html#acbda946f4b81b6085d92a704908b1477aeb3bac16ce0b10104556989311d71e56',1,'verification_utils.h']]],
+  ['twisttranspose_22',['twistTranspose',['../verification__utils_8h.html#acbda946f4b81b6085d92a704908b1477a80bdfcf2886efd525516dc61f6f1d9c9',1,'verification_utils.h']]]
+];

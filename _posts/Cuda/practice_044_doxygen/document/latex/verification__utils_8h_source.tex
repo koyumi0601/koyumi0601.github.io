@@ -1,0 +1,48 @@
+\doxysection{verification\+\_\+utils.\+h}
+\hypertarget{verification__utils_8h_source}{}\label{verification__utils_8h_source}\index{inverseScanConvert/verification\_utils.h@{inverseScanConvert/verification\_utils.h}}
+\mbox{\hyperlink{verification__utils_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{verification__utils_8h_source_l00001}00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{\Hypertarget{verification__utils_8h_source_l00002}00002\ \textcolor{preprocessor}{\#include\ <opencv2/opencv.hpp>}}
+\DoxyCodeLine{\Hypertarget{verification__utils_8h_source_l00003}00003\ \textcolor{preprocessor}{\#include\ <Eigen>}}
+\DoxyCodeLine{\Hypertarget{verification__utils_8h_source_l00004}00004\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{\Hypertarget{verification__utils_8h_source_l00005}00005\ \textcolor{preprocessor}{\#include\ <algorithm>}}
+\DoxyCodeLine{\Hypertarget{verification__utils_8h_source_l00006}00006\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{\Hypertarget{verification__utils_8h_source_l00007}00007\ \textcolor{preprocessor}{\#include\ <chrono>}}
+\DoxyCodeLine{\Hypertarget{verification__utils_8h_source_l00008}00008\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{\Hypertarget{verification__utils_8h_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{verification__utils_8h_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{verification__utils_8h_source_l00011}00011\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{verification__utils_8h_a9b67a973b6971c51f1ef9a1cd2c14ce7}{showVolumeVec}}(\textcolor{keyword}{const}\ std::vector<unsigned\ char>\&\ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{volumeData}},\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{numRows}},\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{numCols}},\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{sliceIdx}});}
+\DoxyCodeLine{\Hypertarget{verification__utils_8h_source_l00012}00012\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{verification__utils_8h_a9b80e905be3730c879ba61167cdc2463}{showMatrix}}(\textcolor{keyword}{const}\ Eigen::MatrixXd\&\ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{eigenMatrix}});}
+\DoxyCodeLine{\Hypertarget{verification__utils_8h_source_l00013}\mbox{\hyperlink{verification__utils_8h_acbda946f4b81b6085d92a704908b1477}{00013}}\ \textcolor{keyword}{enum\ class}\ \mbox{\hyperlink{verification__utils_8h_acbda946f4b81b6085d92a704908b1477}{MatOrientation}}\ \{\ \mbox{\hyperlink{verification__utils_8h_acbda946f4b81b6085d92a704908b1477afea087517c26fadd409bd4b9dc642555}{normal}},\ \mbox{\hyperlink{verification__utils_8h_acbda946f4b81b6085d92a704908b1477aeb3bac16ce0b10104556989311d71e56}{twist}},\ \mbox{\hyperlink{verification__utils_8h_acbda946f4b81b6085d92a704908b1477afea59e1c84f9af7d348aeab95e5d2d30}{normalTranspose}},\ \mbox{\hyperlink{verification__utils_8h_acbda946f4b81b6085d92a704908b1477a80bdfcf2886efd525516dc61f6f1d9c9}{twistTranspose}}\ \};}
+\DoxyCodeLine{\Hypertarget{verification__utils_8h_source_l00014}00014\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{verification__utils_8h_aa7e8d08b1b3e57f434cf2e318131db2a}{showMeshVec}}(\textcolor{keyword}{const}\ std::vector<T>\&\ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{MeshVec}},\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{cols}},\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{rows}},\ \mbox{\hyperlink{verification__utils_8h_acbda946f4b81b6085d92a704908b1477}{MatOrientation}}\ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{orientation}});}
+\DoxyCodeLine{\Hypertarget{verification__utils_8h_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{verification__utils_8h_source_l00023}00023\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{verification__utils_8h_a57c89691cc7178bab8178e2e3a0b958b}{printVectorStats}}(\textcolor{keyword}{const}\ std::vector<double>\&\ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{vec}});}
+\DoxyCodeLine{\Hypertarget{verification__utils_8h_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{verification__utils_8h_source_l00032}00032\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{verification__utils_8h_a346669b1a6d10d55f322a54c729cc6d6}{printMatrixStats}}(\textcolor{keyword}{const}\ Eigen::MatrixXd\&\ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{matrix}});}
+\DoxyCodeLine{\Hypertarget{verification__utils_8h_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{verification__utils_8h_source_l00049}\mbox{\hyperlink{verification__utils_8h_a285e216781a4ee1fb2b3b4dfd73234f2}{00049}}\ \textcolor{preprocessor}{\#define\ PRINTARRAY(var)\ \{\ std::cout\ <<\ \#var\ <<\ "{}:\ "{}\ <<\ std::endl;\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{verification__utils_8h_source_l00050}00050\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ for\ (const\ auto\&\ elem\ :\ var)\ \{\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{verification__utils_8h_source_l00051}00051\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ elem\ <<\ "{}\ "{};\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{verification__utils_8h_source_l00052}00052\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{verification__utils_8h_source_l00053}00053\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ std::endl;\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{verification__utils_8h_source_l00054}00054\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}}
+\DoxyCodeLine{\Hypertarget{verification__utils_8h_source_l00055}00055\ }
+\DoxyCodeLine{\Hypertarget{verification__utils_8h_source_l00070}\mbox{\hyperlink{verification__utils_8h_a0be5437e2a8a7eefb64a891b3c1e72f5}{00070}}\ \textcolor{preprocessor}{\#define\ PRINTSCALAR(var)\ std::cout\ <<\ \#var\ <<\ "{}:\ "{}\ <<\ var\ <<\ std::endl;}}
+\DoxyCodeLine{\Hypertarget{verification__utils_8h_source_l00071}00071\ }
+\DoxyCodeLine{\Hypertarget{verification__utils_8h_source_l00072}00072\ }
+\DoxyCodeLine{\Hypertarget{verification__utils_8h_source_l00073}\mbox{\hyperlink{class_timer}{00073}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_timer}{Timer}}\ \{}
+\DoxyCodeLine{\Hypertarget{verification__utils_8h_source_l00074}00074\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{verification__utils_8h_source_l00075}00075\ \ \ std::chrono::high\_resolution\_clock::time\_point\ start;}
+\DoxyCodeLine{\Hypertarget{verification__utils_8h_source_l00076}00076\ \ \ std::chrono::high\_resolution\_clock::time\_point\ end;}
+\DoxyCodeLine{\Hypertarget{verification__utils_8h_source_l00077}00077\ \ \ std::chrono::duration<double,\ std::milli>\ duration;}
+\DoxyCodeLine{\Hypertarget{verification__utils_8h_source_l00078}00078\ \ \ std::string\ taskName;}
+\DoxyCodeLine{\Hypertarget{verification__utils_8h_source_l00079}00079\ }
+\DoxyCodeLine{\Hypertarget{verification__utils_8h_source_l00080}00080\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{verification__utils_8h_source_l00081}00081\ \ \ \mbox{\hyperlink{class_timer_a5f16e8da27d2a5a5242dead46de05d97}{Timer}}();}
+\DoxyCodeLine{\Hypertarget{verification__utils_8h_source_l00082}00082\ \ \ \mbox{\hyperlink{class_timer_a14fa469c4c295c5fa6e66a4ad1092146}{\string~Timer}}();}
+\DoxyCodeLine{\Hypertarget{verification__utils_8h_source_l00083}00083\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_timer_abe969c0961e146fe51a0b061d68bf239}{on}}(\textcolor{keyword}{const}\ std::string\&\ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{name}});}
+\DoxyCodeLine{\Hypertarget{verification__utils_8h_source_l00084}00084\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_timer_aa9e4976b9ae26b22a53d14ffb2c3ab73}{elapsed}}();}
+\DoxyCodeLine{\Hypertarget{verification__utils_8h_source_l00085}00085\ \};}
+
+\end{DoxyCode}

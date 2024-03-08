@@ -1,0 +1,83 @@
+#include "itkImageFileReader.h"
+#include "itkImageFileWriter.h"
+
+// 필요한 데이터 형식과 차원에 맞는 ImageType 정의
+typedef itk::Image<float, 3> ImageType;
+
+int main(int argc, char *argv[])
+{
+    if(argc < 3)
+    {
+        std::cerr << "Usage: " << argv[0] << " <inputFile> <outputFile>" << std::endl;
+        return EXIT_FAILURE;
+    }
+
+    const char *inputFilename = argv[1];
+    const char *outputFilename = argv[2];
+
+    // NRRD 파일 읽기
+    typedef itk::ImageFileReader<ImageType> ReaderType;
+    ReaderType::Pointer reader = ReaderType::New();
+    reader->SetFileName(inputFilename);
+
+    try
+    {
+        reader->Update();
+    }
+    catch(itk::ExceptionObject &ex)
+    {
+        std::cerr << "Exception caught while reading the input image: " << ex << std::endl;
+        return EXIT_FAILURE;
+    }
+
+    // 읽은 이미지를 다시 쓰기
+    typedef itk::ImageFileWriter<ImageType> WriterType;
+    WriterType::Pointer writer = WriterType::New();
+    writer->SetFileName(outputFilename);
+    writer->SetInput(reader->GetOutput());
+
+    try
+    {
+        writer->Update();
+    }
+    catch(itk::ExceptionObject &ex)
+    {
+        std::cerr << "Exception caught while writing the output image: " << ex << std::endl;
+        return EXIT_FAILURE;
+    }
+
+    return EXIT_SUCCESS;
+}
+
+
+#include <iostream>
+#include <fstream>
+#include <vector>
+
+int main() {
+    const char* filename = "example.nrrd";
+
+    // Open the NRRD file in binary mode
+    std::ifstream file(filename, std::ios::binary);
+    if (!file) {
+        std::cerr << "Failed to open file: " << filename << std::endl;
+        return 1;
+    }
+
+    // Read the header to determine data type, dimensions, etc.
+    // In this example, we assume that the header is already known.
+
+    // Skip the header
+    file.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+
+    // Read the binary data
+    std::vector<char> data((std::istreambuf_iterator<char>(file)), std::istreambuf_iterator<char>());
+
+    // Now 'data' contains the binary data from the NRRD file
+    // You can process it as needed
+
+    // Close the file
+    file.close();
+
+    return 0;
+}

@@ -1,0 +1,93 @@
+\doxysection{inverse\+Scan\+Convert/main.cu File Reference}
+\hypertarget{main_8cu}{}\label{main_8cu}\index{inverseScanConvert/main.cu@{inverseScanConvert/main.cu}}
+{\ttfamily \#include "{}cuda\+\_\+runtime.\+h"{}}\newline
+{\ttfamily \#include "{}device\+\_\+launch\+\_\+parameters.\+h"{}}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$array$>$}\newline
+{\ttfamily \#include $<$regex$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$map$>$}\newline
+{\ttfamily \#include "{}dcmtk/config/osconfig.\+h"{}}\newline
+{\ttfamily \#include "{}dcmtk/dcmdata/dctk.\+h"{}}\newline
+{\ttfamily \#include $<$opencv2/core.\+hpp$>$}\newline
+{\ttfamily \#include $<$opencv2/imgcodecs.\+hpp$>$}\newline
+{\ttfamily \#include $<$opencv2/opencv.\+hpp$>$}\newline
+{\ttfamily \#include $<$Eigen$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$windows.\+h$>$}\newline
+{\ttfamily \#include $<$direct.\+h$>$}\newline
+{\ttfamily \#include $<$numeric$>$}\newline
+{\ttfamily \#include "{}kernel\+\_\+bilinearinterpolation.\+cuh"{}}\newline
+{\ttfamily \#include "{}file\+\_\+utils.\+h"{}}\newline
+{\ttfamily \#include "{}functions.\+h"{}}\newline
+{\ttfamily \#include "{}verification\+\_\+utils.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{int}} \mbox{\hyperlink{main_8cu_a0ddf1224851353fc92bfbff6f499fa97}{main}} (\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{int}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{argc}}, \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{char}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{argv}}\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_dicom_struct}{Dicom\+Struct}} \mbox{\hyperlink{main_8cu_a635493797c6315b67bbf78fdf1f98cba}{ds}}
+\item 
+\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{const}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{double}} \mbox{\hyperlink{main_8cu_a12de8c0c14ab04b8e8fd7aa146d8e353}{target\+Precision}} = 0.\+05
+\item 
+\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{const}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{double}} \mbox{\hyperlink{main_8cu_aece2afe7d2c47294d3a23175a46d7e1a}{target\+Resampling\+Unit\+Length}} = 0.\+15
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{main_8cu_a0ddf1224851353fc92bfbff6f499fa97}\label{main_8cu_a0ddf1224851353fc92bfbff6f499fa97} 
+\index{main.cu@{main.cu}!main@{main}}
+\index{main@{main}!main.cu@{main.cu}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{int}} main (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{int}}}]{argc,  }\item[{\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{char}} \texorpdfstring{$\ast$}{*}}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{main_8cu_source_l00030}{30}} of file \mbox{\hyperlink{main_8cu_source}{main.\+cu}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8cu_a0ddf1224851353fc92bfbff6f499fa97_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{main_8cu_a635493797c6315b67bbf78fdf1f98cba}\label{main_8cu_a635493797c6315b67bbf78fdf1f98cba} 
+\index{main.cu@{main.cu}!ds@{ds}}
+\index{ds@{ds}!main.cu@{main.cu}}
+\doxysubsubsection{\texorpdfstring{ds}{ds}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_dicom_struct}{Dicom\+Struct}} ds}
+
+
+
+Definition at line \mbox{\hyperlink{main_8cu_source_l00025}{25}} of file \mbox{\hyperlink{main_8cu_source}{main.\+cu}}.
+
+\Hypertarget{main_8cu_a12de8c0c14ab04b8e8fd7aa146d8e353}\label{main_8cu_a12de8c0c14ab04b8e8fd7aa146d8e353} 
+\index{main.cu@{main.cu}!targetPrecision@{targetPrecision}}
+\index{targetPrecision@{targetPrecision}!main.cu@{main.cu}}
+\doxysubsubsection{\texorpdfstring{targetPrecision}{targetPrecision}}
+{\footnotesize\ttfamily \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{const}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{double}} target\+Precision = 0.\+05}
+
+
+
+Definition at line \mbox{\hyperlink{main_8cu_source_l00026}{26}} of file \mbox{\hyperlink{main_8cu_source}{main.\+cu}}.
+
+\Hypertarget{main_8cu_aece2afe7d2c47294d3a23175a46d7e1a}\label{main_8cu_aece2afe7d2c47294d3a23175a46d7e1a} 
+\index{main.cu@{main.cu}!targetResamplingUnitLength@{targetResamplingUnitLength}}
+\index{targetResamplingUnitLength@{targetResamplingUnitLength}!main.cu@{main.cu}}
+\doxysubsubsection{\texorpdfstring{targetResamplingUnitLength}{targetResamplingUnitLength}}
+{\footnotesize\ttfamily \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{const}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{double}} target\+Resampling\+Unit\+Length = 0.\+15}
+
+
+
+Definition at line \mbox{\hyperlink{main_8cu_source_l00027}{27}} of file \mbox{\hyperlink{main_8cu_source}{main.\+cu}}.
+

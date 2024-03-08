@@ -1,0 +1,91 @@
+\doxysection{kernel\+\_\+bilinearinterpolation.\+cuh}
+\hypertarget{kernel__bilinearinterpolation_8cuh_source}{}\label{kernel__bilinearinterpolation_8cuh_source}\index{inverseScanConvert/kernel\_bilinearinterpolation.cuh@{inverseScanConvert/kernel\_bilinearinterpolation.cuh}}
+\mbox{\hyperlink{kernel__bilinearinterpolation_8cuh}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{kernel__bilinearinterpolation_8cuh_source_l00001}00001\ \textcolor{comment}{//\ kernel.cuh}}
+\DoxyCodeLine{\Hypertarget{kernel__bilinearinterpolation_8cuh_source_l00002}00002\ \textcolor{preprocessor}{\#ifndef\ KERNEL\_CUH}}
+\DoxyCodeLine{\Hypertarget{kernel__bilinearinterpolation_8cuh_source_l00003}\mbox{\hyperlink{kernel__bilinearinterpolation_8cuh_ae5c7f170d182efbff0dc8bc297002962}{00003}}\ \textcolor{preprocessor}{\#define\ KERNEL\_CUH}}
+\DoxyCodeLine{\Hypertarget{kernel__bilinearinterpolation_8cuh_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{kernel__bilinearinterpolation_8cuh_source_l00005}00005\ \textcolor{preprocessor}{\#include\ <cuda\_runtime.h>}}
+\DoxyCodeLine{\Hypertarget{kernel__bilinearinterpolation_8cuh_source_l00006}00006\ \textcolor{preprocessor}{\#include\ "{}device\_launch\_parameters.h"{}}}
+\DoxyCodeLine{\Hypertarget{kernel__bilinearinterpolation_8cuh_source_l00007}00007\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{\Hypertarget{kernel__bilinearinterpolation_8cuh_source_l00008}00008\ \textcolor{preprocessor}{\#include\ <chrono>}}
+\DoxyCodeLine{\Hypertarget{kernel__bilinearinterpolation_8cuh_source_l00009}00009\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{\Hypertarget{kernel__bilinearinterpolation_8cuh_source_l00010}\mbox{\hyperlink{kernel__bilinearinterpolation_8cuh_a598a3330b3c21701223ee0ca14316eca}{00010}}\ \textcolor{preprocessor}{\#define\ PI\ 3.14159265358979323846}}
+\DoxyCodeLine{\Hypertarget{kernel__bilinearinterpolation_8cuh_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{kernel__bilinearinterpolation_8cuh_source_l00012}00012\ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{\_\_global\_\_}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{kernel__bilinearinterpolation_8cuh_aa790cdc397c55afe58c97be3d1c77ca3}{inverseScanConversionKernels}}}
+\DoxyCodeLine{\Hypertarget{kernel__bilinearinterpolation_8cuh_source_l00013}00013\ (\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}**\ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{deviceOutputVecVol}},}
+\DoxyCodeLine{\Hypertarget{kernel__bilinearinterpolation_8cuh_source_l00014}00014\ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}**\ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{deviceVecVolSlices}},}
+\DoxyCodeLine{\Hypertarget{kernel__bilinearinterpolation_8cuh_source_l00015}00015\ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{numRows}},}
+\DoxyCodeLine{\Hypertarget{kernel__bilinearinterpolation_8cuh_source_l00016}00016\ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{numCols}},}
+\DoxyCodeLine{\Hypertarget{kernel__bilinearinterpolation_8cuh_source_l00017}00017\ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{numVectors}},}
+\DoxyCodeLine{\Hypertarget{kernel__bilinearinterpolation_8cuh_source_l00018}00018\ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{dstRows}},}
+\DoxyCodeLine{\Hypertarget{kernel__bilinearinterpolation_8cuh_source_l00019}00019\ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{dstColumns}},}
+\DoxyCodeLine{\Hypertarget{kernel__bilinearinterpolation_8cuh_source_l00020}00020\ \ \ \textcolor{keywordtype}{double}*\ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{deviceIndexX}},}
+\DoxyCodeLine{\Hypertarget{kernel__bilinearinterpolation_8cuh_source_l00021}00021\ \ \ \textcolor{keywordtype}{double}*\ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{deviceIndexY}}}
+\DoxyCodeLine{\Hypertarget{kernel__bilinearinterpolation_8cuh_source_l00022}00022\ );}
+\DoxyCodeLine{\Hypertarget{kernel__bilinearinterpolation_8cuh_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{kernel__bilinearinterpolation_8cuh_source_l00024}00024\ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{cudaError\_t}}\ \mbox{\hyperlink{kernel__bilinearinterpolation_8cuh_a1ecb4c9ae2d426bffedc636759a73a57}{inverseScanConversionWithCuda}}}
+\DoxyCodeLine{\Hypertarget{kernel__bilinearinterpolation_8cuh_source_l00025}00025\ (\ std::vector<unsigned\ char>\&\ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{outputVecVol}},}
+\DoxyCodeLine{\Hypertarget{kernel__bilinearinterpolation_8cuh_source_l00026}00026\ \ \ std::vector<unsigned\ char>\&\ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{nrrdData}},}
+\DoxyCodeLine{\Hypertarget{kernel__bilinearinterpolation_8cuh_source_l00027}00027\ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{rows}},}
+\DoxyCodeLine{\Hypertarget{kernel__bilinearinterpolation_8cuh_source_l00028}00028\ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{columns}},}
+\DoxyCodeLine{\Hypertarget{kernel__bilinearinterpolation_8cuh_source_l00029}00029\ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{numberOfFrames}},}
+\DoxyCodeLine{\Hypertarget{kernel__bilinearinterpolation_8cuh_source_l00030}00030\ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{dstRows}},}
+\DoxyCodeLine{\Hypertarget{kernel__bilinearinterpolation_8cuh_source_l00031}00031\ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{dstColumns}},}
+\DoxyCodeLine{\Hypertarget{kernel__bilinearinterpolation_8cuh_source_l00032}00032\ \ \ std::vector<double>\ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{srcIndexWiseXVec}},}
+\DoxyCodeLine{\Hypertarget{kernel__bilinearinterpolation_8cuh_source_l00033}00033\ \ \ std::vector<double>\ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{srcIndexWiseYVec}}}
+\DoxyCodeLine{\Hypertarget{kernel__bilinearinterpolation_8cuh_source_l00034}00034\ );}
+\DoxyCodeLine{\Hypertarget{kernel__bilinearinterpolation_8cuh_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{kernel__bilinearinterpolation_8cuh_source_l00036}00036\ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{\_\_global\_\_}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{kernel__bilinearinterpolation_8cuh_a705dcd23a477b6b499ffaf04a0d6c028}{bilinearInterpolationKernels}}}
+\DoxyCodeLine{\Hypertarget{kernel__bilinearinterpolation_8cuh_source_l00037}00037\ (\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}**\ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{deviceOutputVecVol}},}
+\DoxyCodeLine{\Hypertarget{kernel__bilinearinterpolation_8cuh_source_l00038}00038\ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}**\ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{deviceVecVolSlices}},}
+\DoxyCodeLine{\Hypertarget{kernel__bilinearinterpolation_8cuh_source_l00039}00039\ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{numRows}},}
+\DoxyCodeLine{\Hypertarget{kernel__bilinearinterpolation_8cuh_source_l00040}00040\ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{numCols}},}
+\DoxyCodeLine{\Hypertarget{kernel__bilinearinterpolation_8cuh_source_l00041}00041\ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{numVectors}},}
+\DoxyCodeLine{\Hypertarget{kernel__bilinearinterpolation_8cuh_source_l00042}00042\ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{dstRows}},}
+\DoxyCodeLine{\Hypertarget{kernel__bilinearinterpolation_8cuh_source_l00043}00043\ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{dstColumns}},}
+\DoxyCodeLine{\Hypertarget{kernel__bilinearinterpolation_8cuh_source_l00044}00044\ \ \ \textcolor{keywordtype}{float}*\ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{deviceIndexX}},}
+\DoxyCodeLine{\Hypertarget{kernel__bilinearinterpolation_8cuh_source_l00045}00045\ \ \ \textcolor{keywordtype}{float}*\ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{deviceIndexY}},}
+\DoxyCodeLine{\Hypertarget{kernel__bilinearinterpolation_8cuh_source_l00046}00046\ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{deviceMaskMeshVecPtr}}}
+\DoxyCodeLine{\Hypertarget{kernel__bilinearinterpolation_8cuh_source_l00047}00047\ );}
+\DoxyCodeLine{\Hypertarget{kernel__bilinearinterpolation_8cuh_source_l00048}00048\ }
+\DoxyCodeLine{\Hypertarget{kernel__bilinearinterpolation_8cuh_source_l00049}00049\ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{cudaError\_t}}\ \mbox{\hyperlink{kernel__bilinearinterpolation_8cuh_aec635ff571cf294b146ea23ea460cc33}{bilinearInterpolationWithCuda}}}
+\DoxyCodeLine{\Hypertarget{kernel__bilinearinterpolation_8cuh_source_l00050}00050\ (\ std::vector<unsigned\ char>\&\ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{outputVecVol}},}
+\DoxyCodeLine{\Hypertarget{kernel__bilinearinterpolation_8cuh_source_l00051}00051\ \ \ std::vector<unsigned\ char>\&\ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{nrrdData}},}
+\DoxyCodeLine{\Hypertarget{kernel__bilinearinterpolation_8cuh_source_l00052}00052\ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{srcRows}},}
+\DoxyCodeLine{\Hypertarget{kernel__bilinearinterpolation_8cuh_source_l00053}00053\ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{srcColumns}},}
+\DoxyCodeLine{\Hypertarget{kernel__bilinearinterpolation_8cuh_source_l00054}00054\ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{numberOfFrames}},}
+\DoxyCodeLine{\Hypertarget{kernel__bilinearinterpolation_8cuh_source_l00055}00055\ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{dstRows}},}
+\DoxyCodeLine{\Hypertarget{kernel__bilinearinterpolation_8cuh_source_l00056}00056\ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{dstColumns}},}
+\DoxyCodeLine{\Hypertarget{kernel__bilinearinterpolation_8cuh_source_l00057}00057\ \ \ std::vector<float>\ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{srcIndexWiseXVec}},}
+\DoxyCodeLine{\Hypertarget{kernel__bilinearinterpolation_8cuh_source_l00058}00058\ \ \ std::vector<float>\ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{srcIndexWiseYVec}},}
+\DoxyCodeLine{\Hypertarget{kernel__bilinearinterpolation_8cuh_source_l00059}00059\ \ \ std::vector<unsigned\ char>\ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{hostMaskMeshVec}}\ =\ std::vector<unsigned\ char>()}
+\DoxyCodeLine{\Hypertarget{kernel__bilinearinterpolation_8cuh_source_l00060}00060\ );}
+\DoxyCodeLine{\Hypertarget{kernel__bilinearinterpolation_8cuh_source_l00061}00061\ }
+\DoxyCodeLine{\Hypertarget{kernel__bilinearinterpolation_8cuh_source_l00062}00062\ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{\_\_global\_\_}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{kernel__bilinearinterpolation_8cuh_aaf6897c58c280ff8d4a11aa07ae9189b}{generateIndexWiseRangeAngleMeshVecKernel}}}
+\DoxyCodeLine{\Hypertarget{kernel__bilinearinterpolation_8cuh_source_l00063}00063\ (\ \textcolor{keywordtype}{float}*\ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{deviceIndexWiseRangeMeshVecPtr}},}
+\DoxyCodeLine{\Hypertarget{kernel__bilinearinterpolation_8cuh_source_l00064}00064\ \ \ \textcolor{keywordtype}{float}*\ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{deviceIndexWiseAngleMeshVecPtr}},}
+\DoxyCodeLine{\Hypertarget{kernel__bilinearinterpolation_8cuh_source_l00065}00065\ \ \ \textcolor{keywordtype}{double}*\ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{deviceXPtr}},}
+\DoxyCodeLine{\Hypertarget{kernel__bilinearinterpolation_8cuh_source_l00066}00066\ \ \ \textcolor{keywordtype}{double}*\ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{deviceYPtr}},}
+\DoxyCodeLine{\Hypertarget{kernel__bilinearinterpolation_8cuh_source_l00067}00067\ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{cols}},}
+\DoxyCodeLine{\Hypertarget{kernel__bilinearinterpolation_8cuh_source_l00068}00068\ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{rows}},}
+\DoxyCodeLine{\Hypertarget{kernel__bilinearinterpolation_8cuh_source_l00069}00069\ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{firstSrcRangeValue}},}
+\DoxyCodeLine{\Hypertarget{kernel__bilinearinterpolation_8cuh_source_l00070}00070\ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{lastSrcRangeValue}},}
+\DoxyCodeLine{\Hypertarget{kernel__bilinearinterpolation_8cuh_source_l00071}00071\ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{numRanges}},}
+\DoxyCodeLine{\Hypertarget{kernel__bilinearinterpolation_8cuh_source_l00072}00072\ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{firstSrcAngleValue}},}
+\DoxyCodeLine{\Hypertarget{kernel__bilinearinterpolation_8cuh_source_l00073}00073\ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{lastSrcAngleValue}},}
+\DoxyCodeLine{\Hypertarget{kernel__bilinearinterpolation_8cuh_source_l00074}00074\ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{numAngles}}}
+\DoxyCodeLine{\Hypertarget{kernel__bilinearinterpolation_8cuh_source_l00075}00075\ );}
+\DoxyCodeLine{\Hypertarget{kernel__bilinearinterpolation_8cuh_source_l00076}00076\ }
+\DoxyCodeLine{\Hypertarget{kernel__bilinearinterpolation_8cuh_source_l00077}00077\ std::pair<std::vector<float>,\ std::vector<float>>\ \mbox{\hyperlink{kernel__bilinearinterpolation_8cuh_af072da814806af3fd62d5f6ff33354b6}{generateIndexWiseRangeAngleMeshVecWithCuda}}}
+\DoxyCodeLine{\Hypertarget{kernel__bilinearinterpolation_8cuh_source_l00078}00078\ (\ std::vector<double>\ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{X}},}
+\DoxyCodeLine{\Hypertarget{kernel__bilinearinterpolation_8cuh_source_l00079}00079\ \ \ std::vector<double>\ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{Y}},}
+\DoxyCodeLine{\Hypertarget{kernel__bilinearinterpolation_8cuh_source_l00080}00080\ \ \ std::vector<double>\ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{srcRangeA}},}
+\DoxyCodeLine{\Hypertarget{kernel__bilinearinterpolation_8cuh_source_l00081}00081\ \ \ std::vector<double>\ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{srcAngleA}}}
+\DoxyCodeLine{\Hypertarget{kernel__bilinearinterpolation_8cuh_source_l00082}00082\ );}
+\DoxyCodeLine{\Hypertarget{kernel__bilinearinterpolation_8cuh_source_l00083}00083\ }
+\DoxyCodeLine{\Hypertarget{kernel__bilinearinterpolation_8cuh_source_l00084}00084\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ KERNEL\_CUH}}
+\DoxyCodeLine{\Hypertarget{kernel__bilinearinterpolation_8cuh_source_l00085}00085\ }
+
+\end{DoxyCode}

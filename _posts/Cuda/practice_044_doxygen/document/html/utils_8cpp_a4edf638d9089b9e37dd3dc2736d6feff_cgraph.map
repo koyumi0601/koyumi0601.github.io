@@ -1,0 +1,6 @@
+<map id="generateStencilMaskVec" name="generateStencilMaskVec">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,29,172,56"/>
+<area shape="rect" id="Node000002" href="$utils_8cpp.html#acb6c9a4be4f2ead5ba224e2312f6f52f" title=" " alt="" coords="220,29,289,56"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="172,40,204,40,204,45,172,45"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="226,30,221,21,224,11,236,5,254,3,274,5,285,12,282,16,273,10,254,8,237,10,228,15,226,20,230,28"/>
+</map>

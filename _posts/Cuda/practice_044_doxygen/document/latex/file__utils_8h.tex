@@ -1,0 +1,200 @@
+\doxysection{inverse\+Scan\+Convert/file\+\_\+utils.h File Reference}
+\hypertarget{file__utils_8h}{}\label{file__utils_8h}\index{inverseScanConvert/file\_utils.h@{inverseScanConvert/file\_utils.h}}
+{\ttfamily \#include $<$array$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$regex$>$}\newline
+{\ttfamily \#include $<$map$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include "{}dcmtk/config/osconfig.\+h"{}}\newline
+{\ttfamily \#include "{}dcmtk/dcmdata/dctk.\+h"{}}\newline
+{\ttfamily \#include $<$opencv2/core.\+hpp$>$}\newline
+{\ttfamily \#include $<$opencv2/imgcodecs.\+hpp$>$}\newline
+{\ttfamily \#include $<$opencv2/opencv.\+hpp$>$}\newline
+Include dependency graph for file\+\_\+utils.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{file__utils_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=300pt]{file__utils_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_dicom_struct}{Dicom\+Struct}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::tuple}}$<$ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::string}}, \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::string}}, \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::string}} $>$ \mbox{\hyperlink{file__utils_8h_a9a9e8bc35f97eabdb2555925b7381824}{Get\+Data\+Name\+View\+Name}} (\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{const}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::string}} \&\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{path\+Name}})
+\item 
+\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::string}} \mbox{\hyperlink{file__utils_8h_a477087dd040a72711ac30db768f0c186}{trim\+String}} (\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::string}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{str}})
+\item 
+\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::tuple}}$<$ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::vector}}$<$ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::string}} $>$, \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::map}}$<$ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::string}}, \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::string}} $>$, \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::vector}}$<$ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{unsigned}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{char}} $>$ $>$ \mbox{\hyperlink{file__utils_8h_a003abf4f279f71a795beef7c04f397f2}{read\+Nrrd}} (\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::string}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{full\+Path\+Name}})
+\item 
+\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{bool}} \mbox{\hyperlink{file__utils_8h_a69c78b6b1774e1ccaae931b2c60b3b0a}{Save\+Patient\+Name}} (\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{Dcm\+File\+Format}} \&\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{fileformat}}, \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::string}} \&\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{file\+Path}}, \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{const}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::string}} \&\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{info}})
+\item 
+\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{Dcm\+Dataset}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{file__utils_8h_af0482a15a2beeeab99e09215328e75fe}{Open\+DICOMAnd\+Get\+Dataset}} (\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{Dcm\+File\+Format}} \&\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{fileformat}}, \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::string}} \&\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{file\+Path}})
+\item 
+\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::string}} \mbox{\hyperlink{file__utils_8h_a74fb03421a96f952d39a4bbdf4685471}{String\+Replace}} (\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{const}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::string}} \&\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{a\+Str}}, \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{const}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::string}} \&\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{src}}, \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{const}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::string}} \&\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{des}})
+\item 
+\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{void}} \mbox{\hyperlink{file__utils_8h_a879994bb03bd520105f1c2cb98fa0ff4}{Save\+Updated\+Dicom}} (\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{const}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::string}} \&\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{output\+Path}}, \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{Dcm\+File\+Format}} \&\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{dicom\+Fileformat}}, \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{const}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::vector}}$<$ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{unsigned}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{char}} $>$ \&\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{data}}, \mbox{\hyperlink{struct_dicom_struct}{Dicom\+Struct}} \&\mbox{\hyperlink{main_8cu_a635493797c6315b67bbf78fdf1f98cba}{ds}})
+\item 
+\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{void}} \mbox{\hyperlink{file__utils_8h_a6c91dfcfaa6146c95808505fe78a4eff}{Save\+Nrrd\+As\+Dicom}} (\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{const}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::string}} \&\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{output\+Path}}, \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{const}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::vector}}$<$ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{unsigned}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{char}} $>$ \&\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{data}}, \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::map}}$<$ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::string}}, \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{float}} $>$ \&\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{header}}, \mbox{\hyperlink{struct_dicom_struct}{Dicom\+Struct}} \&\mbox{\hyperlink{main_8cu_a635493797c6315b67bbf78fdf1f98cba}{ds}})
+\item 
+\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::tuple}}$<$ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{bool}}, \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::map}}$<$ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::string}}, \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{double}} $>$, \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::vector}}$<$ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{unsigned}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{char}} $>$ $>$ \mbox{\hyperlink{file__utils_8h_a5b9faa7b3cb3bb613ea0da036acb5752}{Open\+DICOMAnd\+Get\+Dataset\+Map}} (\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::string}} \&\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{file\+Path}}, \mbox{\hyperlink{struct_dicom_struct}{Dicom\+Struct}} \&\mbox{\hyperlink{main_8cu_a635493797c6315b67bbf78fdf1f98cba}{ds}})
+\item 
+\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::string}} \mbox{\hyperlink{file__utils_8h_a311b19b064325f318ca65c3475ae72c4}{get\+Deducted\+Path\+Name}} (\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{const}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::string}} \&\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{full\+Path\+Name}}, \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{const}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::string}} \&\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+Folder\+Path}})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{file__utils_8h_a9a9e8bc35f97eabdb2555925b7381824}\label{file__utils_8h_a9a9e8bc35f97eabdb2555925b7381824} 
+\index{file\_utils.h@{file\_utils.h}!GetDataNameViewName@{GetDataNameViewName}}
+\index{GetDataNameViewName@{GetDataNameViewName}!file\_utils.h@{file\_utils.h}}
+\doxysubsubsection{\texorpdfstring{GetDataNameViewName()}{GetDataNameViewName()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::tuple}}$<$ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::string}}, \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::string}}, \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::string}} $>$ Get\+Data\+Name\+View\+Name (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{const}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::string}} \&}]{path\+Name }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{file__utils_8cpp_source_l00004}{4}} of file \mbox{\hyperlink{file__utils_8cpp_source}{file\+\_\+utils.\+cpp}}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=277pt]{file__utils_8h_a9a9e8bc35f97eabdb2555925b7381824_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{file__utils_8h_a311b19b064325f318ca65c3475ae72c4}\label{file__utils_8h_a311b19b064325f318ca65c3475ae72c4} 
+\index{file\_utils.h@{file\_utils.h}!getDeductedPathName@{getDeductedPathName}}
+\index{getDeductedPathName@{getDeductedPathName}!file\_utils.h@{file\_utils.h}}
+\doxysubsubsection{\texorpdfstring{getDeductedPathName()}{getDeductedPathName()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::string}} get\+Deducted\+Path\+Name (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{const}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::string}} \&}]{full\+Path\+Name,  }\item[{\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{const}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::string}} \&}]{std\+Folder\+Path }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{file__utils_8cpp_source_l00295}{295}} of file \mbox{\hyperlink{file__utils_8cpp_source}{file\+\_\+utils.\+cpp}}.
+
+\Hypertarget{file__utils_8h_af0482a15a2beeeab99e09215328e75fe}\label{file__utils_8h_af0482a15a2beeeab99e09215328e75fe} 
+\index{file\_utils.h@{file\_utils.h}!OpenDICOMAndGetDataset@{OpenDICOMAndGetDataset}}
+\index{OpenDICOMAndGetDataset@{OpenDICOMAndGetDataset}!file\_utils.h@{file\_utils.h}}
+\doxysubsubsection{\texorpdfstring{OpenDICOMAndGetDataset()}{OpenDICOMAndGetDataset()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{Dcm\+Dataset}} \texorpdfstring{$\ast$}{*} Open\+DICOMAnd\+Get\+Dataset (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{Dcm\+File\+Format}} \&}]{fileformat,  }\item[{\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::string}} \&}]{file\+Path }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{file__utils_8cpp_source_l00116}{116}} of file \mbox{\hyperlink{file__utils_8cpp_source}{file\+\_\+utils.\+cpp}}.
+
+\Hypertarget{file__utils_8h_a5b9faa7b3cb3bb613ea0da036acb5752}\label{file__utils_8h_a5b9faa7b3cb3bb613ea0da036acb5752} 
+\index{file\_utils.h@{file\_utils.h}!OpenDICOMAndGetDatasetMap@{OpenDICOMAndGetDatasetMap}}
+\index{OpenDICOMAndGetDatasetMap@{OpenDICOMAndGetDatasetMap}!file\_utils.h@{file\_utils.h}}
+\doxysubsubsection{\texorpdfstring{OpenDICOMAndGetDatasetMap()}{OpenDICOMAndGetDatasetMap()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::tuple}}$<$ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{bool}}, \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::map}}$<$ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::string}}, \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{double}} $>$, \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::vector}}$<$ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{unsigned}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{char}} $>$ $>$ Open\+DICOMAnd\+Get\+Dataset\+Map (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::string}} \&}]{file\+Path,  }\item[{\mbox{\hyperlink{struct_dicom_struct}{Dicom\+Struct}} \&}]{ds }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{file__utils_8cpp_source_l00222}{222}} of file \mbox{\hyperlink{file__utils_8cpp_source}{file\+\_\+utils.\+cpp}}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=309pt]{file__utils_8h_a5b9faa7b3cb3bb613ea0da036acb5752_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{file__utils_8h_a003abf4f279f71a795beef7c04f397f2}\label{file__utils_8h_a003abf4f279f71a795beef7c04f397f2} 
+\index{file\_utils.h@{file\_utils.h}!readNrrd@{readNrrd}}
+\index{readNrrd@{readNrrd}!file\_utils.h@{file\_utils.h}}
+\doxysubsubsection{\texorpdfstring{readNrrd()}{readNrrd()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::tuple}}$<$ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::vector}}$<$ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::string}} $>$, \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::map}}$<$ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::string}}, \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::string}} $>$, \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::vector}}$<$ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{unsigned}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{char}} $>$ $>$ read\+Nrrd (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::string}}}]{full\+Path\+Name }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{file__utils_8cpp_source_l00025}{25}} of file \mbox{\hyperlink{file__utils_8cpp_source}{file\+\_\+utils.\+cpp}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=227pt]{file__utils_8h_a003abf4f279f71a795beef7c04f397f2_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=206pt]{file__utils_8h_a003abf4f279f71a795beef7c04f397f2_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{file__utils_8h_a6c91dfcfaa6146c95808505fe78a4eff}\label{file__utils_8h_a6c91dfcfaa6146c95808505fe78a4eff} 
+\index{file\_utils.h@{file\_utils.h}!SaveNrrdAsDicom@{SaveNrrdAsDicom}}
+\index{SaveNrrdAsDicom@{SaveNrrdAsDicom}!file\_utils.h@{file\_utils.h}}
+\doxysubsubsection{\texorpdfstring{SaveNrrdAsDicom()}{SaveNrrdAsDicom()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{void}} Save\+Nrrd\+As\+Dicom (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{const}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::string}} \&}]{output\+Path,  }\item[{\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{const}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::vector}}$<$ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{unsigned}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{char}} $>$ \&}]{data,  }\item[{\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::map}}$<$ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::string}}, \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{float}} $>$ \&}]{header,  }\item[{\mbox{\hyperlink{struct_dicom_struct}{Dicom\+Struct}} \&}]{ds }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{file__utils_8cpp_source_l00159}{159}} of file \mbox{\hyperlink{file__utils_8cpp_source}{file\+\_\+utils.\+cpp}}.
+
+\Hypertarget{file__utils_8h_a69c78b6b1774e1ccaae931b2c60b3b0a}\label{file__utils_8h_a69c78b6b1774e1ccaae931b2c60b3b0a} 
+\index{file\_utils.h@{file\_utils.h}!SavePatientName@{SavePatientName}}
+\index{SavePatientName@{SavePatientName}!file\_utils.h@{file\_utils.h}}
+\doxysubsubsection{\texorpdfstring{SavePatientName()}{SavePatientName()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{bool}} Save\+Patient\+Name (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{Dcm\+File\+Format}} \&}]{fileformat,  }\item[{\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::string}} \&}]{file\+Path,  }\item[{\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{const}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::string}} \&}]{info }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{file__utils_8cpp_source_l00095}{95}} of file \mbox{\hyperlink{file__utils_8cpp_source}{file\+\_\+utils.\+cpp}}.
+
+\Hypertarget{file__utils_8h_a879994bb03bd520105f1c2cb98fa0ff4}\label{file__utils_8h_a879994bb03bd520105f1c2cb98fa0ff4} 
+\index{file\_utils.h@{file\_utils.h}!SaveUpdatedDicom@{SaveUpdatedDicom}}
+\index{SaveUpdatedDicom@{SaveUpdatedDicom}!file\_utils.h@{file\_utils.h}}
+\doxysubsubsection{\texorpdfstring{SaveUpdatedDicom()}{SaveUpdatedDicom()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{void}} Save\+Updated\+Dicom (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{const}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::string}} \&}]{output\+Path,  }\item[{\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{Dcm\+File\+Format}} \&}]{dicom\+Fileformat,  }\item[{\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{const}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::vector}}$<$ \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{unsigned}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{char}} $>$ \&}]{data,  }\item[{\mbox{\hyperlink{struct_dicom_struct}{Dicom\+Struct}} \&}]{ds }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{file__utils_8cpp_source_l00128}{128}} of file \mbox{\hyperlink{file__utils_8cpp_source}{file\+\_\+utils.\+cpp}}.
+
+\Hypertarget{file__utils_8h_a74fb03421a96f952d39a4bbdf4685471}\label{file__utils_8h_a74fb03421a96f952d39a4bbdf4685471} 
+\index{file\_utils.h@{file\_utils.h}!StringReplace@{StringReplace}}
+\index{StringReplace@{StringReplace}!file\_utils.h@{file\_utils.h}}
+\doxysubsubsection{\texorpdfstring{StringReplace()}{StringReplace()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::string}} String\+Replace (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{const}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::string}} \&}]{a\+Str,  }\item[{\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{const}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::string}} \&}]{src,  }\item[{\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{const}} \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::string}} \&}]{des }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{file__utils_8cpp_source_l00148}{148}} of file \mbox{\hyperlink{file__utils_8cpp_source}{file\+\_\+utils.\+cpp}}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=230pt]{file__utils_8h_a74fb03421a96f952d39a4bbdf4685471_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{file__utils_8h_a477087dd040a72711ac30db768f0c186}\label{file__utils_8h_a477087dd040a72711ac30db768f0c186} 
+\index{file\_utils.h@{file\_utils.h}!trimString@{trimString}}
+\index{trimString@{trimString}!file\_utils.h@{file\_utils.h}}
+\doxysubsubsection{\texorpdfstring{trimString()}{trimString()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::string}} trim\+String (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{functions_8cpp_a549e407a8c13ac96b74fbe2022dd13cb}{std\+::string}}}]{str }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{file__utils_8cpp_source_l00018}{18}} of file \mbox{\hyperlink{file__utils_8cpp_source}{file\+\_\+utils.\+cpp}}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=300pt]{file__utils_8h_a477087dd040a72711ac30db768f0c186_icgraph}
+\end{center}
+\end{figure}

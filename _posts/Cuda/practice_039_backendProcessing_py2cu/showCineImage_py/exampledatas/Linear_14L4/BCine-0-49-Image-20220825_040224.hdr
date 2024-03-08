@@ -1,0 +1,33 @@
+#
+# General Info
+#
+Title: BCine
+BeginChunkID: 0
+NumChunks: 50
+BeginTime: 0
+EndTime: 0
+DumpCineRestoreBuffer: 0
+StreamNum: 0
+StreamType: 0
+StreamDataType: 1
+AcqTimestamp: null
+#
+# Stream Parameters
+#
+BitsUsedPerSample: 8
+NumBytesPerSample: 1
+NumAcquiredSamplesPerLine: 688
+NumAcquiredLinesPerSlice: 440
+NumAcquiredSlicesPerVolume: 1
+AcquiredLateralMin: -25.5
+AcquiredLateralSpan: 51
+AcquiredElevationMin: 0
+AcquiredElevationSpan: 0
+DisplayedLateralSpan: 51
+DisplayedLateralMin: -25.5
+DisplayedElevationMin: 0
+DisplayedElevationSpan: 0
+AcquiredAxialMinMm: -0.30318749
+AcquiredAxialSpanMm: 41.5800018
+DisplayedAxialMinMm: 0
+DisplayedAxialSpanMm: 40
