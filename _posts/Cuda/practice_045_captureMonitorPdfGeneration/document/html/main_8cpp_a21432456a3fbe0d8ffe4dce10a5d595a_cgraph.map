@@ -1,0 +1,7 @@
+<map id="CaptureRegionFor" name="CaptureRegionFor">
+<area shape="rect" id="Node000001" title="지정된 영역을 캡처하고 각 페이지의 이미지를 저장하는 함수입니다." alt="" coords="5,31,131,57"/>
+<area shape="rect" id="Node000002" href="$main_8cpp.html#a438a346a9bd7abf391811def008afac9" title="지정된 화면 좌표에 마우스를 클릭하는 함수입니다." alt="" coords="194,5,283,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="131,32,178,25,179,30,132,37"/>
+<area shape="rect" id="Node000003" href="$main_8cpp.html#a9c7a45b5666085d2fc482b9707760837" title="지정된 이미지 형식에 대한 인코더의 CLSID를 검색합니다." alt="" coords="179,56,298,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="132,51,164,56,163,61,131,56"/>
+</map>

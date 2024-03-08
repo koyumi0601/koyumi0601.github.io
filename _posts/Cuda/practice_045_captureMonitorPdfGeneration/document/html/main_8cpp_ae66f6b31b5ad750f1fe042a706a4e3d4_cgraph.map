@@ -1,0 +1,13 @@
+<map id="main" name="main">
+<area shape="rect" id="Node000001" title="프로그램의 메인 함수입니다." alt="" coords="5,81,55,108"/>
+<area shape="rect" id="Node000002" href="$main_8cpp.html#a21432456a3fbe0d8ffe4dce10a5d595a" title="지정된 영역을 캡처하고 각 페이지의 이미지를 저장하는 함수입니다." alt="" coords="117,31,243,57"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="54,84,102,67,121,60,123,65,104,72,56,89"/>
+<area shape="rect" id="Node000005" href="$main_8cpp.html#a5e17ea8f97aa78832a51ad12cc20ed02" title="지정된 폴더에서 특정 확장자를 가진 파일 목록을 검색합니다." alt="" coords="103,81,257,108"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="55,92,87,92,87,97,55,97"/>
+<area shape="rect" id="Node000006" href="$main_8cpp.html#af580a271482ce4a9dd3f069512c1c278" title="여러 이미지 파일을 하나의 PDF 파일로 변환하는 함수입니다." alt="" coords="132,132,228,159"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="56,101,104,117,123,124,121,129,102,123,54,106"/>
+<area shape="rect" id="Node000003" href="$main_8cpp.html#a438a346a9bd7abf391811def008afac9" title="지정된 화면 좌표에 마우스를 클릭하는 함수입니다." alt="" coords="320,5,409,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="242,33,304,24,305,30,243,38"/>
+<area shape="rect" id="Node000004" href="$main_8cpp.html#a9c7a45b5666085d2fc482b9707760837" title="지정된 이미지 형식에 대한 인코더의 CLSID를 검색합니다." alt="" coords="305,56,424,83"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="243,50,290,57,290,62,242,55"/>
+</map>
