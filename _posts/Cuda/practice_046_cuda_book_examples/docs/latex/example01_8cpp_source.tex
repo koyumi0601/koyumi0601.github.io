@@ -1,0 +1,45 @@
+\doxysection{example01.\+cpp}
+\hypertarget{example01_8cpp_source}{}\label{example01_8cpp_source}\index{D:/Github\_Blog/koyumi0601.github.io/\_posts/Cuda/practice\_046\_cuda\_book\_examples/examples/example01.cpp@{D:/Github\_Blog/koyumi0601.github.io/\_posts/Cuda/practice\_046\_cuda\_book\_examples/examples/example01.cpp}}
+\mbox{\hyperlink{example01_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{example01_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{example01_8h}{example01.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{example01_8cpp_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{example01_8cpp_source_l00003}\mbox{\hyperlink{example01_8cpp_a6d494767969a630d11deea8ccf1ef26c}{00003}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{example01_8cpp_a6d494767969a630d11deea8ccf1ef26c}{exampleVector}}()\ \{}
+\DoxyCodeLine{\Hypertarget{example01_8cpp_source_l00004}00004\ \ \ \mbox{\hyperlink{classutils_1_1_timer}{utils::Timer}}\ timer;}
+\DoxyCodeLine{\Hypertarget{example01_8cpp_source_l00005}00005\ \ \ timer.\mbox{\hyperlink{classutils_1_1_timer_aac4e918c83405631fc33ce4acdf6e12f}{on}}(\textcolor{stringliteral}{"{}This\ is\ start!"{}});}
+\DoxyCodeLine{\Hypertarget{example01_8cpp_source_l00006}00006\ \ \ timer.\mbox{\hyperlink{classutils_1_1_timer_a2a44e3a752076ba9cf71e78dbccb8163}{elapsed}}();}
+\DoxyCodeLine{\Hypertarget{example01_8cpp_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{example01_8cpp_source_l00008}00008\ \ \ \textcolor{keywordtype}{size\_t}\ size\_x\ =\ 1024;}
+\DoxyCodeLine{\Hypertarget{example01_8cpp_source_l00009}00009\ \ \ \textcolor{keywordtype}{size\_t}\ size\_y\ =\ 1024;}
+\DoxyCodeLine{\Hypertarget{example01_8cpp_source_l00010}00010\ \ \ std::vector<float>\ Vector1dPtr(size\_y,\ 0.0);}
+\DoxyCodeLine{\Hypertarget{example01_8cpp_source_l00011}00011\ \ \ std::vector<std::vector<float\ >>\ Matrix2dPtr(size\_x,\ Vector1dPtr);}
+\DoxyCodeLine{\Hypertarget{example01_8cpp_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{example01_8cpp_source_l00013}00013\ \ \ \textcolor{comment}{//\ 1d\ vector}}
+\DoxyCodeLine{\Hypertarget{example01_8cpp_source_l00014}00014\ \ \ Vector1dPtr[0]\ =\ 1.0;}
+\DoxyCodeLine{\Hypertarget{example01_8cpp_source_l00015}00015\ \ \ timer.\mbox{\hyperlink{classutils_1_1_timer_aac4e918c83405631fc33ce4acdf6e12f}{on}}(\textcolor{stringliteral}{"{}Vector1dPtr[0]"{}});}
+\DoxyCodeLine{\Hypertarget{example01_8cpp_source_l00016}00016\ \ \ std::cout\ <<\ Vector1dPtr[0]\ <<\ std::endl;\ \textcolor{comment}{//\ []\ operator.\ 제일\ 빠르다고\ 한다.\ 근데\ 실제로\ 재보면\ 제일\ 느린데.}}
+\DoxyCodeLine{\Hypertarget{example01_8cpp_source_l00017}00017\ \ \ timer.\mbox{\hyperlink{classutils_1_1_timer_a2a44e3a752076ba9cf71e78dbccb8163}{elapsed}}();}
+\DoxyCodeLine{\Hypertarget{example01_8cpp_source_l00018}00018\ \ \ timer.\mbox{\hyperlink{classutils_1_1_timer_aac4e918c83405631fc33ce4acdf6e12f}{on}}(\textcolor{stringliteral}{"{}Vector1dPtr.at(0)"{}});}
+\DoxyCodeLine{\Hypertarget{example01_8cpp_source_l00019}00019\ \ \ std::cout\ <<\ Vector1dPtr.at(0)\ <<\ std::endl;\ \textcolor{comment}{//\ at()\ 함수.\ 범위\ 안에\ 있는\ 지\ 확인하고\ 벗어나는\ 경우\ std::out\_of\_range\ 예외\ 발생}}
+\DoxyCodeLine{\Hypertarget{example01_8cpp_source_l00020}00020\ \ \ timer.\mbox{\hyperlink{classutils_1_1_timer_a2a44e3a752076ba9cf71e78dbccb8163}{elapsed}}();}
+\DoxyCodeLine{\Hypertarget{example01_8cpp_source_l00021}00021\ \ \ timer.\mbox{\hyperlink{classutils_1_1_timer_aac4e918c83405631fc33ce4acdf6e12f}{on}}(\textcolor{stringliteral}{"{}Vector1dPtr.begin()"{}});}
+\DoxyCodeLine{\Hypertarget{example01_8cpp_source_l00022}00022\ \ \ std::vector<float>::iterator\ it\ =\ Vector1dPtr.begin();\ \textcolor{comment}{//\ iterator.\ Vector1dPtr.begin(),\ Vector1dPtr.end()}}
+\DoxyCodeLine{\Hypertarget{example01_8cpp_source_l00023}00023\ \ \ std::cout\ <<\ *it\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{example01_8cpp_source_l00024}00024\ \ \ timer.\mbox{\hyperlink{classutils_1_1_timer_a2a44e3a752076ba9cf71e78dbccb8163}{elapsed}}();}
+\DoxyCodeLine{\Hypertarget{example01_8cpp_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{example01_8cpp_source_l00026}00026\ \ \ \textcolor{comment}{//\ 2d\ matrix}}
+\DoxyCodeLine{\Hypertarget{example01_8cpp_source_l00027}00027\ \ \ Matrix2dPtr[0][0]\ =\ 2.0;}
+\DoxyCodeLine{\Hypertarget{example01_8cpp_source_l00028}00028\ \ \ timer.\mbox{\hyperlink{classutils_1_1_timer_aac4e918c83405631fc33ce4acdf6e12f}{on}}(\textcolor{stringliteral}{"{}Matrix2dPtr[0][0]"{}});}
+\DoxyCodeLine{\Hypertarget{example01_8cpp_source_l00029}00029\ \ \ std::cout\ <<\ Matrix2dPtr[0][0]\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{example01_8cpp_source_l00030}00030\ \ \ timer.\mbox{\hyperlink{classutils_1_1_timer_a2a44e3a752076ba9cf71e78dbccb8163}{elapsed}}();}
+\DoxyCodeLine{\Hypertarget{example01_8cpp_source_l00031}00031\ \ \ timer.\mbox{\hyperlink{classutils_1_1_timer_aac4e918c83405631fc33ce4acdf6e12f}{on}}(\textcolor{stringliteral}{"{}Matrix2dPtr.at(0).at(0)"{}});}
+\DoxyCodeLine{\Hypertarget{example01_8cpp_source_l00032}00032\ \ \ std::cout\ <<\ Matrix2dPtr.at(0).at(0)\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{example01_8cpp_source_l00033}00033\ \ \ timer.\mbox{\hyperlink{classutils_1_1_timer_a2a44e3a752076ba9cf71e78dbccb8163}{elapsed}}();}
+\DoxyCodeLine{\Hypertarget{example01_8cpp_source_l00034}00034\ \ \ timer.\mbox{\hyperlink{classutils_1_1_timer_aac4e918c83405631fc33ce4acdf6e12f}{on}}(\textcolor{stringliteral}{"{}Matrix2dPtr.begin(),\ row\_it-\/>begin()"{}});}
+\DoxyCodeLine{\Hypertarget{example01_8cpp_source_l00035}00035\ \ \ std::vector<std::vector<float>>::iterator\ row\_it\ =\ Matrix2dPtr.begin();}
+\DoxyCodeLine{\Hypertarget{example01_8cpp_source_l00036}00036\ \ \ std::vector<float>::iterator\ col\_it\ =\ row\_it-\/>begin();}
+\DoxyCodeLine{\Hypertarget{example01_8cpp_source_l00037}00037\ \ \ std::cout\ <<\ *col\_it\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{example01_8cpp_source_l00038}00038\ \ \ timer.\mbox{\hyperlink{classutils_1_1_timer_a2a44e3a752076ba9cf71e78dbccb8163}{elapsed}}();}
+\DoxyCodeLine{\Hypertarget{example01_8cpp_source_l00039}00039\ \}}
+
+\end{DoxyCode}

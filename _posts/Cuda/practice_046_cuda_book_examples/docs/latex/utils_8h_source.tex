@@ -1,0 +1,32 @@
+\doxysection{utils.\+h}
+\hypertarget{utils_8h_source}{}\label{utils_8h_source}\index{D:/Github\_Blog/koyumi0601.github.io/\_posts/Cuda/practice\_046\_cuda\_book\_examples/examples/utils.h@{D:/Github\_Blog/koyumi0601.github.io/\_posts/Cuda/practice\_046\_cuda\_book\_examples/examples/utils.h}}
+\mbox{\hyperlink{utils_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00001}00001\ \textcolor{preprocessor}{\#ifndef\ UTILS\_H}}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00002}00002\ \textcolor{preprocessor}{\#define\ UTILS\_H}}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00004}00004\ \textcolor{preprocessor}{\#include\ <chrono>}}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00005}00005\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00006}00006\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00008}00008\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceutils}{utils}}}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00009}00009\ \{}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00010}\mbox{\hyperlink{classutils_1_1_timer}{00010}}\ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classutils_1_1_timer}{Timer}}\ \{}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00011}00011\ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00012}00012\ \ \ \ \ std::chrono::high\_resolution\_clock::time\_point\ start;}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00013}00013\ \ \ \ \ std::chrono::high\_resolution\_clock::time\_point\ end;}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00014}00014\ \ \ \ \ std::chrono::duration<double,\ std::milli>\ duration;}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00015}00015\ \ \ \ \ std::string\ taskName;}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00017}00017\ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00018}00018\ \ \ \ \ \mbox{\hyperlink{classutils_1_1_timer_a0489e1eabf3cbaf99b8afcaefa79306e}{Timer}}();}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00019}00019\ \ \ \ \ \mbox{\hyperlink{classutils_1_1_timer_aabf871df1265265d821cbcf245352f13}{\string~Timer}}();}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00020}00020\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classutils_1_1_timer_aac4e918c83405631fc33ce4acdf6e12f}{on}}(\textcolor{keyword}{const}\ std::string\&\ name);}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00021}00021\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classutils_1_1_timer_a2a44e3a752076ba9cf71e78dbccb8163}{elapsed}}();}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00022}00022\ \ \ \};}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00024}00024\ \}}
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{utils_8h_source_l00026}00026\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

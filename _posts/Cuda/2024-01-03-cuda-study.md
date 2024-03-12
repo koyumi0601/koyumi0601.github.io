@@ -20,10 +20,11 @@ search: true
 - **Programming Guide** [https://docs.nvidia.com/cuda/cuda-c-programming-guide](https://docs.nvidia.com/cuda/cuda-c-programming-guide)
 - Quick Start Guide [https://docs.nvidia.com/cuda/cuda-quick-start-guide/](https://docs.nvidia.com/cuda/cuda-quick-start-guide/)
 - CUDA Programming read docs. [https://cuda.readthedocs.io/ko/latest/rtx2080Ti/](https://cuda.readthedocs.io/ko/latest/rtx2080Ti/)
+- 구글검색 nvidia ampere architecture white paper [https://www.nvidia.com/content/PDF/nvidia-ampere-ga-102-gpu-architecture-whitepaper-v2.1.pdf](https://www.nvidia.com/content/PDF/nvidia-ampere-ga-102-gpu-architecture-whitepaper-v2.1.pdf)
 
 
 # Code 
-- Samples: NVIDIA Github 
+- Samples: NVIDIA Github [https://github.com/NVIDIA/cuda-samples](https://github.com/NVIDIA/cuda-samples)
 - 자주 쓰는 코드: https://blog.naver.com/PostView.nhn?blogId=lithium81&logNo=80143506571
 
 
@@ -62,27 +63,58 @@ search: true
 
 ## 구조
 
+# 6.1.1 스트리밍 멀티프로세서
+- 페르미 아키텍처: 하나의 SM에 32개의 CUDA core를 가지고 있다
+
+## Instruction Cache
+- 명령어 1개가 워프 내 모든 스레드에 사용된다. SIMT (Single Instruction Multi Treads)
+
+## Warp Scheduler
+- 다음에 처리할 명령어를 결정하거나 명령을 내린다
+## Dispatch Unit
+- 명령어 전달 유닛
+
+
+## **Register File**
+- 32768 x 32 bit
+- CORE들은 레지스터를 등분해서 가지고 있는다. 자신만의 작업책상이 있다.
+- 따라서 문맥 교환 비용이 0이다.
+
+## **CUDA Core**
+- 간단히는, cuda core하나가 스레드 하나를 처리한다고 볼 수 있다
+### Dispatch port
+### Operand Collector
+### FP Unit
+- 실제 연산 유닛
+### Int Unit
+- 실제 연산 유닛
+### Result Queue
+## LD/ST
+## SFU
+## Interconnect Network
+## 64kB **shared memory** / **L1 cache**
+
+## Uniform cache
+
+# 6.2 CUDA 스레드 계층과 GPU 하드웨어
+- 스레드 -> 워프 -> 스레드 블록 -> 그리드 -> GPU
+- 그리드 1개 = GPU 1개.
+  - 멀티 GPU라고 하더라도 그리드 1개는 GPU 1개에 대응된다.
+  - 반면, GPU 내에서 여러 개의 그리드는 실행 가능하다.
+
 - https://www.youtube.com/watch?v=gSgZNdT9414 33:54
 
 | 항목            | CUDA               | HW               |
-|----------------|--------------------|------------------|
-| 연산 단위        | Thread             | SP or CUDA Core  |
-| HW 점유 단위     | Block              | SM               |
+|-----------------|--------------------|------------------|
+| 연산 단위       | Thread             | SP or CUDA Core  |
+| HW 점유 단위    | Block              | SM               |
 | Shared Memory  | 48KB `__shared__`  | L1 Cache (16KB + 4KB) |
 | Barrier        | `__syncthreads()`  | -                |
 | 언어            | C/C++, ptr 사용 가능 | -                |
 
-<<<<<<< HEAD
-- grid = GPU
-- 
 
-
-# Code Samples
-
-- NVIDIA Github : [https://github.com/NVIDIA/cuda-samples](https://github.com/NVIDIA/cuda-samples)
-=======
 ![img](https://t1.daumcdn.net/cfile/tistory/16282136509A061507)
->>>>>>> 13085658d6d806b0d39f3a0e058dcecde4eba73e
+
 
 
 
@@ -121,3 +153,60 @@ search: true
 
 
 
+# 부동소수점 연산
+- IEEE 754 표준의 부동소수점 표현방식
+- [31] sign [30-23] exponent [22-0] fraction
+## 허용오차 10-5
+## float -> double
+- 허용 오차와 함께 사용
+## API
+| Function Name         | Operation                                  | Description                                                         |
+|-----------------------|--------------------------------------------|---------------------------------------------------------------------|
+| `__fadd_rn(x, y)`     | `x + y` (Float, Round to Nearest)          | 가장 가까운 값으로 라운딩하여 더하기 연산을 수행합니다.                  |
+| `__fadd_rz(x, y)`     | `x + y` (Float, Round Towards Zero)        | 0 방향으로 라운딩하여 더하기 연산을 수행합니다.                          |
+| `__fadd_ru(x, y)`     | `x + y` (Float, Round Up)                  | 무조건 올림하여 더하기 연산을 수행합니다.                               |
+| `__fadd_rd(x, y)`     | `x + y` (Float, Round Down)                | 무조건 내림하여 더하기 연산을 수행합니다.                               |
+| `__fmul_rn(x, y)`     | `x * y` (Float, Round to Nearest)          | 가장 가까운 값으로 라운딩하여 곱하기 연산을 수행합니다.                   |
+| `__fmul_rz(x, y)`     | `x * y` (Float, Round Towards Zero)        | 0 방향으로 라운딩하여 곱하기 연산을 수행합니다.                          |
+| `__fmul_ru(x, y)`     | `x * y` (Float, Round Up)                  | 무조건 올림하여 곱하기 연산을 수행합니다.                                |
+| `__fmul_rd(x, y)`     | `x * y` (Float, Round Down)                | 무조건 내림하여 곱하기 연산을 수행합니다.                                |
+| `__fmaf_rn(x, y, z)`  | `x * y + z` (Float, Round to Nearest)      | 가장 가까운 값으로 라운딩하여 곱한 후 더하기 연산을 수행합니다.           |
+| `__fmaf_rz(x, y, z)`  | `x * y + z` (Float, Round Towards Zero)    | 0 방향으로 라운딩하여 곱한 후 더하기 연산을 수행합니다.                   |
+| `__fmaf_ru(x, y, z)`  | `x * y + z` (Float, Round Up)              | 무조건 올림하여 곱한 후 더하기 연산을 수행합니다.                         |
+| `__fmaf_rd(x, y, z)`  | `x * y + z` (Float, Round Down)            | 무조건 내림하여 곱한 후 더하기 연산을 수행합니다.                         |
+| `__frcp_rn(x)`        | `1/x` (Float, Round to Nearest)            | 가장 가까운 값으로 라운딩하여 역수를 계산합니다.                          |
+| `__frcp_rz(x)`        | `1/x` (Float, Round Towards Zero)          | 0 방향으로 라운딩하여 역수를 계산합니다.                                 |
+| `__frcp_ru(x)`        | `1/x` (Float, Round Up)                    | 무조건 올림하여 역수를 계산합니다.                                       |
+| `__frcp_rd(x)`        | `1/x` (Float, Round Down)                  | 무조건 내림하여 역수를 계산합니다.                                       |
+| `__fdiv_rn(x, y)`     | `x / y` (Float, Round to Nearest)          | 가장 가까운 값으로 라운딩하여 나누기 연산을 수행합니다.                    |
+| `__fdiv_rz(x, y)`     | `x / y` (Float, Round Towards Zero)        | 0 방향으로 라운딩하여 나누기 연산을 수행합니다.                           |
+| `__fdiv_ru(x, y)`     | `x / y` (Float, Round Up)                  | 무조건 올림하여 나누기 연산을 수행합니다.                                 |
+| `__fdiv_rd(x, y)`     | `x / y` (Float, Round Down)                | 무조건 내림하여 나누기 연산을 수행합니다.                                 |
+| `__fsqrt_rn(x)`       | `sqrt(x)` (Float, Round to Nearest)        | 가장 가까운 값으로 라운딩하여 제곱근을 계산합니다.                         |
+| `__fsqrt_rz(x)`       | `sqrt(x)` (Float, Round Towards Zero)      | 0 방향으로 라운딩하여 제곱근을 계산합니다.                                |
+| `__fsqrt_ru(x)`       | `sqrt(x)` (Float, Round Up)                | 무조건 올림하여 제곱근을 계산합니다.                                      |
+| `__fsqrt_rd(x)`       | `sqrt(x)` (Float, Round Down)              | 무조건 내림하여 제곱근을 계산합니다.                                      |
+| `__dadd_rn(x, y)`     | `x + y` (Double, Round to Nearest)         | 더블 정밀도로 가장 가까운 값으로 라운딩하여 더하기 연산을 수행합니다.        |
+| `__dadd_rz(x, y)`     | `x + y` (Double, Round Towards Zero)       | 더블 정밀도로 0 방향으로 라운딩하여 더하기 연산을 수행합니다.               |
+| `__dadd_ru(x, y)`     | `x + y` (Double, Round Up)                 | 더블 정밀도로 무조건 올림하여 더하기 연산을 수행합니다.                     |
+| `__dadd_rd(x, y)`     | `x + y` (Double, Round Down)               | 더블 정밀도로 무조건 내림하여 더하기 연산을 수행합니다.                     |
+| `__dmul_rn(x, y)`     | `x * y` (Double, Round to Nearest)         | 더블 정밀도로 가장 가까운 값으로 라운딩하여 곱하기 연산을 수행합니다.        |
+| `__dmul_rz(x, y)`     | `x * y` (Double, Round Towards Zero)       | 더블 정밀도로 0 방향으로 라운딩하여 곱하기 연산을 수행합니다.               |
+| `__dmul_ru(x, y)`     | `x * y` (Double, Round Up)                 | 더블 정밀도로 무조건 올림하여 곱하기 연산을 수행합니다.                     |
+| `__dmul_rd(x, y)`     | `x * y` (Double, Round Down)               | 더블 정밀도로 무조건 내림하여 곱하기 연산을 수행합니다.                     |
+| `__fma_rn(x, y, z)`   | `x * y + z` (Double, Round to Nearest)     | 더블 정밀도로 가장 가까운 값으로 라운딩하여 곱한 후 더하기 연산을 수행합니다. |
+| `__fma_rz(x, y, z)`   | `x * y + z` (Double, Round Towards Zero)   | 더블 정밀도로 0 방향으로 라운딩하여 곱한 후 더하기 연산을 수행합니다.        |
+| `__fma_ru(x, y, z)`   | `x * y + z` (Double, Round Up)             | 더블 정밀도로 무조건 올림하여 곱한 후 더하기 연산을 수행합니다.              |
+| `__fma_rd(x, y, z)`   | `x * y + z` (Double, Round Down)           | 더블 정밀도로 무조건 내림하여 곱한 후 더하기 연산을 수행합니다.              |
+| `__drcp_rn(x)`        | `1/x` (Double, Round to Nearest)           | 더블 정밀도로 가장 가까운 값으로 라운딩하여 역수를 계산합니다.               |
+| `__drcp_rz(x)`        | `1/x` (Double, Round Towards Zero)         | 더블 정밀도로 0 방향으로 라운딩하여 역수를 계산합니다.                      |
+| `__drcp_ru(x)`        | `1/x` (Double, Round Up)                   | 더블 정밀도로 무조건 올림하여 역수를 계산합니다.                            |
+| `__drcp_rd(x)`        | `1/x` (Double, Round Down)                 | 더블 정밀도로 무조건 내림하여 역수를 계산합니다.                            |
+| `__ddiv_rn(x, y)`     | `x / y` (Double, Round to Nearest)         | 더블 정밀도로 가장 가까운 값으로 라운딩하여 나누기 연산을 수행합니다.         |
+| `__ddiv_rz(x, y)`     | `x / y` (Double, Round Towards Zero)       | 더블 정밀도로 0 방향으로 라운딩하여 나누기 연산을 수행합니다.                |
+| `__ddiv_ru(x, y)`     | `x / y` (Double, Round Up)                 | 더블 정밀도로 무조건 올림하여 나누기 연산을 수행합니다.                      |
+| `__ddiv_rd(x, y)`     | `x / y` (Double, Round Down)               | 더블 정밀도로 무조건 내림하여 나누기 연산을 수행합니다.                      |
+| `__dsqrt_rn(x)`       | `sqrt(x)` (Double, Round to Nearest)       | 더블 정밀도로 가장 가까운 값으로 라운딩하여 제곱근을 계산합니다.              |
+| `__dsqrt_rz(x)`       | `sqrt(x)` (Double, Round Towards Zero)     | 더블 정밀도로 0 방향으로 라운딩하여 제곱근을 계산합니다.                     |
+| `__dsqrt_ru(x)`       | `sqrt(x)` (Double, Round Up)               | 더블 정밀도로 무조건 올림하여 제곱근을 계산합니다.                           |
+| `__dsqrt_rd(x)`       | `sqrt(x)` (Double, Round Down)             | 더블 정밀도로 무조건 내림하여 제곱근을 계산합니다.                           |
