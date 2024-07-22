@@ -142,6 +142,16 @@ search: true
 
 
 # Optimization
+- Occupancy calculator 
+    - [https://developer.download.nvidia.com/compute/cuda/4_0/sdk/docs/CUDA_Occupancy_Calculator.xls](https://developer.download.nvidia.com/compute/cuda/4_0/sdk/docs/CUDA_Occupancy_Calculator.xls)
+- NSight Compute에서 확인 가능하다.
+- 계산방법
+  - Compute capability
+  - Shared Memory Size Config
+  - Threads Per Block
+  - Registers Per Thread
+  - User Shared Memory Per Block
+- 기준 0.5보다 좋으면 괜찮다. 0.8 좋다.
 - Occupancy 100%로 만드는 방법 
   - [https://ccode.tistory.com/184](https://ccode.tistory.com/184)
 - 참고.

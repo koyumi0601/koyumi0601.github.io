@@ -4,7 +4,7 @@
 #include <chrono>
 #include <string>
 #include <iostream>
-
+#include <opencv2/opencv.hpp>
 
 namespace utils
 {
@@ -23,5 +23,7 @@ namespace utils
   };
 
 }
+
+
 
 #endif
